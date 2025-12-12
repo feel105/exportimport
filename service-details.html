@@ -28,6 +28,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/service.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Gp
@@ -101,8 +102,8 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
 
             <div class="service-box">
-              <h4>Serices List</h4>
-              <div class="services-list">
+              <h4>Service List</h4>
+              <!-- <div class="services-list">
                 <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Handicrafts</span></a>
                 <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Carpets</span></a>
                 <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Agriculture And Food</span></a>
@@ -111,6 +112,19 @@
                 <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Sport Goods</span></a>
                 <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Spices</span></a>
                 <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Computer Software</span></a>
+              </div> -->
+              <div class="services-list">
+                <a href="#" data-service="handicrafts" class="active"><i
+                    class="bi bi-arrow-right-circle"></i><span>Handicrafts</span></a>
+                <a href="#" data-service="carpets"><i class="bi bi-arrow-right-circle"></i><span>Carpets</span></a>
+                <a href="#" data-service="agriculture"><i class="bi bi-arrow-right-circle"></i><span>Agriculture And
+                    Food</span></a>
+                <a href="#" data-service="ayurvedic"><i class="bi bi-arrow-right-circle"></i><span>Ayurvedic</span></a>
+                <a href="#" data-service="textiles"><i class="bi bi-arrow-right-circle"></i><span>Textiles</span></a>
+                <a href="#" data-service="sports"><i class="bi bi-arrow-right-circle"></i><span>Sport Goods</span></a>
+                <a href="#" data-service="spices"><i class="bi bi-arrow-right-circle"></i><span>Spices</span></a>
+                <a href="#" data-service="software"><i class="bi bi-arrow-right-circle"></i><span>Computer
+                    Software</span></a>
               </div>
             </div><!-- End Services List -->
 
@@ -129,11 +143,12 @@
                   52619</span></p>
               <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a
                   href="mailto:contact@example.com">feel619patel@gmail.com</a></p>
+
             </div>
 
           </div>
 
-          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+          <!-- <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
             <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
             <h3>Handicrafts</h3>
             <p>
@@ -155,7 +170,15 @@
               décor and soil-made artifacts, our handcrafted pieces bring authenticity, culture, and quality to every
               space.
             </p>
+          </div> -->
+          <div class="col-lg-8 ps-lg-5" id="serviceContent" data-aos="fade-up" data-aos-delay="200">
+
+            <h3 id="serviceTitle">Handicrafts</h3>
+
+            <div class="row gy-4" id="productGrid"></div>
+
           </div>
+
 
         </div>
 
@@ -165,7 +188,7 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer -background">
 
     <div class="footer-top">
       <div class="container">
@@ -179,6 +202,12 @@
               <p>Surat, Gujarat, IN 395007</p>
               <p class="mt-3"><strong>Phone:</strong> <span>+91 98795 52619</span></p>
               <p><strong>Email:</strong> <span>feel619patel@gmail.com</span></p>
+              <p>
+                <strong>Business Hours:</strong>
+              <p><span>Monday - Sunday </span> <span>9:00 AM - 10:00 PM </span></p>
+
+              </p>
+              <p>24/7 Emergency Support</p>
             </div>
 
           </div>
@@ -261,6 +290,174 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const serviceProducts = {
+
+      handicrafts: {
+        title: "Handicrafts",
+        products: [
+          {
+            name: "Wooden Art",
+            short: "Hand-carved with premium finishing.",
+            images: [
+              "assets/img/products/handicraft/wooden/handicraft1.jpg",
+              "assets/img/products/handicraft/wooden/handicraft2.jpg",
+              "assets/img/products/handicraft/wooden/handicraft3.jpg"
+            ]
+          },
+          {
+            name: "Decorative Pot",
+            short: "Traditional Indian art pot for home décor.",
+            images: [
+              "assets/img/products/handicraft/pot/handicraft1.jpg",
+              "assets/img/products/handicraft/pot/handicraft2.jpg",
+              "assets/img/products/handicraft/pot/handicraft3.jpg"
+            ]
+          },
+          {
+            name: "Toran",
+            short: "Hand made Toran.",
+            images: [
+              "assets/img/products/handicraft/toran/handicraft1.jpg",
+              "assets/img/products/handicraft/toran/handicraft2.jpg",
+              "assets/img/products/handicraft/toran/handicraft3.jpg"
+            ]
+          },
+          {
+            name: "Bow",
+            short: "Traditional Indian metal art bow for home décor.",
+            images: [
+              "assets/img/products/handicraft/bow/handicraft1.jpg",
+              "assets/img/products/handicraft/bow/handicraft2.jpg",
+              "assets/img/products/handicraft/bow/handicraft3.jpg"
+            ]
+          }
+        ]
+      },
+
+      carpets: {
+        title: "Carpets",
+        products: [
+          {
+            name: "Kashmiri Carpet",
+            short: "Premium hand-woven Kashmiri carpet.",
+            images: [
+              "assets/img/products/carpet1.jpg",
+              "assets/img/products/carpet1b.jpg"
+            ]
+          },
+          {
+            name: "Modern Floor Rug",
+            short: "Soft-touch rug made with export-quality fibers.",
+            images: [
+              "assets/img/products/carpet2.jpg",
+              "assets/img/products/carpet2b.jpg"
+            ]
+          }
+        ]
+      },
+
+      spices: {
+        title: "Spices",
+        products: [
+          {
+            name: "Turmeric Powder",
+            short: "Pure natural turmeric with strong aroma.",
+            images: [
+              "assets/img/products/spice1.jpg",
+              "assets/img/products/spice1b.jpg"
+            ]
+          },
+          {
+            name: "Red Chilli Powder",
+            short: "Bright red, chemical-free chilli powder.",
+            images: [
+              "assets/img/products/spice2.jpg",
+              "assets/img/products/spice2b.jpg"
+            ]
+          }
+        ]
+      },
+
+      software: {
+        title: "Computer Software",
+        products: [
+          {
+            name: "Custom Website",
+            short: "Responsive business website with admin panel.",
+            images: [
+              "assets/img/products/soft1.jpg"
+            ]
+          },
+          {
+            name: "Mobile App",
+            short: "Android & iOS app development services.",
+            images: [
+              "assets/img/products/soft2.jpg"
+            ]
+          }
+        ]
+      }
+
+    };
+
+    function loadService(type) {
+      const data = serviceProducts[type];
+
+      document.getElementById("serviceTitle").textContent = data.title;
+
+      const grid = document.getElementById("productGrid");
+      grid.innerHTML = "";
+
+      data.products.forEach((p, i) => {
+        const swiperId = `swiper-${type}-${i}`;
+
+        grid.innerHTML += `
+      <div class="col-lg-6">
+        <div class="product-card">
+
+          <div class="swiper ${swiperId}">
+            <div class="swiper-wrapper">
+              ${p.images.map(img => `
+                <div class="swiper-slide">
+                  <img src="${img}" class="img-fluid" />
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <h5 class="mt-3">${p.name}</h5>
+          <p>${p.short}</p>
+
+        </div>
+      </div>
+      `;
+
+        setTimeout(() => {
+          new Swiper(`.${swiperId}`, {
+            loop: true,
+            autoplay: { delay: 2000 },
+            speed: 800
+          });
+        }, 150);
+      });
+    }
+
+    document.querySelectorAll(".services-list a").forEach(item => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(".services-list .active")?.classList.remove("active");
+        this.classList.add("active");
+
+        const type = this.getAttribute("data-service");
+        loadService(type);
+      });
+    });
+
+    // Load default
+    loadService("handicrafts");
+  </script>
 
 </body>
 
