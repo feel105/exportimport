@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Turmeric",
+        "category": "turmeric",
+        "image": "assets/img/products/spices/turmeric/1.jpg",
+        "description": "Premium handmade decor items for global buyers",
+        "delay": 100
+    },
+    {
+        "title": "Chilli",
+        "category": "handicrafts",
+        "image": "assets/img/products/spices/chilli/1.jpg",
+        "description": "Traditional Indian wooden craftsmanship",
+        "delay": 200
+    },
+    {
+        "title": "Cumin Seeds",
+        "category": "textiles",
+        "image": "assets/img/products/spices/cumin/1.jpg",
+        "description": "Export-quality garments and fabrics",
+        "delay": 300
+    },
+    {
+        "title": "Coriander",
+        "category": "textiles",
+        "image": "assets/img/products/spices/coriander/1.jpg",
+        "description": "High-performance sportswear manufacturing",
+        "delay": 400
+    },
+    {
+        "title": "Black Pepper",
+        "category": "spices",
+        "image": "assets/img/products/spices/blackpepper/1.jpg",
+        "description": "Pure and aromatic export-grade spices",
+        "delay": 500
+    },
+    {
+        "title": "Ginger",
+        "category": "ayurvedic",
+        "image": "assets/img/products/spices/Ginger/1.jpg",
+        "description": "Natural and certified ayurvedic products",
+        "delay": 600
+    }
+]

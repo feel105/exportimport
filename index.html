@@ -287,107 +287,7 @@
 
       <div class="container">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-handbag"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Handicrafts</h3>
-              </a>
-              <p>Beautifully crafted wooden, metal, and handmade décor items—created by skilled Indian artisans.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-c-square-fill"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Carpets</h3>
-              </a>
-              <p>High-quality readymade garments, sportswear, ethnic wear, and custom apparel manufacturing.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bag-heart"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Agriculture And Food</h3>
-              </a>
-              <p>Fresh, organic, and processed food items sourced from certified farms across India.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bag-plus"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Ayurvedic</h3>
-              </a>
-              <p>Traditional Indian ayurvedic products with natural ingredients and international safety standards.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-columns-gap"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Textiles</h3>
-              </a>
-              <p>High-quality readymade garments, sportswear, ethnic wear, and custom apparel manufacturing.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bicycle"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Sport Goods</h3>
-              </a>
-              <p>Premium-quality sports equipment and accessories suitable for all levels.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-ui-radios-grid"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Spices</h3>
-              </a>
-              <p>Authentic whole and ground spices known for purity, aroma, and export-grade packaging.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-pc-display"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Computer Software</h3>
-              </a>
-              <p>Custom mobile apps, websites, software development, and digital solutions for global clients.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
+        <div class="row gy-4" id="servicesContainer">
         </div>
 
       </div>
@@ -433,7 +333,19 @@
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+          <ul class="portfolio-filters isotope-filters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".handicrafts">Handicrafts</li>
+            <li data-filter=".textiles">Textiles</li>
+            <li data-filter=".spices">Spices</li>
+            <li data-filter=".ayurvedic">Ayurvedic</li>
+          </ul>
+
+          <div class="row gy-4 portfolio-container isotope-container" id="portfolioContainer">
+            <!-- Portfolio items load here -->
+          </div>
+
+          <!-- <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-Handicrafts">Handicrafts</li>
             <li data-filter=".filter-Carpets">Carpets</li>
@@ -442,7 +354,7 @@
             <li data-filter=".filter-Textiles">Textiles</li>
             <li data-filter=".filter-Sport">Sport Goods</li>
             <li data-filter=".filter-Spices">Spices</li>
-          </ul><!-- End Portfolio Filters -->
+          </ul>
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
@@ -458,7 +370,7 @@
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Carpets">
               <img src="assets/img/masonry-portfolio/Carpets1.jpg" class="img-fluid" alt="">
@@ -472,7 +384,7 @@
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Agriculture">
               <img src="assets/img/masonry-portfolio/Agriculture1.jpg" class="img-fluid" alt="">
@@ -486,7 +398,7 @@
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Ayurvedic">
               <img src="assets/img/masonry-portfolio/Ayurvedic1.png" class="img-fluid" alt="">
@@ -500,7 +412,7 @@
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Textiles">
               <img src="assets/img/masonry-portfolio/Textiles1.jpg" class="img-fluid" alt="">
@@ -514,7 +426,7 @@
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Sport">
               <img src="assets/img/masonry-portfolio/Sport1.jpg" class="img-fluid" alt="">
@@ -528,7 +440,7 @@
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Handicrafts">
               <img src="assets/img/masonry-portfolio/Handicrafts2.jpg" class="img-fluid" alt="">
@@ -542,7 +454,7 @@
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Spices">
               <img src="assets/img/masonry-portfolio/Spices1.jpg" class="img-fluid" alt="">
@@ -571,7 +483,6 @@
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div>
-            <!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img src="assets/img/masonry-portfolio/Computer1.jpg" class="img-fluid" alt="">
@@ -585,9 +496,10 @@
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-          </div><!-- End Portfolio Container -->
+          </div> -->
+          <!-- End Portfolio Container -->
 
         </div>
 
@@ -985,7 +897,99 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    fetch("assets/data/services.json")
+      .then(res => res.json())
+      .then(services => {
+        const container = document.getElementById("servicesContainer");
 
+        services.forEach(service => {
+          container.innerHTML += `
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${service.delay}">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi ${service.icon}"></i>
+            </div>
+
+            <a href="${service.link}" class="stretched-link">
+              <h3>${service.title}</h3>
+            </a>
+
+            <p>${service.description}</p>
+          </div>
+        </div>
+      `;
+        });
+
+        // Refresh AOS after dynamic load
+        AOS.refresh();
+      })
+      .catch(err => console.error("Services JSON error:", err));
+
+    fetch("assets/data/product.json")
+      .then(res => res.json())
+      .then(items => {
+        const container = document.getElementById("portfolioContainer");
+
+
+        items.forEach(item => {
+          container.innerHTML += `
+
+           <div class="col-lg-4 col-md-6 portfolio-item isotope-item ${item.category}">
+              <img src="${item.image}" class="img-fluid" alt="${item.title}">
+              <div class="portfolio-info">
+                <h4>${item.title}</h4>
+                <p>${item.description}</p>
+                <a href="assets/img/masonry-portfolio/Handicrafts1.jpg"
+                  title="Experience the beauty of India’s traditional craftsmanship."
+                  data-gallery="portfolio-gallery-Handicrafts" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+        <div class="col-lg-4 col-md-6 isotope-item portfolio-item ${item.category}"
+             data-aos="fade-up"
+             data-aos-delay="${item.delay}">
+
+          <div class="portfolio-wrap">
+            <img src="${item.image}" class="img-fluid" alt="${item.title}">
+
+            <div class="portfolio-info">
+              <h4>${item.title}</h4>
+              <p>${item.description}</p>
+            </div>
+          </div>
+
+        </div>
+      `;
+        });
+
+        // Re-init AOS
+        AOS.refresh();
+
+        // Re-init Isotope (important)
+        let iso = new Isotope('.portfolio-container', {
+          itemSelector: '.portfolio-item',
+          layoutMode: 'fitRows'
+        });
+
+        document.querySelectorAll('.portfolio-filters li').forEach(filter => {
+          filter.addEventListener('click', function () {
+            document.querySelector('.filter-active').classList.remove('filter-active');
+            this.classList.add('filter-active');
+
+            iso.arrange({
+              filter: this.getAttribute('data-filter')
+            });
+          });
+        });
+
+      })
+      .catch(err => console.error("Portfolio JSON error:", err));
+
+  </script>
 </body>
 
 </html>
