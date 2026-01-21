@@ -2,6 +2,13 @@
     {
         "title": "Turmeric",
         "category": "turmeric",
+        "image": "assets/img/product-portfolio/all1.png",
+        "description": "Premium handmade decor items for global buyers",
+        "delay": 100
+    },
+    {
+        "title": "Turmeric",
+        "category": "turmeric",
         "image": "assets/img/products/spices/turmeric/1.jpg",
         "description": "Premium handmade decor items for global buyers",
         "delay": 100
@@ -38,6 +45,41 @@
         "title": "Ginger",
         "category": "ayurvedic",
         "image": "assets/img/products/spices/Ginger/1.jpg",
+        "description": "Natural and certified ayurvedic products",
+        "delay": 600
+    },
+    {
+        "title": "Cardamom",
+        "category": "ayurvedic",
+        "image": "assets/img/products/spices/cardamom/1.jpg",
+        "description": "Natural and certified ayurvedic products",
+        "delay": 600
+    },
+    {
+        "title": "Mint Leaves",
+        "category": "ayurvedic",
+        "image": "assets/img/products/spices/mintleaves/1.jpg",
+        "description": "Natural and certified ayurvedic products",
+        "delay": 600
+    },
+    {
+        "title": "Tulsi",
+        "category": "ayurvedic",
+        "image": "assets/img/products/spices/tulsi/1.jpg",
+        "description": "Natural and certified ayurvedic products",
+        "delay": 600
+    },
+    {
+        "title": "Drumsticks",
+        "category": "ayurvedic",
+        "image": "assets/img/products/spices/moringa/1.jpg",
+        "description": "Natural and certified ayurvedic products",
+        "delay": 600
+    },
+    {
+        "title": "Tamarind",
+        "category": "ayurvedic",
+        "image": "assets/img/products/spices/tamarind/1.jpg",
         "description": "Natural and certified ayurvedic products",
         "delay": 600
     }

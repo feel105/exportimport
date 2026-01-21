@@ -1,66 +1,10 @@
 [
     {
-        "id": "handicrafts",
-        "title": "Handicrafts",
-        "icon": "bi-handbag",
-        "description": "Beautifully crafted wooden, metal, and handmade décor items—created by skilled Indian artisans.",
-        "link": "service-details.html?service=handicrafts",
-        "delay": 100
-    },
-    {
-        "id": "carpets",
-        "title": "Carpets",
-        "icon": "bi-c-square-fill",
-        "description": "Premium handwoven carpets designed for durability, comfort, and luxury interiors.",
-        "link": "service-details.html?service=carpets",
-        "delay": 200
-    },
-    {
-        "id": "agriculture",
-        "title": "Agriculture And Food",
-        "icon": "bi-bag-heart",
-        "description": "Fresh, organic, and processed food items sourced from certified farms across India.",
-        "link": "service-details.html?service=agriculture",
-        "delay": 300
-    },
-    {
-        "id": "ayurvedic",
-        "title": "Ayurvedic",
-        "icon": "bi-bag-plus",
-        "description": "Traditional Indian ayurvedic products with natural ingredients and global safety standards.",
-        "link": "service-details.html?service=ayurvedic",
-        "delay": 400
-    },
-    {
-        "id": "textiles",
-        "title": "Textiles",
-        "icon": "bi-columns-gap",
-        "description": "Export-quality garments, sportswear, ethnic wear, and custom apparel manufacturing.",
-        "link": "service-details.html?service=textiles",
-        "delay": 500
-    },
-    {
-        "id": "sports",
-        "title": "Sport Goods",
-        "icon": "bi-bicycle",
-        "description": "Premium-quality sports equipment and accessories suitable for all levels.",
-        "link": "service-details.html?service=sports",
-        "delay": 600
-    },
-    {
         "id": "spices",
         "title": "Spices",
         "icon": "bi-ui-radios-grid",
         "description": "Authentic whole and ground spices known for purity, aroma, and export-grade packaging.",
         "link": "service-details.html?service=spices",
         "delay": 700
-    },
-    {
-        "id": "software",
-        "title": "Computer Software",
-        "icon": "bi-pc-display",
-        "description": "Custom mobile apps, websites, software development, and digital solutions for global clients.",
-        "link": "service-details.html?service=software",
-        "delay": 800
     }
 ]
