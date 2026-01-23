@@ -303,14 +303,20 @@
         products: [
           {
             name: "Turmeric",
-            short: "Turmeric Powder Pure natural turmeric with strong aroma.",
+            hsncode: "09103010",
+            moq:,
+            short: "Our Turmeric Powder is manufactured from high-grade turmeric rhizomes sourced from trusted Indian farms.",
+            advantages: [
+              'Enhances color and flavor in food preparations',
+              'Widely used in ayurvedic and herbal medicines',
+              'Suitable for food, ayurvedic & cosmetic industries',
+            ],
             images: [
-              "assets/img/products/spices/turmeric/1.jpg",
+              "assets/img/products/spices/turmeric/1.png",
               "assets/img/products/spices/turmeric/2.jpg",
-              "assets/img/products/spices/turmeric/3.jpg",
+              "assets/img/products/spices/turmeric/3.png",
             ]
           },
-
         ]
       },
 
@@ -322,7 +328,7 @@
             short: "Bright red, chemical-free Chilli Powder.",
             images: [
               "assets/img/products/spices/chilli/1.jpg",
-              "assets/img/products/spices/chilli/2.jpg",
+              "assets/img/products/spices/chilli/2.png",
               "assets/img/products/spices/chilli/3.jpg",
             ]
           },
@@ -336,9 +342,9 @@
             name: "Cumin Seeds",
             short: "Bright red, chemical-free cumin powder.",
             images: [
-              "assets/img/products/spices/cumin/1.jpg",
-              "assets/img/products/spices/cumin/2.jpg",
-              "assets/img/products/spices/cumin/3.jpg",
+              "assets/img/products/spices/cumin/1.png",
+              "assets/img/products/spices/cumin/2.png",
+              "assets/img/products/spices/cumin/4.png",
             ]
           },
 
@@ -352,8 +358,8 @@
             name: "Coriander Seeds",
             short: "Bright red, chemical-free coriander powder.",
             images: [
-              "assets/img/products/spices/coriander/1.jpg",
-              "assets/img/products/spices/coriander/2.jpg",
+              "assets/img/products/spices/coriander/1.png",
+              "assets/img/products/spices/coriander/2.png",
               "assets/img/products/spices/coriander/3.jpg",
             ]
           },
@@ -368,8 +374,8 @@
             short: "Bright red, chemical-free Black Pepper powder.",
             images: [
               "assets/img/products/spices/blackpepper/1.jpg",
-              "assets/img/products/spices/blackpepper/2.jpg",
-              "assets/img/products/spices/blackpepper/3.jpg",
+              "assets/img/products/spices/blackpepper/2.png",
+              "assets/img/products/spices/blackpepper/3.png",
             ]
           },
 
@@ -382,9 +388,9 @@
             name: "Ginger",
             short: "Bright red, chemical-free ginger powder.",
             images: [
-              "assets/img/products/spices/ginger/1.jpg",
-              "assets/img/products/spices/ginger/2.jpg",
-              "assets/img/products/spices/ginger/3.jpg",
+              "assets/img/products/spices/ginger/1.png",
+              "assets/img/products/spices/ginger/2.png",
+              "assets/img/products/spices/ginger/3.png",
             ]
           },
 
@@ -412,9 +418,9 @@
             name: "Mint Leaves",
             short: "Bright red, chemical-free mintleaves powder.",
             images: [
-              "assets/img/products/spices/mintleaves/1.jpg",
-              "assets/img/products/spices/mintleaves/2.jpg",
-              "assets/img/products/spices/mintleaves/3.jpg",
+              "assets/img/products/spices/mintleaves/1.png",
+              "assets/img/products/spices/mintleaves/2.png",
+              "assets/img/products/spices/mintleaves/3.png",
             ]
           },
 
@@ -427,8 +433,8 @@
             name: "Tulsi",
             short: "Bright red, chemical-free tulsi or holy basil powder.",
             images: [
-              "assets/img/products/spices/tulsi/1.jpg",
-              "assets/img/products/spices/tulsi/2.jpg",
+              "assets/img/products/spices/tulsi/1.png",
+              "assets/img/products/spices/tulsi/2.png",
               "assets/img/products/spices/tulsi/3.jpg",
             ]
           },
@@ -442,9 +448,9 @@
             name: "Drumsticks",
             short: "Bright red, chemical-fre holy moringa.",
             images: [
-              "assets/img/products/spices/moringa/1.jpg",
+              "assets/img/products/spices/moringa/1.png",
               "assets/img/products/spices/moringa/2.jpg",
-              "assets/img/products/spices/moringa/3.jpg",
+              "assets/img/products/spices/moringa/3.png",
             ]
           },
 
@@ -457,9 +463,9 @@
             name: "Tamarind",
             short: "Bright red, chemical-free tulsi or holy Tamarind powder.",
             images: [
-              "assets/img/products/spices/tamarind/1.jpg",
-              "assets/img/products/spices/tamarind/2.jpg",
-              "assets/img/products/spices/tamarind/3.jpg",
+              "assets/img/products/spices/tamarind/1.png",
+              "assets/img/products/spices/tamarind/2.png",
+              "assets/img/products/spices/tamarind/3.png",
             ]
           },
         ]
@@ -494,10 +500,9 @@
           <h5 class="mt-3">${p.name}</h5>
           <p>${p.short}</p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Crafted by Hand, Made with Heart</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Indian Artistry, Global Quality.</span>
-              </li>
-              <li><i class="bi bi-check-circle"></i> <span>Where Tradition Meets Craftsmanship</span></li>
+               ${p.advantages.map(data => `
+                <li><i class="bi bi-check-circle"></i> <span>${data}</span></li>
+              `).join("")}
             </ul>
         </div>
       </div>
