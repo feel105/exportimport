@@ -1,34 +1,82 @@
 <?php
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'feel619patel@gmail.com';
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+$phpmailerPath = __DIR__ . '/../assets/vendor/phpmailer/src/';
+
+if (!file_exists($phpmailerPath . 'PHPMailer.php')) {
+  die('PHPMailer not found at: ' . $phpmailerPath);
+}
+
+require_once $phpmailerPath . 'Exception.php';
+require_once $phpmailerPath . 'PHPMailer.php';
+require_once $phpmailerPath . 'SMTP.php';
+
+
+// Allow only POST
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+  http_response_code(403);
+  echo "Forbidden";
+  exit;
+}
+
+// Required fields
+$required = ['name', 'email', 'subject', 'message'];
+foreach ($required as $field) {
+  if (empty($_POST[$field])) {
+    http_response_code(400);
+    echo "Please fill all required fields.";
+    exit;
   }
+}
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
+// Sanitize
+$name    = strip_tags(trim($_POST['name']));
+$email   = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+$subject = strip_tags(trim($_POST['subject']));
+$message = trim($_POST['message']);
 
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  http_response_code(400);
+  echo "Invalid email address.";
+  exit;
+}
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+$mail = new PHPMailer(true);
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+try {
+  // SMTP SETTINGS
+  $mail->isSMTP();
+  $mail->Host       = 'smtp.gmail.com';     // SMTP server
+  $mail->SMTPAuth   = true;
+  $mail->Username   = 'feel619patel@gmail.com'; // SMTP email
+  $mail->Password   = 'Fm@531994619';   // Gmail App Password
+  $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+  $mail->Port       = 587;
 
-  echo $contact->send();
-?>
+  // EMAIL SETTINGS
+  $mail->setFrom($mail->Username, 'Website Contact');
+  $mail->addAddress('feel619patel@gmail.com'); // Receive here
+  $mail->addReplyTo($email, $name);
+
+  $mail->isHTML(true);
+  $mail->Subject = "Contact Form: $subject";
+
+  $mail->Body = "
+    <h3>New Contact Form Message</h3>
+    <p><strong>Name:</strong> {$name}</p>
+    <p><strong>Email:</strong> {$email}</p>
+    <p><strong>Subject:</strong> {$subject}</p>
+    <p><strong>Message:</strong><br>{$message}</p>
+  ";
+
+  $mail->AltBody = "Name: $name\nEmail: $email\nSubject: $subject\n\n$message";
+  $mail->send();
+  echo "OK";die;
+
+} catch (Exception $e) {
+  http_response_code(500);
+  echo "Mailer Error: {$mail->ErrorInfo}";
+}
