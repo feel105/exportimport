@@ -52,7 +52,7 @@ try {
   $mail->Host       = 'smtp.gmail.com';     // SMTP server
   $mail->SMTPAuth   = true;
   $mail->Username   = 'feel619patel@gmail.com'; // SMTP email
-  $mail->Password   = 'Fm@531994619';   // Gmail App Password
+  $mail->Password   = '********';   // Gmail App Password
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $mail->Port       = 587;
 
