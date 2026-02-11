@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>EXIM</title>
-  <meta name="description" content="Indian Tamarind Seeds Exporter – Whole & Powder">
-  <meta name="keywords" content="Indian Tamarind Seeds Exporter – Whole & Powder">
+  <title>FEELEXIM - Indian Spices Exporter</title>
+  <meta name="description" content="Indian spices Exporter – Whole & Powder">
+  <meta name="keywords" content="Indian spices Exporter – Whole & Powder">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon_io/android-chrome-512x512.png" rel="icon">
+  <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -38,7 +38,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.jpg" alt="">
+        <img src="assets/img/logo.png" alt="">
         <!-- <h1 class="sitename">FeelExim</h1>
         <span>.</span> -->
       </a>
@@ -862,53 +862,52 @@
       })
       .catch(err => console.error("Services JSON error:", err));
 
-    fetch("assets/data/product.json")
-      .then(res => res.json())
-      .then(items => {
-        const container = document.getElementById("portfolioContainer");
+    /*  fetch("assets/data/product.json")
+       .then(res => res.json())
+       .then(items => {
+         const container = document.getElementById("portfolioContainer");
 
+         items.forEach(item => {
+           container.innerHTML += `
 
-        items.forEach(item => {
-          container.innerHTML += `
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item ${item.category}">
+               <img src="${item.image}" class="img-fluid" alt="${item.title}">
+               <div class="portfolio-info">
+                 <h4>${item.title}</h4>
+                 <p>${item.description}</p>
+                 <a href="assets/img/masonry-portfolio/Handicrafts1.jpg"
+                   title="Experience the beauty of India’s traditional craftsmanship."
+                   data-gallery="portfolio-gallery-Handicrafts" class="glightbox preview-link"><i
+                     class="bi bi-zoom-in"></i></a>
+                 <a href="service-details.html?service=turmeric" title="More Details" class="details-link"><i
+                     class="bi bi-link-45deg"></i></a>
+               </div>
+             </div>
+       `;
+         });
 
-           <div class="col-lg-4 col-md-6 portfolio-item isotope-item ${item.category}">
-              <img src="${item.image}" class="img-fluid" alt="${item.title}">
-              <div class="portfolio-info">
-                <h4>${item.title}</h4>
-                <p>${item.description}</p>
-                <a href="assets/img/masonry-portfolio/Handicrafts1.jpg"
-                  title="Experience the beauty of India’s traditional craftsmanship."
-                  data-gallery="portfolio-gallery-Handicrafts" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="service-details.html?service=turmeric" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-      `;
-        });
+         // Re-init AOS
+         AOS.refresh();
 
-        // Re-init AOS
-        AOS.refresh();
+         // Re-init Isotope (important)
+         let iso = new Isotope('.portfolio-container', {
+           itemSelector: '.portfolio-item',
+           layoutMode: 'fitRows'
+         });
 
-        // Re-init Isotope (important)
-        let iso = new Isotope('.portfolio-container', {
-          itemSelector: '.portfolio-item',
-          layoutMode: 'fitRows'
-        });
+         document.querySelectorAll('.portfolio-filters li').forEach(filter => {
+           filter.addEventListener('click', function () {
+             document.querySelector('.filter-active').classList.remove('filter-active');
+             this.classList.add('filter-active');
 
-        document.querySelectorAll('.portfolio-filters li').forEach(filter => {
-          filter.addEventListener('click', function () {
-            document.querySelector('.filter-active').classList.remove('filter-active');
-            this.classList.add('filter-active');
+             iso.arrange({
+               filter: this.getAttribute('data-filter')
+             });
+           });
+         });
 
-            iso.arrange({
-              filter: this.getAttribute('data-filter')
-            });
-          });
-        });
-
-      })
-      .catch(err => console.error("Portfolio JSON error:", err));
+       })
+       .catch(err => console.error("Portfolio JSON error:", err)); */
 
   </script>
 </body>
