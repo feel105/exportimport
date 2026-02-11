@@ -52,9 +52,11 @@ try {
   $mail->Host       = 'smtp.gmail.com';     // SMTP server
   $mail->SMTPAuth   = true;
   $mail->Username   = 'feel619patel@gmail.com'; // SMTP email
-  $mail->Password   = '********';   // Gmail App Password
+  $mail->Password   = 'rekxoqgxcclxljml';   // Gmail App Password
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $mail->Port       = 587;
+// $mail->SMTPDebug = 2;
+// $mail->Debugoutput = 'html';
 
   // EMAIL SETTINGS
   $mail->setFrom($mail->Username, 'Website Contact');
@@ -71,12 +73,12 @@ try {
     <p><strong>Subject:</strong> {$subject}</p>
     <p><strong>Message:</strong><br>{$message}</p>
   ";
-
   $mail->AltBody = "Name: $name\nEmail: $email\nSubject: $subject\n\n$message";
   $mail->send();
   echo "OK";die;
 
 } catch (Exception $e) {
+  //echo "<pre>";print_r($e);die;
   http_response_code(500);
   echo "Mailer Error: {$mail->ErrorInfo}";
 }
