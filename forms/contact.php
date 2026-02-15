@@ -61,6 +61,7 @@ try {
   // EMAIL SETTINGS
   $mail->setFrom($mail->Username, 'Website Contact');
   $mail->addAddress('feel619patel@gmail.com'); // Receive here
+  $mail->addCC('tulsikhalasi1234@gmail.com', 'Tulsi');
   $mail->addReplyTo($email, $name);
 
   $mail->isHTML(true);
