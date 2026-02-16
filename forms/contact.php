@@ -1,9 +1,12 @@
 <?php
+ echo "aave";
+  exit;
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
 $phpmailerPath = __DIR__ . '/../assets/vendor/phpmailer/src/';
 
 if (!file_exists($phpmailerPath . 'PHPMailer.php')) {
