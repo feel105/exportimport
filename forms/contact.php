@@ -55,8 +55,8 @@ try {
   $mail->Password   = 'rekxoqgxcclxljml';   // Gmail App Password
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $mail->Port       = 587;
-// $mail->SMTPDebug = 2;
-// $mail->Debugoutput = 'html';
+  $mail->SMTPDebug = 2;
+  $mail->Debugoutput = 'html';
 
   // EMAIL SETTINGS
   $mail->setFrom($mail->Username, 'Website Contact');
