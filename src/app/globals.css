@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0B111A;
+  --color-navy-deep: #121A26;
+  --color-royal: #2563EB;
+  --color-royal-dark: #1D4ED8;
+  --color-gold: #E0A045;
+  --color-gold-light: #F5BE6B;
+  --color-gold-dark: #B87820;
+  --color-warm: #F8FAFC;
+  --color-slate: #94A3B8;
+  --color-slate-dark: #64748B;
+  --color-emerald-accent: #22C55E;
+  --color-cyan-accent: #38BDF8;
+  --color-coral-accent: #F87171;
+}
+
+/* ─── CSS Custom Properties matching Reference Image ────────────────────── */
+:root {
+  --navy: #0B111A;
+  --navy-deep: #121A26;
+  --royal: #2563EB;
+  --royal-dark: #1D4ED8;
+  --gold: #E0A045;
+  --gold-light: #F5BE6B;
+  --gold-dark: #B87820;
+  --warm: #F8FAFC;
+  --slate: #94A3B8;
+  --slate-dark: #64748B;
+  --emerald-accent: #22C55E;
+  --cyan-accent: #38BDF8;
+  --coral-accent: #F87171;
+
+  /* Frosted Liquid Glass System from Reference */
+  --glass-bg: rgba(255, 255, 255, 0.065);
+  --glass-bg-hover: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-border-hover: rgba(255, 255, 255, 0.28);
+  --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.26);
+  --glass-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.65);
+  --glass-pill-bg: rgba(255, 255, 255, 0.08);
+
+  --ambient-amber: rgba(224, 142, 69, 0.18);
+  --ambient-blue: rgba(56, 189, 248, 0.12);
+}
+
+/* ─── Base Reset & Atmospheric Background ────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #0B111A;
+  color: #F8FAFC;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 12% 18%, rgba(224, 142, 69, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 88% 12%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 50% 60%, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* ─── Liquid Frosted Glass (Exact Reference Image Styling) ──────────────── */
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.085) 0%, rgba(255, 255, 255, 0.035) 100%);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border-radius: 1.5rem; /* 24px matching reference */
+  box-shadow: var(--glass-shadow), var(--glass-specular);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--glass-border-hover);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0 30px 70px -10px rgba(0, 0, 0, 0.75), inset 0 1px 1px 0 rgba(255, 255, 255, 0.38);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border-radius: 9999px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.glass-nav {
+  background: rgba(11, 17, 26, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Glowing Indicator Dots matching Reference Image */
+.glow-indicator-green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #22C55E;
+  box-shadow: 0 0 12px 2px rgba(34, 197, 94, 0.65);
+}
+
+.glow-indicator-red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #EF4444;
+  box-shadow: 0 0 12px 2px rgba(239, 68, 68, 0.65);
+}
+
+.glow-indicator-amber {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #F59E0B;
+  box-shadow: 0 0 12px 2px rgba(245, 158, 11, 0.65);
+}
+
+/* ─── Section Themes ─────────────────────────────────────── */
+.section-dark {
+  background-color: var(--navy);
+  color: var(--warm);
+}
+
+.section-deep {
+  background-color: var(--navy-deep);
+  color: var(--warm);
+}
+
+.section-light {
+  background-color: var(--warm);
+  color: var(--navy);
+}
+
+.section-white {
+  background-color: #ffffff;
+  color: var(--navy);
+}
+
+/* ─── Typography ─────────────────────────────────────────── */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.text-gold { color: var(--gold); }
+.text-gold-light { color: var(--gold-light); }
+.bg-navy { background-color: var(--navy); }
+.bg-navy-deep { background-color: var(--navy-deep); }
+
+/* ─── Buttons ────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--royal);
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: var(--royal-dark);
+  box-shadow: var(--blue-glow);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--gold);
+  color: var(--navy);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-gold:hover {
+  background-color: var(--gold-light);
+  box-shadow: var(--gold-glow);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: transparent;
+  color: var(--navy);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--navy);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--navy);
+  color: #ffffff;
+}
+
+/* ─── Form Inputs ────────────────────────────────────────── */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.5rem;
+  color: var(--warm);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: rgba(248, 250, 252, 0.4);
+}
+
+.input-field:focus {
+  border-color: var(--royal);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2);
+}
+
+.input-field.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.input-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  margin-bottom: 0.375rem;
+}
+
+.input-error {
+  font-size: 0.8125rem;
+  color: #f87171;
+  margin-top: 0.25rem;
+}
+
+/* ─── Card Hover ─────────────────────────────────────────── */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+/* ─── Image Zoom ─────────────────────────────────────────── */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.4s ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* ─── Gradient Dividers ──────────────────────────────────── */
+.gradient-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(214, 181, 116, 0.4),
+    transparent
+  );
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 181, 116, 0.4);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 181, 116, 0.7);
+}
+
+/* ─── Focus Indicators ───────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Reduced Motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Container ──────────────────────────────────────────── */
+.container-xl {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-xl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-xl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ─── Section Padding ────────────────────────────────────── */
+.section-py {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-py {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-py {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+}
+
+/* ─── Gold underline decoration ─────────────────────────── */
+.gold-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  border-radius: 1px;
+}
+
+/* ─── Background Decorative ──────────────────────────────── */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(214,181,116,0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
