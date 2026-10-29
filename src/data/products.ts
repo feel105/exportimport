@@ -120,6 +120,17 @@ export const products: Product[] = [
 
   // Spice Powders
   {
+    id: 'moringa-leaf-powder',
+    name: 'Moringa Leaf Powder',
+    slug: 'moringa-leaf-powder',
+    category: 'spice-powders',
+    categoryLabel: 'Spice Powders',
+    shortDescription: 'Organic Indian moringa leaf powder, rich in antioxidants and vital nutrients, processed under sterile dehydration standards.',
+    image: '/product/moringa powder.png',
+    available: true,
+    tags: ['moringa', 'powder', 'superfood', 'organic', 'export-ready'],
+  },
+  {
     id: 'turmeric-powder',
     name: 'Turmeric Powder',
     slug: 'turmeric-powder',

@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 
 export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-  size?: 'default' | 'narrow' | 'wide'
+  size?: 'default' | 'narrow' | 'wide' | 'full'
   children: React.ReactNode
 }
 
@@ -12,15 +12,16 @@ export function Container({
   ...props
 }: ContainerProps) {
   const maxSizes = {
-    narrow: 'max-w-4xl',
-    default: 'max-w-7xl',
-    wide: 'max-w-[1400px]',
+    narrow: 'max-w-5xl',
+    default: 'max-w-[1780px]',
+    wide: 'max-w-[1880px]',
+    full: 'max-w-full',
   }
 
   return (
     <div
       className={cn(
-        'w-full mx-auto px-4 sm:px-6 lg:px-8',
+        'w-full mx-auto px-6 sm:px-10 lg:px-16 xl:px-20',
         maxSizes[size],
         className
       )}

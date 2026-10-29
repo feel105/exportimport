@@ -35,16 +35,16 @@
   --coral-accent: #F87171;
 
   /* Frosted Liquid Glass System from Reference */
-  --glass-bg: rgba(255, 255, 255, 0.065);
-  --glass-bg-hover: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-bg: rgba(255, 255, 255, 0.075);
+  --glass-bg-hover: rgba(255, 255, 255, 0.11);
+  --glass-border: rgba(255, 255, 255, 0.13);
   --glass-border-hover: rgba(255, 255, 255, 0.28);
-  --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.26);
-  --glass-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.65);
+  --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.28);
+  --glass-shadow: 0 28px 70px -12px rgba(0, 0, 0, 0.72);
   --glass-pill-bg: rgba(255, 255, 255, 0.08);
 
-  --ambient-amber: rgba(224, 142, 69, 0.18);
-  --ambient-blue: rgba(56, 189, 248, 0.12);
+  --ambient-amber: rgba(224, 142, 69, 0.22);
+  --ambient-blue: rgba(56, 189, 248, 0.14);
 }
 
 /* ─── Base Reset & Atmospheric Background ────────────────────────────── */
@@ -62,14 +62,15 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #0B111A;
+  background-color: #0A0F18;
   color: #F8FAFC;
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
   background-image: 
-    radial-gradient(circle at 12% 18%, rgba(224, 142, 69, 0.18) 0%, transparent 45%),
-    radial-gradient(circle at 88% 12%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 50% 60%, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 15% 15%, rgba(224, 142, 69, 0.22) 0%, transparent 48%),
+    radial-gradient(circle at 88% 14%, rgba(56, 189, 248, 0.14) 0%, transparent 44%),
+    radial-gradient(circle at 50% 65%, rgba(37, 99, 235, 0.09) 0%, transparent 52%),
+    radial-gradient(circle at 25% 85%, rgba(224, 142, 69, 0.12) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
@@ -77,34 +78,34 @@ body {
 .glass-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.085) 0%, rgba(255, 255, 255, 0.035) 100%);
   border: 1px solid var(--glass-border);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
-  border-radius: 1.5rem; /* 24px matching reference */
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
+  border-radius: 1.75rem; /* 28px matching reference */
   box-shadow: var(--glass-shadow), var(--glass-specular);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
   border-color: var(--glass-border-hover);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.05) 100%);
-  box-shadow: 0 30px 70px -10px rgba(0, 0, 0, 0.75), inset 0 1px 1px 0 rgba(255, 255, 255, 0.38);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.055) 100%);
+  box-shadow: 0 36px 85px -10px rgba(0, 0, 0, 0.8), inset 0 1px 1px 0 rgba(255, 255, 255, 0.42);
 }
 
 .glass-pill {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(32px);
-  -webkit-backdrop-filter: blur(32px);
+  background: rgba(255, 255, 255, 0.085);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
   border-radius: 9999px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .glass-nav {
-  background: rgba(11, 17, 26, 0.75);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+  background: rgba(10, 15, 24, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), inset 0 -1px 0 rgba(255, 255, 255, 0.06);
 }
 
 /* Glowing Indicator Dots matching Reference Image */
@@ -379,47 +380,69 @@ body {
   }
 }
 
-/* ─── Container ──────────────────────────────────────────── */
+/* ─── Expansive Container (Full-Width UI Architecture) ────────── */
 .container-xl {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1780px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 @media (min-width: 640px) {
   .container-xl {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .container-xl {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
-/* ─── Section Padding ────────────────────────────────────── */
+@media (min-width: 1440px) {
+  .container-xl {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container-xl {
+    max-width: 1840px;
+    padding-left: 6.5rem;
+    padding-right: 6.5rem;
+  }
+}
+
+/* ─── Luxurious Section Spacing ────────────────────────────── */
 .section-py {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
 }
 
 @media (min-width: 768px) {
   .section-py {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-py {
-    padding-top: 6.5rem;
-    padding-bottom: 6.5rem;
+    padding-top: 9.5rem;
+    padding-bottom: 9.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-py {
+    padding-top: 11.5rem;
+    padding-bottom: 11.5rem;
   }
 }
 

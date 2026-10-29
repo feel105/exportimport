@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/liquid_ui_home.png',
         width: 1200,
         height: 630,
         alt: 'FEELEXIM — Indian Spices & Agricultural Products Export',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${siteConfig.name} — Indian Spices & Agricultural Products Export`,
     description: siteConfig.description,
-    images: ['/images/og-image.jpg'],
+    images: ['/liquid_ui_home.png'],
   },
   robots: {
     index: true,

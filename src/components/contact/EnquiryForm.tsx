@@ -77,107 +77,107 @@ export function EnquiryForm({ initialProduct = '' }: EnquiryFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="glass-card p-6 sm:p-10 space-y-6">
-      <div className="flex items-center justify-between pb-4 border-b border-white/10">
+    <form onSubmit={handleSubmit(onSubmit)} className="glass-card !rounded-3xl p-8 sm:p-12 lg:p-14 space-y-8 shadow-2xl">
+      <div className="flex items-center justify-between pb-6 border-b border-white/10">
         <div>
-          <h3 className="text-xl font-bold text-white">Request a Formal Quotation</h3>
-          <p className="text-xs text-slate mt-0.5">Direct commercial inquiry to FEELEXIM trade desk</p>
+          <h3 className="text-2xl font-bold text-white">Request a Formal Quotation</h3>
+          <p className="text-xs sm:text-sm text-slate mt-1">Direct commercial inquiry to FEELEXIM trade desk</p>
         </div>
         <span className="glow-indicator-green" />
       </div>
 
       {status === 'error' && (
-        <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-3 text-red-200 text-xs">
-          <AlertCircle size={16} className="text-red-400 mt-0.5 flex-shrink-0" />
+        <div className="p-5 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-start gap-3 text-red-200 text-xs sm:text-sm">
+          <AlertCircle size={18} className="text-red-400 mt-0.5 flex-shrink-0" />
           <p>{errorMessage}</p>
         </div>
       )}
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
         {/* Full Name */}
         <div>
-          <label className="block text-xs font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
             Full Name <span className="text-red-400">*</span>
           </label>
           <input
             {...register('fullName')}
             placeholder="John Smith"
-            className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+            className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-sm sm:text-base text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
           />
           {errors.fullName && (
-            <p className="text-[11px] text-red-400 mt-1">{errors.fullName.message}</p>
+            <p className="text-xs text-red-400 mt-1.5">{errors.fullName.message}</p>
           )}
         </div>
 
         {/* Company Name */}
         <div>
-          <label className="block text-xs font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
             Company Name <span className="text-red-400">*</span>
           </label>
           <input
             {...register('companyName')}
             placeholder="Global Foods Trading Ltd."
-            className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+            className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-sm sm:text-base text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
           />
           {errors.companyName && (
-            <p className="text-[11px] text-red-400 mt-1">{errors.companyName.message}</p>
+            <p className="text-xs text-red-400 mt-1.5">{errors.companyName.message}</p>
           )}
         </div>
 
         {/* Business Email */}
         <div>
-          <label className="block text-xs font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
             Business Email <span className="text-red-400">*</span>
           </label>
           <input
             type="email"
             {...register('email')}
             placeholder="buyer@company.com"
-            className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+            className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-sm sm:text-base text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
           />
           {errors.email && (
-            <p className="text-[11px] text-red-400 mt-1">{errors.email.message}</p>
+            <p className="text-xs text-red-400 mt-1.5">{errors.email.message}</p>
           )}
         </div>
 
         {/* Phone / WhatsApp */}
         <div>
-          <label className="block text-xs font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
             Phone / WhatsApp <span className="text-red-400">*</span>
           </label>
           <input
             {...register('phone')}
             placeholder="+1 555 019 2834"
-            className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+            className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-sm sm:text-base text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
           />
           {errors.phone && (
-            <p className="text-[11px] text-red-400 mt-1">{errors.phone.message}</p>
+            <p className="text-xs text-red-400 mt-1.5">{errors.phone.message}</p>
           )}
         </div>
 
         {/* Country */}
         <div>
-          <label className="block text-xs font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
             Destination Country <span className="text-red-400">*</span>
           </label>
           <input
             {...register('country')}
             placeholder="e.g. United Kingdom, UAE, USA"
-            className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+            className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-sm sm:text-base text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
           />
           {errors.country && (
-            <p className="text-[11px] text-red-400 mt-1">{errors.country.message}</p>
+            <p className="text-xs text-red-400 mt-1.5">{errors.country.message}</p>
           )}
         </div>
 
         {/* Product of Interest */}
         <div>
-          <label className="block text-xs font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
             Product of Interest <span className="text-red-400">*</span>
           </label>
           <select
             {...register('product')}
-            className="w-full px-3.5 py-2.5 rounded-xl bg-[#121A26] border border-white/15 text-sm text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+            className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-[#121A26] border border-white/15 text-sm sm:text-base text-white focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
           >
             <option value="">Select a product...</option>
             {products.map((p) => (
@@ -188,73 +188,73 @@ export function EnquiryForm({ initialProduct = '' }: EnquiryFormProps) {
             <option value="Custom Sourcing Request">Other / Custom Sourcing</option>
           </select>
           {errors.product && (
-            <p className="text-[11px] text-red-400 mt-1">{errors.product.message}</p>
+            <p className="text-xs text-red-400 mt-1.5">{errors.product.message}</p>
           )}
         </div>
 
         {/* Estimated Quantity */}
         <div>
-          <label className="block text-xs font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
             Estimated Quantity
           </label>
           <input
             {...register('quantity')}
             placeholder="e.g. 1 FCL (20ft) / 10 Metric Tons"
-            className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+            className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-sm sm:text-base text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
           />
         </div>
 
         {/* Destination Port */}
         <div>
-          <label className="block text-xs font-medium text-slate-300 mb-1.5">
+          <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
             Destination Port
           </label>
           <input
             {...register('destinationPort')}
             placeholder="e.g. Port of Felixstowe / Jebel Ali"
-            className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+            className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-sm sm:text-base text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
           />
         </div>
       </div>
 
       {/* Preferred Packaging */}
       <div>
-        <label className="block text-xs font-medium text-slate-300 mb-1.5">
+        <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
           Preferred Packaging
         </label>
         <input
           {...register('packaging')}
           placeholder="e.g. 25kg PP bags, 50kg Jute bags, Vacuum pouches, or Private Label"
-          className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+          className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-sm sm:text-base text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
         />
       </div>
 
       {/* Additional Requirements */}
       <div>
-        <label className="block text-xs font-medium text-slate-300 mb-1.5">
+        <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">
           Additional Specifications / Questions
         </label>
         <textarea
           rows={3}
           {...register('requirements')}
           placeholder="Specify purity parameters, maximum moisture %, required certifications, target shipment timeline, etc."
-          className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+          className="w-full px-4.5 py-3.5 sm:py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-sm sm:text-base text-white placeholder:text-slate-500 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/25 transition-all shadow-inner"
         />
       </div>
 
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full py-3.5 rounded-xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-sm shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all duration-200 disabled:opacity-50 flex items-center justify-center gap-2"
+        className="w-full py-4.5 rounded-2xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-base shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all duration-200 disabled:opacity-50 flex items-center justify-center gap-2.5"
       >
         {status === 'submitting' ? (
           <>
-            <Loader2 className="w-4 h-4 animate-spin" />
+            <Loader2 className="w-5 h-5 animate-spin" />
             Sending Enquiry...
           </>
         ) : (
           <>
-            <Send size={15} />
+            <Send size={16} />
             Submit Quotation Request
           </>
         )}

@@ -10,26 +10,26 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="pt-28 pb-20 lg:pt-36 lg:pb-28">
-      <div className="container-xl max-w-4xl space-y-10">
+    <div className="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40">
+      <div className="container-xl max-w-5xl space-y-12">
         <div>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-white transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition-colors mb-6"
           >
-            <ArrowLeft size={14} /> Back to Home
+            <ArrowLeft size={16} /> Back to Home
           </Link>
-          <div className="flex items-center gap-2 mb-2">
-            <Shield size={16} className="text-gold" />
-            <span className="text-xs font-semibold text-gold uppercase tracking-wider">Legal</span>
+          <div className="flex items-center gap-2 mb-3">
+            <Shield size={18} className="text-gold" />
+            <span className="text-xs font-semibold text-gold uppercase tracking-wider">Legal Document</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
             Privacy Policy
           </h1>
-          <p className="text-slate text-xs mt-1">Last Updated: October 2026</p>
+          <p className="text-slate text-sm mt-2">Last Updated: October 2026 • FEELEXIM Compliance Team</p>
         </div>
 
-        <div className="glass-card p-8 sm:p-12 space-y-6 text-sm text-slate leading-relaxed">
+        <div className="glass-card !rounded-3xl p-10 sm:p-14 lg:p-16 space-y-8 text-sm sm:text-base text-slate leading-relaxed shadow-2xl">
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-white">1. Information We Collect</h2>
             <p>
