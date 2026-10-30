@@ -33,8 +33,8 @@ export default function ProductsPage({
   searchParams: Promise<{ category?: string }>
 }) {
   return (
-    <div className="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40">
-      <div className="container-xl">
+    <div className="pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 w-full">
+      <div className="container-xl w-full">
         {/* Page Header */}
         <div className="max-w-4xl mx-auto text-center mb-14 lg:mb-20 space-y-6">
           <div className="inline-flex items-center gap-2.5 px-4.5 py-2 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-gold tracking-wide">

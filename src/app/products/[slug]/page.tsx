@@ -44,8 +44,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   const emoji = categoryEmojis[product.category] || '📦'
 
   return (
-    <div className="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40">
-      <div className="container-xl space-y-16 lg:space-y-24">
+    <div className="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40 w-full">
+      <div className="container-xl space-y-16 lg:space-y-24 w-full">
         {/* Back navigation */}
         <div>
           <Link
@@ -57,10 +57,10 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         </div>
 
         {/* Product Showcase in Frosted Glass */}
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-start w-full">
           
           {/* Left: Product Visual Card */}
-          <div className="lg:col-span-5 glass-card !rounded-3xl p-10 sm:p-12 text-center space-y-8 shadow-2xl">
+          <div className="lg:col-span-5 glass-card !rounded-3xl p-10 sm:p-12 text-center space-y-8 shadow-2xl w-full">
             <div className="aspect-square w-full rounded-3xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 flex items-center justify-center relative overflow-hidden shadow-inner">
               {product.image && product.image.startsWith('/product/') ? (
                 <Image
@@ -97,7 +97,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           </div>
 
           {/* Right: Specifications & Inquire */}
-          <div className="lg:col-span-7 glass-card !rounded-3xl p-10 sm:p-14 lg:p-16 space-y-8 shadow-2xl">
+          <div className="lg:col-span-7 glass-card !rounded-3xl p-10 sm:p-14 lg:p-16 space-y-8 shadow-2xl w-full">
             <div>
               <span className="text-xs sm:text-sm font-semibold text-gold uppercase tracking-wider">
                 {product.categoryLabel}
@@ -171,9 +171,9 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
         {/* Related Products */}
         {relatedProducts.length > 0 && (
-          <div className="pt-12 space-y-8">
+          <div className="pt-12 space-y-8 w-full">
             <h2 className="text-2xl sm:text-3xl font-black text-white">Related Products in {product.categoryLabel}</h2>
-            <div className="grid sm:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 w-full">
               {relatedProducts.map((rel) => (
                 <Link
                   key={rel.id}

@@ -34,8 +34,8 @@ const pillars = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40">
-      <div className="container-xl space-y-20 lg:space-y-32">
+    <div className="pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 w-full">
+      <div className="container-xl space-y-20 lg:space-y-32 w-full">
 
         {/* Hero Banner */}
         <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -55,8 +55,8 @@ export default function AboutPage() {
         </div>
 
         {/* Story Section in Frosted Glass */}
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-stretch">
-          <div className="lg:col-span-7 glass-card !rounded-3xl p-10 sm:p-14 lg:p-16 space-y-8 flex flex-col justify-between shadow-2xl">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-stretch w-full">
+          <div className="lg:col-span-7 glass-card !rounded-3xl p-10 sm:p-14 lg:p-16 space-y-8 flex flex-col justify-between shadow-2xl w-full">
             <div className="space-y-6">
               <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
                 Our Purpose & Methodology
@@ -85,7 +85,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 glass-card !rounded-3xl p-10 sm:p-14 space-y-8 flex flex-col justify-between shadow-2xl">
+          <div className="lg:col-span-5 glass-card !rounded-3xl p-10 sm:p-14 space-y-8 flex flex-col justify-between shadow-2xl w-full">
             <div>
               <div className="flex items-center justify-between pb-6 border-b border-white/10">
                 <div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">Our Core Commitments</h2>
             <p className="text-slate text-base sm:text-lg">Why international food companies and distributors rely on FEELEXIM.</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 lg:gap-8 w-full">
             {pillars.map(({ icon: Icon, title, desc }) => (
               <div key={title} className="glass-card !rounded-3xl p-9 sm:p-10 flex flex-col justify-between hover:-translate-y-2 transition-all duration-300 shadow-xl">
                 <div>

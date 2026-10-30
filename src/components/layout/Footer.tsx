@@ -31,16 +31,16 @@ function FacebookIcon() {
 
 export default function Footer() {
   return (
-    <footer className="relative mt-28 lg:mt-36 border-t border-white/10" style={{ background: 'rgba(10, 15, 24, 0.98)' }} role="contentinfo">
-      <div className="container-xl py-24 lg:py-32 xl:py-36">
+    <footer className="relative mt-10 sm:mt-14 lg:mt-16 border-t border-white/10 w-full" style={{ background: 'rgba(10, 15, 24, 0.98)' }} role="contentinfo">
+      <div className="container-xl w-full pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 lg:pb-12">
         {/* Grid spanning full widescreen */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 w-full">
 
           {/* Column 1 — Brand (4 Cols) */}
-          <div className="sm:col-span-2 lg:col-span-4 space-y-6">
-            <Link href="/" className="inline-flex items-center gap-3" aria-label="FEELEXIM">
+          <div className="sm:col-span-2 lg:col-span-4 space-y-5">
+            <Link href="/" className="inline-flex items-center gap-2.5" aria-label="FEELEXIM">
               <div
-                className="w-12 h-12 rounded-2xl flex items-center justify-center font-extrabold text-sm text-navy shadow-md"
+                className="w-10 h-10 rounded-xl flex items-center justify-center font-extrabold text-xs text-navy shadow-md"
                 style={{
                   background: 'linear-gradient(135deg, var(--gold), var(--gold-dark))',
                   boxShadow: '0 0 18px rgba(224, 160, 69, 0.35)',
@@ -48,24 +48,24 @@ export default function Footer() {
               >
                 FE
               </div>
-              <span className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+              <span className="text-xl sm:text-2xl font-black text-white tracking-tight">
                 FEEL<span className="text-gold">EXIM</span>
               </span>
             </Link>
 
-            <p className="text-slate text-sm sm:text-base leading-relaxed max-w-sm">
+            <p className="text-slate text-xs sm:text-sm leading-relaxed max-w-sm">
               Connecting international importers, food brands, and distributors with authentic Indian agricultural commodities through quality-focused sourcing and port logistics.
             </p>
 
             {/* Social icons */}
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex items-center gap-2.5 pt-1">
               {siteConfig.social.linkedin && (
                 <a
                   href={siteConfig.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/[0.06] border border-white/10 text-slate-300 hover:text-white hover:border-gold/40 transition-all hover:-translate-y-0.5"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/[0.06] border border-white/10 text-slate-300 hover:text-white hover:border-gold/40 transition-all hover:-translate-y-0.5"
                 >
                   <LinkedInIcon />
                 </a>
@@ -76,7 +76,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/[0.06] border border-white/10 text-slate-300 hover:text-white hover:border-gold/40 transition-all hover:-translate-y-0.5"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/[0.06] border border-white/10 text-slate-300 hover:text-white hover:border-gold/40 transition-all hover:-translate-y-0.5"
                 >
                   <InstagramIcon />
                 </a>
@@ -87,7 +87,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="w-11 h-11 rounded-2xl flex items-center justify-center bg-white/[0.06] border border-white/10 text-slate-300 hover:text-white hover:border-gold/40 transition-all hover:-translate-y-0.5"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/[0.06] border border-white/10 text-slate-300 hover:text-white hover:border-gold/40 transition-all hover:-translate-y-0.5"
                 >
                   <FacebookIcon />
                 </a>
@@ -96,9 +96,9 @@ export default function Footer() {
           </div>
 
           {/* Column 2 — Quick Links (2 Cols) */}
-          <div className="lg:col-span-2 space-y-5">
+          <div className="lg:col-span-2 space-y-4">
             <h3 className="text-xs font-bold text-gold uppercase tracking-wider">Quick Links</h3>
-            <ul className="space-y-3.5 text-sm sm:text-base">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               {siteConfig.footerQuickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -113,9 +113,9 @@ export default function Footer() {
           </div>
 
           {/* Column 3 — Product Categories (3 Cols) */}
-          <div className="lg:col-span-3 space-y-5">
+          <div className="lg:col-span-3 space-y-4">
             <h3 className="text-xs font-bold text-gold uppercase tracking-wider">Product Categories</h3>
-            <ul className="space-y-3.5 text-sm sm:text-base">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               {siteConfig.footerCategories.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -130,13 +130,13 @@ export default function Footer() {
           </div>
 
           {/* Column 4 — Contact Desk (3 Cols) */}
-          <div className="lg:col-span-3 space-y-5">
+          <div className="lg:col-span-3 space-y-4">
             <h3 className="text-xs font-bold text-gold uppercase tracking-wider">Export Trade Desk</h3>
-            <ul className="space-y-4 text-sm sm:text-base">
+            <ul className="space-y-3 text-xs sm:text-sm">
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-start gap-3 text-slate-300 hover:text-gold transition-colors"
+                  className="flex items-start gap-2.5 text-slate-300 hover:text-gold transition-colors"
                 >
                   <Mail size={18} className="text-gold mt-1 flex-shrink-0" />
                   <span className="truncate">{siteConfig.email}</span>
@@ -160,8 +160,8 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom bar with Generous Top Padding */}
-        <div className="mt-20 pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
+        {/* Bottom bar with Refined Top Padding */}
+        <div className="mt-12 sm:mt-14 pt-6 sm:pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400 w-full">
           <p>
             © <Suspense fallback={<span>2026</span>}><CurrentYear /></Suspense> {siteConfig.name}. All rights reserved.
           </p>

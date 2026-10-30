@@ -20,7 +20,7 @@ import {
 export default function Hero() {
   return (
     <section
-      className="relative min-h-[95vh] flex items-center overflow-hidden pt-40 pb-24 sm:pt-48 sm:pb-32 lg:pt-52 lg:pb-36"
+      className="relative overflow-hidden pt-24 sm:pt-28 lg:pt-30 pb-6 sm:pb-8 lg:pb-10 w-full"
       aria-label="Hero section"
     >
       {/* Expansive Ambient Background Glows */}
@@ -39,241 +39,241 @@ export default function Hero() {
         }}
       />
 
-      <div className="container-xl relative z-10 space-y-14 lg:space-y-18">
+      <div className="container-xl relative z-10 space-y-5 sm:space-y-6 lg:space-y-7 w-full">
 
         {/* Top Floating Pill Dock (Inspired by the top floating pill in reference image) */}
         <div className="flex justify-center">
-          <div className="glass-pill px-7 py-3 flex items-center gap-6 sm:gap-9 text-slate-300">
-            <span className="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-white">
+          <div className="glass-pill px-5 py-2 flex items-center gap-4 sm:gap-6 text-slate-300">
+            <span className="flex items-center gap-2 text-xs sm:text-sm font-bold text-white">
               <span className="glow-indicator-green" />
               Verified Indian Export House
             </span>
-            <div className="w-[1px] h-4.5 bg-white/20" />
-            <div className="flex items-center gap-4 sm:gap-6 text-white/70">
+            <div className="w-[1px] h-3.5 bg-white/20" />
+            <div className="flex items-center gap-3 sm:gap-4 text-white/70">
               <button aria-label="Search" className="hover:text-gold transition-colors">
-                <Search size={16} />
+                <Search size={14} />
               </button>
               <button aria-label="Catalog Grid" className="hover:text-gold transition-colors">
-                <Grid size={16} />
+                <Grid size={14} />
               </button>
               <button aria-label="Shipment Schedule" className="hover:text-gold transition-colors">
-                <Calendar size={16} />
+                <Calendar size={14} />
               </button>
               <button aria-label="Commodity Parameters" className="hover:text-gold transition-colors">
-                <Sliders size={16} />
+                <Sliders size={14} />
               </button>
               <button aria-label="Trade Notifications" className="hover:text-gold transition-colors">
-                <Bell size={16} />
+                <Bell size={14} />
               </button>
               <button aria-label="Timezone & Dispatch" className="hover:text-gold transition-colors">
-                <Clock size={16} />
+                <Clock size={14} />
               </button>
             </div>
           </div>
         </div>
 
-        {/* Main 2-Column Expansive Grid with Generous Gaps */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20 items-center">
+        {/* Main 2-Column Grid with Calibrated Spacing */}
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-center w-full">
           
-          {/* Left Column: Grand Typography & Sourcing Trust */}
-          <div className="lg:col-span-5 space-y-8 lg:space-y-10">
-            <div className="inline-flex items-center gap-2.5 px-4.5 py-2 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-gold tracking-wide">
-              <Sparkles size={14} className="text-gold" />
+          {/* Left Column: Typography & Sourcing Trust */}
+          <div className="lg:col-span-5 space-y-4 sm:space-y-5 w-full">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-gold tracking-wide">
+              <Sparkles size={13} className="text-gold" />
               <span>PREMIUM INDIAN EXPORT HOUSE</span>
             </div>
 
-            <div className="space-y-5">
-              <h1 className="text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-black tracking-tight text-white leading-[1.08]">
+            <div className="space-y-2.5">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight text-white leading-[1.1]">
                 Connecting <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-gold to-amber-200">
                   Indian Quality
                 </span> <br />
                 to Global Markets.
               </h1>
-              <p className="text-slate text-base sm:text-lg lg:text-xl leading-relaxed max-w-xl pt-1">
+              <p className="text-slate text-xs sm:text-sm lg:text-base leading-relaxed max-w-xl">
                 Your direct sourcing partner for whole spices, spice powders, seeds, and agricultural commodities. We bridge international buyers with dependable Indian producers through verified quality standards.
               </p>
             </div>
 
-            {/* Global Trade Network Badges (Matching the "Members" row in reference image) */}
-            <div className="p-6 rounded-3xl bg-white/[0.04] border border-white/[0.08] space-y-3">
-              <p className="text-xs font-semibold text-slate uppercase tracking-wider">
+            {/* Destination Markets & Port Reach Badges */}
+            <div className="p-4 sm:p-4.5 rounded-xl bg-white/[0.04] border border-white/[0.08] space-y-2">
+              <p className="text-[11px] font-semibold text-slate uppercase tracking-wider">
                 Destination Markets & Port Reach
               </p>
-              <div className="flex items-center gap-3 flex-wrap">
-                <div className="flex -space-x-2 overflow-hidden py-1">
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-800 border-2 border-navy text-sm shadow" title="United Kingdom">🇬🇧</span>
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-800 border-2 border-navy text-sm shadow" title="United Arab Emirates">🇦🇪</span>
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-800 border-2 border-navy text-sm shadow" title="United States">🇺🇸</span>
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-800 border-2 border-navy text-sm shadow" title="Germany">🇩🇪</span>
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-800 border-2 border-navy text-sm shadow" title="Japan">🇯🇵</span>
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-800 border-2 border-navy text-sm shadow" title="Singapore">🇸🇬</span>
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <div className="flex -space-x-1.5 overflow-hidden py-0.5">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="United Kingdom">🇬🇧</span>
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="United Arab Emirates">🇦🇪</span>
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="United States">🇺🇸</span>
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="Germany">🇩🇪</span>
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="Japan">🇯🇵</span>
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="Singapore">🇸🇬</span>
                 </div>
-                <span className="px-3.5 py-1.5 rounded-full bg-white/[0.08] text-xs font-bold text-white border border-white/10">
+                <span className="px-2.5 py-0.5 rounded-full bg-white/[0.08] text-[11px] font-bold text-white border border-white/10">
                   +35 Active Trade Hubs
                 </span>
               </div>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-0.5">
               <Link
                 href="/products"
-                className="px-9 py-4 rounded-2xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-sm sm:text-base shadow-[0_0_28px_rgba(224,160,69,0.4)] hover:shadow-[0_0_36px_rgba(224,160,69,0.55)] transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2.5"
+                className="px-6 py-3 rounded-xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
               >
                 <span>Explore Products</span>
-                <ArrowRight size={17} />
+                <ArrowRight size={15} />
               </Link>
               <Link
                 href="/contact"
-                className="px-9 py-4 rounded-2xl glass-pill text-white font-semibold text-sm sm:text-base hover:bg-white/[0.14] transition-all duration-300 hover:-translate-y-0.5"
+                className="px-6 py-3 rounded-xl glass-pill text-white font-semibold text-xs sm:text-sm hover:bg-white/[0.14] transition-all duration-300 hover:-translate-y-0.5"
               >
                 Request a Quote
               </Link>
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-6 pt-2 text-xs sm:text-sm text-slate-300">
-              <div className="flex items-center gap-2">
-                <CheckCircle size={17} className="text-emerald-400 flex-shrink-0" />
-                <span>Quality-Focused Sourcing</span>
+            <div className="flex flex-wrap items-center gap-4 pt-0.5 text-xs text-slate-300">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle size={14} className="text-emerald-400 flex-shrink-0" />
+                <span>Quality Sourcing</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle size={17} className="text-cyan-accent flex-shrink-0" />
-                <span>Documentation Support</span>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle size={14} className="text-cyan-accent flex-shrink-0" />
+                <span>Docs Support</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle size={17} className="text-gold flex-shrink-0" />
-                <span>Custom Packaging</span>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle size={14} className="text-gold flex-shrink-0" />
+                <span>Custom Packing</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Expansive Liquid Glass Interactive Dashboard (7 Cols) */}
-          <div className="lg:col-span-7 space-y-7">
-            <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 lg:gap-7">
+          {/* Right Column: Liquid Glass Dashboard (7 Cols) */}
+          <div className="lg:col-span-7 space-y-4 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-12 gap-3.5 sm:gap-4 w-full">
 
               {/* Card 1: Featured Live Origin Sourcing (7 Cols) */}
-              <div className="sm:col-span-7 glass-card p-7 sm:p-8 relative overflow-hidden flex flex-col justify-between min-h-[300px]">
-                <div className="flex items-center justify-between mb-4 z-10">
+              <div className="sm:col-span-7 glass-card p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[250px]">
+                <div className="flex items-center justify-between mb-2.5 z-10">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-black/50 text-white border border-white/10 backdrop-blur-md">
-                      Origin Sourcing: Gujarat Belt
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-black/50 text-white border border-white/10 backdrop-blur-md">
+                      Origin: Gujarat Belt
                     </span>
                   </div>
-                  <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/40 text-xs font-bold text-red-300">
+                  <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-500/20 border border-red-500/40 text-[11px] font-bold text-red-300">
                     <span className="glow-indicator-red !w-2 !h-2" />
                     LIVE
                   </div>
                 </div>
 
                 {/* Sourcing Visual Window */}
-                <div className="relative rounded-2xl overflow-hidden my-auto aspect-[16/9] bg-gradient-to-br from-amber-950/40 via-navy-deep to-slate-900 border border-white/10 flex items-center justify-center p-6 text-center shadow-inner">
-                  <div className="space-y-2">
-                    <div className="flex justify-center gap-3 text-4xl select-none">
+                <div className="relative rounded-xl overflow-hidden my-auto aspect-[16/9] bg-gradient-to-br from-amber-950/40 via-navy-deep to-slate-900 border border-white/10 flex items-center justify-center p-3 text-center shadow-inner">
+                  <div className="space-y-1">
+                    <div className="flex justify-center gap-2 text-2xl select-none">
                       <span>🌶️</span>
                       <span>🌿</span>
                       <span>🫙</span>
                     </div>
-                    <p className="text-sm font-bold text-white">Export-Ready Cumin & Turmeric Harvest</p>
-                    <p className="text-xs text-slate">Batch #FE-2026 • Machine Cleaned 99.8%</p>
+                    <p className="text-xs sm:text-sm font-bold text-white">Export-Ready Cumin & Turmeric Harvest</p>
+                    <p className="text-[10px] text-slate">Batch #FE-2026 • Machine Cleaned 99.8%</p>
                   </div>
                 </div>
 
                 {/* Micro Action Dock */}
-                <div className="flex items-center justify-center gap-3.5 pt-4 border-t border-white/10 z-10">
-                  <div className="w-9 h-9 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-white/80 hover:text-white cursor-pointer transition-colors" title="Layer Specs">
-                    <Layers size={15} />
+                <div className="flex items-center justify-center gap-2.5 pt-2.5 border-t border-white/10 z-10">
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-white/80 hover:text-white cursor-pointer transition-colors" title="Layer Specs">
+                    <Layers size={13} />
                   </div>
-                  <div className="w-9 h-9 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-white/80 hover:text-white cursor-pointer transition-colors" title="Testing Grade">
-                    <Sparkles size={15} />
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-white/80 hover:text-white cursor-pointer transition-colors" title="Testing Grade">
+                    <Sparkles size={13} />
                   </div>
-                  <div className="w-9 h-9 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-white/80 hover:text-white cursor-pointer transition-colors" title="Phyto Compliance">
-                    <ShieldCheck size={15} />
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-white/80 hover:text-white cursor-pointer transition-colors" title="Phyto Compliance">
+                    <ShieldCheck size={13} />
                   </div>
                 </div>
               </div>
 
               {/* Card 2: Export Quality & Weather Metrics (5 Cols) */}
-              <div className="sm:col-span-5 glass-card p-7 sm:p-8 flex flex-col justify-between">
+              <div className="sm:col-span-5 glass-card p-4 sm:p-5 flex flex-col justify-between">
                 <div>
                   <div className="flex items-start justify-between">
                     <div>
                       <div className="flex items-baseline gap-1.5">
-                        <span className="text-4xl font-black text-white">99.8%</span>
-                        <span className="text-xs text-slate-300 font-semibold uppercase">Purity</span>
+                        <span className="text-2xl sm:text-3xl font-black text-white">99.8%</span>
+                        <span className="text-[11px] text-slate-300 font-semibold uppercase">Purity</span>
                       </div>
-                      <p className="text-xs text-slate-400 mt-1">Export Grade A Standard</p>
+                      <p className="text-[10px] text-slate-400 mt-0.5">Export Grade A Standard</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm font-extrabold text-gold">FEELEXIM</p>
+                      <p className="text-xs font-extrabold text-gold">FEELEXIM</p>
                       <p className="text-[10px] text-slate-400">Verified House</p>
                     </div>
                   </div>
 
                   {/* 2 Key Metrics */}
-                  <div className="grid grid-cols-2 gap-3 mt-5 pt-4 border-t border-white/10">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8.5 h-8.5 rounded-xl bg-white/[0.08] flex items-center justify-center text-cyan-accent">
-                        <Thermometer size={16} />
+                  <div className="grid grid-cols-2 gap-2 mt-3 pt-2.5 border-t border-white/10">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-7 h-7 rounded-lg bg-white/[0.08] flex items-center justify-center text-cyan-accent">
+                        <Thermometer size={13} />
                       </div>
                       <div>
-                        <p className="text-sm font-bold text-white">&lt; 8%</p>
-                        <p className="text-[11px] text-slate">Moisture</p>
+                        <p className="text-xs font-bold text-white">&lt; 8%</p>
+                        <p className="text-[10px] text-slate">Moisture</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8.5 h-8.5 rounded-xl bg-white/[0.08] flex items-center justify-center text-emerald-accent">
-                        <TrendingUp size={16} />
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-7 h-7 rounded-lg bg-white/[0.08] flex items-center justify-center text-emerald-accent">
+                        <TrendingUp size={13} />
                       </div>
                       <div>
-                        <p className="text-sm font-bold text-white">99.4%</p>
-                        <p className="text-[11px] text-slate">Clean Rate</p>
+                        <p className="text-xs font-bold text-white">99.4%</p>
+                        <p className="text-[10px] text-slate">Clean Rate</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* 4 Statutory Pills */}
-                <div className="mt-5 pt-4 border-t border-white/10 grid grid-cols-4 gap-2 text-center">
-                  <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/5">
-                    <p className="text-[10px] text-slate font-semibold">FSSAI</p>
+                <div className="mt-3 pt-2.5 border-t border-white/10 grid grid-cols-4 gap-1 text-center">
+                  <div className="p-1.5 rounded-lg bg-white/[0.04] border border-white/5">
+                    <p className="text-[9px] text-slate font-semibold">FSSAI</p>
                     <p className="text-xs font-bold text-emerald-400 mt-0.5">✓</p>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/5">
-                    <p className="text-[10px] text-slate font-semibold">APEDA</p>
+                  <div className="p-1.5 rounded-lg bg-white/[0.04] border border-white/5">
+                    <p className="text-[9px] text-slate font-semibold">APEDA</p>
                     <p className="text-xs font-bold text-emerald-400 mt-0.5">✓</p>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/5">
-                    <p className="text-[10px] text-slate font-semibold">SPICE</p>
+                  <div className="p-1.5 rounded-lg bg-white/[0.04] border border-white/5">
+                    <p className="text-[9px] text-slate font-semibold">SPICE</p>
                     <p className="text-xs font-bold text-emerald-400 mt-0.5">✓</p>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/5">
-                    <p className="text-[10px] text-slate font-semibold">IEC</p>
+                  <div className="p-1.5 rounded-lg bg-white/[0.04] border border-white/5">
+                    <p className="text-[9px] text-slate font-semibold">IEC</p>
                     <p className="text-xs font-bold text-emerald-400 mt-0.5">✓</p>
                   </div>
                 </div>
               </div>
 
               {/* Card 3: Quality Control Thermostat Arc Gauge (5 Cols) */}
-              <div className="sm:col-span-5 glass-card p-7 sm:p-8 flex flex-col justify-between">
+              <div className="sm:col-span-5 glass-card p-4 sm:p-5 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-2">
                     <span className="glow-indicator-green" />
                     <div>
-                      <p className="text-xs sm:text-sm font-bold text-white">Quality Assurance</p>
-                      <p className="text-[10px] text-slate">Climate Controlled Bags</p>
+                      <p className="text-xs font-bold text-white">Quality Assurance</p>
+                      <p className="text-[10px] text-slate">Climate Controlled</p>
                     </div>
                   </div>
-                  <div className="w-8.5 h-8.5 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-coral-accent">
+                  <div className="w-6 h-6 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-coral-accent text-xs">
                     ⚡
                   </div>
                 </div>
 
                 {/* Circular Gauge Graphic matching Reference image */}
-                <div className="my-5 flex flex-col items-center justify-center relative">
-                  <div className="relative w-36 h-24 flex items-end justify-center">
-                    <svg className="w-36 h-24 overflow-visible" viewBox="0 0 100 55">
+                <div className="my-2.5 flex flex-col items-center justify-center relative">
+                  <div className="relative w-28 h-18 flex items-end justify-center">
+                    <svg className="w-28 h-18 overflow-visible" viewBox="0 0 100 55">
                       <path
                         d="M 10 50 A 40 40 0 0 1 90 50"
                         fill="none"
@@ -294,16 +294,16 @@ export default function Hero() {
                           <stop offset="100%" stopColor="#818CF8" />
                         </linearGradient>
                       </defs>
-                      <circle cx="78" cy="22" r="5" fill="#FFFFFF" stroke="#38BDF8" strokeWidth="3" />
+                      <circle cx="78" cy="22" r="4.5" fill="#FFFFFF" stroke="#38BDF8" strokeWidth="2.5" />
                     </svg>
                     <div className="absolute -bottom-1 text-center">
-                      <span className="text-3xl font-black text-white tracking-tight">100%</span>
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Sorted</p>
+                      <span className="text-xl sm:text-2xl font-black text-white tracking-tight">100%</span>
+                      <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Sorted</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-1 pt-3 border-t border-white/10 text-center text-xs text-slate">
+                <div className="grid grid-cols-3 gap-1 pt-2 border-t border-white/10 text-center text-[10px] text-slate">
                   <span>Cleaned</span>
                   <span>Tested</span>
                   <span>Certified</span>
@@ -311,59 +311,59 @@ export default function Hero() {
               </div>
 
               {/* Card 4: Curcumin / Natural Color Spectrum (7 Cols) */}
-              <div className="sm:col-span-7 glass-card p-7 sm:p-8 flex flex-col justify-between">
+              <div className="sm:col-span-7 glass-card p-4 sm:p-5 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-2">
                     <span className="glow-indicator-green" />
                     <div>
-                      <p className="text-xs sm:text-sm font-bold text-white">Natural Pigment & Curcumin Index</p>
-                      <p className="text-[10px] text-slate">Volatile Oil & ASTA Color Value</p>
+                      <p className="text-xs font-bold text-white">Natural Pigment & Curcumin</p>
+                      <p className="text-[10px] text-slate">Volatile Oil & ASTA Values</p>
                     </div>
                   </div>
-                  <span className="text-xs px-2.5 py-0.5 rounded-full bg-gold/20 text-gold font-bold">
+                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-gold/20 text-gold font-bold">
                     Grade A+
                   </span>
                 </div>
 
-                <div className="my-4 space-y-2">
-                  <div className="flex justify-between text-xs text-slate">
+                <div className="my-2.5 space-y-1.5">
+                  <div className="flex justify-between text-[10px] text-slate">
                     <span>Natural Spectrum</span>
                     <span className="text-white font-semibold">Turmeric • Chilli • Coriander</span>
                   </div>
                   {/* Multi-color Spectrum Bar matching Reference Image */}
-                  <div className="relative h-3 w-full rounded-full bg-gradient-to-r from-red-500 via-amber-400 via-emerald-400 to-fuchsia-500 p-[1px] shadow-sm">
-                    <div className="absolute top-1/2 left-[48%] -translate-y-1/2 w-4.5 h-4.5 rounded-full bg-white border-2 border-slate-900 shadow-[0_0_10px_rgba(255,255,255,0.9)]" />
+                  <div className="relative h-2.5 w-full rounded-full bg-gradient-to-r from-red-500 via-amber-400 via-emerald-400 to-fuchsia-500 p-[1px] shadow-sm">
+                    <div className="absolute top-1/2 left-[48%] -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-white border-2 border-slate-900 shadow-[0_0_8px_rgba(255,255,255,0.9)]" />
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-slate pt-3 border-t border-white/10">
+                <div className="flex items-center justify-between text-[10px] text-slate pt-2 border-t border-white/10">
                   <span>Export Bulk Packaging: 25kg / 50kg</span>
                   <Link href="/products" className="text-gold hover:underline font-bold flex items-center gap-1">
-                    View Catalog <ArrowRight size={13} />
+                    View Catalog <ArrowRight size={11} />
                   </Link>
                 </div>
               </div>
 
             </div>
 
-            {/* Bottom Floating Room / Category Dock (Matching reference bottom dock) */}
-            <div className="flex justify-center pt-2">
-              <div className="glass-pill px-4 py-2 flex items-center gap-2 text-xs sm:text-sm">
-                <span className="px-4 py-1.5 rounded-full bg-[#1C2533] text-white font-bold flex items-center gap-2 shadow-sm border border-white/10">
+            {/* Bottom Floating Category Dock */}
+            <div className="flex justify-center pt-0.5">
+              <div className="glass-pill px-3 py-1 flex items-center gap-1.5 text-xs">
+                <span className="px-2.5 py-1 rounded-full bg-[#1C2533] text-white font-bold flex items-center gap-1.5 shadow-sm border border-white/10">
                   🌶️ Whole Spices
                 </span>
-                <Link href="/products?category=spice-powders" className="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white transition-colors">
+                <Link href="/products?category=spice-powders" className="px-2.5 py-1 rounded-full text-slate-300 hover:text-white transition-colors">
                   🫙 Powders
                 </Link>
-                <Link href="/products?category=seeds" className="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white transition-colors">
+                <Link href="/products?category=seeds" className="px-2.5 py-1 rounded-full text-slate-300 hover:text-white transition-colors">
                   🌱 Seeds
                 </Link>
-                <Link href="/products?category=nuts-other" className="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white transition-colors">
+                <Link href="/products?category=nuts-other" className="px-2.5 py-1 rounded-full text-slate-300 hover:text-white transition-colors">
                   🥜 Nuts
                 </Link>
                 <Link
                   href="/products"
-                  className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors ml-1 font-bold"
+                  className="w-5 h-5 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors ml-0.5 font-bold text-xs"
                   aria-label="View all categories"
                 >
                   +

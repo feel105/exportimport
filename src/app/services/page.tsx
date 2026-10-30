@@ -49,8 +49,8 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40">
-      <div className="container-xl space-y-20 lg:space-y-32">
+    <div className="pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 w-full">
+      <div className="container-xl space-y-20 lg:space-y-32 w-full">
 
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -67,7 +67,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Services 6-Grid in Frosted Liquid Glass */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-full">
           {services.map(({ icon: Icon, title, desc, highlights }) => (
             <div
               key={title}

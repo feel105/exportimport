@@ -71,9 +71,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="w-full min-h-screen overflow-x-hidden">
         <Navbar />
-        <main id="main-content">{children}</main>
+        <main id="main-content" className="w-full min-h-screen overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>

@@ -57,8 +57,8 @@ const inspectionProtocols = [
 
 export default function QualityCompliancePage() {
   return (
-    <div className="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40">
-      <div className="container-xl space-y-20 lg:space-y-32">
+    <div className="pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 w-full">
+      <div className="container-xl space-y-20 lg:space-y-32 w-full">
 
         {/* Page Header */}
         <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -86,7 +86,7 @@ export default function QualityCompliancePage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-7 lg:gap-8 w-full">
             {certificationsList.map(({ name, fullName, purpose }) => (
               <div
                 key={name}
@@ -115,7 +115,7 @@ export default function QualityCompliancePage() {
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">Quality Control Protocols</h2>
             <p className="text-slate text-base sm:text-lg">Every shipment follows a structured quality verification workflow.</p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 lg:gap-8 w-full">
             {inspectionProtocols.map(({ title, desc }) => (
               <div key={title} className="glass-card !rounded-3xl p-8 sm:p-10 space-y-4 shadow-xl">
                 <div className="flex items-center gap-3.5">

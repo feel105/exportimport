@@ -77,7 +77,7 @@ export function EnquiryForm({ initialProduct = '' }: EnquiryFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="glass-card !rounded-3xl p-8 sm:p-12 lg:p-14 space-y-8 shadow-2xl">
+    <form onSubmit={handleSubmit(onSubmit)} className="glass-card !rounded-3xl p-8 sm:p-12 lg:p-14 space-y-8 shadow-2xl w-full">
       <div className="flex items-center justify-between pb-6 border-b border-white/10">
         <div>
           <h3 className="text-2xl font-bold text-white">Request a Formal Quotation</h3>
@@ -87,13 +87,13 @@ export function EnquiryForm({ initialProduct = '' }: EnquiryFormProps) {
       </div>
 
       {status === 'error' && (
-        <div className="p-5 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-start gap-3 text-red-200 text-xs sm:text-sm">
+        <div className="p-5 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-start gap-3 text-red-200 text-xs sm:text-sm w-full">
           <AlertCircle size={18} className="text-red-400 mt-0.5 flex-shrink-0" />
           <p>{errorMessage}</p>
         </div>
       )}
 
-      <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
+      <div className="grid sm:grid-cols-2 gap-5 sm:gap-6 w-full">
         {/* Full Name */}
         <div>
           <label className="block text-xs sm:text-sm font-semibold text-slate-300 mb-2">

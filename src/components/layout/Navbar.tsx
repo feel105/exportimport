@@ -34,7 +34,7 @@ export default function Navbar() {
           }`}
           style={{ background: 'rgba(11, 17, 26, 0.95)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
         >
-          <div className="container-xl flex items-center justify-between py-2 text-xs">
+          <div className="container-xl w-full flex items-center justify-between py-2 text-xs">
             <div className="flex items-center gap-6">
               <a
                 href={`mailto:${siteConfig.email}`}
@@ -93,7 +93,7 @@ export default function Navbar() {
             isScrolled ? 'glass-nav py-3' : 'bg-transparent py-4 lg:py-5'
           }`}
         >
-          <div className="container-xl flex items-center justify-between">
+          <div className="container-xl w-full flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 flex-shrink-0 group" aria-label="FEELEXIM Home">
               <div

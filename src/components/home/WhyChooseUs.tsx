@@ -35,41 +35,41 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="section-py relative overflow-hidden" aria-labelledby="why-heading">
-      <div className="container-xl space-y-14 lg:space-y-18">
+    <section className="section-py relative overflow-hidden w-full" aria-labelledby="why-heading">
+      <div className="container-xl space-y-6 sm:space-y-7 lg:space-y-8 w-full">
 
-        {/* Section Heading with Generous Margins */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-gold tracking-wide">
+        {/* Section Heading with Calibrated Margins */}
+        <div className="text-center max-w-2xl mx-auto space-y-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-gold tracking-wide">
             <span>OUR ADVANTAGE</span>
           </div>
           <h2
             id="why-heading"
-            className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight"
+            className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight"
           >
             Built Around Your Sourcing Needs
           </h2>
-          <p className="text-slate text-base sm:text-lg leading-relaxed pt-1">
+          <p className="text-slate text-xs sm:text-sm leading-relaxed pt-0.5">
             Engineered to remove volatility, quality uncertainty, and communication barriers from cross-border agricultural procurement.
           </p>
         </div>
 
         {/* 6 Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 lg:gap-5 w-full">
           {features.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="glass-card !rounded-3xl p-9 sm:p-10 lg:p-11 flex flex-col justify-between hover:-translate-y-2 transition-all duration-300 shadow-xl"
+              className="glass-card !rounded-2xl p-4.5 sm:p-5 lg:p-5.5 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-xl"
             >
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold shadow-inner">
-                  <Icon size={26} />
+              <div className="space-y-3">
+                <div className="w-11 h-11 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold shadow-inner">
+                  <Icon size={20} />
                 </div>
-                <div className="space-y-3">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">
+                <div className="space-y-1.5">
+                  <h3 className="text-base sm:text-lg font-bold text-white">
                     {title}
                   </h3>
-                  <p className="text-slate text-sm sm:text-base leading-relaxed">
+                  <p className="text-slate text-xs leading-relaxed">
                     {desc}
                   </p>
                 </div>

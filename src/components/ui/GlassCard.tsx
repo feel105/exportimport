@@ -14,7 +14,7 @@ export function GlassCard({
   return (
     <div
       className={cn(
-        'glass-card p-6 sm:p-8',
+        'glass-card p-6 sm:p-8 w-full',
         hover && 'card-hover',
         className
       )}

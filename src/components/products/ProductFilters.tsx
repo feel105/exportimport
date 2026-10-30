@@ -19,9 +19,9 @@ export function ProductFilters({
   onSearchChange,
 }: ProductFiltersProps) {
   return (
-    <div className="space-y-8 mb-16">
+    <div className="w-full space-y-8 mb-16">
       {/* Search Input styled as liquid glass bar */}
-      <div className="relative max-w-2xl mx-auto sm:mx-0">
+      <div className="relative w-full max-w-2xl">
         <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
         <input
           type="text"
@@ -42,7 +42,7 @@ export function ProductFilters({
       </div>
 
       {/* Category Pills styled matching reference image floating docks */}
-      <div className="flex flex-wrap items-center gap-3.5">
+      <div className="w-full flex flex-wrap items-center gap-3.5">
         <button
           onClick={() => onCategoryChange('all')}
           className={`px-6 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 ${

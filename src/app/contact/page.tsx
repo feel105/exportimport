@@ -37,8 +37,8 @@ export default function ContactPage({
   searchParams: Promise<{ product?: string }>
 }) {
   return (
-    <div className="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40">
-      <div className="container-xl space-y-16 lg:space-y-24">
+    <div className="pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 w-full">
+      <div className="container-xl space-y-16 lg:space-y-24 w-full">
 
         {/* Page Heading */}
         <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -55,11 +55,11 @@ export default function ContactPage({
         </div>
 
         {/* 2-Column Grid with Generous Gaps */}
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-start w-full">
 
           {/* Left Column: Direct Contact & Info Card */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="glass-card !rounded-3xl p-10 sm:p-12 lg:p-14 space-y-8 shadow-2xl">
+          <div className="lg:col-span-5 space-y-8 w-full">
+            <div className="glass-card !rounded-3xl p-10 sm:p-12 lg:p-14 space-y-8 shadow-2xl w-full">
               <h2 className="text-2xl font-bold text-white pb-5 border-b border-white/10">
                 Direct Inquiries
               </h2>
@@ -142,7 +142,7 @@ export default function ContactPage({
           </div>
 
           {/* Right Column: Interactive Quotation Form */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 w-full">
             <ContactFormWrapper searchParams={searchParams} />
           </div>
 
