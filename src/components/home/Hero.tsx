@@ -135,15 +135,15 @@ export default function Hero() {
             {/* Trust Badges */}
             <div className="flex flex-wrap items-center gap-4 pt-0.5 text-xs text-slate-300">
               <div className="flex items-center gap-1.5">
-                <CheckCircle size={14} className="text-emerald-400 flex-shrink-0" />
+                <CheckCircle size={14} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)] flex-shrink-0" />
                 <span>Quality Sourcing</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle size={14} className="text-cyan-accent flex-shrink-0" />
+                <CheckCircle size={14} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)] flex-shrink-0" />
                 <span>Docs Support</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle size={14} className="text-gold flex-shrink-0" />
+                <CheckCircle size={14} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)] flex-shrink-0" />
                 <span>Custom Packing</span>
               </div>
             </div>
@@ -182,14 +182,14 @@ export default function Hero() {
 
                 {/* Micro Action Dock */}
                 <div className="flex items-center justify-center gap-2.5 pt-2.5 border-t border-white/10 z-10">
-                  <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-white/80 hover:text-white cursor-pointer transition-colors" title="Layer Specs">
-                    <Layers size={13} />
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white hover:bg-white/20 cursor-pointer transition-colors shadow-sm" title="Layer Specs">
+                    <Layers size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                   </div>
-                  <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-white/80 hover:text-white cursor-pointer transition-colors" title="Testing Grade">
-                    <Sparkles size={13} />
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white hover:bg-white/20 cursor-pointer transition-colors shadow-sm" title="Testing Grade">
+                    <Sparkles size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                   </div>
-                  <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-white/80 hover:text-white cursor-pointer transition-colors" title="Phyto Compliance">
-                    <ShieldCheck size={13} />
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white hover:bg-white/20 cursor-pointer transition-colors shadow-sm" title="Phyto Compliance">
+                    <ShieldCheck size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                   </div>
                 </div>
               </div>
@@ -214,8 +214,8 @@ export default function Hero() {
                   {/* 2 Key Metrics */}
                   <div className="grid grid-cols-2 gap-2 mt-3 pt-2.5 border-t border-white/10">
                     <div className="flex items-center gap-1.5">
-                      <div className="w-7 h-7 rounded-lg bg-white/[0.08] flex items-center justify-center text-cyan-accent">
-                        <Thermometer size={13} />
+                      <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white shadow-sm">
+                        <Thermometer size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-white">&lt; 8%</p>
@@ -223,8 +223,8 @@ export default function Hero() {
                       </div>
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <div className="w-7 h-7 rounded-lg bg-white/[0.08] flex items-center justify-center text-emerald-accent">
-                        <TrendingUp size={13} />
+                      <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white shadow-sm">
+                        <TrendingUp size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-white">99.4%</p>

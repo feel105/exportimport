@@ -39,8 +39,8 @@ export default function FAQ() {
           {/* Left Column: Heading & Quick Trade Assistance Card (4 Cols on wide screen) */}
           <div className="lg:col-span-4 xl:col-span-4 space-y-4 sm:space-y-5 lg:sticky lg:top-28 w-full">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-gold tracking-wide">
-                <HelpCircle size={13} className="text-gold" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-white tracking-wide">
+                <HelpCircle size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]" />
                 <span>CLEAR ANSWERS</span>
               </div>
               <h2
@@ -67,16 +67,20 @@ export default function FAQ() {
               <div className="space-y-2 pt-0.5">
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.08] hover:border-gold/40 text-white text-xs font-semibold transition-colors"
+                  className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.12] hover:border-white/30 text-white text-xs font-semibold transition-colors group"
                 >
-                  <Mail size={14} className="text-gold flex-shrink-0" />
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white flex-shrink-0 group-hover:bg-white/[0.16] shadow-sm">
+                    <Mail size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
+                  </div>
                   <span className="truncate">{siteConfig.email}</span>
                 </a>
                 <a
                   href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
-                  className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.08] hover:border-gold/40 text-white text-xs font-semibold transition-colors"
+                  className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.12] hover:border-white/30 text-white text-xs font-semibold transition-colors group"
                 >
-                  <Phone size={14} className="text-gold flex-shrink-0" />
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white flex-shrink-0 group-hover:bg-white/[0.16] shadow-sm">
+                    <Phone size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
+                  </div>
                   <span>{siteConfig.phone}</span>
                 </a>
               </div>

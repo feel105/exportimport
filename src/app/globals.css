@@ -133,6 +133,43 @@ body {
   box-shadow: 0 0 12px 2px rgba(245, 158, 11, 0.65);
 }
 
+/* ─── Light & White Theme Icon System ─────────────────────── */
+.icon-badge-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.75rem;
+  color: #FFFFFF;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 2px 8px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+}
+
+.icon-badge-light:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.32);
+  color: #FFFFFF;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 0 14px rgba(255, 255, 255, 0.22);
+}
+
+.icon-white {
+  color: #FFFFFF;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.35));
+}
+
+.icon-white-subtle {
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.2s ease;
+}
+
+.icon-white-subtle:hover {
+  color: #FFFFFF;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.45));
+}
+
 /* ─── Section Themes ─────────────────────────────────────── */
 .section-dark {
   background-color: var(--navy);

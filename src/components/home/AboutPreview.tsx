@@ -25,14 +25,14 @@ export default function AboutPreview() {
                     Export House Profile
                   </span>
                 </div>
-                <div className="w-8 h-8 rounded-lg bg-white/[0.08] flex items-center justify-center text-gold">
-                  <Award size={16} />
+                <div className="w-8 h-8 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white shadow-sm">
+                  <Award size={15} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                 </div>
               </div>
 
               {/* Graphic area */}
               <div className="rounded-xl p-5 sm:p-6 bg-gradient-to-br from-navy via-navy-deep to-slate-900 border border-white/10 text-center space-y-2.5 shadow-inner">
-                <Globe2 size={40} className="mx-auto text-cyan-accent" />
+                <Globe2 size={40} className="mx-auto text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]" />
                 <h3 className="text-lg sm:text-xl font-extrabold text-white">Global Trade Bridge</h3>
                 <p className="text-xs text-slate max-w-sm mx-auto leading-relaxed">
                   Connecting India&apos;s agricultural harvest to food manufacturers, packers, and distributors across Europe, the Middle East, Americas, and Asia.
@@ -54,7 +54,7 @@ export default function AboutPreview() {
 
             {/* Floating pill badge */}
             <div className="absolute -bottom-3 -right-2 sm:-right-3 glass-pill px-4 py-2 flex items-center gap-2 shadow-2xl">
-              <ShieldCheck size={16} className="text-gold" />
+              <ShieldCheck size={16} className="text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.35)]" />
               <span className="text-xs font-bold text-white">Govt. Registered Exporter</span>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function AboutPreview() {
             <ul className="space-y-2.5 pt-0.5">
               {highlights.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
-                  <CheckCircle size={15} className="text-gold mt-0.5 flex-shrink-0" />
+                  <CheckCircle size={15} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)] mt-0.5 flex-shrink-0" />
                   <span className="text-slate-200 text-xs sm:text-sm leading-relaxed">{item}</span>
                 </li>
               ))}

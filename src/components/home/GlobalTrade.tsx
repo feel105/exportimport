@@ -28,16 +28,22 @@ export default function GlobalTrade() {
 
           {/* 3 Pillar Metrics Pill Row */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-3.5 max-w-4xl mx-auto mb-6 sm:mb-7 text-xs sm:text-sm w-full">
-            <div className="p-3 sm:p-3.5 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center gap-2">
-              <Anchor size={16} className="text-cyan-accent" />
+            <div className="p-3 sm:p-3.5 rounded-xl bg-white/[0.05] border border-white/[0.12] flex items-center justify-center gap-2.5 group hover:border-white/25 transition-colors">
+              <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center flex-shrink-0 text-white shadow-sm">
+                <Anchor size={14} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
+              </div>
               <span className="text-white font-semibold">Mundra & Nhava Sheva Ports</span>
             </div>
-            <div className="p-3 sm:p-3.5 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center gap-2">
-              <Navigation size={16} className="text-gold" />
+            <div className="p-3 sm:p-3.5 rounded-xl bg-white/[0.05] border border-white/[0.12] flex items-center justify-center gap-2.5 group hover:border-white/25 transition-colors">
+              <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center flex-shrink-0 text-white shadow-sm">
+                <Navigation size={14} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
+              </div>
               <span className="text-white font-semibold">FOB / CIF / CFR Terms</span>
             </div>
-            <div className="p-3 sm:p-3.5 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center gap-2">
-              <ShieldCheck size={16} className="text-emerald-400" />
+            <div className="p-3 sm:p-3.5 rounded-xl bg-white/[0.05] border border-white/[0.12] flex items-center justify-center gap-2.5 group hover:border-white/25 transition-colors">
+              <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center flex-shrink-0 text-white shadow-sm">
+                <ShieldCheck size={14} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
+              </div>
               <span className="text-white font-semibold">Customs Clearance Ready</span>
             </div>
           </div>

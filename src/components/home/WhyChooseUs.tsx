@@ -59,14 +59,14 @@ export default function WhyChooseUs() {
           {features.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="glass-card !rounded-2xl p-4.5 sm:p-5 lg:p-5.5 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-xl"
+              className="glass-card !rounded-2xl p-4.5 sm:p-5 lg:p-5.5 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-xl group"
             >
               <div className="space-y-3">
-                <div className="w-11 h-11 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold shadow-inner">
-                  <Icon size={20} />
+                <div className="w-11 h-11 rounded-xl bg-white/[0.09] border border-white/20 flex items-center justify-center text-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] group-hover:bg-white/[0.16] group-hover:border-white/30 transition-all duration-300">
+                  <Icon size={20} className="text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.35)]" />
                 </div>
                 <div className="space-y-1.5">
-                  <h3 className="text-base sm:text-lg font-bold text-white">
+                  <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-amber-200 transition-colors">
                     {title}
                   </h3>
                   <p className="text-slate text-xs leading-relaxed">

@@ -38,20 +38,20 @@ export default function Navbar() {
             <div className="flex items-center gap-6">
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="flex items-center gap-2 text-slate-300 hover:text-gold transition-colors"
+                className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors"
               >
-                <Mail size={13} className="text-gold" />
+                <Mail size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                 <span>{siteConfig.email}</span>
               </a>
               <a
                 href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
-                className="flex items-center gap-2 text-slate-300 hover:text-gold transition-colors"
+                className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors"
               >
-                <Phone size={13} className="text-gold" />
+                <Phone size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                 <span>{siteConfig.phone}</span>
               </a>
               <div className="flex items-center gap-1.5 text-slate-400 pl-2 border-l border-white/10">
-                <ShieldCheck size={13} className="text-emerald-400" />
+                <ShieldCheck size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                 <span>FSSAI • APEDA • SPICE RCMC Registered</span>
               </div>
             </div>

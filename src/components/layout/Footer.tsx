@@ -65,7 +65,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/[0.06] border border-white/10 text-slate-300 hover:text-white hover:border-gold/40 transition-all hover:-translate-y-0.5"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/[0.08] border border-white/20 text-white hover:bg-white/[0.16] hover:border-white/35 transition-all hover:-translate-y-0.5 shadow-sm"
                 >
                   <LinkedInIcon />
                 </a>
@@ -76,7 +76,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/[0.06] border border-white/10 text-slate-300 hover:text-white hover:border-gold/40 transition-all hover:-translate-y-0.5"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/[0.08] border border-white/20 text-white hover:bg-white/[0.16] hover:border-white/35 transition-all hover:-translate-y-0.5 shadow-sm"
                 >
                   <InstagramIcon />
                 </a>
@@ -87,7 +87,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/[0.06] border border-white/10 text-slate-300 hover:text-white hover:border-gold/40 transition-all hover:-translate-y-0.5"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/[0.08] border border-white/20 text-white hover:bg-white/[0.16] hover:border-white/35 transition-all hover:-translate-y-0.5 shadow-sm"
                 >
                   <FacebookIcon />
                 </a>
@@ -136,23 +136,29 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-start gap-2.5 text-slate-300 hover:text-gold transition-colors"
+                  className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors group"
                 >
-                  <Mail size={18} className="text-gold mt-1 flex-shrink-0" />
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/15 flex items-center justify-center text-white flex-shrink-0 group-hover:bg-white/[0.16] group-hover:border-white/30 transition-all shadow-sm">
+                    <Mail size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
+                  </div>
                   <span className="truncate">{siteConfig.email}</span>
                 </a>
               </li>
               <li>
                 <a
                   href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
-                  className="flex items-start gap-3 text-slate-300 hover:text-gold transition-colors"
+                  className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors group"
                 >
-                  <Phone size={18} className="text-gold mt-1 flex-shrink-0" />
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/15 flex items-center justify-center text-white flex-shrink-0 group-hover:bg-white/[0.16] group-hover:border-white/30 transition-all shadow-sm">
+                    <Phone size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
+                  </div>
                   <span>{siteConfig.phone}</span>
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-slate-300">
-                <MapPin size={18} className="text-gold mt-1 flex-shrink-0" />
+              <li className="flex items-center gap-2.5 text-slate-300">
+                <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/15 flex items-center justify-center text-white flex-shrink-0 shadow-sm">
+                  <MapPin size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
+                </div>
                 <span>India (Operations & Export Despatch)</span>
               </li>
             </ul>

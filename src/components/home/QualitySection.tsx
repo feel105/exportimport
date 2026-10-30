@@ -18,8 +18,8 @@ export default function QualitySection() {
 
           {/* Left Column (7 Cols) */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-5 w-full">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-gold tracking-wide">
-              <ShieldCheck size={13} className="text-gold" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-white tracking-wide">
+              <ShieldCheck size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]" />
               <span>QUALITY & COMPLIANCE</span>
             </div>
 
@@ -44,7 +44,7 @@ export default function QualitySection() {
             <ul className="space-y-2 pt-0.5">
               {qualityPoints.map((point) => (
                 <li key={point} className="flex items-start gap-2.5">
-                  <CheckCircle2 size={16} className="text-emerald-400 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 size={16} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)] mt-0.5 flex-shrink-0" />
                   <span className="text-slate-200 text-xs sm:text-sm leading-relaxed">{point}</span>
                 </li>
               ))}
@@ -78,8 +78,8 @@ export default function QualitySection() {
                     <p className="text-[10px] text-slate">Statutory Registrations & Councils</p>
                   </div>
                 </div>
-                <div className="w-8 h-8 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold">
-                  <Award size={16} />
+                <div className="w-8 h-8 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white shadow-sm">
+                  <Award size={15} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                 </div>
               </div>
 
@@ -88,9 +88,9 @@ export default function QualitySection() {
                 {siteConfig.certifications.map((cert) => (
                   <div
                     key={cert}
-                    className="p-2.5 rounded-xl bg-white/[0.05] border border-white/[0.1] hover:border-gold/40 transition-colors flex items-center gap-2 shadow-sm"
+                    className="p-2.5 rounded-xl bg-white/[0.05] border border-white/[0.12] hover:border-white/30 transition-colors flex items-center gap-2.5 shadow-sm"
                   >
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.85)] flex-shrink-0" />
                     <div>
                       <p className="text-white text-xs font-bold">{cert}</p>
                       <p className="text-[10px] text-slate-400">Registered</p>
