@@ -28,22 +28,22 @@ export default function ExportProcess() {
           </p>
         </div>
 
-        {/* Steps Grid in Frosted Glass with Balanced Padding */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-3.5 sm:gap-4 w-full">
+        {/* Steps Grid in Frosted Glass with Balanced Padding for 1920px Widescreen */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4 sm:gap-4.5 w-full">
           {steps.map(({ num, title, desc }) => (
             <div
               key={num}
-              className="glass-card !rounded-2xl p-4 sm:p-4.5 lg:p-5 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-xl"
+              className="glass-card !rounded-2xl p-5 sm:p-5.5 lg:p-6 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-xl"
             >
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gold/25 to-gold/5 border border-gold/30 flex items-center justify-center font-black text-gold text-sm tracking-tight shadow-inner">
+              <div className="space-y-3">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-gold/25 to-gold/5 border border-gold/30 flex items-center justify-center font-black text-gold text-sm tracking-tight shadow-inner">
                   {num}
                 </div>
-                <div className="space-y-1">
+                <div className="space-y-1.5">
                   <h3 className="text-sm sm:text-base font-bold text-white leading-snug">
                     {title}
                   </h3>
-                  <p className="text-slate text-[11px] sm:text-xs leading-relaxed">
+                  <p className="text-slate text-xs leading-relaxed">
                     {desc}
                   </p>
                 </div>

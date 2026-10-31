@@ -1,114 +1,139 @@
 import Link from 'next/link'
-import { ArrowRight, ShieldCheck, CheckCircle2, Award } from 'lucide-react'
-import { siteConfig } from '@/config/site'
+import { ArrowRight, ShieldCheck } from 'lucide-react'
 
-const qualityPoints = [
-  'Pre-shipment independent inspection and laboratory testing coordination (SGS / Geo-Chem)',
-  'Strict compliance with destination market tolerances on moisture, pesticide residue, and aflatoxin',
-  'Government Phytosanitary certification & Certificate of Origin issuance prior to dispatch',
-  'Custom bulk packaging options (PP, Jute, multi-wall paper bags, and private label pouches)',
-  'Complete batch traceability from regional Indian processing units to ocean container loading',
+const statutoryCredentials = [
+  {
+    code: 'FSSAI',
+    name: 'Food Safety & Standards Authority',
+    type: 'Central License #1072...',
+    status: 'Verified & Active',
+  },
+  {
+    code: 'APEDA',
+    name: 'Agri & Processed Food Authority',
+    type: 'Export Registration #218...',
+    status: 'Verified & Active',
+  },
+  {
+    code: 'SPICES BOARD',
+    name: 'Ministry of Commerce & Industry',
+    type: 'RCMC Exporter Certificate',
+    status: 'Verified & Active',
+  },
+  {
+    code: 'DGFT IEC',
+    name: 'Directorate General of Foreign Trade',
+    type: 'Import Export Code Validated',
+    status: 'Verified & Active',
+  },
+  {
+    code: 'AGMARK',
+    name: 'Agricultural Marketing Standard',
+    type: 'Quality Grading & Sorting',
+    status: 'Verified & Active',
+  },
+  {
+    code: 'SGS / GEO-CHEM',
+    name: 'Independent Lab Pre-Shipment',
+    type: 'Purity & MRL Certificate',
+    status: 'Per Consignment',
+  },
 ]
 
 export default function QualitySection() {
   return (
-    <section className="section-py relative overflow-hidden w-full" aria-labelledby="quality-heading">
-      <div className="container-xl w-full">
-        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-12 items-center w-full">
+    <section
+      className="w-full border-b border-hairline py-20 sm:py-28 lg:py-32 relative overflow-hidden bg-navy"
+      aria-labelledby="quality-heading"
+    >
+      <div className="container-xl w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16 space-y-10 sm:space-y-12">
+        
+        {/* Section Header */}
+        <div className="max-w-3xl space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.08] border border-hairline text-xs font-semibold text-white tracking-wide">
+            <ShieldCheck size={13} className="text-gold" />
+            <span className="mono-tag text-gold">STATUTORY ACCREDITATION</span>
+          </div>
+          <h2
+            id="quality-heading"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1]"
+          >
+            Enterprise-Grade Trade Compliance.
+          </h2>
+          <p className="text-slate text-sm sm:text-base lg:text-lg leading-relaxed pt-1">
+            Global food and spice trade depends entirely on specification conformity, statutory credentials, and zero-defect phytosanitary clearance.
+          </p>
+        </div>
 
-          {/* Left Column (7 Cols) */}
-          <div className="lg:col-span-7 space-y-4 sm:space-y-5 w-full">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-white tracking-wide">
-              <ShieldCheck size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]" />
-              <span>QUALITY & COMPLIANCE</span>
+        {/* Sanity-Style Split Layout: Left SLA & narrative / Right Credential Matrix */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start w-full">
+          
+          {/* Left Column (5 Cols) */}
+          <div className="lg:col-span-5 space-y-6">
+            <p className="text-slate text-xs sm:text-sm lg:text-base leading-relaxed">
+              We operate exclusively in strict compliance with destination market tolerances on moisture, pesticide residue (MRLs), aflatoxins, and microbiological purity. Every consignment is inspected and sealed prior to port loading.
+            </p>
+
+            {/* SLA Badges Strip */}
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              <div className="p-4 rounded-xl border border-hairline bg-white/[0.02]">
+                <p className="text-2xl font-black text-white">99.8%</p>
+                <p className="text-xs text-slate-400 mt-1 font-mono uppercase">Sortex Purity SLA</p>
+              </div>
+              <div className="p-4 rounded-xl border border-hairline bg-white/[0.02]">
+                <p className="text-2xl font-black text-white">24/7</p>
+                <p className="text-xs text-slate-400 mt-1 font-mono uppercase">Trade Desk Dispatch</p>
+              </div>
             </div>
 
-            <div className="space-y-2">
-              <h2
-                id="quality-heading"
-                className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-[1.15]"
-              >
-                Quality and Documentation,{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-gold to-amber-200">
-                  Carefully Coordinated.
-                </span>
-              </h2>
-
-              <p className="text-slate text-xs sm:text-sm lg:text-base leading-relaxed pt-0.5">
-                We understand that global spice and agricultural trade depends entirely on specification
-                conformity and proper export credentials. We ensure every consignment fulfills the precise
-                physical, chemical, and phytosanitary requirements agreed with international buyers.
-              </p>
-            </div>
-
-            <ul className="space-y-2 pt-0.5">
-              {qualityPoints.map((point) => (
-                <li key={point} className="flex items-start gap-2.5">
-                  <CheckCircle2 size={16} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)] mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-200 text-xs sm:text-sm leading-relaxed">{point}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="pt-1 flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <Link
                 href="/quality-compliance"
-                className="px-5 py-2.5 rounded-xl bg-white/[0.1] hover:bg-white/[0.16] text-white border border-white/[0.18] font-bold text-xs sm:text-sm transition-all duration-200 hover:-translate-y-0.5 flex items-center gap-2"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_20px_rgba(224,160,69,0.3)] hover:shadow-[0_0_28px_rgba(224,160,69,0.5)] transition-all flex items-center gap-2"
               >
-                <span>View Compliance Standards</span>
+                <span>Full Compliance Protocols</span>
                 <ArrowRight size={14} />
               </Link>
               <Link
                 href="/contact"
-                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all duration-200 hover:-translate-y-0.5"
+                className="px-5 py-3 rounded-full bg-white/[0.06] border border-hairline text-white font-semibold text-xs sm:text-sm hover:bg-white/[0.1] transition-all"
               >
-                Discuss Specifications
+                Request Lab Sample
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Frosted Card with Certifications (5 Cols) */}
-          <div className="lg:col-span-5 w-full">
-            <div className="glass-card !rounded-2xl p-4.5 sm:p-5 lg:p-6 space-y-4 shadow-2xl">
-              <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                <div className="flex items-center gap-2">
-                  <span className="glow-indicator-green" />
-                  <div>
-                    <h3 className="text-sm sm:text-base font-bold text-white">Export Credentials</h3>
-                    <p className="text-[10px] text-slate">Statutory Registrations & Councils</p>
-                  </div>
+          {/* Right Column: 6 Statutory Accreditation Tiles (7 Cols) */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 w-full">
+            {statutoryCredentials.map((cred) => (
+              <div
+                key={cred.code}
+                className="p-4.5 sm:p-5 rounded-2xl border border-hairline bg-white/[0.02] hover:bg-white/[0.04] hover:border-hairline-light transition-all flex flex-col justify-between space-y-3 group"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="mono-tag text-gold font-bold text-xs">
+                    {cred.code}
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-400">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    {cred.status}
+                  </span>
                 </div>
-                <div className="w-8 h-8 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white shadow-sm">
-                  <Award size={15} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
+
+                <div className="space-y-1">
+                  <p className="text-sm font-bold text-white group-hover:text-amber-200 transition-colors">
+                    {cred.name}
+                  </p>
+                  <p className="text-slate-400 text-xs font-mono">
+                    {cred.type}
+                  </p>
                 </div>
               </div>
-
-              {/* Verified certifications grid */}
-              <div className="grid grid-cols-2 gap-2.5">
-                {siteConfig.certifications.map((cert) => (
-                  <div
-                    key={cert}
-                    className="p-2.5 rounded-xl bg-white/[0.05] border border-white/[0.12] hover:border-white/30 transition-colors flex items-center gap-2.5 shadow-sm"
-                  >
-                    <div className="w-2 h-2 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.85)] flex-shrink-0" />
-                    <div>
-                      <p className="text-white text-xs font-bold">{cert}</p>
-                      <p className="text-[10px] text-slate-400">Registered</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-xs text-slate space-y-1">
-                <p className="text-white font-semibold text-xs">Destination Testing Support</p>
-                <p className="leading-relaxed text-[11px]">
-                  Third-party testing via authorized accredited labs (SGS, Geo-Chem, or buyer-appointed inspection agencies) can be coordinated upon request.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
 
         </div>
+
       </div>
     </section>
   )

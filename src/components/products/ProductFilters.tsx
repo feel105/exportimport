@@ -45,10 +45,10 @@ export function ProductFilters({
       <div className="w-full flex flex-wrap items-center gap-3.5">
         <button
           onClick={() => onCategoryChange('all')}
-          className={`px-6 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+          className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
             activeCategory === 'all'
-              ? 'bg-gradient-to-r from-gold to-gold-dark text-navy shadow-[0_0_24px_rgba(224,160,69,0.4)]'
-              : 'glass-card !rounded-2xl !p-3 !px-6 text-slate-300 hover:text-white hover:border-white/30'
+              ? 'bg-gradient-to-r from-gold to-gold-dark text-navy shadow-[0_0_20px_rgba(224,160,69,0.4)]'
+              : 'glass-card !rounded-xl !p-2.5 !px-5 text-slate-300 hover:text-white hover:border-white/30'
           }`}
         >
           All Commodities
@@ -60,10 +60,10 @@ export function ProductFilters({
             <button
               key={cat.id}
               onClick={() => onCategoryChange(cat.id)}
-              className={`px-6 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 isActive
-                  ? 'bg-gradient-to-r from-gold to-gold-dark text-navy shadow-[0_0_24px_rgba(224,160,69,0.4)]'
-                  : 'glass-card !rounded-2xl !p-3 !px-6 text-slate-300 hover:text-white hover:border-white/30'
+                  ? 'bg-gradient-to-r from-gold to-gold-dark text-navy shadow-[0_0_20px_rgba(224,160,69,0.4)]'
+                  : 'glass-card !rounded-xl !p-2.5 !px-5 text-slate-300 hover:text-white hover:border-white/30'
               }`}
             >
               {cat.label}

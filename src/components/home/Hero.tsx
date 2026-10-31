@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -15,33 +16,44 @@ import {
   Layers,
   CheckCircle,
   TrendingUp,
+  Copy,
+  Check,
 } from 'lucide-react'
 
 export default function Hero() {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopySpec = () => {
+    navigator.clipboard.writeText('HS 0909.31 - CUMIN SEEDS 99.8% PURITY - MUNDRA PORT')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2200)
+  }
+
   return (
     <section
-      className="relative overflow-hidden pt-24 sm:pt-28 lg:pt-30 pb-6 sm:pb-8 lg:pb-10 w-full"
+      className="relative overflow-hidden pt-[calc(var(--header-h)+3rem)] sm:pt-[calc(var(--header-h)+3.5rem)] lg:pt-[calc(var(--header-h)+4rem)] pb-8 sm:pb-10 lg:pb-12 w-full border-b border-hairline"
       aria-label="Hero section"
     >
-      {/* Expansive Ambient Background Glows */}
+      {/* Background Architectural Grid Lines & Ambient Glow */}
+      <div className="absolute inset-0 bg-grid opacity-35 pointer-events-none" />
       <div
         className="absolute top-1/4 -left-32 w-[750px] h-[750px] rounded-full pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, rgba(224, 142, 69, 0.26) 0%, rgba(245, 158, 11, 0.09) 45%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(224, 142, 69, 0.22) 0%, rgba(245, 158, 11, 0.07) 45%, transparent 70%)',
           filter: 'blur(95px)',
         }}
       />
       <div
         className="absolute top-1/3 right-10 w-[700px] h-[700px] rounded-full pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(37, 99, 235, 0.08) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(56, 189, 248, 0.14) 0%, rgba(37, 99, 235, 0.06) 50%, transparent 70%)',
           filter: 'blur(100px)',
         }}
       />
 
-      <div className="container-xl relative z-10 space-y-5 sm:space-y-6 lg:space-y-7 w-full">
+      <div className="container-xl relative z-10 space-y-6 sm:space-y-8 lg:space-y-10 w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
 
-        {/* Top Floating Pill Dock (Inspired by the top floating pill in reference image) */}
+        {/* Top Floating Pill Dock (Sanity-Style Micro Control Strip) */}
         <div className="flex justify-center">
           <div className="glass-pill px-5 py-2 flex items-center gap-4 sm:gap-6 text-slate-300">
             <span className="flex items-center gap-2 text-xs sm:text-sm font-bold text-white">
@@ -73,63 +85,83 @@ export default function Hero() {
         </div>
 
         {/* Main 2-Column Grid with Calibrated Spacing */}
-        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-center w-full">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center w-full">
           
           {/* Left Column: Typography & Sourcing Trust */}
-          <div className="lg:col-span-5 space-y-4 sm:space-y-5 w-full">
+          <div className="lg:col-span-5 space-y-5 sm:space-y-6 w-full">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-gold tracking-wide">
-              <Sparkles size={13} className="text-gold" />
-              <span>PREMIUM INDIAN EXPORT HOUSE</span>
+              <span className="mono-tag text-gold">EXPORT HOUSE • EST. INDIA</span>
             </div>
 
-            <div className="space-y-2.5">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight text-white leading-[1.1]">
-                Connecting <br />
+            <div className="space-y-3">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight text-white leading-[1.08]">
+                The Agricultural <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-gold to-amber-200">
-                  Indian Quality
-                </span> <br />
-                to Global Markets.
+                  Export Platform.
+                </span>
               </h1>
               <p className="text-slate text-xs sm:text-sm lg:text-base leading-relaxed max-w-xl">
-                Your direct sourcing partner for whole spices, spice powders, seeds, and agricultural commodities. We bridge international buyers with dependable Indian producers through verified quality standards.
+                Direct farm-origin procurement, statutory laboratory verification, and ocean container logistics for international food brands, importers, and bulk packers.
               </p>
+            </div>
+
+            {/* Sanity-Style 3-Action Row */}
+            <div className="flex flex-wrap items-center gap-3 pt-1">
+              <Link
+                href="/contact"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
+              >
+                <span>Request Quotation</span>
+                <ArrowRight size={14} />
+              </Link>
+              
+              <Link
+                href="/products"
+                className="px-5 py-3 rounded-full bg-white/[0.07] border border-white/15 text-white font-semibold text-xs sm:text-sm hover:bg-white/[0.12] transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Browse 25+ Products
+              </Link>
+
+              {/* Sanity-Style Interactive Sourcing Terminal Pill Button */}
+              <button
+                onClick={handleCopySpec}
+                className="code-pill group"
+                title="Click to copy export specification"
+              >
+                {copied ? (
+                  <>
+                    <Check size={13} className="text-emerald-400" />
+                    <span className="text-emerald-300 text-xs">Copied Spec!</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-gold font-bold">HS 0909.31</span>
+                    <span className="text-slate-400">• Mundra Port</span>
+                    <Copy size={12} className="text-slate-400 group-hover:text-white transition-colors" />
+                  </>
+                )}
+              </button>
             </div>
 
             {/* Destination Markets & Port Reach Badges */}
-            <div className="p-4 sm:p-4.5 rounded-xl bg-white/[0.04] border border-white/[0.08] space-y-2">
-              <p className="text-[11px] font-semibold text-slate uppercase tracking-wider">
-                Destination Markets & Port Reach
-              </p>
+            <div className="p-4 sm:p-4.5 rounded-2xl bg-white/[0.03] border border-hairline space-y-2">
+              <div className="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span className="uppercase tracking-wider">DESTINATION REACH</span>
+                <span className="text-emerald-400 font-bold">35+ PORTS</span>
+              </div>
               <div className="flex items-center gap-2.5 flex-wrap">
                 <div className="flex -space-x-1.5 overflow-hidden py-0.5">
-                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="United Kingdom">🇬🇧</span>
-                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="United Arab Emirates">🇦🇪</span>
-                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="United States">🇺🇸</span>
-                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="Germany">🇩🇪</span>
-                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="Japan">🇯🇵</span>
-                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 border border-navy text-xs shadow" title="Singapore">🇸🇬</span>
+                  <span className="inline-flex items-center justify-center w-6.5 h-6.5 rounded-full bg-slate-800 border border-navy text-xs shadow" title="United Kingdom">🇬🇧</span>
+                  <span className="inline-flex items-center justify-center w-6.5 h-6.5 rounded-full bg-slate-800 border border-navy text-xs shadow" title="United Arab Emirates">🇦🇪</span>
+                  <span className="inline-flex items-center justify-center w-6.5 h-6.5 rounded-full bg-slate-800 border border-navy text-xs shadow" title="United States">🇺🇸</span>
+                  <span className="inline-flex items-center justify-center w-6.5 h-6.5 rounded-full bg-slate-800 border border-navy text-xs shadow" title="Germany">🇩🇪</span>
+                  <span className="inline-flex items-center justify-center w-6.5 h-6.5 rounded-full bg-slate-800 border border-navy text-xs shadow" title="Japan">🇯🇵</span>
+                  <span className="inline-flex items-center justify-center w-6.5 h-6.5 rounded-full bg-slate-800 border border-navy text-xs shadow" title="Singapore">🇸🇬</span>
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-white/[0.08] text-[11px] font-bold text-white border border-white/10">
-                  +35 Active Trade Hubs
+                <span className="text-xs text-slate-300">
+                  Direct FOB / CIF / CFR routes from Mundra & Nhava Sheva
                 </span>
               </div>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-3 pt-0.5">
-              <Link
-                href="/products"
-                className="px-6 py-3 rounded-xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
-              >
-                <span>Explore Products</span>
-                <ArrowRight size={15} />
-              </Link>
-              <Link
-                href="/contact"
-                className="px-6 py-3 rounded-xl glass-pill text-white font-semibold text-xs sm:text-sm hover:bg-white/[0.14] transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Request a Quote
-              </Link>
             </div>
 
             {/* Trust Badges */}
@@ -154,21 +186,21 @@ export default function Hero() {
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-3.5 sm:gap-4 w-full">
 
               {/* Card 1: Featured Live Origin Sourcing (7 Cols) */}
-              <div className="sm:col-span-7 glass-card p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[250px]">
-                <div className="flex items-center justify-between mb-2.5 z-10">
+              <div className="sm:col-span-7 glass-card p-5 sm:p-6 relative overflow-hidden flex flex-col justify-between min-h-[260px]">
+                <div className="flex items-center justify-between mb-3 z-10">
                   <div className="flex items-center gap-2">
                     <span className="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-black/50 text-white border border-white/10 backdrop-blur-md">
                       Origin: Gujarat Belt
                     </span>
                   </div>
-                  <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-500/20 border border-red-500/40 text-[11px] font-bold text-red-300">
+                  <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-500/20 border border-red-500/40 text-[11px] font-bold text-red-300">
                     <span className="glow-indicator-red !w-2 !h-2" />
                     LIVE
                   </div>
                 </div>
 
                 {/* Sourcing Visual Window */}
-                <div className="relative rounded-xl overflow-hidden my-auto aspect-[16/9] bg-gradient-to-br from-amber-950/40 via-navy-deep to-slate-900 border border-white/10 flex items-center justify-center p-3 text-center shadow-inner">
+                <div className="relative rounded-xl overflow-hidden my-auto aspect-[16/9] bg-gradient-to-br from-amber-950/40 via-navy-deep to-slate-900 border border-white/10 flex items-center justify-center p-3.5 text-center shadow-inner">
                   <div className="space-y-1">
                     <div className="flex justify-center gap-2 text-2xl select-none">
                       <span>🌶️</span>
@@ -176,12 +208,12 @@ export default function Hero() {
                       <span>🫙</span>
                     </div>
                     <p className="text-xs sm:text-sm font-bold text-white">Export-Ready Cumin & Turmeric Harvest</p>
-                    <p className="text-[10px] text-slate">Batch #FE-2026 • Machine Cleaned 99.8%</p>
+                    <p className="text-[10px] text-slate-400">Batch #FE-2026 • Machine Cleaned 99.8%</p>
                   </div>
                 </div>
 
                 {/* Micro Action Dock */}
-                <div className="flex items-center justify-center gap-2.5 pt-2.5 border-t border-white/10 z-10">
+                <div className="flex items-center justify-center gap-3 pt-3 border-t border-white/10 z-10">
                   <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white hover:bg-white/20 cursor-pointer transition-colors shadow-sm" title="Layer Specs">
                     <Layers size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
                   </div>
@@ -195,7 +227,7 @@ export default function Hero() {
               </div>
 
               {/* Card 2: Export Quality & Weather Metrics (5 Cols) */}
-              <div className="sm:col-span-5 glass-card p-4 sm:p-5 flex flex-col justify-between">
+              <div className="sm:col-span-5 glass-card p-5 sm:p-6 flex flex-col justify-between">
                 <div>
                   <div className="flex items-start justify-between">
                     <div>
@@ -212,7 +244,7 @@ export default function Hero() {
                   </div>
 
                   {/* 2 Key Metrics */}
-                  <div className="grid grid-cols-2 gap-2 mt-3 pt-2.5 border-t border-white/10">
+                  <div className="grid grid-cols-2 gap-2 mt-3.5 pt-3 border-t border-white/10">
                     <div className="flex items-center gap-1.5">
                       <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white shadow-sm">
                         <Thermometer size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
@@ -235,7 +267,7 @@ export default function Hero() {
                 </div>
 
                 {/* 4 Statutory Pills */}
-                <div className="mt-3 pt-2.5 border-t border-white/10 grid grid-cols-4 gap-1 text-center">
+                <div className="mt-3.5 pt-3 border-t border-white/10 grid grid-cols-4 gap-1.5 text-center">
                   <div className="p-1.5 rounded-lg bg-white/[0.04] border border-white/5">
                     <p className="text-[9px] text-slate font-semibold">FSSAI</p>
                     <p className="text-xs font-bold text-emerald-400 mt-0.5">✓</p>
@@ -256,7 +288,7 @@ export default function Hero() {
               </div>
 
               {/* Card 3: Quality Control Thermostat Arc Gauge (5 Cols) */}
-              <div className="sm:col-span-5 glass-card p-4 sm:p-5 flex flex-col justify-between">
+              <div className="sm:col-span-5 glass-card p-5 sm:p-6 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="glow-indicator-green" />
@@ -303,7 +335,7 @@ export default function Hero() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-1 pt-2 border-t border-white/10 text-center text-[10px] text-slate">
+                <div className="grid grid-cols-3 gap-1 pt-2.5 border-t border-white/10 text-center text-[10px] text-slate">
                   <span>Cleaned</span>
                   <span>Tested</span>
                   <span>Certified</span>
@@ -311,7 +343,7 @@ export default function Hero() {
               </div>
 
               {/* Card 4: Curcumin / Natural Color Spectrum (7 Cols) */}
-              <div className="sm:col-span-7 glass-card p-4 sm:p-5 flex flex-col justify-between">
+              <div className="sm:col-span-7 glass-card p-5 sm:p-6 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="glow-indicator-green" />
@@ -336,7 +368,7 @@ export default function Hero() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-[10px] text-slate pt-2 border-t border-white/10">
+                <div className="flex items-center justify-between text-[10px] text-slate pt-2.5 border-t border-white/10">
                   <span>Export Bulk Packaging: 25kg / 50kg</span>
                   <Link href="/products" className="text-gold hover:underline font-bold flex items-center gap-1">
                     View Catalog <ArrowRight size={11} />

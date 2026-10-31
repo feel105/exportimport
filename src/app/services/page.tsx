@@ -58,31 +58,31 @@ export default function ServicesPage() {
             <span className="glow-indicator-green !w-2 !h-2" />
             <span>END-TO-END COORDINATION</span>
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.08]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]">
             Comprehensive Export Services
           </h1>
-          <p className="text-slate text-base sm:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto pt-2">
+          <p className="text-slate text-sm sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto pt-1">
             From initial specification analysis to container arrival at your port, we manage every critical milestone of the Indian agricultural export supply chain.
           </p>
         </div>
 
         {/* Services 6-Grid in Frosted Liquid Glass */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7 w-full">
           {services.map(({ icon: Icon, title, desc, highlights }) => (
             <div
               key={title}
-              className="glass-card !rounded-3xl p-9 sm:p-10 lg:p-11 flex flex-col justify-between hover:-translate-y-2 transition-all duration-300 shadow-xl"
+              className="glass-card !rounded-2xl p-7 sm:p-8 lg:p-9 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 shadow-xl"
             >
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold mb-8 shadow-inner">
-                  <Icon size={28} />
+                <div className="w-12 h-12 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold mb-6 shadow-inner">
+                  <Icon size={24} />
                 </div>
-                <h2 className="text-2xl font-bold text-white mb-4">{title}</h2>
-                <p className="text-slate text-sm sm:text-base leading-relaxed mb-8">{desc}</p>
-                <div className="space-y-3 pt-6 border-t border-white/10">
+                <h2 className="text-xl font-bold text-white mb-3">{title}</h2>
+                <p className="text-slate text-xs sm:text-sm leading-relaxed mb-6">{desc}</p>
+                <div className="space-y-2.5 pt-4 border-t border-white/10">
                   {highlights.map((h) => (
-                    <div key={h} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-300">
-                      <span className="w-2 h-2 rounded-full bg-gold flex-shrink-0" />
+                    <div key={h} className="flex items-center gap-2 text-xs text-slate-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
                       <span>{h}</span>
                     </div>
                   ))}
@@ -93,7 +93,7 @@ export default function ServicesPage() {
         </div>
 
         {/* CTA Banner Spanning Full Container Width */}
-        <div className="glass-card !rounded-3xl p-12 sm:p-16 lg:p-20 text-center border-gold/30 shadow-[0_24px_70px_rgba(224,160,69,0.15)] relative overflow-hidden">
+        <div className="glass-card !rounded-2xl p-8 sm:p-12 lg:p-14 text-center border-gold/30 shadow-[0_24px_70px_rgba(224,160,69,0.15)] relative overflow-hidden">
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full pointer-events-none"
             style={{

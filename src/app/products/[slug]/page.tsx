@@ -44,8 +44,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   const emoji = categoryEmojis[product.category] || '📦'
 
   return (
-    <div className="pt-36 pb-24 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40 w-full">
-      <div className="container-xl space-y-16 lg:space-y-24 w-full">
+    <div className="pt-28 pb-16 sm:pt-36 sm:pb-20 lg:pt-38 lg:pb-24 w-full">
+      <div className="container-xl space-y-12 sm:space-y-16 lg:space-y-20 w-full">
         {/* Back navigation */}
         <div>
           <Link
@@ -57,11 +57,11 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         </div>
 
         {/* Product Showcase in Frosted Glass */}
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-start w-full">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start w-full">
           
           {/* Left: Product Visual Card */}
-          <div className="lg:col-span-5 glass-card !rounded-3xl p-10 sm:p-12 text-center space-y-8 shadow-2xl w-full">
-            <div className="aspect-square w-full rounded-3xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 flex items-center justify-center relative overflow-hidden shadow-inner">
+          <div className="lg:col-span-5 glass-card !rounded-2xl p-7 sm:p-9 text-center space-y-6 shadow-2xl w-full">
+            <div className="aspect-square w-full rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 flex items-center justify-center relative overflow-hidden shadow-inner">
               {product.image && product.image.startsWith('/product/') ? (
                 <Image
                   src={product.image}
@@ -72,24 +72,24 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               ) : (
                 <span className="text-9xl select-none">{emoji}</span>
               )}
-              <div className="absolute top-5 left-5 z-10">
-                <span className="px-4 py-1.5 text-xs font-bold rounded-full bg-black/60 text-white border border-white/10 backdrop-blur-md">
+              <div className="absolute top-4 left-4 z-10">
+                <span className="px-3.5 py-1.5 text-xs font-bold rounded-full bg-black/60 text-white border border-white/10 backdrop-blur-md">
                   {product.categoryLabel}
                 </span>
               </div>
-              <div className="absolute top-5 right-5 z-10 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-xs font-semibold text-emerald-300 backdrop-blur-md">
+              <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-xs font-semibold text-emerald-300 backdrop-blur-md">
                 <span className="glow-indicator-green !w-2 !h-2" />
                 Export Ready
               </div>
             </div>
 
             {/* Spec Highlights Grid */}
-            <div className="grid grid-cols-2 gap-4 text-xs sm:text-sm">
-              <div className="p-4.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-left">
+            <div className="grid grid-cols-2 gap-3.5 text-xs sm:text-sm">
+              <div className="p-4 rounded-xl bg-white/[0.04] border border-white/[0.08] text-left">
                 <p className="text-slate">Origin</p>
                 <p className="text-white font-bold mt-1 text-base">India</p>
               </div>
-              <div className="p-4.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-left">
+              <div className="p-4 rounded-xl bg-white/[0.04] border border-white/[0.08] text-left">
                 <p className="text-slate">Purity Standard</p>
                 <p className="text-emerald-400 font-bold mt-1 text-base">99%+ Machine Cleaned</p>
               </div>
@@ -97,7 +97,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           </div>
 
           {/* Right: Specifications & Inquire */}
-          <div className="lg:col-span-7 glass-card !rounded-3xl p-10 sm:p-14 lg:p-16 space-y-8 shadow-2xl w-full">
+          <div className="lg:col-span-7 glass-card !rounded-2xl p-8 sm:p-10 lg:p-12 space-y-6 shadow-2xl w-full">
             <div>
               <span className="text-xs sm:text-sm font-semibold text-gold uppercase tracking-wider">
                 {product.categoryLabel}

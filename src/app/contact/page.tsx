@@ -41,15 +41,14 @@ export default function ContactPage({
       <div className="container-xl space-y-16 lg:space-y-24 w-full">
 
         {/* Page Heading */}
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="inline-flex items-center gap-2.5 px-4.5 py-2 rounded-full bg-white/[0.08] border border-white/[0.14] text-xs font-semibold text-gold tracking-wide">
-            <span className="glow-indicator-green !w-2 !h-2" />
-            <span>TRADE DESK</span>
+        <div className="max-w-4xl mx-auto text-center space-y-4">
+          <div className="inline-flex items-center gap-2.5 px-4.5 py-1.5 rounded-full bg-white/[0.08] border border-hairline text-xs font-semibold text-gold tracking-wide">
+            <span className="mono-tag text-gold">COMMERCIAL TRADE DESK • DIRECT INQUIRY</span>
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.08]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
             Connect With Our Export Desk
           </h1>
-          <p className="text-slate text-base sm:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto pt-2">
+          <p className="text-slate text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto pt-1">
             Ready to source Indian agricultural commodities? Send us your required specifications, estimated volume, and destination port.
           </p>
         </div>
@@ -58,73 +57,73 @@ export default function ContactPage({
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-start w-full">
 
           {/* Left Column: Direct Contact & Info Card */}
-          <div className="lg:col-span-5 space-y-8 w-full">
-            <div className="glass-card !rounded-3xl p-10 sm:p-12 lg:p-14 space-y-8 shadow-2xl w-full">
-              <h2 className="text-2xl font-bold text-white pb-5 border-b border-white/10">
+          <div className="lg:col-span-5 space-y-6 w-full">
+            <div className="glass-card !rounded-2xl p-7 sm:p-9 lg:p-10 space-y-6 shadow-2xl w-full">
+              <h2 className="text-xl sm:text-2xl font-bold text-white pb-4 border-b border-white/10">
                 Direct Inquiries
               </h2>
 
-              <ul className="space-y-6 text-sm sm:text-base">
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold flex-shrink-0 mt-0.5 shadow-inner">
-                    <Mail size={18} />
+              <ul className="space-y-5 text-sm sm:text-base">
+                <li className="flex items-start gap-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold flex-shrink-0 mt-0.5 shadow-inner">
+                    <Mail size={16} />
                   </div>
                   <div>
                     <p className="text-xs text-slate">Business Email</p>
                     <a
                       href={`mailto:${siteConfig.email}`}
-                      className="text-white font-semibold hover:text-gold transition-colors text-base"
+                      className="text-white font-semibold hover:text-gold transition-colors text-sm sm:text-base"
                     >
                       {siteConfig.email}
                     </a>
                   </div>
                 </li>
 
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold flex-shrink-0 mt-0.5 shadow-inner">
-                    <Phone size={18} />
+                <li className="flex items-start gap-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold flex-shrink-0 mt-0.5 shadow-inner">
+                    <Phone size={16} />
                   </div>
                   <div>
                     <p className="text-xs text-slate">Phone / WhatsApp</p>
                     <a
                       href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
-                      className="text-white font-semibold hover:text-gold transition-colors text-base"
+                      className="text-white font-semibold hover:text-gold transition-colors text-sm sm:text-base"
                     >
                       {siteConfig.phone}
                     </a>
                   </div>
                 </li>
 
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold flex-shrink-0 mt-0.5 shadow-inner">
-                    <MapPin size={18} />
+                <li className="flex items-start gap-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold flex-shrink-0 mt-0.5 shadow-inner">
+                    <MapPin size={16} />
                   </div>
                   <div>
                     <p className="text-xs text-slate">Location</p>
-                    <p className="text-white font-semibold text-base">India (Export Operations)</p>
+                    <p className="text-white font-semibold text-sm sm:text-base">India (Export Operations)</p>
                   </div>
                 </li>
 
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold flex-shrink-0 mt-0.5 shadow-inner">
-                    <Clock size={18} />
+                <li className="flex items-start gap-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-gold flex-shrink-0 mt-0.5 shadow-inner">
+                    <Clock size={16} />
                   </div>
                   <div>
                     <p className="text-xs text-slate">Response Time</p>
-                    <p className="text-white font-semibold text-base">Within 24 business hours</p>
+                    <p className="text-white font-semibold text-sm sm:text-base">Within 24 business hours</p>
                   </div>
                 </li>
               </ul>
 
-              <div className="pt-6 border-t border-white/10 space-y-3">
+              <div className="pt-5 border-t border-white/10 space-y-3">
                 <p className="text-xs text-slate font-medium uppercase tracking-wider">Export Compliance</p>
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-2">
                   {siteConfig.certifications.map((c) => (
                     <span
                       key={c}
-                      className="px-3.5 py-1.5 rounded-xl bg-white/[0.05] border border-white/10 text-xs text-white font-semibold flex items-center gap-2"
+                      className="px-3 py-1 rounded-lg bg-white/[0.05] border border-white/10 text-xs text-white font-semibold flex items-center gap-1.5"
                     >
-                      <ShieldCheck size={14} className="text-emerald-400" />
+                      <ShieldCheck size={13} className="text-emerald-400" />
                       {c}
                     </span>
                   ))}
@@ -133,8 +132,8 @@ export default function ContactPage({
             </div>
 
             {/* Quick Note */}
-            <div className="glass-card !rounded-3xl p-8 border-white/10 text-sm text-slate space-y-2 shadow-xl">
-              <p className="text-white font-bold text-base">Sample Shipments</p>
+            <div className="glass-card !rounded-2xl p-6 sm:p-7 border-white/10 text-xs sm:text-sm text-slate space-y-1.5 shadow-xl">
+              <p className="text-white font-bold text-sm">Sample Shipments</p>
               <p className="leading-relaxed">
                 Courier sample parcels (DHL/FedEx) can be arranged for quality analysis upon mutual agreement on commercial terms.
               </p>

@@ -56,7 +56,7 @@ export function EnquiryForm({ initialProduct = '' }: EnquiryFormProps) {
 
   if (status === 'success') {
     return (
-      <div className="glass-card p-8 sm:p-12 text-center space-y-4 border-emerald-500/30">
+      <div className="glass-card !rounded-2xl p-8 sm:p-12 text-center space-y-4 border-emerald-500/30">
         <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center mx-auto text-emerald-400">
           <CheckCircle2 size={32} />
         </div>
@@ -77,7 +77,7 @@ export function EnquiryForm({ initialProduct = '' }: EnquiryFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="glass-card !rounded-3xl p-8 sm:p-12 lg:p-14 space-y-8 shadow-2xl w-full">
+    <form onSubmit={handleSubmit(onSubmit)} className="glass-card !rounded-2xl p-7 sm:p-9 lg:p-10 space-y-7 sm:space-y-8 shadow-2xl w-full">
       <div className="flex items-center justify-between pb-6 border-b border-white/10">
         <div>
           <h3 className="text-2xl font-bold text-white">Request a Formal Quotation</h3>

@@ -29,7 +29,7 @@ export default function TermsPage() {
           <p className="text-slate text-sm mt-2">Last Updated: October 2026 • FEELEXIM Trade Operations</p>
         </div>
 
-        <div className="glass-card !rounded-3xl p-10 sm:p-14 lg:p-16 space-y-8 text-sm sm:text-base text-slate leading-relaxed shadow-2xl">
+        <div className="glass-card !rounded-2xl p-8 sm:p-12 lg:p-14 space-y-8 text-sm sm:text-base text-slate leading-relaxed shadow-2xl">
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-white">1. Quotations & Price Validity</h2>
             <p>

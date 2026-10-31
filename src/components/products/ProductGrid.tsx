@@ -8,7 +8,7 @@ interface ProductGridProps {
 export function ProductGrid({ products }: ProductGridProps) {
   if (products.length === 0) {
     return (
-      <div className="glass-card !rounded-3xl text-center py-20 px-6">
+      <div className="glass-card !rounded-2xl text-center py-16 px-6">
         <p className="text-5xl mb-4">🔍</p>
         <h3 className="text-xl font-bold text-white mb-2">No matching products found</h3>
         <p className="text-sm text-slate max-w-sm mx-auto">
