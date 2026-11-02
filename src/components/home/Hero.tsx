@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -34,6 +35,19 @@ export default function Hero() {
       className="relative overflow-hidden pt-[calc(var(--header-h)+3rem)] sm:pt-[calc(var(--header-h)+3.5rem)] lg:pt-[calc(var(--header-h)+4rem)] pb-8 sm:pb-10 lg:pb-12 w-full border-b border-hairline"
       aria-label="Hero section"
     >
+      {/* Ship Background */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <Image
+          src="/home/ship.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F18]/88 via-[#0A0F18]/80 to-[#0A0F18]/96" />
+      </div>
+
       {/* Background Architectural Grid Lines & Ambient Glow */}
       <div className="absolute inset-0 bg-grid opacity-35 pointer-events-none" />
       <div
