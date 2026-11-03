@@ -681,6 +681,34 @@ body {
   transform: translateY(-2px);
 }
 
+@keyframes swiperProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.swiper-progress {
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: swiperProgress 4.2s linear forwards;
+}
+
+.swiper-progress[data-paused='true'] {
+  animation-play-state: paused;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* ─── Gold underline decoration ─────────────────────────── */
 .gold-underline {
   position: relative;
