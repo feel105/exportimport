@@ -618,6 +618,69 @@ body {
   }
 }
 
+/* ─── Hero Command Center Micro-Motion ──────────────────── */
+@keyframes heroScan {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(560%);
+    opacity: 0;
+  }
+}
+
+.hero-scan {
+  animation: heroScan 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.hero-float {
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroPulseRing {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.hero-pulse-ring {
+  animation: heroPulseRing 3.2s ease-in-out infinite;
+}
+
+.hero-stat-tile {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.015) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 0.85rem;
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-stat-tile:hover {
+  border-color: rgba(224, 160, 69, 0.4);
+  background: linear-gradient(145deg, rgba(224, 160, 69, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+  transform: translateY(-2px);
+}
+
 /* ─── Gold underline decoration ─────────────────────────── */
 .gold-underline {
   position: relative;

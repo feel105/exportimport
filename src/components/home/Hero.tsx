@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowRight,
+  ArrowUpRight,
   ShieldCheck,
   Search,
   Grid,
@@ -13,12 +14,19 @@ import {
   Bell,
   Clock,
   Sparkles,
-  Thermometer,
   Layers,
   CheckCircle,
   TrendingUp,
   Copy,
   Check,
+  MapPin,
+  BadgeCheck,
+  Droplets,
+  FlaskConical,
+  CircleCheck,
+  FileCheck2,
+  Beaker,
+  Package,
 } from 'lucide-react'
 
 export default function Hero() {
@@ -195,131 +203,206 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Liquid Glass Dashboard (7 Cols) */}
+          {/* Right Column: Live Trade Command Center (7 Cols) */}
           <div className="lg:col-span-7 space-y-4 w-full">
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-3.5 sm:gap-4 w-full">
 
               {/* Card 1: Featured Live Origin Sourcing (7 Cols) */}
-              <div className="sm:col-span-7 glass-card p-5 sm:p-6 relative overflow-hidden flex flex-col justify-between min-h-[260px]">
-                <div className="flex items-center justify-between mb-3 z-10">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-black/50 text-white border border-white/10 backdrop-blur-md">
-                      Origin: Gujarat Belt
+              <div className="sm:col-span-7 glass-card group p-5 sm:p-6 relative overflow-hidden flex flex-col justify-between min-h-[292px]">
+                <div
+                  className="pointer-events-none absolute -top-24 -right-16 h-52 w-52 rounded-full opacity-70 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+                  style={{ background: 'radial-gradient(circle, rgba(224,160,69,0.38), transparent 70%)' }}
+                />
+
+                <div className="flex items-center justify-between gap-2 mb-3 relative z-10">
+                  <div className="flex items-center gap-1.5">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-bold px-2.5 py-1 rounded-lg bg-black/45 text-white border border-white/10 backdrop-blur-md">
+                      <MapPin size={11} className="text-gold" />
+                      Gujarat Belt
+                    </span>
+                    <span className="inline-flex items-center text-[10px] font-semibold px-2 py-1 rounded-lg bg-white/[0.06] text-slate-200 border border-white/10">
+                      2026 Crop
                     </span>
                   </div>
-                  <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-500/20 border border-red-500/40 text-[11px] font-bold text-red-300">
+                  <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-500/20 border border-red-500/40 text-[10px] font-bold text-red-300">
                     <span className="glow-indicator-red !w-2 !h-2" />
                     LIVE
                   </div>
                 </div>
 
                 {/* Sourcing Visual Window */}
-                <div className="relative rounded-xl overflow-hidden my-auto aspect-[16/9] bg-gradient-to-br from-amber-950/40 via-navy-deep to-slate-900 border border-white/10 flex items-center justify-center p-3.5 text-center shadow-inner">
-                  <div className="space-y-1">
-                    <div className="flex justify-center gap-2 text-2xl select-none">
-                      <span>🌶️</span>
-                      <span>🌿</span>
-                      <span>🫙</span>
+                <div
+                  className="relative rounded-2xl overflow-hidden my-2 aspect-[16/9] border border-white/10 flex items-center justify-center text-center shadow-inner"
+                  style={{
+                    background:
+                      'radial-gradient(120% 130% at 18% 8%, rgba(224,160,69,0.30) 0%, rgba(90,58,22,0.32) 34%, rgba(18,26,38,0.92) 62%, rgba(11,17,26,1) 100%)',
+                  }}
+                >
+                  <div className="absolute inset-0 bg-grid opacity-30" />
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
+                  <div className="hero-scan pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-gold/30 via-gold/5 to-transparent" />
+
+                  {/* Floating route chip */}
+                  <div className="hero-float hidden sm:block absolute top-2.5 right-2.5 z-10 rounded-xl bg-black/50 border border-white/15 px-2.5 py-1.5 text-left backdrop-blur-md shadow-lg">
+                    <p className="text-[8px] uppercase tracking-[0.14em] text-slate-400">Live Route</p>
+                    <p className="text-[10px] font-bold text-white flex items-center gap-1">
+                      Mundra <ArrowRight size={9} className="text-gold" /> Rotterdam
+                    </p>
+                  </div>
+
+                  <div className="relative z-10 space-y-1.5 px-6 py-6">
+                    <span className="mono-tag text-gold-light">FEATURED HARVEST</span>
+                    <p className="text-lg sm:text-xl font-black text-white leading-tight tracking-tight">
+                      Cumin & Turmeric
+                    </p>
+                    <p className="text-[10px] text-slate-300">
+                      Machine cleaned • Sortex graded • 99.8% purity
+                    </p>
+                    <div className="flex items-center justify-center gap-1.5 pt-1">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-400/10 border border-emerald-400/30 px-2 py-0.5 text-[9px] font-semibold text-emerald-300">
+                        <ShieldCheck size={9} /> Lab Tested
+                      </span>
+                      <span className="inline-flex items-center gap-1 rounded-full bg-gold/10 border border-gold/30 px-2 py-0.5 text-[9px] font-semibold text-gold-light">
+                        <Sparkles size={9} /> Export Grade
+                      </span>
                     </div>
-                    <p className="text-xs sm:text-sm font-bold text-white">Export-Ready Cumin & Turmeric Harvest</p>
-                    <p className="text-[10px] text-slate-400">Batch #FE-2026 • Machine Cleaned 99.8%</p>
+                  </div>
+
+                  {/* Batch stamp */}
+                  <div className="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1.5 rounded-lg bg-black/50 border border-white/15 px-2 py-1 backdrop-blur-md">
+                    <span className="glow-indicator-green !w-1.5 !h-1.5" />
+                    <p className="text-[9px] font-semibold text-white">Batch #FE-2026</p>
                   </div>
                 </div>
 
-                {/* Micro Action Dock */}
-                <div className="flex items-center justify-center gap-3 pt-3 border-t border-white/10 z-10">
-                  <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white hover:bg-white/20 cursor-pointer transition-colors shadow-sm" title="Layer Specs">
-                    <Layers size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
-                  </div>
-                  <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white hover:bg-white/20 cursor-pointer transition-colors shadow-sm" title="Testing Grade">
-                    <Sparkles size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
-                  </div>
-                  <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white hover:bg-white/20 cursor-pointer transition-colors shadow-sm" title="Phyto Compliance">
-                    <ShieldCheck size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 2: Export Quality & Weather Metrics (5 Cols) */}
-              <div className="sm:col-span-5 glass-card p-5 sm:p-6 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-start justify-between">
+                {/* Micro Action Dock + Inline Stats */}
+                <div className="flex items-center justify-between gap-2 pt-3 border-t border-white/10 relative z-10">
+                  <div className="flex items-center gap-3">
                     <div>
-                      <div className="flex items-baseline gap-1.5">
-                        <span className="text-2xl sm:text-3xl font-black text-white">99.8%</span>
-                        <span className="text-[11px] text-slate-300 font-semibold uppercase">Purity</span>
-                      </div>
-                      <p className="text-[10px] text-slate-400 mt-0.5">Export Grade A Standard</p>
+                      <p className="text-[9px] uppercase tracking-wider text-slate">Moisture</p>
+                      <p className="text-xs font-bold text-white">&lt; 8%</p>
                     </div>
-                    <div className="text-right">
-                      <p className="text-xs font-extrabold text-gold">FEELEXIM</p>
-                      <p className="text-[10px] text-slate-400">Verified House</p>
+                    <div className="w-px h-6 bg-white/10" />
+                    <div>
+                      <p className="text-[9px] uppercase tracking-wider text-slate">Purity</p>
+                      <p className="text-xs font-bold text-white">99.8%</p>
                     </div>
                   </div>
-
-                  {/* 2 Key Metrics */}
-                  <div className="grid grid-cols-2 gap-2 mt-3.5 pt-3 border-t border-white/10">
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white shadow-sm">
-                        <Thermometer size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold text-white">&lt; 8%</p>
-                        <p className="text-[10px] text-slate">Moisture</p>
-                      </div>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition-colors cursor-pointer" title="Layer Specs">
+                      <Layers size={13} />
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-7 h-7 rounded-lg bg-white/[0.09] border border-white/20 flex items-center justify-center text-white shadow-sm">
-                        <TrendingUp size={13} className="text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.35)]" />
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold text-white">99.4%</p>
-                        <p className="text-[10px] text-slate">Clean Rate</p>
-                      </div>
+                    <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition-colors cursor-pointer" title="Testing Grade">
+                      <FlaskConical size={13} />
                     </div>
-                  </div>
-                </div>
-
-                {/* 4 Statutory Pills */}
-                <div className="mt-3.5 pt-3 border-t border-white/10 grid grid-cols-4 gap-1.5 text-center">
-                  <div className="p-1.5 rounded-lg bg-white/[0.04] border border-white/5">
-                    <p className="text-[9px] text-slate font-semibold">FSSAI</p>
-                    <p className="text-xs font-bold text-emerald-400 mt-0.5">✓</p>
-                  </div>
-                  <div className="p-1.5 rounded-lg bg-white/[0.04] border border-white/5">
-                    <p className="text-[9px] text-slate font-semibold">APEDA</p>
-                    <p className="text-xs font-bold text-emerald-400 mt-0.5">✓</p>
-                  </div>
-                  <div className="p-1.5 rounded-lg bg-white/[0.04] border border-white/5">
-                    <p className="text-[9px] text-slate font-semibold">SPICE</p>
-                    <p className="text-xs font-bold text-emerald-400 mt-0.5">✓</p>
-                  </div>
-                  <div className="p-1.5 rounded-lg bg-white/[0.04] border border-white/5">
-                    <p className="text-[9px] text-slate font-semibold">IEC</p>
-                    <p className="text-xs font-bold text-emerald-400 mt-0.5">✓</p>
+                    <Link
+                      href="/contact"
+                      className="ml-1 inline-flex items-center gap-1 rounded-lg bg-gold/15 border border-gold/30 px-2.5 py-1.5 text-[10px] font-bold text-gold-light hover:bg-gold/25 transition-colors"
+                    >
+                      Sample <ArrowUpRight size={11} />
+                    </Link>
                   </div>
                 </div>
               </div>
 
-              {/* Card 3: Quality Control Thermostat Arc Gauge (5 Cols) */}
-              <div className="sm:col-span-5 glass-card p-5 sm:p-6 flex flex-col justify-between">
+              {/* Card 2: Export Grade Quality (5 Cols) */}
+              <div className="sm:col-span-5 glass-card group p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden">
+                <div
+                  className="pointer-events-none absolute -bottom-20 -left-16 h-44 w-44 rounded-full opacity-60 blur-3xl"
+                  style={{ background: 'radial-gradient(circle, rgba(56,189,248,0.30), transparent 70%)' }}
+                />
+
+                <div className="flex items-start justify-between relative z-10">
+                  <div>
+                    <p className="text-xs font-bold text-white">Export Grade Quality</p>
+                    <p className="text-[10px] text-slate">Laboratory verified batch</p>
+                  </div>
+                  <div className="w-7 h-7 rounded-lg bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
+                    <BadgeCheck size={15} />
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 my-3 relative z-10">
+                  {/* Radial purity ring */}
+                  <div className="relative w-[88px] h-[88px] shrink-0">
+                    <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                      <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.10)" strokeWidth="8" />
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="42"
+                        fill="none"
+                        stroke="url(#purityGrad)"
+                        strokeWidth="8"
+                        strokeLinecap="round"
+                        strokeDasharray="264"
+                        strokeDashoffset="1"
+                      />
+                      <defs>
+                        <linearGradient id="purityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#E0A045" />
+                          <stop offset="100%" stopColor="#F5BE6B" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className="text-xl font-black text-white tracking-tight">99.8%</span>
+                      <span className="text-[8px] font-bold uppercase tracking-[0.14em] text-slate">Purity</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/15 flex items-center justify-center text-cyan-300">
+                        <Droplets size={13} />
+                      </div>
+                      <div>
+                        <p className="text-[10px] text-slate">Moisture</p>
+                        <p className="text-xs font-bold text-white">&lt; 8%</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-white/[0.08] border border-white/15 flex items-center justify-center text-emerald-400">
+                        <TrendingUp size={13} />
+                      </div>
+                      <div>
+                        <p className="text-[10px] text-slate">Clean Rate</p>
+                        <p className="text-xs font-bold text-white">99.4%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Certification Matrix */}
+                <div className="grid grid-cols-4 gap-1.5 pt-3 border-t border-white/10 relative z-10">
+                  {['FSSAI', 'APEDA', 'SPICE', 'IEC'].map((cert) => (
+                    <div key={cert} className="hero-stat-tile p-1.5 text-center">
+                      <p className="text-[9px] text-slate font-semibold">{cert}</p>
+                      <CircleCheck size={11} className="text-emerald-400 mx-auto mt-0.5" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Card 3: Quality Assurance & Inspection (5 Cols) */}
+              <div className="sm:col-span-5 glass-card group p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="glow-indicator-green" />
                     <div>
                       <p className="text-xs font-bold text-white">Quality Assurance</p>
-                      <p className="text-[10px] text-slate">Climate Controlled</p>
+                      <p className="text-[10px] text-slate">Climate controlled</p>
                     </div>
                   </div>
-                  <div className="w-6 h-6 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-coral-accent text-xs">
-                    ⚡
+                  <div className="w-6 h-6 rounded-lg bg-white/[0.08] border border-white/10 flex items-center justify-center text-coral-accent">
+                    <ShieldCheck size={12} />
                   </div>
                 </div>
 
-                {/* Circular Gauge Graphic matching Reference image */}
+                {/* Arc Gauge */}
                 <div className="my-2.5 flex flex-col items-center justify-center relative">
-                  <div className="relative w-28 h-18 flex items-end justify-center">
-                    <svg className="w-28 h-18 overflow-visible" viewBox="0 0 100 55">
+                  <div className="relative w-28 h-[72px] flex items-end justify-center">
+                    <svg className="w-28 h-[72px] overflow-visible" viewBox="0 0 100 55">
                       <path
                         d="M 10 50 A 40 40 0 0 1 90 50"
                         fill="none"
@@ -342,49 +425,97 @@ export default function Hero() {
                       </defs>
                       <circle cx="78" cy="22" r="4.5" fill="#FFFFFF" stroke="#38BDF8" strokeWidth="2.5" />
                     </svg>
-                    <div className="absolute -bottom-1 text-center">
+                    <div className="absolute bottom-0 text-center">
                       <span className="text-xl sm:text-2xl font-black text-white tracking-tight">100%</span>
                       <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Sorted</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-1 pt-2.5 border-t border-white/10 text-center text-[10px] text-slate">
-                  <span>Cleaned</span>
-                  <span>Tested</span>
-                  <span>Certified</span>
+                <div className="space-y-1.5 pt-2.5 border-t border-white/10">
+                  {[
+                    { label: 'Cleaned', meta: 'Sortex', icon: Sparkles },
+                    { label: 'Tested', meta: 'NABL Lab', icon: FlaskConical },
+                    { label: 'Certified', meta: 'Phyto Ready', icon: FileCheck2 },
+                  ].map(({ label, meta, icon: Icon }) => (
+                    <div key={label} className="flex items-center justify-between rounded-lg px-2 py-1 bg-white/[0.03] border border-white/5">
+                      <div className="flex items-center gap-1.5">
+                        <Icon size={11} className="text-cyan-300" />
+                        <span className="text-[10px] font-semibold text-slate-200">{label}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <span className="text-[9px] text-slate">{meta}</span>
+                        <Check size={10} className="text-emerald-400" />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Card 4: Curcumin / Natural Color Spectrum (7 Cols) */}
-              <div className="sm:col-span-7 glass-card p-5 sm:p-6 flex flex-col justify-between">
-                <div className="flex items-center justify-between">
+              {/* Card 4: Natural Pigment & Curcumin (7 Cols) */}
+              <div className="sm:col-span-7 glass-card group p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden">
+                <div
+                  className="pointer-events-none absolute -top-20 -right-20 h-44 w-44 rounded-full opacity-60 blur-3xl"
+                  style={{ background: 'radial-gradient(circle, rgba(248,113,113,0.26), transparent 70%)' }}
+                />
+
+                <div className="flex items-center justify-between relative z-10">
                   <div className="flex items-center gap-2">
                     <span className="glow-indicator-green" />
                     <div>
                       <p className="text-xs font-bold text-white">Natural Pigment & Curcumin</p>
-                      <p className="text-[10px] text-slate">Volatile Oil & ASTA Values</p>
+                      <p className="text-[10px] text-slate">Volatile oil & ASTA values</p>
                     </div>
                   </div>
-                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-gold/20 text-gold font-bold">
+                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-gold/20 border border-gold/30 text-gold font-bold">
                     Grade A+
                   </span>
                 </div>
 
-                <div className="my-2.5 space-y-1.5">
+                {/* Curcumin stat tiles */}
+                <div className="grid grid-cols-3 gap-1.5 my-3 relative z-10">
+                  {[
+                    { label: 'Curcumin', value: '3.5%', icon: Beaker, color: 'text-amber-300' },
+                    { label: 'Volatile Oil', value: '2.8%', icon: Droplets, color: 'text-cyan-300' },
+                    { label: 'ASTA', value: '60+', icon: BadgeCheck, color: 'text-emerald-400' },
+                  ].map(({ label, value, icon: Icon, color }) => (
+                    <div key={label} className="hero-stat-tile px-2 py-2 text-center">
+                      <Icon size={12} className={`${color} mx-auto mb-1`} />
+                      <p className="text-sm font-black text-white leading-none">{value}</p>
+                      <p className="text-[8px] uppercase tracking-wider text-slate mt-1">{label}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="space-y-1.5 relative z-10">
                   <div className="flex justify-between text-[10px] text-slate">
                     <span>Natural Spectrum</span>
                     <span className="text-white font-semibold">Turmeric • Chilli • Coriander</span>
                   </div>
-                  {/* Multi-color Spectrum Bar matching Reference Image */}
-                  <div className="relative h-2.5 w-full rounded-full bg-gradient-to-r from-red-500 via-amber-400 via-emerald-400 to-fuchsia-500 p-[1px] shadow-sm">
+                  {/* Multi-color Spectrum Bar */}
+                  <div
+                    className="relative h-2.5 w-full rounded-full p-[1px] shadow-sm"
+                    style={{
+                      background:
+                        'linear-gradient(90deg, #EF4444 0%, #F59E0B 30%, #EAB308 50%, #22C55E 72%, #D946EF 100%)',
+                    }}
+                  >
+                    <div className="absolute inset-0 rounded-full ring-1 ring-white/15" />
                     <div className="absolute top-1/2 left-[48%] -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-white border-2 border-slate-900 shadow-[0_0_8px_rgba(255,255,255,0.9)]" />
+                  </div>
+                  <div className="flex justify-between text-[8px] uppercase tracking-wider text-slate-500">
+                    <span>Deep Red</span>
+                    <span>Golden</span>
+                    <span>Bright</span>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-[10px] text-slate pt-2.5 border-t border-white/10">
-                  <span>Export Bulk Packaging: 25kg / 50kg</span>
-                  <Link href="/products" className="text-gold hover:underline font-bold flex items-center gap-1">
+                <div className="flex items-center justify-between text-[10px] text-slate pt-2.5 border-t border-white/10 relative z-10">
+                  <span className="flex items-center gap-1.5">
+                    <Package size={11} className="text-slate-400" />
+                    25kg / 50kg Export Bulk
+                  </span>
+                  <Link href="/products" className="text-gold hover:text-gold-light font-bold flex items-center gap-1 transition-colors">
                     View Catalog <ArrowRight size={11} />
                   </Link>
                 </div>
