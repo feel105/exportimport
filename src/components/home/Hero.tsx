@@ -92,7 +92,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Content overlaying the full-width ship slider */}
+        {/* Content overlaying the full-width product portfolio slider */}
         <div className="max-w-3xl space-y-5 sm:space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.08] px-3.5 py-1 text-xs font-semibold tracking-wide text-gold">
             <span className="mono-tag text-gold">EXPORT HOUSE • EST. INDIA</span>

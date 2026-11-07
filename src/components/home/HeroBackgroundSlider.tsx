@@ -11,11 +11,13 @@ type Slide = {
 }
 
 const SLIDES: Slide[] = [
-  { src: '/home/ship.jpg', label: 'Ocean Freight', meta: 'Mundra → Rotterdam' },
-  { src: '/home/port-night.jpg', label: 'Port Operations', meta: 'Nhava Sheva' },
-  { src: '/home/ship-container.jpg', label: 'Container Logistics', meta: 'FCL / LCL' },
-  { src: '/home/port-hamburg.jpg', label: 'Global Terminals', meta: '35+ Ports' },
-  { src: '/home/ship-sea.jpg', label: 'Export Ready', meta: 'FOB / CIF / CFR' },
+  { src: '/home/whole-spices.jpg', label: 'Whole Spices', meta: 'Machine Cleaned • ASTA' },
+  { src: '/home/spice-powders.jpg', label: 'Spice Powders', meta: '60–100 Mesh • Pure' },
+  { src: '/home/nuts.jpg', label: 'Nuts & Dry Fruits', meta: 'Export Grade • Assorted' },
+  { src: '/home/seeds.jpg', label: 'Seeds', meta: 'Sortex 99.8% • Bulk' },
+  { src: '/home/tea.jpg', label: 'Tea', meta: 'Single Origin • Bulk' },
+  { src: '/home/herbs.jpg', label: 'Herbs', meta: 'Air-Dried • Aromatic' },
+  { src: '/home/agri-products.jpg', label: 'Agri Products', meta: 'Farm Direct • FOB / CIF' },
 ]
 
 const SLIDE_MS = 5500
@@ -62,7 +64,7 @@ export default function HeroBackgroundSlider() {
           )
         })}
 
-        {/* Left-weighted scrim keeps the content readable while the ship stays visible */}
+        {/* Left-weighted scrim keeps the content readable while the produce stays visible */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F18] via-[#0A0F18]/88 to-[#0A0F18]/25" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F18]/75 via-transparent to-[#0A0F18]/90" />
         <div className="absolute inset-0 bg-grid opacity-25" />
@@ -70,10 +72,10 @@ export default function HeroBackgroundSlider() {
 
       {/* Slide controls */}
       <div className="absolute bottom-5 right-4 z-20 flex items-center gap-2 sm:bottom-7 sm:right-7">
-        <div className="glass-pill hidden items-center gap-2 px-3 py-1.5 md:flex">
+        <div className="glass-pill flex items-center gap-2 px-2.5 py-1.5 sm:px-3">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(34,197,94,0.7)]" />
           <span className="text-[10px] font-bold text-white">{active.label}</span>
-          <span className="text-[10px] text-slate-400">• {active.meta}</span>
+          <span className="hidden text-[10px] text-slate-400 sm:inline">• {active.meta}</span>
         </div>
 
         <div className="flex items-center gap-1">
