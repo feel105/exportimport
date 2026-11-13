@@ -1,11 +1,29 @@
 'use client'
 
-import { useState, Suspense } from 'react'
+import { Suspense, use, useState } from 'react'
 import Link from 'next/link'
+import { io } from 'next/cache'
+import { useLocale, useTranslations } from 'next-intl'
 import { Mail, Phone, MapPin, CheckCircle2 } from 'lucide-react'
 import { siteConfig } from '@/config/site'
+import { localeHref } from '@/i18n/href'
+import type { Locale } from '@/i18n/config'
 import BackToTop from '@/components/ui/BackToTop'
-import CurrentYear from '@/components/ui/CurrentYear'
+import Logo from './Logo'
+
+const quickLinks = [
+  { key: 'about', href: '/about' },
+  { key: 'products', href: '/products' },
+  { key: 'services', href: '/services' },
+  { key: 'contact', href: '/contact' },
+]
+
+const categoryLinks = [
+  { key: 'wholeSpices', href: '/products?category=whole-spices' },
+  { key: 'spicePowders', href: '/products?category=spice-powders' },
+  { key: 'seeds', href: '/products?category=seeds' },
+  { key: 'nuts', href: '/products?category=nuts-other' },
+]
 
 function LinkedInIcon() {
   return (
@@ -31,9 +49,17 @@ function FacebookIcon() {
   )
 }
 
+function CopyrightYear() {
+  use(io())
+  const t = useTranslations('footer')
+  return <p>{t('rights', { year: new Date().getFullYear(), name: siteConfig.name })}</p>
+}
+
 export default function Footer() {
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
+  const t = useTranslations('footer')
+  const locale = useLocale() as Locale
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault()
@@ -50,32 +76,29 @@ export default function Footer() {
       role="contentinfo"
     >
       <div className="container-xl w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16 pt-16 sm:pt-20 pb-12 space-y-14">
-        
-        {/* Sanity-Style Top Section: Community & Inline Newsletter Capture Form */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 pb-12 border-b border-hairline">
           <div className="max-w-xl space-y-2">
-            <span className="mono-tag text-gold font-bold">MARKET INTELLIGENCE</span>
+            <span className="mono-tag text-gold font-bold">{t('newsletterEyebrow')}</span>
             <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Subscribe to Export Price Intelligence.
+              {t('newsletterTitle')}
             </h2>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Weekly harvest crop arrivals, wholesale terminal price movements, and ocean freight space updates directly to your corporate inbox.
+              {t('newsletterDescription')}
             </p>
           </div>
 
-          {/* Inline Email Form */}
           <div className="w-full max-w-md">
             {subscribed ? (
               <div className="px-5 py-3 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold flex items-center gap-2">
                 <CheckCircle2 size={16} />
-                <span>Thank you. You are now subscribed to FEELEXIM trade updates.</span>
+                <span>{t('subscribed')}</span>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="flex items-center gap-2">
                 <input
                   type="email"
                   required
-                  placeholder="buyer@company.com"
+                  placeholder={t('emailPlaceholder')}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full h-11 px-4.5 rounded-full bg-white/[0.04] border border-hairline text-xs sm:text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold transition-colors font-mono"
@@ -84,45 +107,34 @@ export default function Footer() {
                   type="submit"
                   className="h-11 px-6 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider transition-colors flex-shrink-0 border border-hairline"
                 >
-                  Subscribe
+                  {t('subscribe')}
                 </button>
               </form>
             )}
           </div>
         </div>
 
-        {/* Full-Width Multi-Column Link Directory */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 w-full">
-
-          {/* Column 1 — Brand (4 Cols) */}
           <div className="sm:col-span-2 lg:col-span-4 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-2.5" aria-label="FEELEXIM">
-              <div
-                className="w-9 h-9 rounded-xl flex items-center justify-center font-extrabold text-xs text-navy shadow-md"
-                style={{
-                  background: 'linear-gradient(135deg, var(--gold), var(--gold-dark))',
-                  boxShadow: '0 0 16px rgba(224, 160, 69, 0.35)',
-                }}
-              >
-                FE
-              </div>
-              <span className="text-xl font-black text-white tracking-tight">
-                FEEL<span className="text-gold">EXIM</span>
-              </span>
+            <Link
+              href={localeHref(locale, '/')}
+              className="inline-flex items-center gap-2.5"
+              aria-label={siteConfig.name}
+            >
+              <Logo />
             </Link>
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
-              Connecting international importers, food brands, and distributors with authentic Indian agricultural commodities through quality-focused sourcing and port logistics.
+              {t('brandDescription')}
             </p>
 
-            {/* Social icons */}
             <div className="flex items-center gap-2.5 pt-1">
               {siteConfig.social.linkedin && (
                 <a
                   href={siteConfig.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn"
+                  aria-label={t('linkedinAria')}
                   className="w-8 h-8 rounded-full flex items-center justify-center bg-white/[0.06] border border-hairline text-white hover:bg-white/[0.12] transition-colors"
                 >
                   <LinkedInIcon />
@@ -133,7 +145,7 @@ export default function Footer() {
                   href={siteConfig.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram"
+                  aria-label={t('instagramAria')}
                   className="w-8 h-8 rounded-full flex items-center justify-center bg-white/[0.06] border border-hairline text-white hover:bg-white/[0.12] transition-colors"
                 >
                   <InstagramIcon />
@@ -144,7 +156,7 @@ export default function Footer() {
                   href={siteConfig.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Facebook"
+                  aria-label={t('facebookAria')}
                   className="w-8 h-8 rounded-full flex items-center justify-center bg-white/[0.06] border border-hairline text-white hover:bg-white/[0.12] transition-colors"
                 >
                   <FacebookIcon />
@@ -153,43 +165,40 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2 — Quick Links (2 Cols) */}
           <div className="lg:col-span-2 space-y-3 font-mono text-xs">
-            <h3 className="mono-tag text-gold font-bold tracking-wider">NAVIGATION</h3>
+            <h3 className="mono-tag text-gold font-bold tracking-wider">{t('navigation')}</h3>
             <ul className="space-y-2">
-              {siteConfig.footerQuickLinks.map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href}
+                    href={localeHref(locale, link.href)}
                     className="text-slate-400 hover:text-white transition-colors"
                   >
-                    {link.label}
+                    {t(`quickLinks.${link.key}`)}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 3 — Product Categories (3 Cols) */}
           <div className="lg:col-span-3 space-y-3 font-mono text-xs">
-            <h3 className="mono-tag text-gold font-bold tracking-wider">COMMODITIES</h3>
+            <h3 className="mono-tag text-gold font-bold tracking-wider">{t('commodities')}</h3>
             <ul className="space-y-2">
-              {siteConfig.footerCategories.map((link) => (
+              {categoryLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href}
+                    href={localeHref(locale, link.href)}
                     className="text-slate-400 hover:text-white transition-colors"
                   >
-                    {link.label}
+                    {t(`categories.${link.key}`)}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 4 — Contact Desk (3 Cols) */}
           <div className="lg:col-span-3 space-y-3 font-mono text-xs">
-            <h3 className="mono-tag text-gold font-bold tracking-wider">TRADE DESK</h3>
+            <h3 className="mono-tag text-gold font-bold tracking-wider">{t('tradeDesk')}</h3>
             <ul className="space-y-2.5">
               <li>
                 <a
@@ -211,35 +220,38 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2 text-slate-400">
                 <MapPin size={12} className="text-gold flex-shrink-0 mt-0.5" />
-                <span>India • Mundra & Nhava Sheva Despatch Corridor</span>
+                <span>{t('location')}</span>
               </li>
             </ul>
           </div>
-
         </div>
 
-        {/* Bottom bar with Sanity-Style Status Telemetry */}
         <div className="pt-8 border-t border-hairline flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500 w-full">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span>MUNDRA & NHAVA SHEVA PORTS OPERATIONAL</span>
+            <span>{t('portsOperational')}</span>
           </div>
 
           <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">
-              Privacy Policy
+            <Link
+              href={localeHref(locale, '/privacy-policy')}
+              className="hover:text-slate-300 transition-colors"
+            >
+              {t('privacy')}
             </Link>
             <span>·</span>
-            <Link href="/terms" className="hover:text-slate-300 transition-colors">
-              Terms & Conditions
+            <Link
+              href={localeHref(locale, '/terms')}
+              className="hover:text-slate-300 transition-colors"
+            >
+              {t('terms')}
             </Link>
           </div>
 
-          <p>
-            © <Suspense fallback={<span>2026</span>}><CurrentYear /></Suspense> {siteConfig.name}. All rights reserved.
-          </p>
+          <Suspense fallback={<p>{t('rights', { year: 2026, name: siteConfig.name })}</p>}>
+            <CopyrightYear />
+          </Suspense>
         </div>
-
       </div>
 
       <BackToTop />

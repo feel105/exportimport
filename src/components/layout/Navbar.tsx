@@ -3,10 +3,15 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useLocale, useTranslations } from 'next-intl'
 import { Menu, X, ArrowRight, ChevronDown, ShieldCheck } from 'lucide-react'
 import { siteConfig } from '@/config/site'
 import { navigation } from '@/config/navigation'
+import { localeHref, stripLocale } from '@/i18n/href'
+import type { Locale } from '@/i18n/config'
+import Logo from './Logo'
 import MobileMenu from './MobileMenu'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -14,6 +19,8 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null)
   const headerRef = useRef<HTMLElement>(null)
   const pathname = usePathname()
+  const t = useTranslations('nav')
+  const locale = useLocale() as Locale
   const [prevPathname, setPrevPathname] = useState(pathname)
 
   if (prevPathname !== pathname) {
@@ -46,8 +53,15 @@ export default function Navbar() {
     }
   }, [])
 
+  const currentPath = stripLocale(pathname)
+  const isActive = (href: string) => {
+    const base = href.split('?')[0]
+    if (base === '/') return currentPath === '/'
+    return currentPath === base || currentPath.startsWith(`${base}/`)
+  }
+
   const activePanel = openMenu
-    ? navigation.find((item) => item.label === openMenu)?.panel
+    ? navigation.find((item) => item.href === openMenu)?.panel
     : undefined
 
   return (
@@ -59,7 +73,6 @@ export default function Navbar() {
         }`}
         onMouseLeave={() => setOpenMenu(null)}
       >
-        {/* Slim announcement strip */}
         <div
           className={`overflow-hidden border-b border-hairline bg-gradient-to-r from-navy-deep via-[#162233] to-navy-deep transition-all duration-300 ${
             isScrolled ? 'max-h-0 opacity-0' : 'max-h-10 opacity-100'
@@ -71,15 +84,15 @@ export default function Navbar() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
               </span>
-              <span className="mono-tag hidden font-bold text-emerald-400 sm:inline">HARVEST 2026</span>
-              <span className="truncate text-slate-300">
-                Export price lists &amp; container loading slots now active for EU, GCC, UK &amp; Americas.
+              <span className="mono-tag hidden font-bold text-emerald-400 sm:inline">
+                {t('harvest')}
               </span>
+              <span className="truncate text-slate-300">{t('announcement')}</span>
               <Link
-                href="/products"
+                href={localeHref(locale, '/products')}
                 className="ml-1 inline-flex flex-shrink-0 items-center gap-1 font-semibold text-gold transition-colors hover:text-gold-light"
               >
-                <span>View Allocation</span>
+                <span>{t('viewAllocation')}</span>
                 <ArrowRight size={11} />
               </Link>
             </div>
@@ -87,7 +100,7 @@ export default function Navbar() {
             <div className="hidden items-center gap-5 text-[11px] text-slate-400 lg:flex">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck size={12} className="text-gold" />
-                <span>APEDA • FSSAI • SPICES BOARD</span>
+                <span>{t('certifications')}</span>
               </span>
               <span className="text-white/20">|</span>
               <a
@@ -100,69 +113,58 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Header row */}
         <div className="relative">
           <div className="mx-auto flex h-[66px] w-full max-w-[1920px] items-center justify-between gap-2 px-4 sm:px-6 lg:px-8">
-            {/* Brand */}
             <div className="flex items-center gap-3">
-              <Link href="/" className="group flex flex-shrink-0 items-center gap-2.5" aria-label="FEELEXIM Home">
-                <div
-                  className="flex h-9 w-9 items-center justify-center rounded-lg text-xs font-extrabold text-navy shadow-md transition-transform duration-300 group-hover:scale-105"
-                  style={{
-                    background: 'linear-gradient(135deg, var(--gold), var(--gold-dark))',
-                    boxShadow: '0 0 16px rgba(224, 160, 69, 0.3)',
-                  }}
-                >
-                  FE
-                </div>
-                <span className="text-lg font-black tracking-tight text-white sm:text-xl">
-                  FEEL<span className="text-gold">EXIM</span>
-                </span>
+              <Link
+                href={localeHref(locale, '/')}
+                className="group flex flex-shrink-0 items-center"
+                aria-label={t('brandAria')}
+              >
+                <Logo priority />
               </Link>
 
               <span className="hidden h-4 w-px bg-white/15 2xl:block" />
               <span className="mono-tag hidden items-center gap-1.5 text-[10px] tracking-wider text-slate-400 2xl:flex">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                PORTS: MUNDRA &amp; NHAVA SHEVA ACTIVE
+                {t('ports')}
               </span>
             </div>
 
-            {/* Desktop navigation */}
-            <nav className="hidden items-center xl:flex" aria-label="Main navigation">
+            <nav className="hidden items-center xl:flex" aria-label={t('mainNavAria')}>
               {navigation.map((item) => {
-                const isActive =
-                  pathname === item.href ||
-                  (item.href !== '/' && pathname.startsWith(item.href.split('?')[0]))
-                const isOpen = openMenu === item.label
+                const itemIsActive = isActive(item.href)
+                const isOpen = openMenu === item.href
+                const label = t(item.labelKey)
 
                 if (!item.panel) {
                   return (
                     <Link
-                      key={item.label}
-                      href={item.href}
+                      key={item.href}
+                      href={localeHref(locale, item.href)}
                       className="nav-link"
-                      data-active={isActive}
+                      data-active={itemIsActive}
                     >
-                      {item.label}
+                      {label}
                     </Link>
                   )
                 }
 
                 return (
                   <div
-                    key={item.label}
+                    key={item.href}
                     className="relative"
-                    onMouseEnter={() => setOpenMenu(item.label)}
+                    onMouseEnter={() => setOpenMenu(item.href)}
                   >
                     <button
                       type="button"
                       className="nav-link"
-                      data-active={isActive || isOpen}
+                      data-active={itemIsActive || isOpen}
                       aria-haspopup="true"
                       aria-expanded={isOpen}
-                      onClick={() => setOpenMenu(isOpen ? null : item.label)}
+                      onClick={() => setOpenMenu(isOpen ? null : item.href)}
                     >
-                      {item.label}
+                      {label}
                       <ChevronDown
                         size={14}
                         className={`opacity-60 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
@@ -173,7 +175,6 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* Actions */}
             <div className="flex items-center gap-2">
               <a
                 href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
@@ -184,16 +185,18 @@ export default function Navbar() {
 
               <span className="hidden h-5 w-px bg-white/15 2xl:block" />
 
+              <LanguageSwitcher className="hidden md:inline-flex" />
+
               <Link
-                href="/products"
+                href={localeHref(locale, '/products')}
                 className="nav-cta-outline hidden md:inline-flex"
               >
-                Browse Catalog
+                {t('browseCatalog')}
               </Link>
 
-              <Link href="/contact" className="nav-cta-primary">
-                <span className="hidden sm:inline">Request Quotation</span>
-                <span className="sm:hidden">Enquire</span>
+              <Link href={localeHref(locale, '/contact')} className="nav-cta-primary">
+                <span className="hidden sm:inline">{t('requestQuotation')}</span>
+                <span className="sm:hidden">{t('enquire')}</span>
                 <ArrowRight size={13} />
               </Link>
 
@@ -201,7 +204,7 @@ export default function Navbar() {
                 type="button"
                 className="flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12] xl:hidden"
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
-                aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
+                aria-label={isMobileOpen ? t('closeMenu') : t('openMenu')}
                 aria-expanded={isMobileOpen}
                 aria-controls="mobile-menu"
               >
@@ -210,45 +213,52 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mega menu panel */}
           {activePanel && (
             <div className="absolute inset-x-0 top-full z-40 hidden xl:block">
               <div className="mx-auto w-full max-w-[1180px] px-6 pt-2 lg:px-8">
                 <div className="nav-panel-in glass-panel overflow-hidden rounded-2xl">
                   <div className="grid lg:grid-cols-[340px_1fr]">
                     <div className="border-b border-white/10 p-8 lg:border-b-0 lg:border-r">
-                      <Link href={activePanel.overview.href} className="group block">
+                      <Link
+                        href={localeHref(locale, activePanel.overview.href)}
+                        className="group block"
+                      >
                         <div className="flex items-start justify-between gap-3">
                           <span className="text-[16px] font-semibold leading-tight tracking-tight text-white">
-                            {activePanel.overview.label}
+                            {t(activePanel.overview.labelKey)}
                           </span>
                           <ArrowRight
                             size={16}
                             className="mt-0.5 flex-shrink-0 text-gold transition-transform duration-200 group-hover:translate-x-1"
                           />
                         </div>
-                        <p className="mt-2.5 line-clamp-3 text-[13px] leading-relaxed text-slate-400">
-                          {activePanel.overview.description}
-                        </p>
+                        {activePanel.overview.descriptionKey && (
+                          <p className="mt-2.5 line-clamp-3 text-[13px] leading-relaxed text-slate-400">
+                            {t(activePanel.overview.descriptionKey)}
+                          </p>
+                        )}
                       </Link>
                     </div>
 
                     <div className="grid sm:grid-cols-2 sm:divide-x sm:divide-white/10">
                       {activePanel.columns.map((column) => (
-                        <div key={column.heading} className="p-8">
+                        <div key={column.headingKey} className="p-8">
                           <p className="mono-tag mb-5 text-[10px] font-bold tracking-wider text-gold">
-                            {column.heading}
+                            {t(column.headingKey)}
                           </p>
                           <ul className="flex flex-col gap-4">
                             {column.items.map((link) => (
-                              <li key={link.label}>
-                                <Link href={link.href} className="group flex flex-col gap-0.5">
+                              <li key={link.labelKey}>
+                                <Link
+                                  href={localeHref(locale, link.href)}
+                                  className="group flex flex-col gap-0.5"
+                                >
                                   <span className="nav-underline w-fit text-[14px] font-medium leading-tight text-white">
-                                    {link.label}
+                                    {t(link.labelKey)}
                                   </span>
-                                  {link.description && (
+                                  {link.descriptionKey && (
                                     <span className="text-[13px] leading-snug text-slate-400">
-                                      {link.description}
+                                      {t(link.descriptionKey)}
                                     </span>
                                   )}
                                 </Link>
@@ -262,12 +272,18 @@ export default function Navbar() {
 
                   {activePanel.footer && (
                     <Link
-                      href={activePanel.footer.href}
+                      href={localeHref(locale, activePanel.footer.href)}
                       className="group flex items-center justify-between gap-6 border-t border-white/10 bg-white/[0.03] px-8 py-4 transition-colors hover:bg-white/[0.06]"
                     >
                       <span className="flex flex-col">
-                        <span className="text-[15px] font-semibold text-white">{activePanel.footer.label}</span>
-                        <span className="text-[13px] text-slate-400">{activePanel.footer.description}</span>
+                        <span className="text-[15px] font-semibold text-white">
+                          {t(activePanel.footer.labelKey)}
+                        </span>
+                        {activePanel.footer.descriptionKey && (
+                          <span className="text-[13px] text-slate-400">
+                            {t(activePanel.footer.descriptionKey)}
+                          </span>
+                        )}
                       </span>
                       <ArrowRight
                         size={16}

@@ -1,8 +1,11 @@
 'use client'
 
 import { ArrowUp } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export default function BackToTop() {
+  const t = useTranslations('common')
+
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -11,7 +14,7 @@ export default function BackToTop() {
         background: 'linear-gradient(135deg, var(--gold), var(--gold-dark))',
         color: 'var(--navy)',
       }}
-      aria-label="Back to top"
+      aria-label={t('backToTop')}
     >
       <ArrowUp size={18} />
     </button>

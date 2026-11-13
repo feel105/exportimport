@@ -1,11 +1,11 @@
 export interface NavLinkItem {
-  label: string
-  description?: string
+  labelKey: string
+  descriptionKey?: string
   href: string
 }
 
 export interface NavColumn {
-  heading: string
+  headingKey: string
   items: NavLinkItem[]
 }
 
@@ -16,156 +16,183 @@ export interface NavPanel {
 }
 
 export interface NavItem {
-  label: string
+  labelKey: string
   href: string
   panel?: NavPanel
 }
 
 export const navigation: NavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
+  { labelKey: 'home', href: '/' },
+  { labelKey: 'about', href: '/about' },
   {
-    label: 'Products',
+    labelKey: 'products',
     href: '/products',
     panel: {
       overview: {
-        label: 'Browse Full Catalog',
-        description:
-          "Machine cleaned, optically sorted, and packed to comply with your destination market's statutory food safety import standards.",
+        labelKey: 'panels.products.overviewLabel',
+        descriptionKey: 'panels.products.overviewDescription',
         href: '/products',
       },
       columns: [
         {
-          heading: 'COMMODITIES',
+          headingKey: 'panels.products.commodities',
           items: [
             {
-              label: 'Whole Spices',
-              description: 'Machine Cleaned • ASTA Tolerances',
+              labelKey: 'panels.products.wholeSpices',
+              descriptionKey: 'panels.products.wholeSpicesDesc',
               href: '/products?category=whole-spices',
             },
             {
-              label: 'Spice Powders',
-              description: '60 - 100 Mesh • Pure & Unadulterated',
+              labelKey: 'panels.products.spicePowders',
+              descriptionKey: 'panels.products.spicePowdersDesc',
               href: '/products?category=spice-powders',
             },
             {
-              label: 'Seeds & Grains',
-              description: 'Laser Cleaned • Purity 99.8%+',
+              labelKey: 'panels.products.seeds',
+              descriptionKey: 'panels.products.seedsDesc',
               href: '/products?category=seeds',
             },
             {
-              label: 'Nuts & Commodities',
-              description: 'Direct Sourcing • Export Graded',
+              labelKey: 'panels.products.nuts',
+              descriptionKey: 'panels.products.nutsDesc',
               href: '/products?category=nuts-other',
             },
           ],
         },
       ],
       footer: {
-        label: 'Request Quotation',
-        description:
-          'Export price lists & container loading slots now active for EU, GCC, UK & Americas.',
+        labelKey: 'panels.products.footerLabel',
+        descriptionKey: 'panels.products.footerDescription',
         href: '/contact',
       },
     },
   },
   {
-    label: 'Services',
+    labelKey: 'services',
     href: '/services',
     panel: {
       overview: {
-        label: 'Comprehensive Export Services',
-        description:
-          'From initial specification analysis to container arrival at your port, we manage every critical milestone of the Indian agricultural export supply chain.',
+        labelKey: 'panels.services.overviewLabel',
+        descriptionKey: 'panels.services.overviewDescription',
         href: '/services',
       },
       columns: [
         {
-          heading: 'END-TO-END COORDINATION',
+          headingKey: 'panels.services.coordination',
           items: [
             {
-              label: 'Custom Product Sourcing',
-              description: 'Regional farm origin mapping',
+              labelKey: 'panels.services.customSourcing',
+              descriptionKey: 'panels.services.customSourcingDesc',
               href: '/services',
             },
             {
-              label: 'Quality Testing & Grade Analysis',
-              description: 'Aflatoxin & pesticide screening',
+              labelKey: 'panels.services.qualityTesting',
+              descriptionKey: 'panels.services.qualityTestingDesc',
               href: '/services',
             },
             {
-              label: 'Custom Packaging & Private Label',
-              description: '25kg & 50kg PP / HDPE / Jute bags',
+              labelKey: 'panels.services.packaging',
+              descriptionKey: 'panels.services.packagingDesc',
               href: '/services',
             },
           ],
         },
         {
-          heading: 'EXPORT DESK',
+          headingKey: 'panels.services.exportDesk',
           items: [
             {
-              label: 'Statutory Export Documentation',
-              description: 'Phytosanitary Certificate',
+              labelKey: 'panels.services.documentation',
+              descriptionKey: 'panels.services.documentationDesc',
               href: '/services',
             },
             {
-              label: 'Freight & Container Logistics',
-              description: 'FOB, CIF, and CFR trade terms',
+              labelKey: 'panels.services.freight',
+              descriptionKey: 'panels.services.freightDesc',
               href: '/services',
             },
             {
-              label: 'Post-Dispatch Support & Continuity',
-              description: 'Couriered original documents',
+              labelKey: 'panels.services.postDispatch',
+              descriptionKey: 'panels.services.postDispatchDesc',
               href: '/services',
             },
           ],
         },
       ],
       footer: {
-        label: 'Request Custom Sourcing',
-        description:
-          'Have a unique commodity requirement, non-standard moisture threshold, or private label packaging request?',
+        labelKey: 'panels.services.footerLabel',
+        descriptionKey: 'panels.services.footerDescription',
         href: '/contact',
       },
     },
   },
   {
-    label: 'Quality & Compliance',
+    labelKey: 'quality',
     href: '/quality-compliance',
     panel: {
       overview: {
-        label: 'Quality Assurance & Credentials',
-        description:
-          'International agricultural trade requires uncompromising compliance. FEELEXIM operates under certified Indian trade licenses and adheres to strict destination food safety regulations.',
+        labelKey: 'panels.quality.overviewLabel',
+        descriptionKey: 'panels.quality.overviewDescription',
         href: '/quality-compliance',
       },
       columns: [
         {
-          heading: 'STATUTORY REGISTRATIONS',
+          headingKey: 'panels.quality.registrations',
           items: [
-            { label: 'FSSAI', description: 'Food Safety and Standards Authority of India', href: '/quality-compliance' },
-            { label: 'Spice RCMC', description: 'Registration cum Membership Certificate', href: '/quality-compliance' },
-            { label: 'IEC', description: 'Import Export Code (DGFT)', href: '/quality-compliance' },
-            { label: 'APEDA', description: 'Agricultural & Processed Food Products', href: '/quality-compliance' },
-            { label: 'GST', description: 'Goods and Services Tax Registration', href: '/quality-compliance' },
+            {
+              labelKey: 'panels.quality.fssai',
+              descriptionKey: 'panels.quality.fssaiDesc',
+              href: '/quality-compliance',
+            },
+            {
+              labelKey: 'panels.quality.rcmc',
+              descriptionKey: 'panels.quality.rcmcDesc',
+              href: '/quality-compliance',
+            },
+            {
+              labelKey: 'panels.quality.iec',
+              descriptionKey: 'panels.quality.iecDesc',
+              href: '/quality-compliance',
+            },
+            {
+              labelKey: 'panels.quality.apeda',
+              descriptionKey: 'panels.quality.apedaDesc',
+              href: '/quality-compliance',
+            },
+            {
+              labelKey: 'panels.quality.gst',
+              descriptionKey: 'panels.quality.gstDesc',
+              href: '/quality-compliance',
+            },
           ],
         },
         {
-          heading: 'QUALITY CONTROL PROTOCOLS',
+          headingKey: 'panels.quality.protocols',
           items: [
-            { label: 'Moisture Control', href: '/quality-compliance' },
-            { label: 'Sortex Cleaning & Optical Grading', href: '/quality-compliance' },
-            { label: 'Pesticide & Chemical Residue Testing', href: '/quality-compliance' },
-            { label: 'Phytosanitary & Fumigation Protocol', href: '/quality-compliance' },
+            {
+              labelKey: 'panels.quality.moisture',
+              href: '/quality-compliance',
+            },
+            {
+              labelKey: 'panels.quality.sortex',
+              href: '/quality-compliance',
+            },
+            {
+              labelKey: 'panels.quality.residue',
+              href: '/quality-compliance',
+            },
+            {
+              labelKey: 'panels.quality.phytosanitary',
+              href: '/quality-compliance',
+            },
           ],
         },
       ],
       footer: {
-        label: 'Discuss Compliance Parameters',
-        description: 'We align packaging and laboratory protocols to meet regional import regulations worldwide.',
+        labelKey: 'panels.quality.footerLabel',
+        descriptionKey: 'panels.quality.footerDescription',
         href: '/contact',
       },
     },
   },
-  { label: 'Contact', href: '/contact' },
+  { labelKey: 'contact', href: '/contact' },
 ]

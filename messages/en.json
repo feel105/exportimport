@@ -1,0 +1,1283 @@
+{
+  "languages": {
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español"
+  },
+  "common": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "services": "Services",
+    "quality": "Quality & Compliance",
+    "contact": "Contact",
+    "login": "Login",
+    "browseCatalog": "Browse Catalog",
+    "requestQuotation": "Request Quotation",
+    "enquire": "Enquire",
+    "language": "Language",
+    "selectLanguage": "Select language",
+    "backToTop": "Back to top"
+  },
+  "metadata": {
+    "siteTitle": "FEELEXIM — Indian Spices & Agricultural Products Export",
+    "siteDescription": "Your trusted sourcing partner for Indian spices, seeds, nuts, and agricultural products. We connect international buyers with reliable Indian suppliers through quality-focused sourcing and export coordination.",
+    "homeTitle": "FEELEXIM — The Agricultural Export Platform | Indian Spices, Seeds & Commodities",
+    "homeDescription": "FEELEXIM is the modern B2B Indian agricultural export platform for premium whole spices, ground powders, seeds, and commodities. Direct farm-origin sourcing, NABL laboratory testing, and ocean freight logistics to 35+ global ports.",
+    "ogImageAlt": "FEELEXIM — Indian Spices & Agricultural Products Export"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "services": "Services",
+    "quality": "Quality & Compliance",
+    "contact": "Contact",
+    "announcement": "Export price lists & container loading slots now active for EU, GCC, UK & Americas.",
+    "harvest": "HARVEST 2026",
+    "viewAllocation": "View Allocation",
+    "certifications": "APEDA • FSSAI • RCMC",
+    "ports": "PORTS: MUNDRA & NHAVA SHEVA ACTIVE",
+    "brandAria": "FEELEXIM Home",
+    "mainNavAria": "Main navigation",
+    "mobileNavAria": "Mobile navigation",
+    "mobileMenuAria": "Mobile navigation menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "browseCatalog": "Browse Catalog",
+    "requestQuotation": "Request Quotation",
+    "enquire": "Enquire",
+    "panels": {
+      "products": {
+        "overviewLabel": "Browse Full Catalog",
+        "overviewDescription": "Machine cleaned, optically sorted, and packed to comply with your destination market’s statutory food safety import standards.",
+        "commodities": "COMMODITIES",
+        "wholeSpices": "Whole Spices",
+        "wholeSpicesDesc": "Machine Cleaned • ASTA Tolerances",
+        "spicePowders": "Spice Powders",
+        "spicePowdersDesc": "60 - 100 Mesh • Pure & Unadulterated",
+        "seeds": "Seeds & Grains",
+        "seedsDesc": "Laser Cleaned • Purity 99.8%+",
+        "nuts": "Nuts & Commodities",
+        "nutsDesc": "Direct Sourcing • Export Graded",
+        "footerLabel": "Request Quotation",
+        "footerDescription": "Export price lists & container loading slots now active for EU, GCC, UK & Americas."
+      },
+      "services": {
+        "overviewLabel": "Comprehensive Export Services",
+        "overviewDescription": "From initial specification analysis to container arrival at your port, we manage every critical milestone of the Indian agricultural export supply chain.",
+        "coordination": "END-TO-END COORDINATION",
+        "customSourcing": "Custom Product Sourcing",
+        "customSourcingDesc": "Regional farm origin mapping",
+        "qualityTesting": "Quality Testing & Grade Analysis",
+        "qualityTestingDesc": "Aflatoxin & pesticide screening",
+        "packaging": "Custom Packaging & Private Label",
+        "packagingDesc": "25kg & 50kg PP / HDPE / Jute bags",
+        "exportDesk": "EXPORT DESK",
+        "documentation": "Statutory Export Documentation",
+        "documentationDesc": "Phytosanitary Certificate",
+        "freight": "Freight & Container Logistics",
+        "freightDesc": "FOB, CIF, and CFR trade terms",
+        "postDispatch": "Post-Dispatch Support & Continuity",
+        "postDispatchDesc": "Couriered original documents",
+        "footerLabel": "Request Custom Sourcing",
+        "footerDescription": "Have a unique commodity requirement, non-standard moisture threshold, or private label packaging request?"
+      },
+      "quality": {
+        "overviewLabel": "Quality Assurance & Credentials",
+        "overviewDescription": "International agricultural trade requires uncompromising compliance. FEELEXIM operates under certified Indian trade licenses and adheres to strict destination food safety regulations.",
+        "registrations": "STATUTORY REGISTRATIONS",
+        "fssai": "FSSAI",
+        "fssaiDesc": "Food Safety and Standards Authority of India",
+        "rcmc": "RCMC",
+        "rcmcDesc": "Registration cum Membership Certificate",
+        "iec": "IEC",
+        "iecDesc": "Import Export Code (DGFT)",
+        "apeda": "APEDA",
+        "apedaDesc": "Agricultural & Processed Food Products",
+        "gst": "GST",
+        "gstDesc": "Goods and Services Tax Registration",
+        "protocols": "QUALITY CONTROL PROTOCOLS",
+        "moisture": "Moisture Control",
+        "sortex": "Sortex Cleaning & Optical Grading",
+        "residue": "Pesticide & Chemical Residue Testing",
+        "phytosanitary": "Phytosanitary & Fumigation Protocol",
+        "footerLabel": "Discuss Compliance Parameters",
+        "footerDescription": "We align packaging and laboratory protocols to meet regional import regulations worldwide."
+      }
+    }
+  },
+  "footer": {
+    "newsletterEyebrow": "MARKET INTELLIGENCE",
+    "newsletterTitle": "Subscribe to Export Price Intelligence.",
+    "newsletterDescription": "Weekly harvest crop arrivals, wholesale terminal price movements, and ocean freight space updates directly to your corporate inbox.",
+    "emailPlaceholder": "buyer@company.com",
+    "subscribe": "Subscribe",
+    "subscribed": "Thank you. You are now subscribed to FEELEXIM trade updates.",
+    "brandDescription": "Connecting international importers, food brands, and distributors with authentic Indian agricultural commodities through quality-focused sourcing and port logistics.",
+    "navigation": "NAVIGATION",
+    "commodities": "COMMODITIES",
+    "tradeDesk": "TRADE DESK",
+    "location": "India • Mundra & Nhava Sheva Despatch Corridor",
+    "quickLinks": {
+      "about": "About Us",
+      "products": "Products",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "categories": {
+      "wholeSpices": "Whole Spices",
+      "spicePowders": "Spice Powders",
+      "seeds": "Seeds",
+      "nuts": "Nuts & Agricultural"
+    },
+    "portsOperational": "MUNDRA & NHAVA SHEVA PORTS OPERATIONAL",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "rights": "© {year} {name}. All rights reserved.",
+    "linkedinAria": "LinkedIn",
+    "instagramAria": "Instagram",
+    "facebookAria": "Facebook"
+  },
+  "hero": {
+    "aria": "Hero section",
+    "verified": "Verified Indian Export House",
+    "ports": "Mundra • Nhava Sheva",
+    "range": "Spices • Tea • Seeds • Herbs • Agri",
+    "titleLead": "The Agricultural",
+    "titleHighlight": "Export Platform.",
+    "description": "From whole spices and milled powders to seeds, tea, herbs and agri commodities — sourced direct from Indian farms, Manufacture, lab-verified, and shipped FOB / CIF to 35+ ports.",
+    "requestQuotation": "Request Quotation",
+    "browseRange": "Browse Product Range",
+    "copyTitle": "Click to copy export specification",
+    "copied": "Copied Spec!",
+    "mundraPort": "Mundra Port",
+    "trust": [
+      "Quality Sourcing",
+      "Docs Support",
+      "Custom Packing"
+    ],
+    "exportPorts": "export ports",
+    "nowSourcing": "Now sourcing · {hsCode}",
+    "productCategory": "Product category",
+    "explore": "Explore {label}",
+    "rangeLabel": "Range",
+    "previousSlide": "Previous product slide",
+    "nextSlide": "Next product slide",
+    "showSlide": "Show slide {index}: {label}",
+    "categories": {
+      "whole-spices": "Whole Spices",
+      "spice-powders": "Spice Powders",
+      "nuts-other": "Nuts",
+      "seeds": "Seeds",
+      "tea": "Tea",
+      "herbs": "Herbs",
+      "agri": "Agri Products"
+    },
+    "countries": {
+      "uk": "United Kingdom",
+      "uae": "United Arab Emirates",
+      "us": "United States",
+      "de": "Germany",
+      "jp": "Japan",
+      "sg": "Singapore"
+    },
+    "slides": {
+      "whole-spices": {
+        "label": "Whole Spices",
+        "meta": "Machine Cleaned • ASTA",
+        "description": "Cumin, coriander, turmeric finger, black pepper, fennel and cloves — machine cleaned, sortex graded and packed to ASTA tolerances.",
+        "specs": [
+          "Machine Cleaned",
+          "ASTA Tolerances"
+        ]
+      },
+      "spice-powders": {
+        "label": "Spice Powders",
+        "meta": "60–100 Mesh • Pure",
+        "description": "Turmeric, chilli, coriander, ginger, garlic and onion powders milled to your specified mesh, colour value and heat level.",
+        "specs": [
+          "60–100 Mesh",
+          "No Additives"
+        ]
+      },
+      "nuts-other": {
+        "label": "Nuts & Dry Fruits",
+        "meta": "Export Grade • Assorted",
+        "description": "Export-grade assorted nuts and dry fruits sourced to buyer specification, with complete food-safety documentation on request.",
+        "specs": [
+          "Export Grade",
+          "Buyer Specification"
+        ]
+      },
+      "seeds": {
+        "label": "Seeds",
+        "meta": "Sortex 99.8% • Bulk",
+        "description": "Sesame, flax, chia, basil, kalonji, mustard and quinoa — laser cleaned and sortexed to 99.8% purity for bulk buyers.",
+        "specs": [
+          "Sortex 99.8%",
+          "Bulk Packing"
+        ]
+      },
+      "tea": {
+        "label": "Tea",
+        "meta": "Single Origin • Bulk",
+        "description": "Single-origin Indian teas selected for bright liquor, clean aroma and consistent batch-to-batch strength.",
+        "specs": [
+          "Single Origin",
+          "Bulk / Retail"
+        ]
+      },
+      "herbs": {
+        "label": "Herbs",
+        "meta": "Air-Dried • Aromatic",
+        "description": "Mint, tulsi and moringa leaves, air-dried and hygienically processed to retain natural colour, aroma and potency.",
+        "specs": [
+          "Air-Dried",
+          "Aromatic"
+        ]
+      },
+      "agri": {
+        "label": "Agri Products",
+        "meta": "Farm Direct • FOB / CIF",
+        "description": "Farm-direct agricultural commodities and food ingredients for processors, importers and bulk packers worldwide.",
+        "specs": [
+          "Farm Direct",
+          "FOB / CIF"
+        ]
+      }
+    }
+  },
+  "trustStrip": {
+    "aria": "Platform metrics and trust indicators",
+    "stats": [
+      {
+        "tag": "GLOBAL REACH",
+        "metric": "35+",
+        "metricSub": "Ports",
+        "title": "Active Destination Trade Lanes",
+        "desc": "Regular container dispatch to UK, UAE, USA, Germany, Japan & Singapore.",
+        "linkText": "Explore trade lanes",
+        "href": "/services"
+      },
+      {
+        "tag": "SORTEX PURITY",
+        "metric": "99.8%",
+        "metricSub": "Standard",
+        "title": "Machine-Cleaned Sourcing",
+        "desc": "Direct NABL lab inspection for ASTA cleanliness, volatile oil & mycotoxins.",
+        "linkText": "View lab protocols",
+        "href": "/quality-compliance"
+      },
+      {
+        "tag": "SHELF LIFE",
+        "metric": "< 8%",
+        "metricSub": "Moisture",
+        "title": "Strict Quality Retention",
+        "desc": "Controlled post-harvest drying & vacuum packing preventing clumping in transit.",
+        "linkText": "Browse commodities",
+        "href": "/products"
+      },
+      {
+        "tag": "TRADE DESK",
+        "metric": "24h",
+        "metricSub": "SLA",
+        "title": "Commercial Turnaround",
+        "desc": "Transparent FOB Indian Ports, CIF & CFR price proformas with freight analysis.",
+        "linkText": "Request proforma",
+        "href": "/contact"
+      }
+    ]
+  },
+  "aboutPreview": {
+    "profile": "EXPORT HOUSE PROFILE",
+    "bridgeTitle": "Global Trade Bridge",
+    "bridgeDescription": "Connecting India’s agricultural harvest to food manufacturers, packers, and distributors across Europe, the Middle East, Americas, and Asia.",
+    "originLabel": "ORIGIN SOURCING",
+    "originValue": "All Indian Zones",
+    "qualityLabel": "QUALITY STANDARD",
+    "qualityValue": "Export Grade A",
+    "registered": "Govt. Registered Exporter",
+    "eyebrow": "ABOUT FEELEXIM",
+    "titleLead": "Your Direct Partner in",
+    "titleHighlight": "Global Trade.",
+    "description": "FEELEXIM connects international importers, wholesalers, and manufacturers with premium Indian agricultural commodities. We work directly with dependable regional growers and processing units across India to guarantee product conformity, customized packaging, and frictionless export documentation.",
+    "highlights": [
+      "Direct origin sourcing & customized chemical/physical specifications",
+      "Field-level aggregation across certified Gujarat and Rajasthan growing belts",
+      "Port corridor transit to Mundra & Nhava Sheva with complete customs clearance",
+      "Transparent commercial proformas, forward crop hedging & courier sample evaluation",
+      "Long-term trade partnerships across international importers and food manufacturers"
+    ],
+    "learnMore": "Learn More About Us"
+  },
+  "productRange": {
+    "eyebrow": "EXPORT PORTFOLIO • 25+ COMMODITIES",
+    "heading": "Premium Indian Export Range.",
+    "description": "Machine cleaned, optically sorted, and packed to comply with your destination market’s statutory food safety import standards.",
+    "browse": "Browse Full Catalog",
+    "viewGrades": "VIEW GRADES",
+    "categories": {
+      "whole-spices": {
+        "label": "Whole Spices",
+        "desc": "Cumin Seeds, Coriander Seeds, Turmeric Finger, Black Pepper, Fennel, Cloves & Mustard Seeds",
+        "badge": "High Demand",
+        "specs": "Machine Cleaned • ASTA Tolerances"
+      },
+      "spice-powders": {
+        "label": "Spice Powders",
+        "desc": "Finely milled Turmeric Powder, Red Chilli Powder, Coriander, Ginger, Garlic & Onion Powders",
+        "badge": "Controlled Mesh",
+        "specs": "60 - 100 Mesh • Pure & Unadulterated"
+      },
+      "seeds": {
+        "label": "Seeds & Grains",
+        "desc": "Natural Sesame Seeds, Black Sesame, Flax Seeds, Chia, Basil Seeds, Kalonji & Quinoa",
+        "badge": "Sortex 99.8%",
+        "specs": "Laser Cleaned • Purity 99.8%+"
+      },
+      "nuts-other": {
+        "label": "Nuts & Commodities",
+        "desc": "Assorted export-grade nuts and bespoke Indian agricultural commodities on commercial inquiry",
+        "badge": "On Request",
+        "specs": "Direct Sourcing • Export Graded"
+      }
+    }
+  },
+  "tradeShowcase": {
+    "eyebrow": "ARCHITECTURE & CAPABILITIES",
+    "heading": "Everything Your Trade Needs in One Place.",
+    "description": "Engineered to remove volatility, quality uncertainty, and customs friction from cross-border agricultural procurement.",
+    "chaptersLabel": "WORKFLOW CHAPTERS",
+    "steps": "05 STEPS",
+    "phase": "PHASE {num} • {label}",
+    "keySpecifications": "KEY SPECIFICATIONS:",
+    "realtime": "Real-time Manifest Verification",
+    "requestBatch": "Request Batch Sample",
+    "chapters": {
+      "quality": {
+        "tabLabel": "Quality Verification",
+        "heading": "Laboratory-Verified Commodity Standards",
+        "subheading": "Eliminate quality disputes with pre-shipment laboratory inspections.",
+        "description": "Every export lot undergoes comprehensive testing for physical cleanliness, moisture content, volatile oil percentages, and destination-specific pesticide MRLs before container loading.",
+        "bullets": [
+          "NABL & ISO/IEC 17025 accredited laboratory testing",
+          "Third-party inspection coordination (SGS, Geo-Chem, Bureau Veritas)",
+          "Aflatoxin, Ochratoxin, and Salmonella microbiological screening",
+          "Sortex optical sorting with 99.8% purity guarantee"
+        ],
+        "actionText": "View Quality Protocols",
+        "terminalData": [
+          {
+            "label": "Commodity Batch",
+            "value": "FE-2026-CUMIN-A1"
+          },
+          {
+            "label": "Purity Standard",
+            "value": "99.8% Machine Cleaned Sortex",
+            "highlight": true
+          },
+          {
+            "label": "Moisture Content",
+            "value": "7.4% (Max Allowable: 8.0%)"
+          },
+          {
+            "label": "Volatile Oil",
+            "value": "3.2% v/w (ASTA Standard)"
+          },
+          {
+            "label": "Aflatoxin (B1+B2+G1+G2)",
+            "value": "< 2.0 ppb (Compliant EU/US)"
+          },
+          {
+            "label": "Pesticide MRL Status",
+            "value": "Zero Residue Exceedance"
+          },
+          {
+            "label": "Issuing Lab",
+            "value": "NABL Certified #TC-7892"
+          }
+        ]
+      },
+      "origin": {
+        "tabLabel": "Direct Origin Sourcing",
+        "heading": "Direct Farm-Gate & APMC Terminal Procurement",
+        "subheading": "Connected directly to prime growing belts across Gujarat and Rajasthan.",
+        "description": "We bypass unnecessary middle layers by maintaining direct aggregation networks across Saurashtra, Unjha, Nagaur, and Kota terminal markets—securing competitive crop arrivals at harvest peak.",
+        "bullets": [
+          "Direct contracts with certified grower clusters and FPOs",
+          "Daily mandi pricing parity with complete transparent breakdown",
+          "Crop season tracking & forward price hedging discussions",
+          "Traceability back to regional growing district and harvest batch"
+        ],
+        "actionText": "Learn About Our Sourcing",
+        "terminalData": [
+          {
+            "label": "Primary Mandi Hub",
+            "value": "Unjha Terminal Market (Gujarat)"
+          },
+          {
+            "label": "Harvest Season",
+            "value": "Fresh Crop Arrival 2026",
+            "highlight": true
+          },
+          {
+            "label": "Grower Aggregation",
+            "value": "Verified Regional FPO Network"
+          },
+          {
+            "label": "Grading Protocol",
+            "value": "AGMARK Grade 1 / Export Special"
+          },
+          {
+            "label": "Transit to Port",
+            "value": "360 km via Dedicated Freight Corridor"
+          },
+          {
+            "label": "Traceability Index",
+            "value": "100% Regional Farm Block Mapped"
+          }
+        ]
+      },
+      "documentation": {
+        "tabLabel": "Export Documentation",
+        "heading": "Zero-Friction Customs & Statutory Clearance",
+        "subheading": "Complete paperwork handled seamlessly to guarantee prompt port release.",
+        "description": "Cross-border agricultural trade requires spotless paperwork. Our customs compliance desk prepares, verifies, and dispatches every statutory trade document prior to ocean vessel arrival.",
+        "bullets": [
+          "Official Government Phytosanitary Certificate (Plant Quarantine)",
+          "Certificate of Origin (Preferential / Non-Preferential via FIEO & Chamber)",
+          "Customs Commercial Invoice, Packing List & Bill of Lading (B/L)",
+          "Fumigation Certificate (Methyl Bromide / Phosphine treatment)"
+        ],
+        "actionText": "Explore Compliance Credentials",
+        "terminalData": [
+          {
+            "label": "Phytosanitary Cert",
+            "value": "PSC-INDIA-2026-VALIDATED",
+            "highlight": true
+          },
+          {
+            "label": "Certificate of Origin",
+            "value": "COO-CHAMBER-ISSUED"
+          },
+          {
+            "label": "Fumigation Standard",
+            "value": "AFAS / IMO Approved 48h Cycle"
+          },
+          {
+            "label": "Bill of Lading",
+            "value": "Clean On Board Express Release"
+          },
+          {
+            "label": "Statutory Body",
+            "value": "FSSAI • APEDA • RCMC"
+          },
+          {
+            "label": "HS Classification",
+            "value": "Harmonized 6-Digit Global Standard"
+          }
+        ]
+      },
+      "packaging": {
+        "tabLabel": "Custom Packaging",
+        "heading": "Bespoke Bulk Packaging & Private Label Solutions",
+        "subheading": "Engineered for cargo stability, moisture protection, and retail readiness.",
+        "description": "From 25kg multi-ply paper and PP woven sacks for wholesale processors to customized vacuum-sealed barrier pouches under your own brand, we tailor packaging to your exact retail or industrial requirements.",
+        "bullets": [
+          "Multi-wall paper bags, PP woven sacks & traditional Jute hessian",
+          "Food-grade vacuum pouches with oxygen absorbers (1kg to 10kg)",
+          "1000kg FIBC Jumbo Tote Bags with lifting loops for automated lines",
+          "Private label retail printing with barcode & nutritional label integration"
+        ],
+        "actionText": "Discuss Packaging Needs",
+        "terminalData": [
+          {
+            "label": "Primary Bag Type",
+            "value": "25kg Polypropylene (PP) with Inner PE Liner",
+            "highlight": true
+          },
+          {
+            "label": "Moisture Barrier",
+            "value": "Heavy Duty 50-micron Virgin PE"
+          },
+          {
+            "label": "Palletization",
+            "value": "ISPM-15 Heat Treated Wooden Pallets"
+          },
+          {
+            "label": "Stretch Wrap",
+            "value": "Fully Strapped & Shrink-Wrapped"
+          },
+          {
+            "label": "Private Labeling",
+            "value": "Custom Buyer Marking & Artwork Supported"
+          },
+          {
+            "label": "Bag Tolerance",
+            "value": "± 0.2% Automatic Electronic Check-Weigher"
+          }
+        ]
+      },
+      "logistics": {
+        "tabLabel": "Multimodal Logistics",
+        "heading": "Container Logistics from Mundra to Destination Port",
+        "subheading": "Guaranteed shipping line slots and real-time vessel tracking.",
+        "description": "Strategically positioned with rapid highway access to Mundra Port and Nhava Sheva (JNPT), we coordinate container stuffing, customs seal verification, and ocean freight bookings across leading shipping lines.",
+        "bullets": [
+          "FOB (Indian Ports), CIF, or CFR Incoterms pricing",
+          "Direct carrier contracts with Maersk, MSC, CMA CGM & Hapag-Lloyd",
+          "20ft FCL (18–20 MT) and 40ft High Cube (24–26 MT) payloads",
+          "Real-time ocean container tracking updates from port gate-in to discharge"
+        ],
+        "actionText": "Check Shipping Lanes",
+        "terminalData": [
+          {
+            "label": "Loading Port",
+            "value": "Port of Mundra / Nhava Sheva (IN)"
+          },
+          {
+            "label": "Target Incoterm",
+            "value": "FOB / CIF / CFR Destination Port",
+            "highlight": true
+          },
+          {
+            "label": "Container Size",
+            "value": "20ft GP (19 Metric Tons Payload)"
+          },
+          {
+            "label": "Transit Time to GCC",
+            "value": "4 - 7 Days (Jebel Ali / Dammam)"
+          },
+          {
+            "label": "Transit Time to EU",
+            "value": "18 - 24 Days (Rotterdam / Felixstowe)"
+          },
+          {
+            "label": "Transit Time to US",
+            "value": "26 - 32 Days (New York / Savannah)"
+          }
+        ]
+      }
+    }
+  },
+  "whyChooseUs": {
+    "eyebrow": "THE FEELEXIM ADVANTAGE",
+    "heading": "Built Around Your Sourcing Needs.",
+    "description": "Engineered to remove volatility, quality uncertainty, and communication barriers from cross-border agricultural procurement.",
+    "verifiedStandard": "OPERATIONAL STANDARD VERIFIED",
+    "features": [
+      {
+        "title": "Transparent Quotations",
+        "desc": "Clear, competitive pricing calculated directly against Indian wholesale terminal markets, with complete breakdown of ocean freight and certification costs."
+      },
+      {
+        "title": "Flexible Packaging Options",
+        "desc": "Custom private labeling, varied package sizing (1kg to 1000kg jumbo tote bags), and protective vacuum packaging tailored to destination shelf life."
+      },
+      {
+        "title": "Verified Quality Sourcing",
+        "desc": "Direct field and terminal market sourcing backed by NABL accredited lab inspections for moisture, pesticide MRLs, and ASTA cleanliness."
+      },
+      {
+        "title": "Complete Export Documentation",
+        "desc": "Full coordination of Phytosanitary, Certificate of Origin, Bill of Lading, Fumigation, and custom trade invoices without bureaucratic delays."
+      },
+      {
+        "title": "Responsive Trade Desk",
+        "desc": "Dedicated commercial managers providing proactive status updates from port loading at Mundra / Nhava Sheva to shipping line tracking."
+      },
+      {
+        "title": "Buyer-Specific Procurement",
+        "desc": "Capability to procure unique grades, wild-harvested herbs, or specialty seeds outside standard catalogs upon commercial request."
+      }
+    ]
+  },
+  "workbench": {
+    "eyebrow": "INSTANT PROCUREMENT SPECS",
+    "heading": "Less talk, verified specifications.",
+    "description": "Direct commercial parameters, tariff classifications, and container payload metrics for international commodity buyers.",
+    "cards": {
+      "rfq": {
+        "title": "Instant Proforma RFQ",
+        "description": "Generate an official export price quotation with complete breakdown of FOB Indian port charges, freight, and mandatory phytosanitary documentation.",
+        "slaLabel": "TURNAROUND SLA:",
+        "slaValue": "< 24 HOURS",
+        "button": "Request Commercial Proforma"
+      },
+      "hs": {
+        "title": "HS Tariff Reference",
+        "description": "Copy verified 6-digit Harmonized System export tariff codes for customs duty declarations at your destination clearance port.",
+        "copyLabel": "CLICK TO COPY HS CODE:",
+        "source": "WCO HARMONIZED",
+        "copied": "Copied",
+        "items": [
+          {
+            "id": "cumin",
+            "code": "0909.31",
+            "name": "Cumin Seeds (Whole)"
+          },
+          {
+            "id": "turmeric",
+            "code": "0910.30",
+            "name": "Turmeric Fingers / Curcumin"
+          },
+          {
+            "id": "sesame",
+            "code": "1207.40",
+            "name": "Natural Sesame Seeds"
+          }
+        ]
+      },
+      "payload": {
+        "title": "Container Payload Matrix",
+        "description": "Standard stuffing payload capacities and palletization parameters for dry bulk agricultural ocean shipments.",
+        "label": "STUFFING CAPACITIES:",
+        "port": "MUNDRA PORT",
+        "rows": [
+          {
+            "label": "20ft FCL Standard",
+            "value": "18 - 20 Metric Tons"
+          },
+          {
+            "label": "40ft High Cube",
+            "value": "24 - 26 Metric Tons"
+          },
+          {
+            "label": "Pallet Standard",
+            "value": "ISPM-15 Heat Treated"
+          }
+        ]
+      }
+    }
+  },
+  "qualitySection": {
+    "eyebrow": "STATUTORY ACCREDITATION",
+    "heading": "Enterprise-Grade Trade Compliance.",
+    "description": "Global food and spice trade depends entirely on specification conformity, statutory credentials, and zero-defect phytosanitary clearance.",
+    "paragraph": "We operate exclusively in strict compliance with destination market tolerances on moisture, pesticide residue (MRLs), aflatoxins, and microbiological purity. Every consignment is inspected and sealed prior to port loading.",
+    "sortexMetric": "99.8%",
+    "sortexLabel": "Sortex Purity SLA",
+    "deskMetric": "24/7",
+    "deskLabel": "Trade Desk Dispatch",
+    "protocolsButton": "Full Compliance Protocols",
+    "labButton": "Request Lab Sample",
+    "credentials": [
+      {
+        "code": "FSSAI",
+        "name": "Food Safety & Standards Authority",
+        "type": "Central License #1072...",
+        "status": "Verified & Active"
+      },
+      {
+        "code": "APEDA",
+        "name": "Agri & Processed Food Authority",
+        "type": "Export Registration #218...",
+        "status": "Verified & Active"
+      },
+      {
+        "code": "RCMC",
+        "name": "Ministry of Commerce & Industry",
+        "type": "RCMC Exporter Certificate",
+        "status": "Verified & Active"
+      },
+      {
+        "code": "DGFT IEC",
+        "name": "Directorate General of Foreign Trade",
+        "type": "Import Export Code Validated",
+        "status": "Verified & Active"
+      },
+      {
+        "code": "AGMARK",
+        "name": "Agricultural Marketing Standard",
+        "type": "Quality Grading & Sorting",
+        "status": "Verified & Active"
+      },
+      {
+        "code": "SGS / GEO-CHEM",
+        "name": "Independent Lab Pre-Shipment",
+        "type": "Purity & MRL Certificate",
+        "status": "Per Consignment"
+      }
+    ]
+  },
+  "globalTrade": {
+    "eyebrow": "OCEAN FREIGHT & PORT CORRIDORS",
+    "heading": "Bringing Indian Produce to Global Importers.",
+    "description": "Coordinating dependable multimodal supply chains from Mundra and Nhava Sheva ports to your destination harbor under ICC Incoterms.",
+    "terms": "TERMS: FOB / CIF / CFR",
+    "gateIn": "MUNDRA GATE-IN",
+    "lanes": [
+      {
+        "region": "Middle East & GCC",
+        "ports": "Jebel Ali • Dammam • Doha • Sohar",
+        "days": "4 - 7 Days",
+        "status": "High Frequency"
+      },
+      {
+        "region": "Europe & United Kingdom",
+        "ports": "Rotterdam • Felixstowe • Hamburg • Antwerp",
+        "days": "18 - 24 Days",
+        "status": "Weekly Sailings"
+      },
+      {
+        "region": "North America",
+        "ports": "New York • Savannah • Houston • Long Beach",
+        "days": "26 - 32 Days",
+        "status": "Direct Routes"
+      },
+      {
+        "region": "Southeast Asia & Far East",
+        "ports": "Singapore • Port Klang • Tokyo • Busan",
+        "days": "10 - 15 Days",
+        "status": "Regular Feeder"
+      }
+    ],
+    "pillars": [
+      {
+        "title": "Mundra & Nhava Sheva Ports",
+        "desc": "Primary western corridor loading hubs"
+      },
+      {
+        "title": "FOB / CIF / CFR Commercial Terms",
+        "desc": "Transparent freight & customs breakdown"
+      },
+      {
+        "title": "Customs Clearance Ready",
+        "desc": "Complete pre-dispatch statutory vetting"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "TRADE INTELLIGENCE",
+    "heading": "Frequently Asked Questions.",
+    "description": "Key information on sourcing procedures, laboratory analysis, custom branding, and shipping logistics.",
+    "quickTitle": "HAVE SPECIFIC QUESTIONS?",
+    "quickDescription": "Need details on HS tariff codes, container load limits, or harvest season schedules? Our trade desk responds promptly.",
+    "requestQuotation": "Request a Quotation",
+    "items": [
+      {
+        "question": "What products does FEELEXIM export?",
+        "answer": "FEELEXIM focuses on Indian-origin agricultural products including whole spices (cumin, coriander, turmeric, black pepper, fennel, fenugreek, mustard, cloves), spice powders (turmeric, red chilli, coriander, ginger, garlic, onion), seeds (sesame, flax, chia, basil, kalonji, quinoa), and selected nuts and agricultural commodities. We are also open to sourcing other Indian-origin products based on buyer requirements."
+      },
+      {
+        "question": "Can I request product samples?",
+        "answer": "Sample coordination is possible for many products and is subject to product availability, agreed terms, and destination-specific requirements. Please contact us through the enquiry form to discuss your sample needs, and we will do our best to accommodate your request."
+      },
+      {
+        "question": "Can packaging be customised?",
+        "answer": "Yes, we are open to discussing flexible packaging options — including private label, custom sizes, and specific packaging materials — subject to minimum order quantities and mutually agreed commercial terms. Please share your packaging requirements through the enquiry form."
+      },
+      {
+        "question": "Can you coordinate export documentation?",
+        "answer": "We provide support for export documentation coordination, including commercial invoices, packing lists, phytosanitary certificates, certificates of origin, and other documents that may be required for your destination market. Specific documentation depends on the product, destination country, and applicable regulations."
+      },
+      {
+        "question": "How can I request a quotation?",
+        "answer": "You can request a quotation by filling out the enquiry form on our Contact page or by reaching out directly via email or phone. Please include the product name, estimated quantity, preferred packaging, and destination port so we can provide an accurate quotation."
+      },
+      {
+        "question": "Do you accept product-specific sourcing requests?",
+        "answer": "Yes. If you are looking for a specific Indian-origin agricultural product not listed in our catalog, please contact us with your requirements. We will assess the sourcing feasibility and revert with available options."
+      }
+    ]
+  },
+  "contactCta": {
+    "eyebrow": "READY TO INITIATE TRADE?",
+    "heading": "Let’s Start a Conversation.",
+    "description": "Share your target commodity specifications, required volume (FCL or LCL), and destination port. Our export desk will revert within 24 business hours.",
+    "button": "Request Formal Quotation"
+  },
+  "pages": {
+    "about": {
+      "meta": {
+        "title": "About Us",
+        "description": "Learn about FEELEXIM, our values, and our mission connecting international importers with authentic Indian spices, seeds, and agricultural commodities."
+      },
+      "eyebrow": "INDIAN EXPORT HOUSE • ESTABLISHED TRADE",
+      "titleLead": "Bridging Indian Agricultural Excellence with",
+      "titleHighlight": "World Markets.",
+      "description": "FEELEXIM operates as an international trade and sourcing house headquartered in India, coordinating high-grade spices, seeds, nuts, and agricultural products for international buyers.",
+      "purposeTitle": "Our Purpose & Methodology",
+      "paragraph1": "India produces some of the world’s most sought-after agricultural commodities — from pungent cumin and vibrant high-curcumin turmeric to pure sesame and medicinal seeds. However, navigating regional suppliers, fluctuating moisture standards, and complex export paperwork can pose major challenges for global importers.",
+      "paragraph2": "FEELEXIM was founded to eliminate this friction. We serve as your dedicated Indian sourcing arm — identifying authentic supplies, arranging independent laboratory tests, supervising sorting and custom packaging, and securing statutory export certifications before container dispatch.",
+      "exploreCatalog": "Explore Catalog",
+      "contactDesk": "Contact Trade Desk",
+      "credentialsTitle": "Registered Credentials",
+      "credentialsSubtitle": "Official statutory registrations",
+      "certified": "{cert} Certified & Registered",
+      "complianceNote": "All export shipments undergo required statutory phytosanitary inspections and quality checks in full compliance with Indian trade authorities.",
+      "commitmentsTitle": "Our Core Commitments",
+      "commitmentsSubtitle": "Why international food companies and distributors rely on FEELEXIM.",
+      "pillars": [
+        {
+          "title": "Quality-Centric Sourcing",
+          "desc": "We coordinate directly with certified growers, grading centers, and processing plants across India to ensure all physical and chemical tolerances are strictly verified."
+        },
+        {
+          "title": "Global Export Fluency",
+          "desc": "From port coordination at Mundra and Nhava Sheva to customs clearances, certificate of origin, and phytosanitary certificates, we manage export logistics end-to-end."
+        },
+        {
+          "title": "Buyer-Aligned Focus",
+          "desc": "Every international market has unique labeling, packaging, mesh size, and testing parameters. We customize sourcing according to your specific import norms."
+        },
+        {
+          "title": "Long-Term Trade Relationships",
+          "desc": "We prioritize consistent reliability, transparent commercial dealings, and integrity over one-off spot shipments, building enduring global partnerships."
+        }
+      ]
+    },
+    "contact": {
+      "meta": {
+        "title": "Contact Us & Request a Quote",
+        "description": "Contact FEELEXIM trade desk. Request formal quotations for Indian spices, seeds, and agricultural commodities with custom packaging and destination shipping terms."
+      },
+      "eyebrow": "COMMERCIAL TRADE DESK • DIRECT INQUIRY",
+      "heading": "Connect With Our Export Desk",
+      "description": "Ready to source Indian agricultural commodities? Send us your required specifications, estimated volume, and destination port.",
+      "loadingForm": "Loading quotation form...",
+      "directInquiries": "Direct Inquiries",
+      "businessEmail": "Business Email",
+      "phone": "Phone / WhatsApp",
+      "location": "Location",
+      "locationValue": "India (Export Operations)",
+      "responseTime": "Response Time",
+      "responseValue": "Within 24 business hours",
+      "exportCompliance": "Export Compliance",
+      "sampleTitle": "Sample Shipments",
+      "sampleDescription": "Courier sample parcels (DHL/FedEx) can be arranged for quality analysis upon mutual agreement on commercial terms."
+    },
+    "products": {
+      "meta": {
+        "title": "Export Products Catalog",
+        "description": "Explore FEELEXIM export product catalog: Indian whole spices, spice powders, natural seeds, and nuts. Cleaned, sorted, and packaged for international export."
+      },
+      "eyebrow": "EXPORT CATALOG",
+      "heading": "Premium Agricultural Products",
+      "description": "Browse our export-ready commodities sourced from prime agricultural belts across India. Filter by category, search by product name, or enquire for customized specifications.",
+      "loading": "Loading product catalog...",
+      "allCommodities": "All Commodities",
+      "searchPlaceholder": "Search commodities by name, botanical grade, origin or tag...",
+      "clearSearch": "Clear search",
+      "noResultsTitle": "No matching products found",
+      "noResultsDescription": "Try adjusting your search query or selecting a different category filter.",
+      "ready": "Ready",
+      "fullSpec": "Full Spec",
+      "enquire": "Enquire"
+    },
+    "productDetail": {
+      "metaTitle": "{product} — Indian Export Specification",
+      "notFound": "Product Not Found",
+      "back": "Back to Products Catalog",
+      "exportReady": "Export Ready",
+      "origin": "Origin",
+      "india": "India",
+      "purity": "Purity Standard",
+      "purityValue": "99%+ Machine Cleaned",
+      "specsTitle": "Export Specification Parameters",
+      "specGrading": "Grading: Machine cleaned & Sortex graded",
+      "specMoisture": "Moisture Content: Strictly controlled per buyer destination norms",
+      "specPackaging": "Packaging: 25kg / 50kg PP bags, Jute bags, Vacuum bags, or Private Label",
+      "specLoadability": "Loadability: 1×20ft FCL or 1×40ft FCL container loads",
+      "requestQuotation": "Request Quotation for {product}",
+      "qualityDetails": "Quality Compliance Details",
+      "related": "Related Products in {category}"
+    },
+    "services": {
+      "meta": {
+        "title": "Export Services",
+        "description": "Comprehensive Indian export services: product sourcing, sortex cleaning, custom packaging, documentation coordination, and global shipping management."
+      },
+      "eyebrow": "END-TO-END COORDINATION",
+      "heading": "Comprehensive Export Services",
+      "description": "From initial specification analysis to container arrival at your port, we manage every critical milestone of the Indian agricultural export supply chain.",
+      "items": [
+        {
+          "title": "Custom Product Sourcing",
+          "desc": "Leverage our established network of Indian farm clusters, aggregators, and processors to procure commodities tailored to your exact purity, size, and botanical grade.",
+          "highlights": [
+            "Regional farm origin mapping",
+            "Batch sampling",
+            "Price discovery & index comparison"
+          ]
+        },
+        {
+          "title": "Quality Testing & Grade Analysis",
+          "desc": "Coordinating rigorous pre-shipment inspections through government and buyer-approved accredited laboratories to verify physical, chemical, and microbiological standards.",
+          "highlights": [
+            "Aflatoxin & pesticide screening",
+            "Moisture & volatile oil content check",
+            "Sortex cleanliness inspection"
+          ]
+        },
+        {
+          "title": "Custom Packaging & Private Label",
+          "desc": "Packaging solutions engineered for food preservation during transoceanic transit, with customizable buyer branding, barcoding, and destination language compliance.",
+          "highlights": [
+            "25kg & 50kg PP / HDPE / Jute bags",
+            "Multi-wall paper bags & vacuum packs",
+            "Retail consumer pouches with private label"
+          ]
+        },
+        {
+          "title": "Statutory Export Documentation",
+          "desc": "Complete handling and coordination of all Indian customs and international import documentation to ensure swift customs clearance at your destination port.",
+          "highlights": [
+            "Phytosanitary Certificate",
+            "Certificate of Origin (Preferential / Non-Preferential)",
+            "Commercial Invoice, Packing List, BL & Fumigation"
+          ]
+        },
+        {
+          "title": "Freight & Container Logistics",
+          "desc": "Coordinating container stuffing, fumigation, port transportation to Mundra / Nhava Sheva, and ocean freight booking with premier shipping lines.",
+          "highlights": [
+            "FOB, CIF, and CFR trade terms",
+            "20ft & 40ft FCL container loads",
+            "Real-time dispatch tracking & BL release"
+          ]
+        },
+        {
+          "title": "Post-Dispatch Support & Continuity",
+          "desc": "Ongoing commercial communication following vessel departure to ensure seamless document surrender, bank presentations, and repeat container scheduling.",
+          "highlights": [
+            "Couriered original documents",
+            "Contractual fulfillment guarantee",
+            "Long-term price hedging guidance"
+          ]
+        }
+      ],
+      "ctaHeading": "Need Customized Sourcing?",
+      "ctaDescription": "Have a unique commodity requirement, non-standard moisture threshold, or private label packaging request? Discuss your terms directly with our export desk.",
+      "ctaPrimary": "Request Custom Sourcing",
+      "ctaSecondary": "View Available Commodities"
+    },
+    "quality": {
+      "meta": {
+        "title": "Quality & Compliance",
+        "description": "FEELEXIM compliance standards: verified statutory registrations (FSSAI, RCMC, IEC, APEDA, GST), laboratory testing parameters, and export quality controls."
+      },
+      "eyebrow": "VERIFIED COMPLIANCE",
+      "heading": "Quality Assurance & Credentials",
+      "description": "International agricultural trade requires uncompromising compliance. FEELEXIM operates under certified Indian trade licenses and adheres to strict destination food safety regulations.",
+      "registrationsTitle": "Statutory Registrations & Licenses",
+      "registrationsSubtitle": "Legitimate government registrations held by FEELEXIM",
+      "certifications": [
+        {
+          "name": "FSSAI",
+          "fullName": "Food Safety and Standards Authority of India",
+          "purpose": "Apex food safety regulatory licensing ensuring purity, sanitary processing, and absence of prohibited adulterants."
+        },
+        {
+          "name": "RCMC",
+          "fullName": "Registration cum Membership Certificate — RCMC",
+          "purpose": "Statutory certificate permitting legitimate commercial export of whole spices and spice powders from India."
+        },
+        {
+          "name": "IEC",
+          "fullName": "Import Export Code (DGFT, Ministry of Commerce)",
+          "purpose": "Permanent business identification code issued by the Directorate General of Foreign Trade for cross-border shipments."
+        },
+        {
+          "name": "APEDA",
+          "fullName": "Agricultural & Processed Food Products Export Development Authority",
+          "purpose": "Registration governing export standards, packaging requirements, and promotion of Indian agricultural produce."
+        },
+        {
+          "name": "GST",
+          "fullName": "Goods and Services Tax Registration",
+          "purpose": "Statutory tax registration verifying corporate standing and legal compliance under Indian revenue laws."
+        }
+      ],
+      "note": "* Note: In accordance with our authenticity commitment, only verified registrations held by FEELEXIM are listed above.",
+      "protocolsTitle": "Quality Control Protocols",
+      "protocolsSubtitle": "Every shipment follows a structured quality verification workflow.",
+      "protocols": [
+        {
+          "title": "Moisture Control",
+          "desc": "Each commodity is dried and sorted to maintain moisture strictly beneath statutory thresholds (typically 8% - 10%), inhibiting fungal growth and microbial spoilage during marine transit."
+        },
+        {
+          "title": "Sortex Cleaning & Optical Grading",
+          "desc": "Color sortex grading machines eliminate discolored seeds, stones, and foreign matter to achieve clean purities from 99.0% up to 99.9% as demanded by buyers."
+        },
+        {
+          "title": "Pesticide & Chemical Residue Testing",
+          "desc": "Samples can be submitted to NABL accredited laboratories (e.g. SGS, Eurofins, Geo-Chem) to verify compliance with destination MRLs (Maximum Residue Limits)."
+        },
+        {
+          "title": "Phytosanitary & Fumigation Protocol",
+          "desc": "Mandatory methyl bromide or aluminum phosphide fumigation of containers combined with official government phytosanitary inspection certificates prior to loading."
+        }
+      ],
+      "ctaHeading": "Require Destination-Specific Standards?",
+      "ctaDescription": "We are accustomed to aligning packaging and laboratory protocols to meet regional import regulations worldwide.",
+      "ctaButton": "Discuss Compliance Parameters"
+    },
+    "privacy": {
+      "meta": {
+        "title": "Privacy Policy",
+        "description": "FEELEXIM website privacy policy and data protection terms."
+      },
+      "back": "Back to Home",
+      "legalDocument": "Legal Document",
+      "title": "Privacy Policy",
+      "lastUpdated": "Last Updated: October 2026 • FEELEXIM Compliance Team",
+      "sections": [
+        {
+          "title": "1. Information We Collect",
+          "paragraphs": [
+            "When you submit a quotation inquiry or contact request on the {name} website, we collect personal and commercial information including your name, company name, corporate email address, phone/WhatsApp number, destination country, and specified commodity requirements."
+          ]
+        },
+        {
+          "title": "2. How We Use Your Information",
+          "paragraphs": [
+            "The information collected is used exclusively for legitimate business communication:"
+          ],
+          "list": [
+            "Preparing and sending formal export price quotations (FOB/CIF/CFR).",
+            "Coordinating commodity sample deliveries and laboratory testing reports.",
+            "Facilitating container freight, customs documentation, and commercial agreements."
+          ]
+        },
+        {
+          "title": "3. Data Protection & Confidentiality",
+          "paragraphs": [
+            "We do not sell, rent, or trade your contact or business information with third-party advertising networks. Information is only shared with authorized statutory trade authorities, shipping carriers, and inspection agencies strictly necessary to execute your export order."
+          ]
+        },
+        {
+          "title": "4. Contacting Us",
+          "paragraphs": [
+            "For any questions regarding your data or this policy, contact our privacy desk at {email}."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "meta": {
+        "title": "Terms & Conditions",
+        "description": "FEELEXIM commercial terms, quotation conditions, and website terms of use."
+      },
+      "back": "Back to Home",
+      "legalDocument": "Legal Document",
+      "title": "Terms & Conditions",
+      "lastUpdated": "Last Updated: October 2026 • FEELEXIM Trade Operations",
+      "sections": [
+        {
+          "title": "1. Quotations & Price Validity",
+          "paragraphs": [
+            "Commodity market prices for agricultural crops, spices, and seeds are subject to daily market fluctuations, crop arrival volumes, and currency variations. Quotations issued through the {name} platform or direct correspondence are valid only for the validity duration explicitly stated on the written proforma or quote sheet."
+          ]
+        },
+        {
+          "title": "2. Quality Specifications & Tolerances",
+          "paragraphs": [
+            "All shipments are executed in compliance with contractual specifications agreed between buyer and seller. Standard agricultural tolerances (moisture, foreign matter, admixture, broken grains) follow RCMC / APEDA / AGMARK guidelines unless custom tolerances are contractually defined."
+          ]
+        },
+        {
+          "title": "3. International Commercial Terms (Incoterms)",
+          "paragraphs": [
+            "Standard contracts are governed by ICC Incoterms (typically FOB Indian Ports, CIF, or CFR Destination Ports). Marine insurance, customs handling, and discharge demurrage are assigned according to the agreed Incoterm in each individual contract."
+          ]
+        },
+        {
+          "title": "4. Force Majeure",
+          "paragraphs": [
+            "Neither party shall be held liable for delays or failure in delivery resulting from acts of God, extreme adverse weather conditions, freight embargoes, government export restrictions, or unforeseen international shipping disruptions beyond reasonable control."
+          ]
+        },
+        {
+          "title": "5. Governing Law & Dispute Resolution",
+          "paragraphs": [
+            "All trade contracts and commercial agreements are subject to the laws and jurisdiction of India, with mutual arbitration conducted under standard rules of international spice and commodity trade associations where applicable."
+          ]
+        }
+      ]
+    }
+  },
+  "productCategories": {
+    "whole-spices": {
+      "label": "Whole Spices",
+      "description": "Premium whole spices sourced from the finest Indian growing regions."
+    },
+    "spice-powders": {
+      "label": "Spice Powders",
+      "description": "Finely ground spice powders with authentic aroma and colour."
+    },
+    "seeds": {
+      "label": "Seeds",
+      "description": "High-quality seeds including sesame, flax, chia, and more."
+    },
+    "nuts-other": {
+      "label": "Nuts & Other",
+      "description": "Selected nuts and agricultural commodities available for export."
+    }
+  },
+  "productTags": {
+    "spice": "Spice",
+    "whole": "Whole",
+    "export-ready": "Export Ready",
+    "high-curcumin": "High Curcumin",
+    "moringa": "Moringa",
+    "powder": "Powder",
+    "superfood": "Superfood",
+    "organic": "Organic",
+    "seed": "Seed",
+    "health": "Health",
+    "grain": "Grain",
+    "nuts": "Nuts",
+    "agricultural": "Agricultural"
+  },
+  "products": {
+    "cumin-seeds": {
+      "name": "Cumin Seeds",
+      "description": "Premium Indian cumin seeds with rich aroma, sourced for consistent quality and uniform grain size."
+    },
+    "coriander-seeds": {
+      "name": "Coriander Seeds",
+      "description": "Whole coriander seeds with natural fragrance, carefully cleaned and sorted for export."
+    },
+    "turmeric-finger": {
+      "name": "Turmeric Finger",
+      "description": "High-curcumin Indian turmeric fingers, known for vibrant colour and quality consistency."
+    },
+    "black-pepper": {
+      "name": "Black Pepper",
+      "description": "Bold, aromatic Indian black pepper sourced for uniform size and pungency."
+    },
+    "fennel-seeds": {
+      "name": "Fennel Seeds",
+      "description": "Sweet and aromatic fennel seeds from Indian farms, cleaned and export-grade."
+    },
+    "fenugreek-seeds": {
+      "name": "Fenugreek Seeds",
+      "description": "Premium fenugreek seeds with characteristic bitterness and uniform golden colour."
+    },
+    "mustard-seeds": {
+      "name": "Mustard Seeds",
+      "description": "Small, pungent Indian mustard seeds, available in yellow and black varieties."
+    },
+    "cloves": {
+      "name": "Cloves",
+      "description": "Aromatic, hand-picked cloves with high essential oil content, suitable for export."
+    },
+    "moringa-leaf-powder": {
+      "name": "Moringa Leaf Powder",
+      "description": "Organic Indian moringa leaf powder, rich in antioxidants and vital nutrients, processed under sterile dehydration standards."
+    },
+    "turmeric-powder": {
+      "name": "Turmeric Powder",
+      "description": "Finely milled turmeric powder with high curcumin content and vibrant yellow colour."
+    },
+    "red-chilli-powder": {
+      "name": "Red Chilli Powder",
+      "description": "Rich, deep-red chilli powder with consistent heat levels and colour value."
+    },
+    "coriander-powder": {
+      "name": "Coriander Powder",
+      "description": "Smooth coriander powder with mild citrus notes, made from premium whole seeds."
+    },
+    "ginger-powder": {
+      "name": "Ginger Powder",
+      "description": "Pungent and aromatic ginger powder from quality Indian ginger varieties."
+    },
+    "garlic-powder": {
+      "name": "Garlic Powder",
+      "description": "Dehydrated and finely ground garlic powder with strong, consistent flavour."
+    },
+    "onion-powder": {
+      "name": "Onion Powder",
+      "description": "Fine onion powder with sweet, mild flavour — ideal for food manufacturers."
+    },
+    "sesame-seeds": {
+      "name": "Sesame Seeds",
+      "description": "Natural hulled sesame seeds with consistent whiteness, purity, and oil content."
+    },
+    "black-sesame-seeds": {
+      "name": "Black Sesame Seeds",
+      "description": "Premium black sesame seeds, known for rich flavour and nutritional profile."
+    },
+    "flax-seeds": {
+      "name": "Flax Seeds",
+      "description": "High-quality flaxseeds (linseed) with good omega-3 content and clean sorting."
+    },
+    "chia-seeds": {
+      "name": "Chia Seeds",
+      "description": "Export-grade chia seeds, carefully cleaned and sorted for international markets."
+    },
+    "basil-seeds": {
+      "name": "Basil Seeds",
+      "description": "Sabja (basil) seeds with good swelling properties, popular in food and beverage markets."
+    },
+    "kalonji-seeds": {
+      "name": "Kalonji Seeds",
+      "description": "Nigella (kalonji) seeds with characteristic aroma and purity, export-sorted."
+    },
+    "quinoa": {
+      "name": "Quinoa",
+      "description": "Protein-rich quinoa grains, suitable for health food markets worldwide."
+    },
+    "nuts": {
+      "name": "Nuts (Assorted)",
+      "description": "Selected Indian-origin nuts available for export. Specific varieties available on enquiry."
+    },
+    "agricultural-commodities": {
+      "name": "Agricultural Commodities",
+      "description": "Selected Indian agricultural commodities available for international export. Enquire for details."
+    }
+  },
+  "form": {
+    "title": "Request a Formal Quotation",
+    "subtitle": "Direct commercial inquiry to FEELEXIM trade desk",
+    "fullName": "Full Name",
+    "companyName": "Company Name",
+    "email": "Business Email",
+    "phone": "Phone / WhatsApp",
+    "country": "Destination Country",
+    "product": "Product of Interest",
+    "quantity": "Estimated Quantity",
+    "destinationPort": "Destination Port",
+    "packaging": "Preferred Packaging",
+    "requirements": "Additional Specifications / Questions",
+    "fullNamePlaceholder": "John Smith",
+    "companyPlaceholder": "Global Foods Trading Ltd.",
+    "emailPlaceholder": "buyer@company.com",
+    "phonePlaceholder": "+1 555 019 2834",
+    "countryPlaceholder": "e.g. United Kingdom, UAE, USA",
+    "selectProduct": "Select a product...",
+    "productOption": "{name} ({category})",
+    "other": "Other / Custom Sourcing",
+    "quantityPlaceholder": "e.g. 1 FCL (20ft) / 10 Metric Tons",
+    "destinationPortPlaceholder": "e.g. Port of Felixstowe / Jebel Ali",
+    "packagingPlaceholder": "e.g. 25kg PP bags, 50kg Jute bags, Vacuum pouches, or Private Label",
+    "requirementsPlaceholder": "Specify purity parameters, maximum moisture %, required certifications, target shipment timeline, etc.",
+    "submit": "Submit Quotation Request",
+    "submitting": "Sending Enquiry...",
+    "successTitle": "Quotation Request Received",
+    "successDescription": "Thank you for reaching out. Our export coordination team will review your requirements and provide an official quotation within 24 business hours.",
+    "submitAnother": "Submit Another Request",
+    "errorFallback": "An unexpected error occurred. Please try again.",
+    "requestFailed": "Failed to submit enquiry. Please try again."
+  },
+  "validation": {
+    "fullNameMin": "Full name must be at least 2 characters",
+    "fullNameMax": "Full name must be less than 100 characters",
+    "companyMin": "Company name must be at least 2 characters",
+    "companyMax": "Company name must be less than 200 characters",
+    "email": "Please enter a valid business email address",
+    "phoneMin": "Please enter a valid phone number",
+    "phoneMax": "Phone number is too long",
+    "country": "Please select your country",
+    "product": "Please select a product of interest",
+    "requirementsMax": "Additional requirements must be less than 1000 characters"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "change": "Change language",
+    "current": "Current language: {language}"
+  }
+}

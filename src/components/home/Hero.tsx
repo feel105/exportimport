@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 import {
   ArrowRight,
   ArrowUpRight,
@@ -20,27 +21,27 @@ import {
   Wheat,
 } from 'lucide-react'
 import HeroBackgroundSlider from './HeroBackgroundSlider'
-import { HERO_SLIDES, SLIDE_MS } from './heroSlides'
+import { HERO_SLIDES, SLIDE_MS, type HeroSlide } from './heroSlides'
+import { localeHref } from '@/i18n/href'
+import type { Locale } from '@/i18n/config'
 
 const CATEGORIES = [
-  { label: 'Whole Spices', icon: Leaf, href: '/products?category=whole-spices' },
-  { label: 'Spice Powders', icon: Flame, href: '/products?category=spice-powders' },
-  { label: 'Nuts', icon: Nut, href: '/products?category=nuts-other' },
-  { label: 'Seeds', icon: Sprout, href: '/products?category=seeds' },
-  { label: 'Tea', icon: Coffee, href: '/products' },
-  { label: 'Herbs', icon: Flower2, href: '/products' },
-  { label: 'Agri Products', icon: Wheat, href: '/products?category=nuts-other' },
+  { key: 'whole-spices', icon: Leaf, href: '/products?category=whole-spices' },
+  { key: 'spice-powders', icon: Flame, href: '/products?category=spice-powders' },
+  { key: 'nuts-other', icon: Nut, href: '/products?category=nuts-other' },
+  { key: 'seeds', icon: Sprout, href: '/products?category=seeds' },
+  { key: 'tea', icon: Coffee, href: '/products' },
+  { key: 'herbs', icon: Flower2, href: '/products' },
+  { key: 'agri', icon: Wheat, href: '/products?category=nuts-other' },
 ]
 
-const TRUST = ['Quality Sourcing', 'Docs Support', 'Custom Packing']
-
 const FLAGS = [
-  { code: '🇬🇧', label: 'United Kingdom' },
-  { code: '🇦🇪', label: 'United Arab Emirates' },
-  { code: '🇺🇸', label: 'United States' },
-  { code: '🇩🇪', label: 'Germany' },
-  { code: '🇯🇵', label: 'Japan' },
-  { code: '🇸🇬', label: 'Singapore' },
+  { code: '🇬🇧', key: 'uk' },
+  { code: '🇦🇪', key: 'uae' },
+  { code: '🇺🇸', key: 'us' },
+  { code: '🇩🇪', key: 'de' },
+  { code: '🇯🇵', key: 'jp' },
+  { code: '🇸🇬', key: 'sg' },
 ]
 
 const pad = (value: number) => String(value).padStart(2, '0')
@@ -49,9 +50,20 @@ export default function Hero() {
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
   const [copied, setCopied] = useState(false)
+  const t = useTranslations('hero')
+  const locale = useLocale() as Locale
 
-  const active = HERO_SLIDES[index]
-  const total = HERO_SLIDES.length
+  const slides: HeroSlide[] = HERO_SLIDES.map((slide) => ({
+    ...slide,
+    label: t(`slides.${slide.key}.label`),
+    meta: t(`slides.${slide.key}.meta`),
+    description: t(`slides.${slide.key}.description`),
+    specs: t.raw(`slides.${slide.key}.specs`) as string[],
+  }))
+
+  const trust = t.raw('trust') as string[]
+  const active = slides[index]
+  const total = slides.length
 
   useEffect(() => {
     if (paused) return
@@ -77,15 +89,14 @@ export default function Hero() {
   return (
     <section
       className="relative isolate flex min-h-[660px] w-full items-center overflow-hidden border-b border-hairline pt-[calc(var(--header-h)+2.5rem)] pb-8 sm:min-h-[720px] sm:pt-[calc(var(--header-h)+3rem)] sm:pb-10 lg:min-h-[780px] lg:pb-12"
-      aria-label="Hero section"
+      aria-label={t('aria')}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
     >
-      <HeroBackgroundSlider slides={HERO_SLIDES} index={index} />
+      <HeroBackgroundSlider slides={slides} index={index} />
 
-      {/* Brand ambient glow */}
       <div
         className="pointer-events-none absolute top-1/4 -left-40 h-[650px] w-[650px] rounded-full"
         style={{
@@ -97,76 +108,80 @@ export default function Hero() {
 
       <div className="container-xl relative z-10 w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end xl:grid-cols-[minmax(0,1fr)_380px] xl:gap-16">
-
-          {/* Left column — aligned to the container edge */}
           <div className="max-w-[46rem] space-y-6">
             <div className="flex flex-wrap items-center gap-3">
               <span className="glass-pill inline-flex items-center gap-2 px-3.5 py-1.5 text-[11px] font-bold text-white sm:text-xs">
                 <span className="glow-indicator-green" />
-                Verified Indian Export House
+                {t('verified')}
               </span>
               <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-300 sm:text-xs">
                 <MapPin size={12} className="text-gold" />
-                Mundra • Nhava Sheva
+                {t('ports')}
               </span>
             </div>
 
             <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.08] px-3.5 py-1">
-              <span className="mono-tag text-gold">Spices • Tea • Seeds • Herbs • Agri</span>
+              <span className="mono-tag text-gold">{t('range')}</span>
             </div>
 
             <div className="space-y-3">
               <h1 className="text-4xl font-black leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-                The Agricultural <br />
+                {t('titleLead')} <br />
                 <span className="bg-gradient-to-r from-amber-300 via-gold to-amber-200 bg-clip-text text-transparent">
-                  Export Platform.
+                  {t('titleHighlight')}
                 </span>
               </h1>
               <p className="max-w-2xl text-sm leading-relaxed text-slate sm:text-base lg:text-lg">
-                From whole spices and milled powders to seeds, tea, herbs and agri commodities — sourced direct from Indian farms, lab-verified, and shipped FOB / CIF to 35+ ports.
+                {t('description')}
               </p>
             </div>
 
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <Link
-                href="/contact"
+                href={localeHref(locale, '/contact')}
                 className="flex items-center gap-2 rounded-full bg-gradient-to-r from-gold to-gold-dark px-6 py-3 text-xs font-bold text-navy shadow-[0_0_24px_rgba(224,160,69,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] sm:text-sm"
               >
-                <span>Request Quotation</span>
+                <span>{t('requestQuotation')}</span>
                 <ArrowRight size={14} />
               </Link>
 
               <Link
-                href="/products"
+                href={localeHref(locale, '/products')}
                 className="rounded-full border border-white/15 bg-white/[0.07] px-5 py-3 text-xs font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.12] sm:text-sm"
               >
-                Browse Product Range
+                {t('browseRange')}
               </Link>
 
               <button
                 onClick={handleCopySpec}
                 className="code-pill group"
-                title="Click to copy export specification"
+                title={t('copyTitle')}
               >
                 {copied ? (
                   <>
                     <Check size={13} className="text-emerald-400" />
-                    <span className="text-xs text-emerald-300">Copied Spec!</span>
+                    <span className="text-xs text-emerald-300">{t('copied')}</span>
                   </>
                 ) : (
                   <>
                     <span className="font-bold text-gold">{active.hsCode}</span>
-                    <span className="text-slate-400">• Mundra Port</span>
-                    <Copy size={12} className="text-slate-400 transition-colors group-hover:text-white" />
+                    <span className="text-slate-400">• {t('mundraPort')}</span>
+                    <Copy
+                      size={12}
+                      className="text-slate-400 transition-colors group-hover:text-white"
+                    />
                   </>
                 )}
               </button>
             </div>
 
             <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-slate-300">
-              {TRUST.map((item) => (
+              {trust.map((item) => (
                 <div key={item} className="flex items-center gap-1.5">
-                  <CheckCircle size={14} className="flex-shrink-0 text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]" />
+                  <CheckCircle
+                    size={14}
+                    className="flex-shrink-0 text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]"
+                  />
                   <span>{item}</span>
                 </div>
               ))}
@@ -177,28 +192,29 @@ export default function Hero() {
                 <div className="flex -space-x-1.5 overflow-hidden py-0.5">
                   {FLAGS.map((flag) => (
                     <span
-                      key={flag.label}
+                      key={flag.key}
                       className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-navy bg-slate-800 text-[11px] shadow"
-                      title={flag.label}
+                      title={t(`countries.${flag.key}`)}
                     >
                       {flag.code}
                     </span>
                   ))}
                 </div>
                 <span className="font-semibold text-white">35+</span>
-                <span className="text-slate-400">export ports</span>
+                <span className="text-slate-400">{t('exportPorts')}</span>
               </div>
             </div>
 
-            {/* Compact active-slide card for mobile */}
             <div className="rounded-2xl border border-white/10 bg-[#0A0F18]/65 p-4 backdrop-blur-xl lg:hidden">
               <div className="flex items-center justify-between gap-2">
-                <span className="mono-tag text-gold">Now sourcing · {active.hsCode}</span>
+                <span className="mono-tag text-gold">
+                  {t('nowSourcing', { hsCode: active.hsCode })}
+                </span>
                 <div className="flex items-center gap-1.5">
                   <button
                     type="button"
                     onClick={() => step(-1)}
-                    aria-label="Previous product slide"
+                    aria-label={t('previousSlide')}
                     className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12]"
                   >
                     <ChevronLeft size={14} />
@@ -209,7 +225,7 @@ export default function Hero() {
                   <button
                     type="button"
                     onClick={() => step(1)}
-                    aria-label="Next product slide"
+                    aria-label={t('nextSlide')}
                     className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12]"
                   >
                     <ChevronRight size={14} />
@@ -219,11 +235,13 @@ export default function Hero() {
               <div className="mt-2 flex items-start justify-between gap-4">
                 <div>
                   <p className="text-base font-bold text-white">{active.label}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-300">{active.description}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-300">
+                    {active.description}
+                  </p>
                 </div>
                 <Link
-                  href={active.href}
-                  aria-label={`Explore ${active.label}`}
+                  href={localeHref(locale, active.href)}
+                  aria-label={t('explore', { label: active.label })}
                   className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-gold transition-colors hover:bg-white/[0.12]"
                 >
                   <ArrowUpRight size={14} />
@@ -232,20 +250,21 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right column — live slide context */}
           <aside className="hidden lg:block">
             <div className="relative overflow-hidden rounded-3xl border border-white/[0.12] bg-gradient-to-b from-[#0A0F18]/85 via-[#0A0F18]/70 to-[#0A0F18]/90 p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] backdrop-blur-2xl">
               <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/10 blur-2xl" />
 
               <div className="relative flex items-center justify-between">
-                <span className="mono-tag text-gold">Now sourcing · {active.hsCode}</span>
+                <span className="mono-tag text-gold">
+                  {t('nowSourcing', { hsCode: active.hsCode })}
+                </span>
                 <span className="font-mono text-[10px] tabular-nums text-slate-400">
                   {pad(index + 1)} / {pad(total)}
                 </span>
               </div>
 
               <p className="relative mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-                Product category
+                {t('productCategory')}
               </p>
               <h2 className="relative mt-1.5 text-2xl font-black leading-tight text-white">
                 {active.label}
@@ -266,20 +285,19 @@ export default function Hero() {
               </div>
 
               <Link
-                href={active.href}
+                href={localeHref(locale, active.href)}
                 className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-white/[0.08] px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-white/[0.14]"
               >
-                Explore {active.label}
+                {t('explore', { label: active.label })}
                 <ArrowUpRight size={13} className="text-gold" />
               </Link>
 
               <div className="relative mt-6 flex items-center gap-1.5">
-                {HERO_SLIDES.map((slide, slideIndex) => (
+                {slides.map((slide, slideIndex) => (
                   <span
-                    key={slide.src}
-                    className={`h-1 rounded-full transition-all duration-300 ${
-                      slideIndex === index ? 'w-6 bg-gold' : 'w-3 bg-white/20'
-                    }`}
+                    key={slide.key}
+                    className={`h-1 rounded-full transition-all duration-300 ${slideIndex === index ? 'w-6 bg-gold' : 'w-3 bg-white/20'
+                      }`}
                   />
                 ))}
               </div>
@@ -287,18 +305,17 @@ export default function Hero() {
           </aside>
         </div>
 
-        {/* Bottom rail — categories left, slide controls right */}
         <div className="mt-9 flex flex-col gap-4 border-t border-white/10 pt-5 sm:mt-11 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <span className="mono-tag shrink-0 text-slate-500">Range</span>
-            {CATEGORIES.map(({ label, icon: Icon, href }) => (
+            <span className="mono-tag shrink-0 text-slate-500">{t('rangeLabel')}</span>
+            {CATEGORIES.map(({ key, icon: Icon, href }) => (
               <Link
-                key={label}
-                href={href}
+                key={key}
+                href={localeHref(locale, href)}
                 className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold text-slate-300 backdrop-blur-md transition-colors hover:border-gold/40 hover:text-white"
               >
                 <Icon size={11} className="text-gold" />
-                {label}
+                {t(`categories.${key}`)}
               </Link>
             ))}
           </div>
@@ -312,7 +329,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => step(-1)}
-                aria-label="Previous product slide"
+                aria-label={t('previousSlide')}
                 className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60"
               >
                 <ChevronLeft size={14} />
@@ -320,7 +337,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => step(1)}
-                aria-label="Next product slide"
+                aria-label={t('nextSlide')}
                 className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60"
               >
                 <ChevronRight size={14} />
@@ -328,18 +345,17 @@ export default function Hero() {
             </div>
 
             <div className="glass-pill flex items-center gap-1.5 px-2.5 py-1.5">
-              {HERO_SLIDES.map((slide, slideIndex) => (
+              {slides.map((slide, slideIndex) => (
                 <button
-                  key={slide.src}
+                  key={slide.key}
                   type="button"
                   onClick={() => setIndex(slideIndex)}
-                  aria-label={`Show slide ${slideIndex + 1}: ${slide.label}`}
+                  aria-label={t('showSlide', { index: slideIndex + 1, label: slide.label })}
                   aria-current={slideIndex === index}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    slideIndex === index
-                      ? 'w-4 bg-gold'
-                      : 'w-1.5 bg-white/30 hover:bg-white/60'
-                  }`}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${slideIndex === index
+                    ? 'w-4 bg-gold'
+                    : 'w-1.5 bg-white/30 hover:bg-white/60'
+                    }`}
                 />
               ))}
               <span className="ml-1 font-mono text-[10px] tabular-nums text-slate-300">

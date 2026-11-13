@@ -1,50 +1,27 @@
 import Link from 'next/link'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { ArrowRight } from 'lucide-react'
+import { localeHref } from '@/i18n/href'
 
-const stats = [
-  {
-    tag: 'GLOBAL REACH',
-    metric: '35+',
-    metricSub: 'Ports',
-    title: 'Active Destination Trade Lanes',
-    desc: 'Regular container dispatch to UK, UAE, USA, Germany, Japan & Singapore.',
-    href: '/services',
-    linkText: 'Explore trade lanes',
-  },
-  {
-    tag: 'SORTEX PURITY',
-    metric: '99.8%',
-    metricSub: 'Standard',
-    title: 'Machine-Cleaned Sourcing',
-    desc: 'Direct NABL lab inspection for ASTA cleanliness, volatile oil & mycotoxins.',
-    href: '/quality-compliance',
-    linkText: 'View lab protocols',
-  },
-  {
-    tag: 'SHELF LIFE',
-    metric: '< 8%',
-    metricSub: 'Moisture',
-    title: 'Strict Quality Retention',
-    desc: 'Controlled post-harvest drying & vacuum packing preventing clumping in transit.',
-    href: '/products',
-    linkText: 'Browse commodities',
-  },
-  {
-    tag: 'TRADE DESK',
-    metric: '24h',
-    metricSub: 'SLA',
-    title: 'Commercial Turnaround',
-    desc: 'Transparent FOB Indian Ports, CIF & CFR price proformas with freight analysis.',
-    href: '/contact',
-    linkText: 'Request proforma',
-  },
-]
+interface Stat {
+  tag: string
+  metric: string
+  metricSub: string
+  title: string
+  desc: string
+  href: string
+  linkText: string
+}
 
-export default function TrustStrip() {
+export default async function TrustStrip() {
+  const t = await getTranslations('trustStrip')
+  const locale = await getLocale()
+  const stats = t.raw('stats') as Stat[]
+
   return (
     <section
       className="w-full border-b border-hairline bg-navy-deep/60 relative overflow-hidden"
-      aria-label="Platform metrics and trust indicators"
+      aria-label={t('aria')}
     >
       <div className="absolute inset-0 bg-dots-pattern opacity-40 pointer-events-none" />
 
@@ -53,7 +30,7 @@ export default function TrustStrip() {
           {stats.map(({ tag, metric, metricSub, title, desc, href, linkText }, idx) => (
             <Link
               key={tag}
-              href={href}
+              href={localeHref(locale, href)}
               className={`group flex flex-col justify-between p-6 sm:p-7 lg:p-8 hover:bg-white/[0.03] transition-all duration-300 relative ${
                 idx === 0 ? 'xl:pl-0' : ''
               } ${idx === stats.length - 1 ? 'xl:pr-0' : ''}`}
@@ -79,9 +56,7 @@ export default function TrustStrip() {
                   <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-gold transition-colors">
                     {title}
                   </h3>
-                  <p className="text-slate text-xs leading-relaxed">
-                    {desc}
-                  </p>
+                  <p className="text-slate text-xs leading-relaxed">{desc}</p>
                 </div>
               </div>
 

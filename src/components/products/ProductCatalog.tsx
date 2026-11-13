@@ -1,13 +1,17 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import { Product, ProductCategory, ProductCategory_Meta } from '@/types/product'
+import { useMemo, useState } from 'react'
+import type {
+  LocalizedProduct,
+  LocalizedProductCategory,
+  ProductCategory,
+} from '@/types/product'
 import { ProductFilters } from './ProductFilters'
 import { ProductGrid } from './ProductGrid'
 
 interface ProductCatalogProps {
-  products: Product[]
-  categories: ProductCategory_Meta[]
+  products: LocalizedProduct[]
+  categories: LocalizedProductCategory[]
   initialCategory?: ProductCategory | 'all'
 }
 

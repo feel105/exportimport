@@ -2,12 +2,22 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 import { ChevronDown, HelpCircle, Mail, Phone, ArrowRight } from 'lucide-react'
-import { faqs } from '@/data/faqs'
 import { siteConfig } from '@/config/site'
+import { localeHref } from '@/i18n/href'
+import type { Locale } from '@/i18n/config'
+
+interface FaqItem {
+  question: string
+  answer: string
+}
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const t = useTranslations('faq')
+  const locale = useLocale() as Locale
+  const faqs = t.raw('items') as FaqItem[]
 
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i)
 
@@ -36,34 +46,31 @@ export default function FAQ() {
 
       <div className="container-xl w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-start w-full">
-
-          {/* Left Column: Heading & Quick Trade Assistance Card (4 Cols) */}
           <div className="lg:col-span-4 space-y-5 lg:sticky lg:top-24 w-full">
             <div className="space-y-3">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.08] border border-hairline text-xs font-semibold text-white tracking-wide">
                 <HelpCircle size={13} className="text-gold" />
-                <span className="mono-tag text-gold">TRADE INTELLIGENCE</span>
+                <span className="mono-tag text-gold">{t('eyebrow')}</span>
               </div>
               <h2
                 id="faq-heading"
                 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-[1.1]"
               >
-                Frequently Asked Questions.
+                {t('heading')}
               </h2>
               <p className="text-slate text-xs sm:text-sm leading-relaxed pt-0.5">
-                Key information on sourcing procedures, laboratory analysis, custom branding, and shipping logistics.
+                {t('description')}
               </p>
             </div>
 
-            {/* Quick Contact Card */}
             <div className="rounded-2xl border border-hairline bg-white/[0.02] p-5 sm:p-6 space-y-4">
               <div className="flex items-center justify-between pb-3 border-b border-hairline">
-                <span className="text-xs font-mono font-bold text-white uppercase">HAVE SPECIFIC QUESTIONS?</span>
+                <span className="text-xs font-mono font-bold text-white uppercase">
+                  {t('quickTitle')}
+                </span>
                 <span className="glow-indicator-green" />
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Need details on HS tariff codes, container load limits, or harvest season schedules? Our trade desk responds promptly.
-              </p>
+              <p className="text-xs text-slate-400 leading-relaxed">{t('quickDescription')}</p>
               <div className="space-y-2 pt-0.5 font-mono text-xs">
                 <a
                   href={`mailto:${siteConfig.email}`}
@@ -81,16 +88,15 @@ export default function FAQ() {
                 </a>
               </div>
               <Link
-                href="/contact"
+                href={localeHref(locale, '/contact')}
                 className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs shadow-[0_0_18px_rgba(224,160,69,0.3)] hover:shadow-[0_0_24px_rgba(224,160,69,0.45)] transition-all mt-1"
               >
-                <span>Request a Quotation</span>
+                <span>{t('requestQuotation')}</span>
                 <ArrowRight size={13} />
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Accordion List (8 Cols) */}
           <div className="lg:col-span-8 space-y-3 w-full">
             {faqs.map((faq, i) => {
               const isOpen = openIndex === i
@@ -148,7 +154,6 @@ export default function FAQ() {
               )
             })}
           </div>
-
         </div>
       </div>
     </section>

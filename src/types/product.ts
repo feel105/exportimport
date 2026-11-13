@@ -2,20 +2,25 @@ export type ProductCategory = 'whole-spices' | 'spice-powders' | 'seeds' | 'nuts
 
 export interface Product {
   id: string
-  name: string
   slug: string
   category: ProductCategory
-  categoryLabel: string
-  shortDescription: string
-  fullDescription?: string
   image: string
   available: boolean
   tags?: string[]
 }
 
+export interface LocalizedProduct extends Product {
+  name: string
+  categoryLabel: string
+  shortDescription: string
+}
+
 export interface ProductCategory_Meta {
   id: ProductCategory
+  icon: string
+}
+
+export interface LocalizedProductCategory extends ProductCategory_Meta {
   label: string
   description: string
-  icon: string
 }

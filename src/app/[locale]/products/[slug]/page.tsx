@@ -3,36 +3,54 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, Mail, ShieldCheck, CheckCircle2 } from 'lucide-react'
-import { products, getProductBySlug, getProductsByCategory } from '@/data/products'
+import { getTranslations } from 'next-intl/server'
+import { products } from '@/data/products'
+import { getLocalizedProducts } from '@/lib/localized-products'
+import { buildPageMetadata } from '@/lib/metadata'
+import { localeHref } from '@/i18n/href'
+import { getLocaleFromParams } from '@/i18n/server'
 
 interface ProductDetailPageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: string; slug: string }>
 }
 
 export async function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }))
+  return products.map((product) => ({ slug: product.slug }))
 }
 
-export async function generateMetadata({ params }: ProductDetailPageProps): Promise<Metadata> {
-  const { slug } = await params
-  const product = getProductBySlug(slug)
+export async function generateMetadata({
+  params,
+}: ProductDetailPageProps): Promise<Metadata> {
+  const { locale: localeParam, slug } = await params
+  const locale = await getLocaleFromParams(Promise.resolve({ locale: localeParam }))
+  const t = await getTranslations({ locale, namespace: 'pages.productDetail' })
+  const localizedProducts = await getLocalizedProducts(locale)
+  const product = localizedProducts.find((item) => item.slug === slug)
 
-  if (!product) return { title: 'Product Not Found' }
-
-  return {
-    title: `${product.name} — Indian Export Specification`,
-    description: product.shortDescription,
+  if (!product) {
+    return { title: t('notFound') }
   }
+
+  return buildPageMetadata({
+    locale,
+    path: `/products/${product.slug}`,
+    title: t('metaTitle', { product: product.name }),
+    description: product.shortDescription,
+  })
 }
 
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
-  const { slug } = await params
-  const product = getProductBySlug(slug)
+  const { locale: localeParam, slug } = await params
+  const locale = await getLocaleFromParams(Promise.resolve({ locale: localeParam }))
+  const t = await getTranslations({ locale, namespace: 'pages.productDetail' })
+  const tagT = await getTranslations({ locale, namespace: 'productTags' })
+  const localizedProducts = await getLocalizedProducts(locale)
+  const product = localizedProducts.find((item) => item.slug === slug)
 
   if (!product) notFound()
 
-  const relatedProducts = getProductsByCategory(product.category)
-    .filter((p) => p.slug !== product.slug)
+  const relatedProducts = localizedProducts
+    .filter((item) => item.category === product.category && item.slug !== product.slug)
     .slice(0, 3)
 
   const categoryEmojis: Record<string, string> = {
@@ -46,20 +64,16 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   return (
     <div className="pt-28 pb-16 sm:pt-36 sm:pb-20 lg:pt-38 lg:pb-24 w-full">
       <div className="container-xl space-y-12 sm:space-y-16 lg:space-y-20 w-full">
-        {/* Back navigation */}
         <div>
           <Link
-            href="/products"
+            href={localeHref(locale, '/products')}
             className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition-colors"
           >
-            <ArrowLeft size={16} /> Back to Products Catalog
+            <ArrowLeft size={16} /> {t('back')}
           </Link>
         </div>
 
-        {/* Product Showcase in Frosted Glass */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start w-full">
-          
-          {/* Left: Product Visual Card */}
           <div className="lg:col-span-5 glass-card !rounded-2xl p-7 sm:p-9 text-center space-y-6 shadow-2xl w-full">
             <div className="aspect-square w-full rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 flex items-center justify-center relative overflow-hidden shadow-inner">
               {product.image && product.image.startsWith('/product/') ? (
@@ -79,24 +93,22 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               </div>
               <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-xs font-semibold text-emerald-300 backdrop-blur-md">
                 <span className="glow-indicator-green !w-2 !h-2" />
-                Export Ready
+                {t('exportReady')}
               </div>
             </div>
 
-            {/* Spec Highlights Grid */}
             <div className="grid grid-cols-2 gap-3.5 text-xs sm:text-sm">
               <div className="p-4 rounded-xl bg-white/[0.04] border border-white/[0.08] text-left">
-                <p className="text-slate">Origin</p>
-                <p className="text-white font-bold mt-1 text-base">India</p>
+                <p className="text-slate">{t('origin')}</p>
+                <p className="text-white font-bold mt-1 text-base">{t('india')}</p>
               </div>
               <div className="p-4 rounded-xl bg-white/[0.04] border border-white/[0.08] text-left">
-                <p className="text-slate">Purity Standard</p>
-                <p className="text-emerald-400 font-bold mt-1 text-base">99%+ Machine Cleaned</p>
+                <p className="text-slate">{t('purity')}</p>
+                <p className="text-emerald-400 font-bold mt-1 text-base">{t('purityValue')}</p>
               </div>
             </div>
           </div>
 
-          {/* Right: Specifications & Inquire */}
           <div className="lg:col-span-7 glass-card !rounded-2xl p-8 sm:p-10 lg:p-12 space-y-6 shadow-2xl w-full">
             <div>
               <span className="text-xs sm:text-sm font-semibold text-gold uppercase tracking-wider">
@@ -114,80 +126,76 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             <div className="p-6 sm:p-7 rounded-3xl bg-white/[0.04] border border-white/[0.08] space-y-4">
               <h3 className="text-base font-bold text-white flex items-center gap-2.5">
                 <ShieldCheck size={18} className="text-gold" />
-                Export Specification Parameters
+                {t('specsTitle')}
               </h3>
               <ul className="text-xs sm:text-sm text-slate-300 space-y-2.5 leading-relaxed">
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 size={16} className="text-emerald-400 flex-shrink-0" />
-                  <span>Grading: Machine cleaned & Sortex graded</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 size={16} className="text-emerald-400 flex-shrink-0" />
-                  <span>Moisture Content: Strictly controlled per buyer destination norms</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 size={16} className="text-emerald-400 flex-shrink-0" />
-                  <span>Packaging: 25kg / 50kg PP bags, Jute bags, Vacuum bags, or Private Label</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 size={16} className="text-emerald-400 flex-shrink-0" />
-                  <span>Loadability: 1×20ft FCL or 1×40ft FCL container loads</span>
-                </li>
+                {[t('specGrading'), t('specMoisture'), t('specPackaging'), t('specLoadability')].map(
+                  (spec) => (
+                    <li key={spec} className="flex items-center gap-2.5">
+                      <CheckCircle2 size={16} className="text-emerald-400 flex-shrink-0" />
+                      <span>{spec}</span>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
 
-            {/* Tags */}
-            {product.tags && (
+            {product.tags && product.tags.length > 0 && (
               <div className="flex flex-wrap items-center gap-2.5 pt-1">
                 {product.tags.map((tag) => (
                   <span
                     key={tag}
                     className="px-3.5 py-1.5 rounded-xl bg-white/[0.06] border border-white/10 text-xs text-slate-300"
                   >
-                    #{tag}
+                    #{tagT(tag)}
                   </span>
                 ))}
               </div>
             )}
 
-            {/* Actions */}
             <div className="pt-6 flex flex-wrap items-center gap-5 border-t border-white/10">
               <Link
-                href={`/contact?product=${encodeURIComponent(product.name)}`}
+                href={localeHref(
+                  locale,
+                  `/contact?product=${encodeURIComponent(product.name)}`
+                )}
                 className="px-9 py-4.5 rounded-2xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-sm sm:text-base shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all flex items-center gap-2.5"
               >
-                <Mail size={18} /> <span>Request Quotation for {product.name}</span>
+                <Mail size={18} />{' '}
+                <span>{t('requestQuotation', { product: product.name })}</span>
               </Link>
               <Link
-                href="/quality-compliance"
+                href={localeHref(locale, '/quality-compliance')}
                 className="px-8 py-4.5 rounded-2xl glass-pill text-white text-xs sm:text-sm font-semibold hover:bg-white/[0.14] transition-all"
               >
-                Quality Compliance Details
+                {t('qualityDetails')}
               </Link>
             </div>
           </div>
-
         </div>
 
-        {/* Related Products */}
         {relatedProducts.length > 0 && (
           <div className="pt-12 space-y-8 w-full">
-            <h2 className="text-2xl sm:text-3xl font-black text-white">Related Products in {product.categoryLabel}</h2>
+            <h2 className="text-2xl sm:text-3xl font-black text-white">
+              {t('related', { category: product.categoryLabel })}
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 w-full">
-              {relatedProducts.map((rel) => (
+              {relatedProducts.map((related) => (
                 <Link
-                  key={rel.id}
-                  href={`/products/${rel.slug}`}
+                  key={related.id}
+                  href={localeHref(locale, `/products/${related.slug}`)}
                   className="glass-card !rounded-3xl p-6 sm:p-7 group flex items-center gap-5 hover:-translate-y-1.5 transition-all shadow-xl"
                 >
                   <div className="w-16 h-16 rounded-2xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-inner flex-shrink-0">
-                    {categoryEmojis[rel.category] || '📦'}
+                    {categoryEmojis[related.category] || '📦'}
                   </div>
                   <div className="min-w-0">
                     <h3 className="text-base font-bold text-white group-hover:text-gold transition-colors truncate">
-                      {rel.name}
+                      {related.name}
                     </h3>
-                    <p className="text-xs text-slate mt-1 line-clamp-1">{rel.shortDescription}</p>
+                    <p className="text-xs text-slate mt-1 line-clamp-1">
+                      {related.shortDescription}
+                    </p>
                   </div>
                 </Link>
               ))}
