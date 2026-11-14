@@ -48,7 +48,7 @@ export function ProductFilters({
           onClick={() => onCategoryChange('all')}
           className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
             activeCategory === 'all'
-              ? 'bg-gradient-to-r from-gold to-gold-dark text-navy shadow-[0_0_20px_rgba(224,160,69,0.4)]'
+              ? 'bg-gradient-to-r from-gold to-gold-dark text-navy shadow-[0_0_20px_rgba(56,207,255,0.4)]'
               : 'glass-card !rounded-xl !p-2.5 !px-5 text-slate-300 hover:text-white hover:border-white/30'
           }`}
         >
@@ -63,7 +63,7 @@ export function ProductFilters({
               onClick={() => onCategoryChange(category.id)}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 isActive
-                  ? 'bg-gradient-to-r from-gold to-gold-dark text-navy shadow-[0_0_20px_rgba(224,160,69,0.4)]'
+                  ? 'bg-gradient-to-r from-gold to-gold-dark text-navy shadow-[0_0_20px_rgba(56,207,255,0.4)]'
                   : 'glass-card !rounded-xl !p-2.5 !px-5 text-slate-300 hover:text-white hover:border-white/30'
               }`}
             >

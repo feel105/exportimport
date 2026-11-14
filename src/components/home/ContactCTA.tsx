@@ -19,7 +19,7 @@ export default async function ContactCTA() {
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full pointer-events-none"
             style={{
               background:
-                'radial-gradient(circle, rgba(224, 142, 69, 0.16) 0%, transparent 65%)',
+                'radial-gradient(circle, rgba(56, 207, 255, 0.16) 0%, transparent 65%)',
               filter: 'blur(85px)',
             }}
           />
@@ -43,7 +43,7 @@ export default async function ContactCTA() {
             <div className="flex flex-wrap items-center justify-center gap-3.5 pt-3">
               <Link
                 href={localeHref(locale, '/contact')}
-                className="px-7 py-3.5 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all duration-200 hover:-translate-y-0.5 flex items-center gap-2"
+                className="px-7 py-3.5 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_24px_rgba(56,207,255,0.35)] hover:shadow-[0_0_32px_rgba(56,207,255,0.5)] transition-all duration-200 hover:-translate-y-0.5 flex items-center gap-2"
               >
                 <span>{t('button')}</span>
                 <ArrowRight size={14} />

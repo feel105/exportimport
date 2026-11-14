@@ -75,7 +75,7 @@ export default function SpecificationWorkbench() {
               </div>
               <Link
                 href={localeHref(locale, '/contact')}
-                className="w-full py-3 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_20px_rgba(224,160,69,0.3)] hover:shadow-[0_0_28px_rgba(224,160,69,0.5)] transition-all flex items-center justify-center gap-2"
+                className="w-full py-3 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_20px_rgba(56,207,255,0.3)] hover:shadow-[0_0_28px_rgba(56,207,255,0.5)] transition-all flex items-center justify-center gap-2"
               >
                 <Send size={13} />
                 <span>{t('cards.rfq.button')}</span>

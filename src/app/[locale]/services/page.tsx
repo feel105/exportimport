@@ -88,11 +88,11 @@ export default async function ServicesPage({
           })}
         </div>
 
-        <div className="glass-card !rounded-2xl p-8 sm:p-12 lg:p-14 text-center border-gold/30 shadow-[0_24px_70px_rgba(224,160,69,0.15)] relative overflow-hidden">
+        <div className="glass-card !rounded-2xl p-8 sm:p-12 lg:p-14 text-center border-gold/30 shadow-[0_24px_70px_rgba(56,207,255,0.15)] relative overflow-hidden">
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full pointer-events-none"
             style={{
-              background: 'radial-gradient(circle, rgba(224, 142, 69, 0.16) 0%, transparent 65%)',
+              background: 'radial-gradient(circle, rgba(56, 207, 255, 0.16) 0%, transparent 65%)',
               filter: 'blur(75px)',
             }}
           />
@@ -106,7 +106,7 @@ export default async function ServicesPage({
             <div className="pt-4 flex flex-wrap items-center justify-center gap-5">
               <Link
                 href={localeHref(locale, '/contact')}
-                className="px-9 py-4.5 rounded-2xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-base shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all flex items-center gap-2.5"
+                className="px-9 py-4.5 rounded-2xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-base shadow-[0_0_24px_rgba(56,207,255,0.35)] hover:shadow-[0_0_32px_rgba(56,207,255,0.5)] transition-all flex items-center gap-2.5"
               >
                 <span>{t('ctaPrimary')}</span>
                 <ArrowRight size={17} />

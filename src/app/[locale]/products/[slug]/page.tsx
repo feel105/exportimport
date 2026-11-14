@@ -159,7 +159,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                   locale,
                   `/contact?product=${encodeURIComponent(product.name)}`
                 )}
-                className="px-9 py-4.5 rounded-2xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-sm sm:text-base shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all flex items-center gap-2.5"
+                className="px-9 py-4.5 rounded-2xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-sm sm:text-base shadow-[0_0_24px_rgba(56,207,255,0.35)] hover:shadow-[0_0_32px_rgba(56,207,255,0.5)] transition-all flex items-center gap-2.5"
               >
                 <Mail size={18} />{' '}
                 <span>{t('requestQuotation', { product: product.name })}</span>

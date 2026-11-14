@@ -44,7 +44,7 @@ export default async function TrustStrip() {
                 </div>
 
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight group-hover:text-amber-200 transition-colors">
+                  <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight group-hover:text-gold-light transition-colors">
                     {metric}
                   </span>
                   <span className="text-xs font-mono text-slate-400 font-semibold uppercase">

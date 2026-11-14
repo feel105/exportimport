@@ -25,7 +25,7 @@ export default function Logo({ size = 'md', priority = false, className = '' }: 
         width={256}
         height={256}
         priority={priority}
-        className={`${styles.emblem} shrink-0 rounded-full object-contain ring-1 ring-white/15 shadow-[0_0_18px_rgba(67,213,255,0.16)] transition-transform duration-300 group-hover:scale-105`}
+        className={`${styles.emblem} shrink-0 rounded-full object-contain ring-1 ring-white/15 shadow-[0_0_18px_rgba(122,229,255,0.22)] transition-transform duration-300 group-hover:scale-105`}
       />
       <Image
         src="/logo/wordmark.png"

@@ -7,9 +7,9 @@
   --color-navy-deep: #121A26;
   --color-royal: #2563EB;
   --color-royal-dark: #1D4ED8;
-  --color-gold: #E0A045;
-  --color-gold-light: #F5BE6B;
-  --color-gold-dark: #B87820;
+  --color-gold: #38CFFF;
+  --color-gold-light: #7AE5FF;
+  --color-gold-dark: #21C8FF;
   --color-warm: #F8FAFC;
   --color-slate: #94A3B8;
   --color-slate-dark: #64748B;
@@ -24,9 +24,9 @@
   --navy-deep: #121A26;
   --royal: #2563EB;
   --royal-dark: #1D4ED8;
-  --gold: #E0A045;
-  --gold-light: #F5BE6B;
-  --gold-dark: #B87820;
+  --gold: #38CFFF;
+  --gold-light: #7AE5FF;
+  --gold-dark: #21C8FF;
   --warm: #F8FAFC;
   --slate: #94A3B8;
   --slate-dark: #64748B;
@@ -43,8 +43,10 @@
   --glass-shadow: 0 28px 70px -12px rgba(0, 0, 0, 0.72);
   --glass-pill-bg: rgba(255, 255, 255, 0.08);
 
-  --ambient-amber: rgba(224, 142, 69, 0.22);
+  --ambient-amber: rgba(56, 207, 255, 0.22);
   --ambient-blue: rgba(56, 189, 248, 0.14);
+  --gold-glow: 0 0 22px rgba(56, 207, 255, 0.45);
+  --blue-glow: 0 0 22px rgba(37, 99, 235, 0.45);
 }
 
 /* ─── Base Reset & Atmospheric Background ────────────────────────────── */
@@ -69,10 +71,10 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
   background-image: 
-    radial-gradient(circle at 15% 15%, rgba(224, 142, 69, 0.22) 0%, transparent 48%),
+    radial-gradient(circle at 15% 15%, rgba(56, 207, 255, 0.22) 0%, transparent 48%),
     radial-gradient(circle at 88% 14%, rgba(56, 189, 248, 0.14) 0%, transparent 44%),
     radial-gradient(circle at 50% 65%, rgba(37, 99, 235, 0.09) 0%, transparent 52%),
-    radial-gradient(circle at 25% 85%, rgba(224, 142, 69, 0.12) 0%, transparent 40%);
+    radial-gradient(circle at 25% 85%, rgba(56, 207, 255, 0.12) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
@@ -167,7 +169,7 @@ body {
 
 .nav-cta-primary:hover {
   filter: brightness(1.06);
-  box-shadow: 0 0 22px rgba(224, 160, 69, 0.42);
+  box-shadow: 0 0 22px rgba(56, 207, 255, 0.42);
 }
 
 .nav-cta-outline {
@@ -244,8 +246,8 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #F59E0B;
-  box-shadow: 0 0 12px 2px rgba(245, 158, 11, 0.65);
+  background-color: #38CFFF;
+  box-shadow: 0 0 12px 2px rgba(56, 207, 255, 0.65);
 }
 
 /* ─── Light & White Theme Icon System ─────────────────────── */
@@ -438,8 +440,8 @@ body {
 }
 
 .input-field:focus {
-  border-color: var(--royal);
-  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(56, 207, 255, 0.2);
 }
 
 .input-field.error {
@@ -490,7 +492,7 @@ body {
   background: linear-gradient(
     to right,
     transparent,
-    rgba(214, 181, 116, 0.4),
+    rgba(56, 207, 255, 0.4),
     transparent
   );
 }
@@ -505,12 +507,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(214, 181, 116, 0.4);
+  background: rgba(56, 207, 255, 0.4);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(214, 181, 116, 0.7);
+  background: rgba(56, 207, 255, 0.7);
 }
 
 /* ─── Focus Indicators ───────────────────────────────────── */
@@ -644,7 +646,7 @@ body {
 }
 
 .bg-dots {
-  background-image: radial-gradient(circle, rgba(214,181,116,0.15) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(56,207,255,0.15) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -654,7 +656,7 @@ body {
 }
 
 .bg-dots-dense {
-  background-image: radial-gradient(rgba(224, 160, 69, 0.16) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(56, 207, 255, 0.16) 1px, transparent 1px);
   background-size: 12px 12px;
 }
 
@@ -697,6 +699,6 @@ body {
 
 .code-pill:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(224, 160, 69, 0.5);
-  box-shadow: 0 0 16px rgba(224, 160, 69, 0.2);
+  border-color: rgba(56, 207, 255, 0.5);
+  box-shadow: 0 0 16px rgba(56, 207, 255, 0.2);
 }

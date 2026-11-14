@@ -101,7 +101,7 @@ export default function Hero() {
         className="pointer-events-none absolute top-1/4 -left-40 h-[650px] w-[650px] rounded-full"
         style={{
           background:
-            'radial-gradient(circle, rgba(224, 142, 69, 0.18) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 70%)',
+            'radial-gradient(circle, rgba(56, 207, 255, 0.18) 0%, rgba(56, 207, 255, 0.05) 45%, transparent 70%)',
           filter: 'blur(95px)',
         }}
       />
@@ -127,7 +127,7 @@ export default function Hero() {
             <div className="space-y-3">
               <h1 className="text-4xl font-black leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
                 {t('titleLead')} <br />
-                <span className="bg-gradient-to-r from-amber-300 via-gold to-amber-200 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-200 via-gold to-cyan-300 bg-clip-text text-transparent">
                   {t('titleHighlight')}
                 </span>
               </h1>
@@ -139,7 +139,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <Link
                 href={localeHref(locale, '/contact')}
-                className="flex items-center gap-2 rounded-full bg-gradient-to-r from-gold to-gold-dark px-6 py-3 text-xs font-bold text-navy shadow-[0_0_24px_rgba(224,160,69,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] sm:text-sm"
+                className="flex items-center gap-2 rounded-full bg-gradient-to-r from-gold to-gold-dark px-6 py-3 text-xs font-bold text-navy shadow-[0_0_24px_rgba(56,207,255,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_32px_rgba(56,207,255,0.5)] sm:text-sm"
               >
                 <span>{t('requestQuotation')}</span>
                 <ArrowRight size={14} />

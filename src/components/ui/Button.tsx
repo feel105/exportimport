@@ -33,7 +33,7 @@ export function Button({
   const variantStyles = {
     primary: 'bg-royal hover:bg-royal-dark text-white shadow-sm hover:shadow-[0_0_24px_rgba(29,78,216,0.35)]',
     secondary: 'bg-white/10 hover:bg-white/15 text-white border border-white/20',
-    gold: 'bg-gold hover:bg-gold-light text-navy font-bold shadow-sm hover:shadow-[0_0_20px_rgba(214,181,116,0.25)]',
+    gold: 'bg-gold hover:bg-gold-light text-navy font-bold shadow-sm hover:shadow-[0_0_20px_rgba(56,207,255,0.25)]',
     ghost: 'bg-transparent text-slate-300 hover:text-white hover:bg-white/10',
     outline: 'bg-transparent text-white border border-white/35 hover:bg-white/10 hover:border-white/60',
     'outline-dark': 'bg-transparent text-navy border-2 border-navy hover:bg-navy hover:text-white',

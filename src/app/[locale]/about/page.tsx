@@ -43,7 +43,7 @@ export default async function AboutPage({
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
             {t('titleLead')}{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-gold to-amber-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-gold to-cyan-300">
               {t('titleHighlight')}
             </span>
           </h1>
@@ -64,7 +64,7 @@ export default async function AboutPage({
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <Link
                 href={localeHref(locale, '/products')}
-                className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_24px_rgba(224,160,69,0.35)] hover:shadow-[0_0_32px_rgba(224,160,69,0.5)] transition-all flex items-center gap-2"
+                className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_24px_rgba(56,207,255,0.35)] hover:shadow-[0_0_32px_rgba(56,207,255,0.5)] transition-all flex items-center gap-2"
               >
                 <span>{t('exploreCatalog')}</span>
                 <ArrowRight size={15} />

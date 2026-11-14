@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import { Menu, X, ArrowRight, ChevronDown, ShieldCheck } from 'lucide-react'
+import { Menu, X, ArrowRight, ChevronDown, ShieldCheck, MailBadge, PhoneCall } from 'lucide-react'
 import { siteConfig } from '@/config/site'
 import { navigation } from '@/config/navigation'
 import { localeHref, stripLocale } from '@/i18n/href'
@@ -68,26 +68,25 @@ export default function Navbar() {
     <>
       <header
         ref={headerRef}
-        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-          isScrolled || openMenu ? 'glass-nav' : 'bg-transparent'
-        }`}
+        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${isScrolled || openMenu ? 'glass-nav' : 'bg-transparent'
+          }`}
         onMouseLeave={() => setOpenMenu(null)}
       >
         <div
-          className={`overflow-hidden border-b border-hairline bg-gradient-to-r from-navy-deep via-[#162233] to-navy-deep transition-all duration-300 ${
-            isScrolled ? 'max-h-0 opacity-0' : 'max-h-10 opacity-100'
-          }`}
+          className={`overflow-hidden border-b border-hairline bg-gradient-to-r from-navy-deep via-[#162233] to-navy-deep transition-all duration-300 ${isScrolled ? 'max-h-0 opacity-0' : 'max-h-10 opacity-100'
+            }`}
         >
           <div className="mx-auto flex h-9 w-full max-w-[1920px] items-center justify-between gap-4 px-4 text-[11px] sm:px-6 lg:px-8">
             <div className="flex min-w-0 items-center gap-2">
-              <span className="relative flex h-1.5 w-1.5 flex-shrink-0">
+              {/* <span className="relative flex h-1.5 w-1.5 flex-shrink-0">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
               </span>
-              <span className="mono-tag hidden font-bold text-emerald-400 sm:inline">
+               <span className="mono-tag hidden font-bold text-emerald-400 sm:inline">
                 {t('harvest')}
-              </span>
-              <span className="truncate text-slate-300">{t('announcement')}</span>
+              </span> */}
+              <ShieldCheck size={12} className="text-gold" />
+              <span>{t('certifications')}</span>
               <Link
                 href={localeHref(locale, '/products')}
                 className="ml-1 inline-flex flex-shrink-0 items-center gap-1 font-semibold text-gold transition-colors hover:text-gold-light"
@@ -99,16 +98,22 @@ export default function Navbar() {
 
             <div className="hidden items-center gap-5 text-[11px] text-slate-400 lg:flex">
               <span className="flex items-center gap-1.5">
-                <ShieldCheck size={12} className="text-gold" />
-                <span>{t('certifications')}</span>
+                <MailBadge size={12} className="text-gold" />
+                <a
+                  href={`mailto:${siteConfig.email.replace(/\s/g, '')}`}
+                  className="transition-colors hover:text-white"
+                >{siteConfig.email}</a>
               </span>
               <span className="text-white/20">|</span>
-              <a
-                href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
-                className="transition-colors hover:text-white"
-              >
-                {siteConfig.phone}
-              </a>
+              <span className="flex items-center gap-1.5">
+                <PhoneCall size={12} className="text-gold" />
+                <a
+                  href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+                  className="transition-colors hover:text-white"
+                >
+                  {siteConfig.phone}
+                </a>
+              </span>
             </div>
           </div>
         </div>

@@ -61,7 +61,7 @@ export default async function QualitySection() {
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <Link
                 href={localeHref(locale, '/quality-compliance')}
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_20px_rgba(224,160,69,0.3)] hover:shadow-[0_0_28px_rgba(224,160,69,0.5)] transition-all flex items-center gap-2"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_20px_rgba(56,207,255,0.3)] hover:shadow-[0_0_28px_rgba(56,207,255,0.5)] transition-all flex items-center gap-2"
               >
                 <span>{t('protocolsButton')}</span>
                 <ArrowRight size={14} />
@@ -90,7 +90,7 @@ export default async function QualitySection() {
                 </div>
 
                 <div className="space-y-1">
-                  <p className="text-sm font-bold text-white group-hover:text-amber-200 transition-colors">
+                  <p className="text-sm font-bold text-white group-hover:text-gold-light transition-colors">
                     {cred.name}
                   </p>
                   <p className="text-slate-400 text-xs font-mono">{cred.type}</p>

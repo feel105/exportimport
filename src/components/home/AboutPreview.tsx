@@ -70,7 +70,7 @@ export default async function AboutPreview() {
                 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1]"
               >
                 {t('titleLead')}{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-gold to-amber-200">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-gold to-cyan-300">
                   {t('titleHighlight')}
                 </span>
               </h2>

@@ -89,7 +89,7 @@ export default function FAQ() {
               </div>
               <Link
                 href={localeHref(locale, '/contact')}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs shadow-[0_0_18px_rgba(224,160,69,0.3)] hover:shadow-[0_0_24px_rgba(224,160,69,0.45)] transition-all mt-1"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs shadow-[0_0_18px_rgba(56,207,255,0.3)] hover:shadow-[0_0_24px_rgba(56,207,255,0.45)] transition-all mt-1"
               >
                 <span>{t('requestQuotation')}</span>
                 <ArrowRight size={13} />
@@ -118,7 +118,7 @@ export default function FAQ() {
                   >
                     <span
                       className={`text-sm sm:text-base font-bold pr-4 leading-snug transition-colors ${
-                        isOpen ? 'text-gold' : 'text-white group-hover:text-amber-200'
+                        isOpen ? 'text-gold' : 'text-white group-hover:text-gold-light'
                       }`}
                     >
                       {faq.question}

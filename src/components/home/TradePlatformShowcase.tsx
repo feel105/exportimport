@@ -151,7 +151,7 @@ export default function TradePlatformShowcase() {
               <div className="px-4 py-3 bg-white/[0.04] border-b border-hairline flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-gold/80" />
                   <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                   <span className="mono-tag text-slate-400 text-[11px] ml-2 font-mono">
                     {currentChapter.id}.manifest
@@ -173,7 +173,7 @@ export default function TradePlatformShowcase() {
                     </span>
                     <span
                       className={`font-semibold text-right max-w-[55%] text-[11px] sm:text-xs ${
-                        row.highlight ? 'text-amber-300 font-bold' : 'text-white'
+                        row.highlight ? 'text-gold-light font-bold' : 'text-white'
                       }`}
                     >
                       {row.value}

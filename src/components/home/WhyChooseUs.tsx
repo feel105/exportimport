@@ -52,7 +52,7 @@ export default async function WhyChooseUs() {
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-amber-200 transition-colors">
+                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-gold-light transition-colors">
                       {title}
                     </h3>
                     <p className="text-slate text-xs sm:text-sm leading-relaxed">{desc}</p>
