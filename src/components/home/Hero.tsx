@@ -4,14 +4,14 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import {
-  ArrowRight,
+  // ArrowRight,
   ArrowUpRight,
-  Check,
+  // Check,
   CheckCircle,
   ChevronLeft,
   ChevronRight,
   Coffee,
-  Copy,
+  // Copy,
   Flame,
   Flower2,
   Leaf,
@@ -49,7 +49,7 @@ const pad = (value: number) => String(value).padStart(2, '0')
 export default function Hero() {
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
-  const [copied, setCopied] = useState(false)
+  // const [copied, setCopied] = useState(false)
   const t = useTranslations('hero')
   const locale = useLocale() as Locale
 
@@ -80,11 +80,11 @@ export default function Hero() {
     setIndex((current) => (current + direction + total) % total)
   }
 
-  const handleCopySpec = () => {
-    navigator.clipboard.writeText(`${active.hsCode} - ${active.label.toUpperCase()} - MUNDRA PORT`)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2200)
-  }
+  // const handleCopySpec = () => {
+  //   navigator.clipboard.writeText(`${active.hsCode} - ${active.label.toUpperCase()} - MUNDRA PORT`)
+  //   setCopied(true)
+  //   setTimeout(() => setCopied(false), 2200)
+  // }
 
   return (
     <section
@@ -114,15 +114,16 @@ export default function Hero() {
                 <span className="glow-indicator-green" />
                 {t('verified')}
               </span>
-              <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-300 sm:text-xs">
+              {/* <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-300 sm:text-xs">
                 <MapPin size={12} className="text-gold" />
                 {t('ports')}
-              </span>
+              </span> */}
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.08] px-3.5 py-1">
+                <span className="mono-tag text-gold">{t('range')}</span>
+              </div>
             </div>
 
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.08] px-3.5 py-1">
-              <span className="mono-tag text-gold">{t('range')}</span>
-            </div>
+
 
             <div className="space-y-3">
               <h1 className="text-4xl font-black leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -136,7 +137,7 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 pt-1">
+            {/* <div className="flex flex-wrap items-center gap-3 pt-1">
               <Link
                 href={localeHref(locale, '/contact')}
                 className="flex items-center gap-2 rounded-full bg-gradient-to-r from-gold to-gold-dark px-6 py-3 text-xs font-bold text-navy shadow-[0_0_24px_rgba(56,207,255,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_32px_rgba(56,207,255,0.5)] sm:text-sm"
@@ -173,7 +174,7 @@ export default function Hero() {
                   </>
                 )}
               </button>
-            </div>
+            </div> */}
 
             <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-slate-300">
               {trust.map((item) => (
@@ -292,7 +293,7 @@ export default function Hero() {
                 <ArrowUpRight size={13} className="text-gold" />
               </Link>
 
-              <div className="relative mt-6 flex items-center gap-1.5">
+              {/* <div className="relative mt-6 flex items-center gap-1.5">
                 {slides.map((slide, slideIndex) => (
                   <span
                     key={slide.key}
@@ -300,7 +301,7 @@ export default function Hero() {
                       }`}
                   />
                 ))}
-              </div>
+              </div> */}
             </div>
           </aside>
         </div>
