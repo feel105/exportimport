@@ -826,6 +826,30 @@
           "title": "Long-Term Trade Relationships",
           "desc": "We prioritize consistent reliability, transparent commercial dealings, and integrity over one-off spot shipments, building enduring global partnerships."
         }
+      ],
+      "processTitleLead": "Our",
+      "processTitleHighlight": "Process",
+      "processSteps": [
+        {
+          "title": "Sourcing",
+          "desc": "Direct partnerships with trusted local farmers and producers."
+        },
+        {
+          "title": "Quality Control",
+          "desc": "Rigorous inspection and testing to meet international standards."
+        },
+        {
+          "title": "Processing",
+          "desc": "Intermediate treatment, packaging, or sorting where required."
+        },
+        {
+          "title": "Logistics & Export",
+          "desc": "Optimized supply chain management for smooth and timely delivery."
+        },
+        {
+          "title": "Customer Delivery",
+          "desc": "Ensuring buyers receive products as promised, with full transparency."
+        }
       ]
     },
     "contact": {

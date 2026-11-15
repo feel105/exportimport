@@ -826,6 +826,30 @@
           "title": "Langfristige Handelsbeziehungen",
           "desc": "Wir legen Wert auf beständige Zuverlässigkeit, transparente Geschäftsabwicklungen und Integrität gegenüber einmaligen Spotsendungen und bauen dauerhafte globale Partnerschaften auf."
         }
+      ],
+      "processTitleLead": "Unser",
+      "processTitleHighlight": "Prozess",
+      "processSteps": [
+        {
+          "title": "Beschaffung",
+          "desc": "Direkte Partnerschaften mit vertrauenswürdigen lokalen Landwirten und Produzenten."
+        },
+        {
+          "title": "Qualitätskontrolle",
+          "desc": "Strenge Inspektion und Prüfung nach internationalen Standards."
+        },
+        {
+          "title": "Verarbeitung",
+          "desc": "Zwischenbehandlung, Verpackung oder Sortierung, wo erforderlich."
+        },
+        {
+          "title": "Logistik & Export",
+          "desc": "Optimiertes Supply-Chain-Management für eine reibungslose und termingerechte Lieferung."
+        },
+        {
+          "title": "Kundenlieferung",
+          "desc": "Sicherstellung, dass Käufer die Produkte wie versprochen mit voller Transparenz erhalten."
+        }
       ]
     },
     "contact": {

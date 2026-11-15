@@ -826,6 +826,30 @@
           "title": "Relaciones comerciales a largo plazo",
           "desc": "Priorizamos la confiabilidad constante, los tratos comerciales transparentes y la integridad sobre los envíos puntuales, construyendo asociaciones globales duraderas."
         }
+      ],
+      "processTitleLead": "Nuestro",
+      "processTitleHighlight": "Proceso",
+      "processSteps": [
+        {
+          "title": "Abastecimiento",
+          "desc": "Alianzas directas con agricultores y productores locales de confianza."
+        },
+        {
+          "title": "Control de calidad",
+          "desc": "Inspección y pruebas rigurosas para cumplir con los estándares internacionales."
+        },
+        {
+          "title": "Procesamiento",
+          "desc": "Tratamiento intermedio, envasado o clasificación cuando sea necesario."
+        },
+        {
+          "title": "Logística y exportación",
+          "desc": "Gestión optimizada de la cadena de suministro para una entrega fluida y puntual."
+        },
+        {
+          "title": "Entrega al cliente",
+          "desc": "Garantizar que los compradores reciban los productos según lo prometido, con total transparencia."
+        }
       ]
     },
     "contact": {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2, Globe, ShieldCheck, TrendingUp, Users } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
@@ -8,6 +9,45 @@ import { buildPageMetadata } from '@/lib/metadata'
 import { getLocaleFromParams } from '@/i18n/server'
 
 const pillarIcons = [ShieldCheck, Globe, Users, TrendingUp]
+
+const processImages = [
+  '/home/agri-products.jpg',
+  '/home/spice-powders.jpg',
+  '/home/seeds.jpg',
+  '/home/ship-container.jpg',
+  '/home/nuts.jpg',
+]
+
+function ProcessCard({
+  title,
+  desc,
+  image,
+}: {
+  title: string
+  desc: string
+  image: string
+}) {
+  return (
+    <article className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 p-6 shadow-xl transition-colors duration-300 hover:border-gold/40 sm:min-h-[360px] sm:p-7 lg:min-h-[400px] lg:p-8">
+      <Image
+        src={image}
+        alt=""
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
+        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F18]/20 via-[#0A0F18]/65 to-[#0A0F18]/95" />
+      <div className="relative space-y-2">
+        <h3 className="text-2xl font-black leading-tight text-white sm:text-3xl lg:text-[2.5rem]">
+          {title}
+        </h3>
+        <p className="max-w-md text-xs leading-relaxed text-slate-200 sm:text-sm lg:text-base">
+          {desc}
+        </p>
+      </div>
+    </article>
+  )
+}
 
 export async function generateMetadata({
   params,
@@ -33,6 +73,7 @@ export default async function AboutPage({
   const locale = await getLocaleFromParams(params)
   const t = await getTranslations({ locale, namespace: 'pages.about' })
   const pillars = t.raw('pillars') as { title: string; desc: string }[]
+  const processSteps = t.raw('processSteps') as { title: string; desc: string }[]
 
   return (
     <div className="pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 w-full">
@@ -134,6 +175,40 @@ export default async function AboutPage({
                 </div>
               )
             })}
+          </div>
+        </div>
+
+        <div className="space-y-8 lg:space-y-10">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+              <span className="text-white/70">{t('processTitleLead')}</span>{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-gold to-cyan-300">
+                {t('processTitleHighlight')}
+              </span>
+            </h2>
+          </div>
+
+          <div className="space-y-5 sm:space-y-6 lg:space-y-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+              {processSteps.slice(0, 3).map((step, index) => (
+                <ProcessCard
+                  key={step.title}
+                  title={step.title}
+                  desc={step.desc}
+                  image={processImages[index]}
+                />
+              ))}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 lg:px-24 xl:px-40">
+              {processSteps.slice(3).map((step, index) => (
+                <ProcessCard
+                  key={step.title}
+                  title={step.title}
+                  desc={step.desc}
+                  image={processImages[index + 3]}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
