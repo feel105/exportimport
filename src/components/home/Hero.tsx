@@ -88,7 +88,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative isolate flex min-h-[660px] w-full items-center overflow-hidden border-b border-hairline pt-[calc(var(--header-h)+2.5rem)] pb-8 sm:min-h-[720px] sm:pt-[calc(var(--header-h)+3rem)] sm:pb-10 lg:min-h-[780px] lg:pb-12"
+      className="relative isolate flex min-h-[660px] w-full flex-col overflow-hidden border-b border-hairline pt-[calc(var(--header-h)+2.5rem)] pb-8 sm:min-h-[720px] sm:pt-[calc(var(--header-h)+3rem)] sm:pb-10 lg:min-h-[780px] lg:pb-12"
       aria-label={t('aria')}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -106,7 +106,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="container-xl relative z-10 w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
+      <div className="container-xl relative z-10 flex w-full flex-1 flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end xl:grid-cols-[minmax(0,1fr)_380px] xl:gap-16">
           <div className="max-w-[46rem] space-y-6">
             <div className="flex flex-wrap items-center gap-3">
@@ -206,8 +206,9 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-[#0A0F18]/65 p-4 backdrop-blur-xl lg:hidden">
-              <div className="flex items-center justify-between gap-2">
+            <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-b from-white/[0.14] via-white/[0.05] to-white/[0.02] p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.22)] backdrop-blur-xl lg:hidden">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.18] via-transparent to-transparent" />
+              <div className="relative flex items-center justify-between gap-2">
                 <span className="mono-tag text-gold">
                   {t('nowSourcing', { hsCode: active.hsCode })}
                 </span>
@@ -233,7 +234,7 @@ export default function Hero() {
                   </button>
                 </div>
               </div>
-              <div className="mt-2 flex items-start justify-between gap-4">
+              <div className="relative mt-2 flex items-start justify-between gap-4">
                 <div>
                   <p className="text-base font-bold text-white">{active.label}</p>
                   <p className="mt-1 text-xs leading-relaxed text-slate-300">
@@ -252,25 +253,26 @@ export default function Hero() {
           </div>
 
           <aside className="hidden lg:block">
-            <div className="relative overflow-hidden rounded-3xl border border-white/[0.12] bg-gradient-to-b from-[#0A0F18]/85 via-[#0A0F18]/70 to-[#0A0F18]/90 p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] backdrop-blur-2xl">
+            <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-b from-white/[0.16] via-white/[0.06] to-white/[0.02] p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9),inset_0_1px_0_0_rgba(255,255,255,0.28)] backdrop-blur-2xl">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.2] via-transparent to-transparent" />
               <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/10 blur-2xl" />
 
               <div className="relative flex items-center justify-between">
                 <span className="mono-tag text-gold">
                   {t('nowSourcing', { hsCode: active.hsCode })}
                 </span>
-                <span className="font-mono text-[10px] tabular-nums text-slate-400">
+                <span className="font-mono text-[10px] tabular-nums text-slate-300">
                   {pad(index + 1)} / {pad(total)}
                 </span>
               </div>
 
-              <p className="relative mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+              <p className="relative mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold/80">
                 {t('productCategory')}
               </p>
-              <h2 className="relative mt-1.5 text-2xl font-black leading-tight text-white">
+              <h2 className="relative mt-1.5 bg-gradient-to-r from-white via-white to-gold-light bg-clip-text text-2xl font-black leading-tight text-transparent">
                 {active.label}
               </h2>
-              <p className="relative mt-2 text-sm leading-relaxed text-slate-300">
+              <p className="relative mt-2 text-sm leading-relaxed text-slate-200">
                 {active.description}
               </p>
 
@@ -278,7 +280,7 @@ export default function Hero() {
                 {active.specs.map((spec) => (
                   <span
                     key={spec}
-                    className="rounded-full border border-white/10 bg-white/[0.06] px-2.5 py-1 text-[10px] font-semibold text-slate-200"
+                    className="rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[10px] font-semibold text-white/90"
                   >
                     {spec}
                   </span>
@@ -305,8 +307,11 @@ export default function Hero() {
             </div>
           </aside>
         </div>
+      </div>
 
-        <div className="mt-9 flex flex-col gap-4 border-t border-white/10 pt-5 sm:mt-11 lg:flex-row lg:items-center lg:justify-between">
+      <div className="relative z-20 w-full border-t border-white/10">
+        <div className="container-xl px-4 py-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <span className="mono-tag shrink-0 text-slate-500">{t('rangeLabel')}</span>
             {CATEGORIES.map(({ key, icon: Icon, href }) => (
@@ -363,6 +368,7 @@ export default function Hero() {
                 {pad(index + 1)}/{pad(total)}
               </span>
             </div>
+          </div>
           </div>
         </div>
       </div>

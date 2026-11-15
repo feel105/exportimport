@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { getLocale, getTranslations } from 'next-intl/server'
-import { ArrowRight, CheckCircle, Globe2, ShieldCheck, Award } from 'lucide-react'
+import { ArrowRight, CheckCircle, Globe2, ShieldCheck, Award, Globe, Globe2Icon, GlobeCheck, GlobeCheckIcon, GlobeCodeIcon, GlobeOff, GlobeX } from 'lucide-react'
 import { localeHref } from '@/i18n/href'
 
 export default async function AboutPreview() {
@@ -30,7 +30,7 @@ export default async function AboutPreview() {
               </div>
 
               <div className="rounded-xl p-6 sm:p-7 bg-[#0f1723] border border-hairline text-center space-y-2.5 shadow-inner">
-                <Globe2 size={36} className="mx-auto text-gold" />
+                <GlobeCheckIcon size={36} className="mx-auto text-emerald-400" />
                 <h3 className="text-lg sm:text-xl font-extrabold text-white">
                   {t('bridgeTitle')}
                 </h3>
