@@ -649,7 +649,26 @@
           }
         ]
       }
-    }
+    },
+    "emailAria": "E-Mail an {name}",
+    "phoneAria": "{name} anrufen",
+    "profiles": [
+      {
+        "name": "Arjun Mehta",
+        "position": "GRÜNDER & GESCHÄFTSFÜHRER",
+        "description": "Verantwortet die Beschaffung in Gujarat und Rajasthan und baut langfristige Beziehungen zu Erzeugern, Verarbeitern und Exporteuren auf."
+      },
+      {
+        "name": "Priya Sharma",
+        "position": "LEITERIN QUALITÄT & COMPLIANCE",
+        "description": "Verantwortet Labortests, Sortex-Reinheitsstandards und die Pflanzengesundheitsdokumentation für jede Sendung."
+      },
+      {
+        "name": "Rohan Patel",
+        "position": "EXPORTLOGISTIK-MANAGER",
+        "description": "Koordiniert Containerplanung, Hafenbetrieb in Mundra und Nhava Sheva sowie pünktliche Lieferungen an den Bestimmungsort."
+      }
+    ]
   },
   "qualitySection": {
     "eyebrow": "GESETZLICHE AKKREDITIERUNG",

@@ -649,7 +649,26 @@
           }
         ]
       }
-    }
+    },
+    "emailAria": "Enviar correo a {name}",
+    "phoneAria": "Llamar a {name}",
+    "profiles": [
+      {
+        "name": "Arjun Mehta",
+        "position": "FUNDADOR Y DIRECTOR GENERAL",
+        "description": "Lidera el abastecimiento de origen en Gujarat y Rajasthan, creando relaciones a largo plazo con productores, procesadores y exportadores."
+      },
+      {
+        "name": "Priya Sharma",
+        "position": "JEFA DE CALIDAD Y CUMPLIMIENTO",
+        "description": "Responsable de pruebas de laboratorio, estándares de pureza Sortex y la documentación fitosanitaria de cada envío."
+      },
+      {
+        "name": "Rohan Patel",
+        "position": "GERENTE DE LOGÍSTICA DE EXPORTACIÓN",
+        "description": "Coordina la planificación de contenedores, las operaciones portuarias en Mundra y Nhava Sheva y la entrega puntual en destino."
+      }
+    ]
   },
   "qualitySection": {
     "eyebrow": "ACREDITACIÓN REGLAMENTARIA",

@@ -649,7 +649,26 @@
           }
         ]
       }
-    }
+    },
+    "emailAria": "Email {name}",
+    "phoneAria": "Call {name}",
+    "profiles": [
+      {
+        "name": "Arjun Mehta",
+        "position": "FOUNDER & MANAGING DIRECTOR",
+        "description": "Leads origin sourcing across Gujarat and Rajasthan, building long-term relationships with growers, processors, and exporters."
+      },
+      {
+        "name": "Priya Sharma",
+        "position": "HEAD OF QUALITY & COMPLIANCE",
+        "description": "Owns lab testing, sortex purity standards, and the phytosanitary documentation that clears every consignment."
+      },
+      {
+        "name": "Rohan Patel",
+        "position": "EXPORT LOGISTICS MANAGER",
+        "description": "Coordinates container planning, port operations at Mundra and Nhava Sheva, and on-time destination delivery."
+      }
+    ]
   },
   "qualitySection": {
     "eyebrow": "STATUTORY ACCREDITATION",

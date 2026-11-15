@@ -1,35 +1,36 @@
-'use client'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
+import { Compass, Mail, Phone, ShieldCheck, Ship } from 'lucide-react'
+import { siteConfig } from '@/config/site'
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { useLocale, useTranslations } from 'next-intl'
-import { Copy, Check, ShieldCheck, Box, FileText, Send } from 'lucide-react'
-import { localeHref } from '@/i18n/href'
-import type { Locale } from '@/i18n/config'
-
-interface HsItem {
-  id: string
-  code: string
+interface Profile {
   name: string
+  position: string
+  description: string
+  image?: string
 }
 
-interface PayloadRow {
-  label: string
-  value: string
-}
+const roleIcons = [Compass, ShieldCheck, Ship]
+
+const hoverImages = [
+  '/home/agri-products.jpg',
+  '/home/spice-powders.jpg',
+  '/home/ship-container.jpg',
+]
+
+const getInitials = (name: string) =>
+  name
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join('')
+    .toUpperCase()
 
 export default function SpecificationWorkbench() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null)
   const t = useTranslations('workbench')
-  const locale = useLocale() as Locale
-  const hsItems = t.raw('cards.hs.items') as HsItem[]
-  const payloadRows = t.raw('cards.payload.rows') as PayloadRow[]
-
-  const handleCopy = (text: string, id: string) => {
-    navigator.clipboard.writeText(text)
-    setCopiedCode(id)
-    setTimeout(() => setCopiedCode(null), 2000)
-  }
+  const profiles = t.raw('profiles') as Profile[]
+  const phoneHref = siteConfig.phone.replace(/[^\d+]/g, '')
 
   return (
     <section
@@ -54,109 +55,84 @@ export default function SpecificationWorkbench() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 w-full">
-          <div className="rounded-2xl border border-hairline bg-white/[0.02] p-6 sm:p-7 flex flex-col justify-between hover:border-hairline-light transition-all space-y-6">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-white/[0.08] border border-hairline flex items-center justify-center text-gold shadow-sm">
-                <FileText size={18} />
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white">
-                {t('cards.rfq.title')}
-              </h3>
-              <p className="text-slate text-xs sm:text-sm leading-relaxed">
-                {t('cards.rfq.description')}
-              </p>
-            </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 w-full">
+          {profiles.map((profile, index) => {
+            const Icon = roleIcons[index] ?? Compass
+            const image = profile.image ?? hoverImages[index] ?? hoverImages[0]
 
-            <div className="space-y-3 pt-4 border-t border-hairline">
-              <div className="text-[11px] font-mono text-slate-400 flex items-center justify-between">
-                <span>{t('cards.rfq.slaLabel')}</span>
-                <span className="text-emerald-400 font-bold">{t('cards.rfq.slaValue')}</span>
-              </div>
-              <Link
-                href={localeHref(locale, '/contact')}
-                className="w-full py-3 rounded-full bg-gradient-to-r from-gold to-gold-dark text-navy font-bold text-xs sm:text-sm shadow-[0_0_20px_rgba(56,207,255,0.3)] hover:shadow-[0_0_28px_rgba(56,207,255,0.5)] transition-all flex items-center justify-center gap-2"
+            return (
+              <article
+                key={profile.name}
+                className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-hairline bg-white/[0.02] p-6 text-center transition-all duration-300 hover:border-hairline-light hover:bg-white/[0.04] sm:p-7"
               >
-                <Send size={13} />
-                <span>{t('cards.rfq.button')}</span>
-              </Link>
-            </div>
-          </div>
+                <Image
+                  src={image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover object-center opacity-0 scale-105 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F18]/85 via-[#0A0F18]/85 to-[#0A0F18]/95 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-gold/10 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-          <div className="rounded-2xl border border-hairline bg-white/[0.02] p-6 sm:p-7 flex flex-col justify-between hover:border-hairline-light transition-all space-y-6">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-white/[0.08] border border-hairline flex items-center justify-center text-cyan-accent shadow-sm">
-                <ShieldCheck size={18} />
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white">
-                {t('cards.hs.title')}
-              </h3>
-              <p className="text-slate text-xs sm:text-sm leading-relaxed">
-                {t('cards.hs.description')}
-              </p>
-            </div>
-
-            <div className="space-y-2 pt-4 border-t border-hairline">
-              <div className="text-[11px] font-mono text-slate-400 flex items-center justify-between mb-2">
-                <span>{t('cards.hs.copyLabel')}</span>
-                <span className="text-gold font-bold">{t('cards.hs.source')}</span>
-              </div>
-
-              {hsItems.map(({ id, code, name }) => (
-                <button
-                  key={id}
-                  onClick={() => handleCopy(code, id)}
-                  className="w-full flex items-center justify-between px-3.5 py-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-hairline transition-colors text-left group cursor-pointer font-mono text-xs"
-                >
-                  <div className="flex items-center gap-2 truncate">
-                    <span className="text-gold font-bold">{code}</span>
-                    <span className="text-slate-400 truncate text-[11px]">{name}</span>
+                <div className="relative flex flex-1 flex-col items-center">
+                  <div className="relative">
+                    <div className="relative flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-gradient-to-br from-gold/30 via-cyan-accent/20 to-white/[0.06] shadow-inner">
+                      {profile.image ? (
+                        <Image
+                          src={profile.image}
+                          alt={profile.name}
+                          fill
+                          sizes="80px"
+                          className="object-cover object-center"
+                        />
+                      ) : (
+                        <>
+                          <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent" />
+                          <span className="relative text-2xl font-black tracking-tight text-white">
+                            {getInitials(profile.name)}
+                          </span>
+                        </>
+                      )}
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full border border-hairline bg-navy-deep text-gold shadow">
+                      <Icon size={12} />
+                    </div>
                   </div>
-                  {copiedCode === id ? (
-                    <span className="text-emerald-400 text-[11px] font-bold flex items-center gap-1">
-                      <Check size={12} /> {t('cards.hs.copied')}
-                    </span>
-                  ) : (
-                    <Copy
-                      size={12}
-                      className="text-slate-500 group-hover:text-white transition-colors flex-shrink-0"
-                    />
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
 
-          <div className="rounded-2xl border border-hairline bg-white/[0.02] p-6 sm:p-7 flex flex-col justify-between hover:border-hairline-light transition-all space-y-6">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-white/[0.08] border border-hairline flex items-center justify-center text-emerald-accent shadow-sm">
-                <Box size={18} />
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white">
-                {t('cards.payload.title')}
-              </h3>
-              <p className="text-slate text-xs sm:text-sm leading-relaxed">
-                {t('cards.payload.description')}
-              </p>
-            </div>
+                  <h3 className="mt-4 text-lg font-bold text-white">
+                    {profile.name}
+                  </h3>
+                  <p className="mono-tag mt-1 text-[10px] text-gold">
+                    {profile.position}
+                  </p>
 
-            <div className="space-y-2 pt-4 border-t border-hairline">
-              <div className="text-[11px] font-mono text-slate-400 flex items-center justify-between mb-2">
-                <span>{t('cards.payload.label')}</span>
-                <span className="text-emerald-400 font-bold">{t('cards.payload.port')}</span>
-              </div>
+                  <p className="mt-4 flex-1 text-slate text-xs leading-relaxed sm:text-sm">
+                    {profile.description}
+                  </p>
 
-              {payloadRows.map(({ label, value }) => (
-                <div
-                  key={label}
-                  className="flex items-center justify-between px-3.5 py-2 rounded-xl bg-white/[0.04] border border-hairline text-xs font-mono"
-                >
-                  <span className="text-slate-300 text-[11px]">{label}</span>
-                  <span className="text-white font-bold text-[11px]">{value}</span>
+                  <div className="mt-5 flex w-full flex-col items-center gap-2 border-t border-hairline pt-4">
+                    <a
+                      href={`mailto:${siteConfig.email}`}
+                      aria-label={t('emailAria', { name: profile.name })}
+                      className="inline-flex items-center gap-2 text-[11px] text-slate-300 transition-colors hover:text-gold"
+                    >
+                      <Mail size={13} className="shrink-0 text-gold" />
+                      <span className="truncate">{siteConfig.email}</span>
+                    </a>
+                    <a
+                      href={`tel:${phoneHref}`}
+                      aria-label={t('phoneAria', { name: profile.name })}
+                      className="inline-flex items-center gap-2 text-[11px] text-slate-300 transition-colors hover:text-gold"
+                    >
+                      <Phone size={13} className="shrink-0 text-gold" />
+                      <span>{siteConfig.phone}</span>
+                    </a>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>
