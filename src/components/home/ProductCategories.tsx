@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { ArrowRight } from 'lucide-react'
 import { localeHref } from '@/i18n/href'
@@ -9,6 +10,13 @@ const categories = [
   { id: 'seeds', emoji: '🌱', href: '/products?category=seeds' },
   { id: 'nuts-other', emoji: '🥜', href: '/products?category=nuts-other' },
 ]
+
+const categoryImages: Record<string, string> = {
+  'whole-spices': '/home/whole-spices.jpg',
+  'spice-powders': '/home/spice-powders.jpg',
+  seeds: '/home/seeds.jpg',
+  'nuts-other': '/home/nuts.jpg',
+}
 
 export default async function ProductCategories() {
   const t = await getTranslations('productRange')
@@ -52,7 +60,15 @@ export default async function ProductCategories() {
               href={localeHref(locale, href)}
               className="rounded-2xl border border-hairline bg-white/[0.02] hover:bg-white/[0.05] hover:border-hairline-light group p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 relative overflow-hidden space-y-6"
             >
-              <div className="space-y-4">
+              <Image
+                src={categoryImages[id]}
+                alt=""
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover object-center opacity-0 scale-105 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F18]/95 via-[#0A0F18]/75 to-[#0A0F18]/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="relative space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="w-12 h-12 rounded-xl bg-white/[0.08] border border-hairline flex items-center justify-center text-2xl group-hover:scale-105 transition-transform duration-300 shadow-inner">
                     {emoji}
@@ -72,7 +88,7 @@ export default async function ProductCategories() {
                 </div>
               </div>
 
-              <div className="pt-3.5 border-t border-hairline space-y-2">
+              <div className="relative pt-3.5 border-t border-hairline space-y-2">
                 <p className="text-[10px] font-mono text-slate-400">
                   {t(`categories.${id}.specs`)}
                 </p>
