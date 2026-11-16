@@ -47,6 +47,10 @@
     "browseCatalog": "Browse Catalog",
     "requestQuotation": "Request Quotation",
     "enquire": "Enquire",
+    "themeSystem": "Theme: system",
+    "themeLight": "Theme: light",
+    "themeDark": "Theme: dark",
+    "themeToggle": "Change theme",
     "panels": {
       "products": {
         "overviewLabel": "Browse Full Catalog",

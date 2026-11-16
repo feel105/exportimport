@@ -12,6 +12,7 @@ import type { Locale } from '@/i18n/config'
 import Logo from './Logo'
 import MobileMenu from './MobileMenu'
 import LanguageSwitcher from './LanguageSwitcher'
+import ThemeToggle from '@/components/theme/ThemeToggle'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -73,7 +74,7 @@ export default function Navbar() {
         onMouseLeave={() => setOpenMenu(null)}
       >
         <div
-          className={`overflow-hidden border-b border-hairline bg-gradient-to-r from-navy-deep via-[#162233] to-navy-deep transition-all duration-300 ${isScrolled ? 'max-h-0 opacity-0' : 'max-h-10 opacity-100'
+          className={`overflow-hidden border-b border-hairline bg-gradient-to-r from-navy-deep via-navy to-navy-deep transition-all duration-300 ${isScrolled ? 'max-h-0 opacity-0' : 'max-h-10 opacity-100'
             }`}
         >
           <div className="mx-auto flex h-9 w-full max-w-[1920px] items-center justify-between gap-4 px-4 text-[11px] sm:px-6 lg:px-8">
@@ -189,6 +190,8 @@ export default function Navbar() {
               </a>
 
               <span className="hidden h-5 w-px bg-white/15 2xl:block" />
+
+              <ThemeToggle />
 
               <LanguageSwitcher className="hidden md:inline-flex" />
 

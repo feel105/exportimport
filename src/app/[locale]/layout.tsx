@@ -94,6 +94,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={localeMeta[locale].htmlLang} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var k='exim.theme';var s=localStorage.getItem(k);var d=s==='light'||s==='dark'?s:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',d);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();",
+          }}
+        />
+      </head>
       <body className="w-full min-h-screen overflow-x-hidden">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />

@@ -87,7 +87,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                 <span className="text-9xl select-none">{emoji}</span>
               )}
               <div className="absolute top-4 left-4 z-10">
-                <span className="px-3.5 py-1.5 text-xs font-bold rounded-full bg-black/60 text-white border border-white/10 backdrop-blur-md">
+                <span className="keep-dark px-3.5 py-1.5 text-xs font-bold rounded-full bg-black/60 text-white border border-white/10 backdrop-blur-md">
                   {product.categoryLabel}
                 </span>
               </div>

@@ -47,6 +47,10 @@
     "browseCatalog": "Explorar catálogo",
     "requestQuotation": "Solicitar cotización",
     "enquire": "Preguntar",
+    "themeSystem": "Tema: sistema",
+    "themeLight": "Tema: claro",
+    "themeDark": "Tema: oscuro",
+    "themeToggle": "Cambiar tema",
     "panels": {
       "products": {
         "overviewLabel": "Explorar el catálogo completo",

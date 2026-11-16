@@ -88,7 +88,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative isolate flex min-h-[660px] w-full flex-col overflow-hidden border-b border-hairline pt-[calc(var(--header-h)+2.5rem)] pb-8 sm:min-h-[720px] sm:pt-[calc(var(--header-h)+3rem)] sm:pb-10 lg:min-h-[780px] lg:pb-12"
+      className="keep-dark relative isolate flex min-h-[660px] w-full flex-col overflow-hidden border-b border-hairline pt-[calc(var(--header-h)+2.5rem)] pb-8 sm:min-h-[720px] sm:pt-[calc(var(--header-h)+3rem)] sm:pb-10 lg:min-h-[780px] lg:pb-12"
       aria-label={t('aria')}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}

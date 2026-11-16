@@ -702,3 +702,324 @@ body {
   border-color: rgba(56, 207, 255, 0.5);
   box-shadow: 0 0 16px rgba(56, 207, 255, 0.2);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   THEME SYSTEM — light / dark / system
+   Light palette (warm paper, stone text, violet accent) mirrored from the
+   reference design language. Dark keeps the original FEELEXIM navy/cyan.
+   Applied via <html data-theme="…"> set before first paint.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --fg: #F8FAFC;
+  --fg-muted: #94A3B8;
+  --fg-subtle: #64748B;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.14);
+  --page-bg: #0A0F18;
+  --on-accent: #0B111A;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --fg: #1F1B16;
+  --fg-muted: #57514A;
+  --fg-subtle: #6B645C;
+  --surface: rgba(255, 255, 255, 0.62);
+  --surface-strong: rgba(255, 255, 255, 0.88);
+  --line: rgba(31, 27, 22, 0.10);
+  --line-strong: rgba(31, 27, 22, 0.20);
+  --page-bg: #FAF5EF;
+  --on-accent: #FFFFFF;
+
+  /* Remap the project's Tailwind colour tokens */
+  --color-navy: #FAF5EF;
+  --color-navy-deep: #F1ECE6;
+  --color-warm: #1F1B16;
+  --color-slate: #57514A;
+  --color-slate-dark: #6B645C;
+  --color-gold: #6D5CE7;
+  --color-gold-light: #8B7BFF;
+  --color-gold-dark: #5B4BD6;
+  --color-royal: #6D5CE7;
+  --color-royal-dark: #5B4BD6;
+  --color-emerald-accent: #047857;
+  --color-cyan-accent: #4F6D9A;
+  --color-coral-accent: #BE123C;
+  --color-cyan-200: #C9BFFF;
+  --color-cyan-300: #9A8AFB;
+
+  /* Tailwind default palette remaps for contrast on paper */
+  --color-slate-200: #4A443D;
+  --color-slate-300: #57514A;
+  --color-slate-400: #6B645C;
+  --color-slate-500: #7A736A;
+  --color-emerald-300: #047857;
+  --color-emerald-400: #047857;
+  --color-emerald-500: #047857;
+  --color-red-200: #BE123C;
+  --color-red-400: #BE123C;
+}
+
+/* Restore the dark palette inside image-led islands (hero, photo cards…) */
+.keep-dark {
+  --color-navy: #0B111A;
+  --color-navy-deep: #121A26;
+  --color-warm: #F8FAFC;
+  --color-slate: #94A3B8;
+  --color-slate-dark: #64748B;
+  --color-gold: #38CFFF;
+  --color-gold-light: #7AE5FF;
+  --color-gold-dark: #21C8FF;
+  --color-emerald-accent: #22C55E;
+  --color-cyan-accent: #38BDF8;
+  --color-coral-accent: #F87171;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-emerald-300: #6EE7B7;
+  --color-emerald-400: #34D399;
+  --color-emerald-500: #10B981;
+  --color-red-200: #FECACA;
+  --color-red-400: #F87171;
+  --color-cyan-200: #A5F3FC;
+  --color-cyan-300: #67E8F9;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--fg);
+}
+
+[data-theme="light"] body {
+  background-image:
+    radial-gradient(40% 45% at 15% 30%, rgba(255, 190, 130, 0.45), transparent 70%),
+    radial-gradient(45% 55% at 85% 20%, rgba(150, 190, 230, 0.45), transparent 70%),
+    radial-gradient(50% 50% at 60% 100%, rgba(200, 180, 240, 0.35), transparent 70%);
+  background-attachment: fixed;
+}
+
+/* Smooth colour cross-fade while switching themes */
+html.theme-anim *,
+html.theme-anim *::before,
+html.theme-anim *::after {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    fill 220ms ease,
+    box-shadow 220ms ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.theme-anim * {
+    transition: none !important;
+  }
+}
+
+/* ─── Light: text colours ─────────────────────────────────────────────── */
+[data-theme="light"] .text-white {
+  color: var(--fg);
+}
+[data-theme="light"] .keep-dark .text-white,
+[data-theme="light"] .keep-dark.text-white {
+  color: #F8FAFC;
+}
+[data-theme="light"] .text-navy {
+  color: #FFFFFF;
+}
+[data-theme="light"] .text-white\/90 { color: rgba(31, 27, 22, 0.9); }
+[data-theme="light"] .text-white\/70 { color: rgba(31, 27, 22, 0.7); }
+[data-theme="light"] .text-white\/20 { color: rgba(31, 27, 22, 0.2); }
+[data-theme="light"] .keep-dark .text-white\/90 { color: rgba(248, 250, 252, 0.9); }
+[data-theme="light"] .keep-dark .text-white\/70 { color: rgba(248, 250, 252, 0.7); }
+[data-theme="light"] .keep-dark .text-white\/20 { color: rgba(248, 250, 252, 0.2); }
+
+/* Hover colour utilities keep working in light mode */
+[data-theme="light"] .hover\:text-gold:hover,
+[data-theme="light"] .group:hover .group-hover\:text-gold {
+  color: var(--color-gold);
+}
+[data-theme="light"] .group:hover .group-hover\:text-gold-light {
+  color: var(--color-gold-light);
+}
+[data-theme="light"] .hover\:text-white:hover {
+  color: var(--fg);
+}
+[data-theme="light"] .group:hover .group-hover\:text-white {
+  color: var(--fg);
+}
+[data-theme="light"] .keep-dark .group:hover .group-hover\:text-white {
+  color: #FFFFFF;
+}
+
+/* ─── Light: surfaces ────────────────────────────────────────────────── */
+[data-theme="light"] [class^="bg-white/"]:not(.keep-dark):not(.keep-dark *),
+[data-theme="light"] [class*=" bg-white/"]:not(.keep-dark):not(.keep-dark *) {
+  background-color: var(--surface);
+}
+
+[data-theme="light"] [class~="bg-[#121A26]"],
+[data-theme="light"] [class~="bg-[#0f1723]"],
+[data-theme="light"] [class~="bg-[#0c131d]"] {
+  background-color: var(--surface-strong);
+}
+
+[data-theme="light"] [class~="bg-[#090E17]"] {
+  background-color: #F6F0E9;
+}
+
+/* ─── Light: borders & dividers ──────────────────────────────────────── */
+[data-theme="light"] [class^="border-white/"]:not(.keep-dark):not(.keep-dark *),
+[data-theme="light"] [class*=" border-white/"]:not(.keep-dark):not(.keep-dark *) {
+  border-color: var(--line);
+}
+
+[data-theme="light"] .border-hairline {
+  border-color: var(--line);
+}
+[data-theme="light"] .border-hairline-light {
+  border-color: var(--line-strong);
+}
+
+[data-theme="light"] [class*="divide-white/"] > :not(:last-child) {
+  border-color: var(--line);
+}
+
+[data-theme="light"] .bg-dots-pattern {
+  background-image: radial-gradient(rgba(31, 27, 22, 0.1) 1px, transparent 1px);
+}
+
+/* ─── Light: glass surfaces ──────────────────────────────────────────── */
+[data-theme="light"] .glass-nav {
+  background: rgba(250, 245, 239, 0.84);
+  border-bottom-color: var(--line);
+  box-shadow: 0 10px 30px rgba(60, 40, 20, 0.08), inset 0 -1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Header floats over a dark hero when unscrolled — keep a light bar for legibility */
+[data-theme="light"] header.bg-transparent {
+  background: rgba(250, 245, 239, 0.88);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+}
+
+/* The wordmark artwork is light cyan (built for dark navy) */
+[data-theme="light"] img[alt="FEELEXIM"] {
+  filter: brightness(0.28) saturate(1.5) drop-shadow(0 1px 1px rgba(255, 255, 255, 0.35));
+}
+
+[data-theme="light"] .glass-panel {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.97) 0%, rgba(250, 245, 239, 0.98) 100%);
+  border-color: var(--line-strong);
+  box-shadow: 0 24px 60px -12px rgba(60, 40, 20, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.58) 100%);
+  border-color: var(--line);
+  box-shadow: 0 12px 32px rgba(60, 40, 20, 0.1), 0 2px 6px rgba(60, 40, 20, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .glass-card:hover {
+  border-color: var(--line-strong);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.72) 100%);
+  box-shadow: 0 20px 50px rgba(60, 40, 20, 0.14), inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+[data-theme="light"] .glass-pill {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--line-strong);
+  box-shadow: 0 10px 30px rgba(60, 40, 20, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .keep-dark .glass-pill {
+  background: rgba(255, 255, 255, 0.085);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* ─── Light: navigation ──────────────────────────────────────────────── */
+[data-theme="light"] .nav-link {
+  color: rgba(31, 27, 22, 0.72);
+}
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link[data-active="true"] {
+  color: var(--fg);
+  background-color: rgba(31, 27, 22, 0.05);
+}
+[data-theme="light"] .nav-cta-primary {
+  color: #FFFFFF;
+}
+[data-theme="light"] .nav-cta-outline {
+  color: var(--fg);
+  border-color: var(--line-strong);
+}
+[data-theme="light"] .nav-cta-outline:hover {
+  background-color: rgba(31, 27, 22, 0.05);
+  border-color: rgba(31, 27, 22, 0.4);
+}
+
+/* ─── Light: form primitives ─────────────────────────────────────────── */
+[data-theme="light"] .input-field {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: var(--line-strong);
+  color: var(--fg);
+}
+[data-theme="light"] .input-field::placeholder {
+  color: var(--fg-subtle);
+}
+[data-theme="light"] .input-label {
+  color: var(--fg-muted);
+}
+[data-theme="light"] .input-error {
+  color: var(--danger, #BE123C);
+}
+[data-theme="light"] option {
+  background-color: #FFFFFF;
+  color: #1F1B16;
+}
+
+[data-theme="light"] .code-pill {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: var(--line);
+  color: var(--fg);
+}
+
+/* ─── Light: scrollbar ───────────────────────────────────────────────── */
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #F1ECE6;
+}
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: rgba(109, 92, 231, 0.35);
+}
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(109, 92, 231, 0.6);
+}
+[data-theme="light"] :focus-visible {
+  outline-color: var(--color-gold);
+}
+
+/* ─── Light: cards that darken on hover (photo reveal) ───────────────── */
+[data-theme="light"] .workbench-card:hover .text-white {
+  color: #FFFFFF;
+}
+[data-theme="light"] .workbench-card:hover .text-slate,
+[data-theme="light"] .workbench-card:hover .text-slate-300 {
+  color: #E2E8F0;
+}
+[data-theme="light"] .workbench-card:hover .text-gold {
+  color: #7AE5FF;
+}
+[data-theme="light"] .workbench-card:hover .bg-navy-deep {
+  background-color: #121A26;
+}
+
+[data-theme="light"] .group:hover .group-hover\:bg-gold {
+  background-color: var(--color-gold);
+}

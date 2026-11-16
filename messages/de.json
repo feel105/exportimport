@@ -47,6 +47,10 @@
     "browseCatalog": "Katalog durchsuchen",
     "requestQuotation": "Angebot anfordern",
     "enquire": "Erkundigen",
+    "themeSystem": "Design: System",
+    "themeLight": "Design: Hell",
+    "themeDark": "Design: Dunkel",
+    "themeToggle": "Design ändern",
     "panels": {
       "products": {
         "overviewLabel": "Durchsuchen Sie den vollständigen Katalog",

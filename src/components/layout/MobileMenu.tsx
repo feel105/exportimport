@@ -11,6 +11,7 @@ import { localeHref, stripLocale } from '@/i18n/href'
 import type { Locale } from '@/i18n/config'
 import Logo from './Logo'
 import LanguageSwitcher from './LanguageSwitcher'
+import ThemeToggle from '@/components/theme/ThemeToggle'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -79,14 +80,17 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           >
             <Logo size="sm" />
           </Link>
-          <button
-            ref={closeRef}
-            onClick={onClose}
-            aria-label={t('closeMenu')}
-            className="flex h-9 w-9 items-center justify-center rounded-md text-white/70 transition-colors hover:bg-white/10 hover:text-white"
-          >
-            <X size={20} />
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              ref={closeRef}
+              onClick={onClose}
+              aria-label={t('closeMenu')}
+              className="flex h-9 w-9 items-center justify-center rounded-md text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+            >
+              <X size={20} />
+            </button>
+          </div>
         </div>
 
         <nav className="flex-1 px-4 py-5" aria-label={t('mobileNavAria')}>
@@ -102,7 +106,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       href={localeHref(locale, item.href)}
                       onClick={onClose}
                       className="flex h-12 items-center justify-between rounded-md px-3 text-[15px] font-medium transition-colors hover:bg-white/[0.07]"
-                      style={{ color: itemIsActive ? '#ffffff' : 'rgba(255,255,255,0.78)' }}
+                      style={{ color: itemIsActive ? 'var(--fg)' : 'var(--fg-muted)' }}
                     >
                       {label}
                       <ArrowRight

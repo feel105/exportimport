@@ -49,7 +49,7 @@ export function ProductCard({ product }: ProductCardProps) {
           )}
 
           <div className="absolute top-3.5 left-3.5 z-10">
-            <span className="inline-block px-3 py-1 text-xs font-bold rounded-full bg-black/60 text-white border border-white/10 backdrop-blur-md">
+            <span className="keep-dark inline-block px-3 py-1 text-xs font-bold rounded-full bg-black/60 text-white border border-white/10 backdrop-blur-md">
               {product.categoryLabel}
             </span>
           </div>

@@ -63,7 +63,7 @@ export default function SpecificationWorkbench() {
             return (
               <article
                 key={profile.name}
-                className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-hairline bg-white/[0.02] p-6 text-center transition-all duration-300 hover:border-hairline-light hover:bg-white/[0.04] sm:p-7"
+                className="workbench-card group relative flex flex-col items-center overflow-hidden rounded-2xl border border-hairline bg-white/[0.02] p-6 text-center transition-all duration-300 hover:border-hairline-light hover:bg-white/[0.04] sm:p-7"
               >
                 <Image
                   src={image}

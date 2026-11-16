@@ -60,7 +60,7 @@ export default function CategoryCard({
       onBlur={stop}
       className="group relative flex flex-col overflow-hidden rounded-2xl border border-hairline bg-white/[0.02] transition-all duration-300 hover:border-hairline-light hover:bg-white/[0.05]"
     >
-      <div className="relative h-40 w-full shrink-0 overflow-hidden sm:h-44">
+      <div className="keep-dark relative h-40 w-full shrink-0 overflow-hidden sm:h-44">
         {images.map((src, index) => (
           <Image
             key={src}

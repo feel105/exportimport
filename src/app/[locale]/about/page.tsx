@@ -28,7 +28,7 @@ function ProcessCard({
   image: string
 }) {
   return (
-    <article className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 p-6 shadow-xl transition-colors duration-300 hover:border-gold/40 sm:min-h-[360px] sm:p-7 lg:min-h-[400px] lg:p-8">
+    <article className="keep-dark group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 p-6 shadow-xl transition-colors duration-300 hover:border-gold/40 sm:min-h-[360px] sm:p-7 lg:min-h-[400px] lg:p-8">
       <Image
         src={image}
         alt=""
