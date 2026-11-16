@@ -23,7 +23,7 @@ export default async function GlobalTrade() {
 
   return (
     <section
-      className="w-full border-b border-hairline py-20 sm:py-28 lg:py-32 relative overflow-hidden bg-navy-deep/60"
+      className="w-full border-b border-hairline py-10 sm:py-14 lg:py-16 relative overflow-hidden bg-navy-deep/60"
       aria-labelledby="global-heading"
     >
       <div className="absolute inset-0 bg-dots-pattern opacity-30 pointer-events-none" />

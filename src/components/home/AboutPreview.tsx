@@ -10,7 +10,7 @@ export default async function AboutPreview() {
 
   return (
     <section
-      className="w-full border-b border-hairline py-20 sm:py-28 lg:py-32 relative overflow-hidden bg-navy"
+      className="w-full border-b border-hairline py-10 sm:py-14 lg:py-16 relative overflow-hidden bg-navy"
       aria-labelledby="about-heading"
     >
       <div className="container-xl w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">

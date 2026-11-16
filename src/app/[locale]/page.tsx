@@ -35,14 +35,14 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <TrustStrip />
+      {/* <TrustStrip /> */}
       <AboutPreview />
       <ProductCategories />
       <TradePlatformShowcase />
       <WhyChooseUs />
       <SpecificationWorkbench />
       <QualitySection />
-      <GlobalTrade />
+      {/* <GlobalTrade /> */}
       <FAQ />
       <ContactCTA />
     </>

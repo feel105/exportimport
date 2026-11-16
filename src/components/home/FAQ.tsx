@@ -36,7 +36,7 @@ export default function FAQ() {
 
   return (
     <section
-      className="w-full border-b border-hairline py-20 sm:py-28 lg:py-32 relative overflow-hidden bg-navy"
+      className="w-full border-b border-hairline py-10 sm:py-14 lg:py-16 relative overflow-hidden bg-navy"
       aria-labelledby="faq-heading"
     >
       <script

@@ -261,13 +261,13 @@
         "href": "/services"
       },
       {
-        "tag": "SORTEX-REINHEIT",
-        "metric": "99,8 %",
-        "metricSub": "Standard",
-        "title": "Maschinell gereinigte Beschaffung",
-        "desc": "Direkte NABL Laborinspektion auf ASTA Sauberkeit, ätherische Öle und Mykotoxine.",
-        "linkText": "Laborprotokolle ansehen",
-        "href": "/quality-compliance"
+        "tag": "VERTRAUENSVOLLE BESCHAFFUNG",
+        "metric": "500+",
+        "metricSub": "Partner",
+        "title": "Vertrauenswürdige Erzeuger & Hersteller",
+        "desc": "Direkte, langfristige Beschaffung von geprüften indischen Erzeugern und Verarbeitungsbetrieben – vom Feld bis zur Lieferung rückverfolgbar.",
+        "linkText": "Unser Beschaffungsnetzwerk",
+        "href": "/services"
       },
       {
         "tag": "HALTBARKEIT",
@@ -333,8 +333,8 @@
       "seeds": {
         "label": "Samen und Körner",
         "desc": "Natürliche Sesamsamen, schwarzer Sesam, Leinsamen, Chia, Basilikumsamen, Kalonji und Quinoa",
-        "badge": "Sortex 99,8 %",
-        "specs": "Lasergereinigt • Reinheit 99,8 %+"
+        "badge": "Vertrauenswürdige Hofbeschaffung",
+        "specs": "Geprüfte Erzeuger & Verarbeiter • Rückverfolgbar"
       },
       "nuts-other": {
         "label": "Nüsse und Rohstoffe",

@@ -261,13 +261,13 @@
         "href": "/services"
       },
       {
-        "tag": "SORTEX PURITY",
-        "metric": "99.8%",
-        "metricSub": "Standard",
-        "title": "Machine-Cleaned Sourcing",
-        "desc": "Direct NABL lab inspection for ASTA cleanliness, volatile oil & mycotoxins.",
-        "linkText": "View lab protocols",
-        "href": "/quality-compliance"
+        "tag": "TRUSTED SOURCING",
+        "metric": "500+",
+        "metricSub": "Partners",
+        "title": "Trusted Farmers & Manufacturers",
+        "desc": "Direct, long-term sourcing from vetted Indian growers and processing units — traceable from farm to shipment.",
+        "linkText": "See our sourcing network",
+        "href": "/services"
       },
       {
         "tag": "SHELF LIFE",
@@ -333,8 +333,8 @@
       "seeds": {
         "label": "Seeds & Grains",
         "desc": "Natural Sesame Seeds, Black Sesame, Flax Seeds, Chia, Basil Seeds, Kalonji & Quinoa",
-        "badge": "Sortex 99.8%",
-        "specs": "Laser Cleaned • Purity 99.8%+"
+        "badge": "Trusted Farm Sourcing",
+        "specs": "Vetted Growers & Processors • Traceable"
       },
       "nuts-other": {
         "label": "Nuts & Commodities",

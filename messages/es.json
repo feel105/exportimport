@@ -261,13 +261,13 @@
         "href": "/services"
       },
       {
-        "tag": "PUREZA DEL SORTEX",
-        "metric": "99,8%",
-        "metricSub": "Estándar",
-        "title": "Abastecimiento limpio a máquina",
-        "desc": "Inspección directa del laboratorio NABL para limpieza de ASTA, aceite volátil y micotoxinas.",
-        "linkText": "Ver protocolos de laboratorio",
-        "href": "/quality-compliance"
+        "tag": "ABASTECIMIENTO CONFIABLE",
+        "metric": "500+",
+        "metricSub": "Socios",
+        "title": "Agricultores y fabricantes de confianza",
+        "desc": "Abastecimiento directo y a largo plazo de productores y plantas de procesamiento indios verificados, con trazabilidad del campo al envío.",
+        "linkText": "Ver nuestra red de abastecimiento",
+        "href": "/services"
       },
       {
         "tag": "DURACIÓN",
@@ -333,8 +333,8 @@
       "seeds": {
         "label": "Semillas y granos",
         "desc": "Semillas de sésamo naturales, sésamo negro, semillas de lino, chía, semillas de albahaca, kalonji y quinoa",
-        "badge": "Sortex 99,8%",
-        "specs": "Limpieza con láser • Pureza 99,8%+"
+        "badge": "Abastecimiento agrícola confiable",
+        "specs": "Productores y procesadores verificados • Trazable"
       },
       "nuts-other": {
         "label": "Nueces y productos básicos",
