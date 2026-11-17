@@ -17,19 +17,19 @@ export const SLIDE_MS = 5500
 export const HERO_SLIDES: HeroSlideSource[] = [
   {
     key: 'whole-spices',
-    src: '/home/whole-spices.jpg',
+    src: '/home/ships/port-night.jpg',
     hsCode: 'HS 0909',
     href: '/products?category=whole-spices',
   },
   {
     key: 'spice-powders',
-    src: '/home/spice-powders.jpg',
+    src: '/home/slides/spice-powders.png',
     hsCode: 'HS 0910',
     href: '/products?category=spice-powders',
   },
   {
     key: 'nuts-other',
-    src: '/home/nuts.jpg',
+    src: '/home/slides/sesame.png',
     hsCode: 'HS 0801',
     href: '/products?category=nuts-other',
   },
