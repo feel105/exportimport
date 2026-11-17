@@ -62,7 +62,7 @@ export default async function ProductCategories() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 w-full">
-          {categories.map(({ id, emoji, href }) => (
+          {categories.map(({ id, emoji, href }, index) => (
             <CategoryCard
               key={id}
               href={localeHref(locale, href)}
@@ -73,6 +73,7 @@ export default async function ProductCategories() {
               desc={t(`categories.${id}.desc`)}
               specs={t(`categories.${id}.specs`)}
               viewGrades={t('viewGrades')}
+              interval={3400 + (index % 4) * 600}
             />
           ))}
         </div>

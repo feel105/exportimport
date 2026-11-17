@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
@@ -14,6 +14,7 @@ interface CategoryCardProps {
   desc: string
   specs: string
   viewGrades: string
+  interval?: number
 }
 
 export default function CategoryCard({
@@ -25,39 +26,31 @@ export default function CategoryCard({
   desc,
   specs,
   viewGrades,
+  interval = 3600,
 }: CategoryCardProps) {
   const [active, setActive] = useState(0)
-  const timer = useRef<ReturnType<typeof setInterval> | null>(null)
+  const [isPaused, setIsPaused] = useState(false)
 
-  const clearTimer = () => {
-    if (timer.current) {
-      clearInterval(timer.current)
-      timer.current = null
+  useEffect(() => {
+    if (images.length < 2 || isPaused) return
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return
     }
-  }
 
-  const start = () => {
-    if (images.length < 2) return
-    clearTimer()
-    timer.current = setInterval(() => {
+    const timer = setInterval(() => {
       setActive((current) => (current + 1) % images.length)
-    }, 1400)
-  }
+    }, interval)
 
-  const stop = () => {
-    clearTimer()
-    setActive(0)
-  }
-
-  useEffect(() => clearTimer, [])
+    return () => clearInterval(timer)
+  }, [images.length, interval, isPaused])
 
   return (
     <Link
       href={href}
-      onMouseEnter={start}
-      onMouseLeave={stop}
-      onFocus={start}
-      onBlur={stop}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
       className="group relative flex flex-col overflow-hidden rounded-2xl border border-hairline bg-white/[0.02] transition-all duration-300 hover:border-hairline-light hover:bg-white/[0.05]"
     >
       <div className="keep-dark relative h-40 w-full shrink-0 overflow-hidden sm:h-44">
@@ -74,12 +67,15 @@ export default function CategoryCard({
           />
         ))}
 
-        <div className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-navy-deep/70 text-xl shadow-sm backdrop-blur">
+        {/* Ambient gradient protection for badge and indicators */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+
+        <div className="relative z-10 m-3 flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-navy-deep/70 text-xl shadow-sm backdrop-blur">
           {emoji}
         </div>
 
         {images.length > 1 && (
-          <div className="absolute bottom-3 right-3 flex items-center gap-1.5">
+          <div className="absolute bottom-3 right-3 z-10 flex items-center gap-1.5">
             {images.map((src, index) => (
               <span
                 key={src}
