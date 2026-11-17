@@ -570,6 +570,13 @@
     "heading": "Auf Ihre Beschaffungsanforderungen zugeschnitten.",
     "description": "Entwickelt, um Volatilität, Qualitätsunsicherheit und Kommunikationsbarrieren bei der grenzüberschreitenden Agrarbeschaffung zu beseitigen.",
     "verifiedStandard": "BETRIEBLICHER STANDARD ÜBERPRÜFT",
+    "tabsLabel": "BETRIEBSSTANDARDS",
+    "count": "06 STANDARDS",
+    "phase": "STANDARD {num} • {label}",
+    "status": "ÜBERPRÜFT",
+    "cta": "Anforderung besprechen",
+    "manifestFooter": "Überprüfter Betriebsstandard",
+    "footerLink": "Mit dem Trade Desk sprechen",
     "features": [
       {
         "title": "Transparente Angebote",

@@ -570,6 +570,13 @@
     "heading": "Creado en torno a sus necesidades de abastecimiento.",
     "description": "Diseñado para eliminar la volatilidad, la incertidumbre sobre la calidad y las barreras de comunicación de las adquisiciones agrícolas transfronterizas.",
     "verifiedStandard": "ESTÁNDAR OPERATIVO VERIFICADO",
+    "tabsLabel": "ESTÁNDARES OPERATIVOS",
+    "count": "06 ESTÁNDARES",
+    "phase": "ESTÁNDAR {num} • {label}",
+    "status": "VERIFICADO",
+    "cta": "Hablemos de su requisito",
+    "manifestFooter": "Estándar operativo verificado",
+    "footerLink": "Hable con la mesa comercial",
     "features": [
       {
         "title": "Cotizaciones transparentes",

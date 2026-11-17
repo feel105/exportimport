@@ -567,9 +567,16 @@
   },
   "whyChooseUs": {
     "eyebrow": "THE FEELEXIM ADVANTAGE",
-    "heading": "Built Around Your Sourcing Needs.",
-    "description": "Engineered to remove volatility, quality uncertainty, and communication barriers from cross-border agricultural procurement.",
+    "heading": "Everything Your Trade Needs in One Place.",
+    "description": "Built Around Your Sourcing Needs.",
     "verifiedStandard": "OPERATIONAL STANDARD VERIFIED",
+    "tabsLabel": "OPERATIONAL STANDARDS",
+    "count": "06 STANDARDS",
+    "phase": "STANDARD {num} • {label}",
+    "status": "VERIFIED",
+    "cta": "Discuss Your Requirement",
+    "manifestFooter": "Verified operating standard",
+    "footerLink": "Talk to the trade desk",
     "features": [
       {
         "title": "Transparent Quotations",
