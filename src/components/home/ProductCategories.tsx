@@ -13,17 +13,20 @@ const categories = [
 
 const categoryImages: Record<string, string[]> = {
   'whole-spices': [
-    '/home/whole-spices.jpg',
-    '/home/spice-powders.jpg',
-    '/home/herbs.jpg',
+    '/product/spices/cumin/cumin.JPG',
+    '/product/spices/blackpepper/blakcpapper.JPG',
+    '/product/spices/cardamom/2.jpg',
+    '/product/spices/coriander/2.png',
+    '/product/spices/turmeric/real1.JPG'
   ],
   'spice-powders': [
-    '/home/spice-powders.jpg',
-    '/home/whole-spices.jpg',
-    '/home/herbs.jpg',
+    '/product/spices/chilli/2.jpg',
+    '/product/spices/coriander/1.png',
+    '/product/spices/cumin/4.jpg',
+    '/product/spices/turmeric/3.png',
   ],
-  seeds: ['/home/seeds.jpg', '/home/agri-products.jpg', '/home/herbs.jpg'],
-  'nuts-other': ['/home/nuts.jpg', '/home/agri-products.jpg', '/home/seeds.jpg'],
+  seeds: ['/product/spices/sesame/sesame_Natural.jpg', '/product/spices/seeds/Ajwain2.jpeg', '/product/spices/seeds/quinoa1.jpeg', '/product/spices/seeds/fennel2.jpeg'],
+  'nuts-other': ['/home/slides/nuts.jpg', '/product/spices/tulsi/2.png', '/product/spices/tea/tea.jpg', '/product/spices/moringa/moringa powder.png'],
 }
 
 export default async function ProductCategories() {
