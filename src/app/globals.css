@@ -1037,21 +1037,22 @@ html.theme-anim *::after {
   outline-color: var(--color-gold);
 }
 
-/* ─── Light: hero — vivid photography showcase with full visibility ───── */
+/* ─── Light: Hero Slider Page — Solid, High-Contrast & Professional Design ── */
 [data-theme="light"] .hero-slider img {
-  /* Enhance produce photography so spices, herbs, and grains look rich, vibrant, and alive */
-  filter: saturate(1.18) contrast(1.08) brightness(1.01);
+  /* Crisp, vibrant agricultural produce imagery */
+  filter: saturate(1.15) contrast(1.08) brightness(1.0);
 }
 
+/* Left-weighted solid transition: 100% solid clean background behind headline,
+   smoothly revealing the photo on the right */
 [data-theme="light"] .hero-scrim-side {
-  /* Feather-soft gradient purely behind text on the left;
-     leaves the center & right completely clear so the background slider displays full */
   background-image: linear-gradient(
     to right,
-    rgba(250, 245, 239, 0.72) 0%,
-    rgba(250, 245, 239, 0.48) 32%,
-    rgba(250, 245, 239, 0.14) 52%,
-    rgba(250, 245, 239, 0) 70%
+    #FAF5EF 0%,
+    #FAF5EF 28%,
+    rgba(250, 245, 239, 0.96) 42%,
+    rgba(250, 245, 239, 0.65) 58%,
+    rgba(250, 245, 239, 0) 74%
   );
 }
 
@@ -1059,59 +1060,260 @@ html.theme-anim *::after {
   [data-theme="light"] .hero-scrim-side {
     background-image: linear-gradient(
       to right,
-      rgba(250, 245, 239, 0.68) 0%,
-      rgba(250, 245, 239, 0.40) 28%,
-      rgba(250, 245, 239, 0.08) 48%,
-      rgba(250, 245, 239, 0) 62%
+      #FAF5EF 0%,
+      #FAF5EF 32%,
+      rgba(250, 245, 239, 0.96) 45%,
+      rgba(250, 245, 239, 0.50) 60%,
+      rgba(250, 245, 239, 0) 75%
     );
   }
 }
 
+/* No vertical haze or unwanted milky wash */
 [data-theme="light"] .hero-scrim-y {
-  /* Minimal vertical vignette: only slight soft blend near header & bottom ticker,
-     leaving 70%+ of the vertical slider 100% crystal clear */
-  background-image: linear-gradient(
-    to bottom,
-    rgba(250, 245, 239, 0.28) 0%,
-    transparent 16%,
-    transparent 84%,
-    rgba(250, 245, 239, 0.35) 100%
-  );
+  display: none;
 }
 
 [data-theme="light"] .hero-grid {
-  opacity: 0.04;
+  display: none;
 }
 
 [data-theme="light"] .hero-ambient-glow {
-  opacity: 0.15;
+  display: none;
 }
 
+/* 100% Solid Badges */
+[data-theme="light"] .hero-badge-verified {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #0F172A !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+[data-theme="light"] .hero-badge-range {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+[data-theme="light"] .hero-badge-range .mono-tag {
+  color: #2563EB !important;
+  font-weight: 700 !important;
+}
+
+/* High-Contrast, Authoritative Typography */
 [data-theme="light"] .hero-title-text {
-  text-shadow: 0 1px 3px rgba(250, 245, 239, 0.85), 0 0 20px rgba(250, 245, 239, 0.5);
+  color: #0F172A !important;
+  font-weight: 900 !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] .hero-title-highlight {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: initial !important;
+  color: #2563EB !important;
+  font-weight: 900 !important;
 }
 
 [data-theme="light"] .hero-desc-text {
-  text-shadow: 0 1px 2px rgba(250, 245, 239, 0.75);
+  color: #334155 !important;
+  font-weight: 450 !important;
+  text-shadow: none !important;
+  line-height: 1.65 !important;
 }
 
+/* Solid Trust Strip */
+[data-theme="light"] .hero-trust-list {
+  color: #1E293B !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="light"] .hero-trust-check {
+  color: #059669 !important;
+  filter: none !important;
+}
+
+[data-theme="light"] .hero-trust-divider {
+  background-color: #CBD5E1 !important;
+}
+
+[data-theme="light"] .hero-flag-item {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #0F172A !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06) !important;
+}
+
+[data-theme="light"] .hero-flag-count {
+  color: #0F172A !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .hero-flag-label {
+  color: #475569 !important;
+}
+
+/* 100% Solid, Crisp Product Cards (No Glass, No Blur) */
 [data-theme="light"] .hero-panel {
-  background: rgba(255, 255, 255, 0.62);
-  border-color: rgba(31, 27, 22, 0.14);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
-  box-shadow: 0 20px 50px -15px rgba(60, 40, 20, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  border: 1px solid #E2E8F0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.05) !important;
 }
 
-[data-theme="light"] .hero-bottom-bar {
-  background: rgba(250, 245, 239, 0.55);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-top-color: var(--line);
+[data-theme="light"] .hero-panel-decor {
+  display: none !important;
+}
+
+[data-theme="light"] .hero-card-tag {
+  color: #2563EB !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .hero-card-count {
+  color: #64748B !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .hero-card-eyebrow {
+  color: #2563EB !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
 }
 
 [data-theme="light"] .hero-card-title {
-  background-image: linear-gradient(to right, #1F1B16 0%, #1F1B16 55%, #6D5CE7 100%);
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: initial !important;
+  color: #0F172A !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="light"] .hero-card-desc {
+  color: #475569 !important;
+  line-height: 1.6 !important;
+}
+
+[data-theme="light"] .hero-card-spec {
+  background-color: #F1F5F9 !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #1E293B !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .hero-card-cta {
+  background-color: #0F172A !important;
+  border: 1px solid #0F172A !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15) !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-theme="light"] .hero-card-cta:hover {
+  background-color: #1E293B !important;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.22) !important;
+  transform: translateY(-1px) !important;
+}
+
+[data-theme="light"] .hero-card-cta-icon {
+  color: #38BDF8 !important;
+}
+
+/* 100% Solid Bottom Navigation Bar */
+[data-theme="light"] .hero-bottom-bar {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  border-top: 1px solid #E2E8F0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .hero-category-label {
+  color: #64748B !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .hero-category-chip {
+  background-color: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #334155 !important;
+  font-weight: 600 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-theme="light"] .hero-category-chip:hover {
+  background-color: #FFFFFF !important;
+  border-color: #2563EB !important;
+  color: #0F172A !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="light"] .hero-category-icon {
+  color: #2563EB !important;
+}
+
+/* Consistent Slider & Form Controls */
+[data-theme="light"] .hero-nav-btn {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #0F172A !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-theme="light"] .hero-nav-btn:hover {
+  background-color: #F1F5F9 !important;
+  border-color: #94A3B8 !important;
+  color: #000000 !important;
+}
+
+[data-theme="light"] .hero-dots-container {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+[data-theme="light"] .hero-dot-indicator {
+  background-color: #CBD5E1 !important;
+}
+
+[data-theme="light"] .hero-dot-indicator:hover {
+  background-color: #94A3B8 !important;
+}
+
+[data-theme="light"] .hero-dot-indicator[aria-current="true"] {
+  background-color: #2563EB !important;
+}
+
+[data-theme="light"] .hero-slide-meta {
+  color: #64748B !important;
+}
+
+[data-theme="light"] .hero-slide-meta-title {
+  color: #0F172A !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .hero-counter-text {
+  color: #334155 !important;
+  font-weight: 700 !important;
 }
 
 [data-theme="light"] .bg-grid {

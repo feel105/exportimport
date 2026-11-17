@@ -109,15 +109,11 @@ export default function Hero() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end xl:grid-cols-[minmax(0,1fr)_380px] xl:gap-16">
           <div className="max-w-[46rem] space-y-6">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="glass-pill inline-flex items-center gap-2 px-3.5 py-1.5 text-[11px] font-bold text-white sm:text-xs">
+              <span className="hero-badge-verified glass-pill inline-flex items-center gap-2 px-3.5 py-1.5 text-[11px] font-bold text-white sm:text-xs">
                 <span className="glow-indicator-green" />
                 {t('verified')}
               </span>
-              {/* <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-300 sm:text-xs">
-                <MapPin size={12} className="text-gold" />
-                {t('ports')}
-              </span> */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.08] px-3.5 py-1">
+              <div className="hero-badge-range inline-flex items-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.08] px-3.5 py-1">
                 <span className="mono-tag text-gold">{t('range')}</span>
               </div>
             </div>
@@ -127,7 +123,7 @@ export default function Hero() {
             <div className="space-y-3">
               <h1 className="hero-title-text text-4xl font-black leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
                 {t('titleLead')} <br />
-                <span className="bg-gradient-to-r from-cyan-200 via-gold to-cyan-300 bg-clip-text text-transparent">
+                <span className="hero-title-highlight bg-gradient-to-r from-cyan-200 via-gold to-cyan-300 bg-clip-text text-transparent">
                   {t('titleHighlight')}
                 </span>
               </h1>
@@ -175,40 +171,40 @@ export default function Hero() {
               </button>
             </div> */}
 
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-slate-300">
+            <div className="hero-trust-list flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-slate-300">
               {trust.map((item) => (
-                <div key={item} className="flex items-center gap-1.5">
+                <div key={item} className="hero-trust-item flex items-center gap-1.5">
                   <CheckCircle
                     size={14}
-                    className="flex-shrink-0 text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]"
+                    className="hero-trust-check flex-shrink-0 text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]"
                   />
                   <span>{item}</span>
                 </div>
               ))}
 
-              <span className="hidden h-4 w-px bg-white/15 sm:block" />
+              <span className="hero-trust-divider hidden h-4 w-px bg-white/15 sm:block" />
 
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-1.5 overflow-hidden py-0.5">
                   {FLAGS.map((flag) => (
                     <span
                       key={flag.key}
-                      className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-navy bg-slate-800 text-[11px] shadow"
+                      className="hero-flag-item inline-flex h-6 w-6 items-center justify-center rounded-full border border-navy bg-slate-800 text-[11px] shadow"
                       title={t(`countries.${flag.key}`)}
                     >
                       {flag.code}
                     </span>
                   ))}
                 </div>
-                <span className="font-semibold text-white">35+</span>
-                <span className="text-slate-400">{t('exportPorts')}</span>
+                <span className="hero-flag-count font-semibold text-white">35+</span>
+                <span className="hero-flag-label text-slate-400">{t('exportPorts')}</span>
               </div>
             </div>
 
             <div className="hero-panel relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-b from-white/[0.14] via-white/[0.05] to-white/[0.02] p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.22)] backdrop-blur-xl lg:hidden">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.18] via-transparent to-transparent" />
+              <div className="hero-panel-decor pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.18] via-transparent to-transparent" />
               <div className="relative flex items-center justify-between gap-2">
-                <span className="mono-tag text-gold">
+                <span className="hero-card-tag mono-tag text-gold">
                   {t('nowSourcing', { hsCode: active.hsCode })}
                 </span>
                 <div className="flex items-center gap-1.5">
@@ -216,18 +212,18 @@ export default function Hero() {
                     type="button"
                     onClick={() => step(-1)}
                     aria-label={t('previousSlide')}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12]"
+                    className="hero-nav-btn flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12]"
                   >
                     <ChevronLeft size={14} />
                   </button>
-                  <span className="min-w-8 text-center font-mono text-[10px] tabular-nums text-slate-400">
+                  <span className="hero-counter-text min-w-8 text-center font-mono text-[10px] tabular-nums text-slate-400">
                     {pad(index + 1)}/{pad(total)}
                   </span>
                   <button
                     type="button"
                     onClick={() => step(1)}
                     aria-label={t('nextSlide')}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12]"
+                    className="hero-nav-btn flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12]"
                   >
                     <ChevronRight size={14} />
                   </button>
@@ -235,17 +231,17 @@ export default function Hero() {
               </div>
               <div className="relative mt-2 flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-base font-bold text-white">{active.label}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-300">
+                  <p className="hero-card-title text-base font-bold text-white">{active.label}</p>
+                  <p className="hero-card-desc mt-1 text-xs leading-relaxed text-slate-300">
                     {active.description}
                   </p>
                 </div>
                 <Link
                   href={localeHref(locale, active.href)}
                   aria-label={t('explore', { label: active.label })}
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-gold transition-colors hover:bg-white/[0.12]"
+                  className="hero-card-cta flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-gold transition-colors hover:bg-white/[0.12]"
                 >
-                  <ArrowUpRight size={14} />
+                  <ArrowUpRight size={14} className="hero-card-cta-icon" />
                 </Link>
               </div>
             </div>
@@ -253,25 +249,25 @@ export default function Hero() {
 
           <aside className="hidden lg:block">
             <div className="hero-panel relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-b from-white/[0.16] via-white/[0.06] to-white/[0.02] p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9),inset_0_1px_0_0_rgba(255,255,255,0.28)] backdrop-blur-2xl">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.2] via-transparent to-transparent" />
-              <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/10 blur-2xl" />
+              <div className="hero-panel-decor pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.2] via-transparent to-transparent" />
+              <div className="hero-panel-decor pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/10 blur-2xl" />
 
               <div className="relative flex items-center justify-between">
-                <span className="mono-tag text-gold">
+                <span className="hero-card-tag mono-tag text-gold">
                   {t('nowSourcing', { hsCode: active.hsCode })}
                 </span>
-                <span className="font-mono text-[10px] tabular-nums text-slate-300">
+                <span className="hero-card-count font-mono text-[10px] tabular-nums text-slate-300">
                   {pad(index + 1)} / {pad(total)}
                 </span>
               </div>
 
-              <p className="relative mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold/80">
+              <p className="hero-card-eyebrow relative mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold/80">
                 {t('productCategory')}
               </p>
               <h2 className="hero-card-title relative mt-1.5 bg-gradient-to-r from-white via-white to-gold-light bg-clip-text text-2xl font-black leading-tight text-transparent">
                 {active.label}
               </h2>
-              <p className="relative mt-2 text-sm leading-relaxed text-slate-200">
+              <p className="hero-card-desc relative mt-2 text-sm leading-relaxed text-slate-200">
                 {active.description}
               </p>
 
@@ -279,7 +275,7 @@ export default function Hero() {
                 {active.specs.map((spec) => (
                   <span
                     key={spec}
-                    className="rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[10px] font-semibold text-white/90"
+                    className="hero-card-spec rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[10px] font-semibold text-white/90"
                   >
                     {spec}
                   </span>
@@ -288,21 +284,11 @@ export default function Hero() {
 
               <Link
                 href={localeHref(locale, active.href)}
-                className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-white/[0.08] px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-white/[0.14]"
+                className="hero-card-cta relative mt-6 inline-flex items-center gap-2 rounded-full bg-white/[0.08] px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-white/[0.14]"
               >
-                {t('explore', { label: active.label })}
-                <ArrowUpRight size={13} className="text-gold" />
+                <span>{t('explore', { label: active.label })}</span>
+                <ArrowUpRight size={13} className="hero-card-cta-icon text-gold" />
               </Link>
-
-              {/* <div className="relative mt-6 flex items-center gap-1.5">
-                {slides.map((slide, slideIndex) => (
-                  <span
-                    key={slide.key}
-                    className={`h-1 rounded-full transition-all duration-300 ${slideIndex === index ? 'w-6 bg-gold' : 'w-3 bg-white/20'
-                      }`}
-                  />
-                ))}
-              </div> */}
             </div>
           </aside>
         </div>
@@ -312,22 +298,22 @@ export default function Hero() {
         <div className="container-xl px-4 py-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <span className="mono-tag shrink-0 text-slate-500">{t('rangeLabel')}</span>
+            <span className="hero-category-label mono-tag shrink-0 text-slate-500">{t('rangeLabel')}</span>
             {CATEGORIES.map(({ key, icon: Icon, href }) => (
               <Link
                 key={key}
                 href={localeHref(locale, href)}
-                className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold text-slate-300 backdrop-blur-md transition-colors hover:border-gold/40 hover:text-white"
+                className="hero-category-chip inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold text-slate-300 backdrop-blur-md transition-colors hover:border-gold/40 hover:text-white"
               >
-                <Icon size={11} className="text-gold" />
+                <Icon size={11} className="hero-category-icon text-gold" />
                 {t(`categories.${key}`)}
               </Link>
             ))}
           </div>
 
           <div className="hidden items-center justify-between gap-3 lg:flex lg:justify-end">
-            <span className="hidden font-mono text-[11px] text-slate-400 sm:inline">
-              <span className="text-white">{active.label}</span> • {active.meta}
+            <span className="hero-slide-meta hidden font-mono text-[11px] text-slate-400 sm:inline">
+              <span className="hero-slide-meta-title text-white">{active.label}</span> • {active.meta}
             </span>
 
             <div className="flex items-center gap-1">
@@ -335,7 +321,7 @@ export default function Hero() {
                 type="button"
                 onClick={() => step(-1)}
                 aria-label={t('previousSlide')}
-                className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60"
+                className="hero-nav-btn flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60"
               >
                 <ChevronLeft size={14} />
               </button>
@@ -343,13 +329,13 @@ export default function Hero() {
                 type="button"
                 onClick={() => step(1)}
                 aria-label={t('nextSlide')}
-                className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60"
+                className="hero-nav-btn flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60"
               >
                 <ChevronRight size={14} />
               </button>
             </div>
 
-            <div className="glass-pill flex items-center gap-1.5 px-2.5 py-1.5">
+            <div className="hero-dots-container glass-pill flex items-center gap-1.5 px-2.5 py-1.5">
               {slides.map((slide, slideIndex) => (
                 <button
                   key={slide.key}
@@ -357,13 +343,13 @@ export default function Hero() {
                   onClick={() => setIndex(slideIndex)}
                   aria-label={t('showSlide', { index: slideIndex + 1, label: slide.label })}
                   aria-current={slideIndex === index}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${slideIndex === index
+                  className={`hero-dot-indicator h-1.5 rounded-full transition-all duration-300 ${slideIndex === index
                     ? 'w-4 bg-gold'
                     : 'w-1.5 bg-white/30 hover:bg-white/60'
                     }`}
                 />
               ))}
-              <span className="ml-1 font-mono text-[10px] tabular-nums text-slate-300">
+              <span className="hero-counter-text ml-1 font-mono text-[10px] tabular-nums text-slate-300">
                 {pad(index + 1)}/{pad(total)}
               </span>
             </div>
