@@ -35,7 +35,7 @@ export const HERO_SLIDES: HeroSlideSource[] = [
   },
   {
     key: 'seeds',
-    src: '/home/seeds.jpg',
+    src: '/home/slides/sesame_.jpg',
     hsCode: 'HS 1207',
     href: '/products?category=seeds',
   },
