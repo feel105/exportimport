@@ -665,19 +665,22 @@
     "phoneAria": "Call {name}",
     "profiles": [
       {
-        "name": "Arjun Mehta",
+        "image": "/home/team/billionaireme.png",
+        "name": "Final Patel",
         "position": "FOUNDER & MANAGING DIRECTOR",
         "description": "Leads origin sourcing across Gujarat and Rajasthan, building long-term relationships with growers, processors, and exporters."
       },
       {
-        "name": "Priya Sharma",
-        "position": "HEAD OF QUALITY & COMPLIANCE",
-        "description": "Owns lab testing, sortex purity standards, and the phytosanitary documentation that clears every consignment."
+        "image": "/home/team/partnero.png",
+        "name": "Mahesh Patel",
+        "position": "SALES MANAGER",
+        "description": "Coordinates container planning, port operations at Mundra and Nhava Sheva, and on-time destination delivery."
       },
       {
-        "name": "Rohan Patel",
-        "position": "EXPORT LOGISTICS MANAGER",
-        "description": "Coordinates container planning, port operations at Mundra and Nhava Sheva, and on-time destination delivery."
+        "image": "/home/team/billionairetulsi.png",
+        "name": "Tulsi Khalasi",
+        "position": "SALES MANAGER",
+        "description": "Owns lab testing, sortex purity standards, and the phytosanitary documentation that clears every consignment."
       }
     ]
   },

@@ -12,12 +12,6 @@ interface Profile {
 
 const roleIcons = [Compass, ShieldCheck, Ship]
 
-const hoverImages = [
-  '/home/agri-products.jpg',
-  '/home/spice-powders.jpg',
-  '/home/ship-container.jpg',
-]
-
 const getInitials = (name: string) =>
   name
     .split(' ')
@@ -58,15 +52,13 @@ export default function SpecificationWorkbench() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 w-full">
           {profiles.map((profile, index) => {
             const Icon = roleIcons[index] ?? Compass
-            const image = profile.image ?? hoverImages[index] ?? hoverImages[0]
-
             return (
               <article
                 key={profile.name}
                 className="workbench-card group relative flex flex-col items-center overflow-hidden rounded-2xl border border-hairline bg-white/[0.02] p-6 text-center transition-all duration-300 hover:border-hairline-light hover:bg-white/[0.04] sm:p-7"
               >
                 <Image
-                  src={image}
+                  src={profile.image}
                   alt=""
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
