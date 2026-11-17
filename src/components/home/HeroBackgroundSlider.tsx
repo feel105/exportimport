@@ -8,7 +8,7 @@ type HeroBackgroundSliderProps = {
 
 export default function HeroBackgroundSlider({ slides, index }: HeroBackgroundSliderProps) {
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+    <div className="hero-slider absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
       {slides.map((slide, slideIndex) => {
         const isActive = slideIndex === index
         return (
@@ -24,9 +24,7 @@ export default function HeroBackgroundSlider({ slides, index }: HeroBackgroundSl
               fill
               priority={slideIndex === 0}
               sizes="100vw"
-              className={`object-cover object-center transition-transform duration-[7000ms] ease-out ${
-                isActive ? 'scale-105' : 'scale-100'
-              }`}
+              className="object-cover object-center"
             />
           </div>
         )
@@ -35,7 +33,7 @@ export default function HeroBackgroundSlider({ slides, index }: HeroBackgroundSl
       {/* Left-weighted scrim for readable copy, lighter on the right so the produce stays visible */}
       <div className="hero-scrim-side absolute inset-0 bg-gradient-to-r from-[#0A0F18] via-[#0A0F18]/90 to-[#0A0F18]/55 lg:to-[#0A0F18]/20" />
       <div className="hero-scrim-y absolute inset-0 bg-gradient-to-b from-[#0A0F18]/80 via-[#0A0F18]/10 to-[#0A0F18]/90" />
-      <div className="absolute inset-0 bg-grid opacity-20" />
+      <div className="hero-grid absolute inset-0 bg-grid opacity-20" />
     </div>
   )
 }

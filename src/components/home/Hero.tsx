@@ -15,7 +15,6 @@ import {
   Flame,
   Flower2,
   Leaf,
-  MapPin,
   Nut,
   Sprout,
   Wheat,
@@ -88,7 +87,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative isolate flex min-h-[660px] w-full flex-col overflow-hidden border-b border-hairline pt-[calc(var(--header-h)+2.5rem)] pb-8 sm:min-h-[720px] sm:pt-[calc(var(--header-h)+3rem)] sm:pb-10 lg:min-h-[780px] lg:pb-12"
+      className="relative isolate flex min-h-[calc(100vh-var(--header-h,66px))] min-h-[680px] w-full flex-col justify-between overflow-hidden border-b border-hairline pt-[calc(var(--header-h)+2rem)] pb-4 sm:min-h-[calc(100dvh-var(--header-h,66px))] sm:pt-[calc(var(--header-h)+2.5rem)] sm:pb-6 lg:min-h-[calc(100vh-var(--header-h,66px))] lg:pb-6"
       aria-label={t('aria')}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -98,7 +97,7 @@ export default function Hero() {
       <HeroBackgroundSlider slides={slides} index={index} />
 
       <div
-        className="pointer-events-none absolute top-1/4 -left-40 h-[650px] w-[650px] rounded-full"
+        className="hero-ambient-glow pointer-events-none absolute top-1/4 -left-40 h-[650px] w-[650px] rounded-full"
         style={{
           background:
             'radial-gradient(circle, rgba(56, 207, 255, 0.18) 0%, rgba(56, 207, 255, 0.05) 45%, transparent 70%)',
@@ -106,7 +105,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="container-xl relative z-10 flex w-full flex-1 flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
+      <div className="container-xl relative z-10 flex w-full flex-1 flex-col justify-center px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end xl:grid-cols-[minmax(0,1fr)_380px] xl:gap-16">
           <div className="max-w-[46rem] space-y-6">
             <div className="flex flex-wrap items-center gap-3">
@@ -126,13 +125,13 @@ export default function Hero() {
 
 
             <div className="space-y-3">
-              <h1 className="text-4xl font-black leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+              <h1 className="hero-title-text text-4xl font-black leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
                 {t('titleLead')} <br />
                 <span className="bg-gradient-to-r from-cyan-200 via-gold to-cyan-300 bg-clip-text text-transparent">
                   {t('titleHighlight')}
                 </span>
               </h1>
-              <p className="max-w-2xl text-sm leading-relaxed text-slate sm:text-base lg:text-lg">
+              <p className="hero-desc-text max-w-2xl text-sm leading-relaxed text-slate sm:text-base lg:text-lg">
                 {t('description')}
               </p>
             </div>
@@ -309,7 +308,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-20 w-full border-t border-white/10">
+      <div className="hero-bottom-bar relative z-20 w-full border-t border-white/10">
         <div className="container-xl px-4 py-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
