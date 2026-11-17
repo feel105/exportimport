@@ -88,7 +88,7 @@ export default function Hero() {
 
   return (
     <section
-      className="keep-dark relative isolate flex min-h-[660px] w-full flex-col overflow-hidden border-b border-hairline pt-[calc(var(--header-h)+2.5rem)] pb-8 sm:min-h-[720px] sm:pt-[calc(var(--header-h)+3rem)] sm:pb-10 lg:min-h-[780px] lg:pb-12"
+      className="relative isolate flex min-h-[660px] w-full flex-col overflow-hidden border-b border-hairline pt-[calc(var(--header-h)+2.5rem)] pb-8 sm:min-h-[720px] sm:pt-[calc(var(--header-h)+3rem)] sm:pb-10 lg:min-h-[780px] lg:pb-12"
       aria-label={t('aria')}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -206,7 +206,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-b from-white/[0.14] via-white/[0.05] to-white/[0.02] p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.22)] backdrop-blur-xl lg:hidden">
+            <div className="hero-panel relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-b from-white/[0.14] via-white/[0.05] to-white/[0.02] p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.22)] backdrop-blur-xl lg:hidden">
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.18] via-transparent to-transparent" />
               <div className="relative flex items-center justify-between gap-2">
                 <span className="mono-tag text-gold">
@@ -253,7 +253,7 @@ export default function Hero() {
           </div>
 
           <aside className="hidden lg:block">
-            <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-b from-white/[0.16] via-white/[0.06] to-white/[0.02] p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9),inset_0_1px_0_0_rgba(255,255,255,0.28)] backdrop-blur-2xl">
+            <div className="hero-panel relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-b from-white/[0.16] via-white/[0.06] to-white/[0.02] p-6 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9),inset_0_1px_0_0_rgba(255,255,255,0.28)] backdrop-blur-2xl">
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.2] via-transparent to-transparent" />
               <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/10 blur-2xl" />
 
@@ -269,7 +269,7 @@ export default function Hero() {
               <p className="relative mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold/80">
                 {t('productCategory')}
               </p>
-              <h2 className="relative mt-1.5 bg-gradient-to-r from-white via-white to-gold-light bg-clip-text text-2xl font-black leading-tight text-transparent">
+              <h2 className="hero-card-title relative mt-1.5 bg-gradient-to-r from-white via-white to-gold-light bg-clip-text text-2xl font-black leading-tight text-transparent">
                 {active.label}
               </h2>
               <p className="relative mt-2 text-sm leading-relaxed text-slate-200">

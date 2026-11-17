@@ -752,6 +752,22 @@ body {
   --color-cyan-200: #C9BFFF;
   --color-cyan-300: #9A8AFB;
 
+  /* Remap the project's legacy CSS custom properties too (used by the
+     hand-written .bg-navy / .text-gold helper classes) */
+  --navy: #FAF5EF;
+  --navy-deep: #F1ECE6;
+  --warm: #1F1B16;
+  --slate: #57514A;
+  --slate-dark: #6B645C;
+  --gold: #6D5CE7;
+  --gold-light: #8B7BFF;
+  --gold-dark: #5B4BD6;
+  --royal: #6D5CE7;
+  --royal-dark: #5B4BD6;
+  --emerald-accent: #047857;
+  --cyan-accent: #4F6D9A;
+  --coral-accent: #BE123C;
+
   /* Tailwind default palette remaps for contrast on paper */
   --color-slate-200: #4A443D;
   --color-slate-300: #57514A;
@@ -762,6 +778,7 @@ body {
   --color-emerald-500: #047857;
   --color-red-200: #BE123C;
   --color-red-400: #BE123C;
+  --color-slate-800: #E8E0D8;
 }
 
 /* Restore the dark palette inside image-led islands (hero, photo cards…) */
@@ -786,8 +803,23 @@ body {
   --color-emerald-500: #10B981;
   --color-red-200: #FECACA;
   --color-red-400: #F87171;
+  --color-slate-800: #1E293B;
   --color-cyan-200: #A5F3FC;
   --color-cyan-300: #67E8F9;
+
+  --navy: #0B111A;
+  --navy-deep: #121A26;
+  --warm: #F8FAFC;
+  --slate: #94A3B8;
+  --slate-dark: #64748B;
+  --gold: #38CFFF;
+  --gold-light: #7AE5FF;
+  --gold-dark: #21C8FF;
+  --royal: #2563EB;
+  --royal-dark: #1D4ED8;
+  --emerald-accent: #22C55E;
+  --cyan-accent: #38BDF8;
+  --coral-accent: #F87171;
 }
 
 body {
@@ -1003,6 +1035,67 @@ html.theme-anim *::after {
 }
 [data-theme="light"] :focus-visible {
   outline-color: var(--color-gold);
+}
+
+/* ─── Light: hero (warm paper scrims over the produce photography) ────── */
+[data-theme="light"] .hero-scrim-side {
+  background-image: linear-gradient(
+    to right,
+    rgba(250, 245, 239, 0.99) 0%,
+    rgba(250, 245, 239, 0.95) 38%,
+    rgba(250, 245, 239, 0.72) 66%,
+    rgba(250, 245, 239, 0.32) 100%
+  );
+}
+
+@media (min-width: 1024px) {
+  [data-theme="light"] .hero-scrim-side {
+    background-image: linear-gradient(
+      to right,
+      rgba(250, 245, 239, 0.98) 0%,
+      rgba(250, 245, 239, 0.9) 42%,
+      rgba(250, 245, 239, 0.5) 72%,
+      rgba(250, 245, 239, 0.08) 100%
+    );
+  }
+}
+
+[data-theme="light"] .hero-scrim-y {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(250, 245, 239, 0.72) 0%,
+    rgba(250, 245, 239, 0.18) 45%,
+    rgba(250, 245, 239, 0.9) 100%
+  );
+}
+
+[data-theme="light"] .hero-panel {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: var(--line-strong);
+  box-shadow: 0 24px 60px -20px rgba(60, 40, 20, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="light"] .hero-card-title {
+  background-image: linear-gradient(to right, #1F1B16 0%, #1F1B16 55%, #6D5CE7 100%);
+}
+
+[data-theme="light"] .bg-grid {
+  background-image:
+    linear-gradient(rgba(31, 27, 22, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 27, 22, 0.06) 1px, transparent 1px);
+}
+
+[data-theme="light"] .bg-white\/30:not(.keep-dark):not(.keep-dark *) {
+  background-color: rgba(31, 27, 22, 0.22);
+}
+[data-theme="light"] .hover\:bg-white\/60:hover {
+  background-color: rgba(31, 27, 22, 0.4);
+}
+[data-theme="light"] .bg-black\/40:not(.keep-dark):not(.keep-dark *) {
+  background-color: rgba(255, 255, 255, 0.72);
+}
+[data-theme="light"] .hover\:bg-black\/60:hover {
+  background-color: rgba(255, 255, 255, 0.92);
 }
 
 /* ─── Light: cards that darken on hover (photo reveal) ───────────────── */

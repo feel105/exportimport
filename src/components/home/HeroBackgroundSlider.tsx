@@ -33,8 +33,8 @@ export default function HeroBackgroundSlider({ slides, index }: HeroBackgroundSl
       })}
 
       {/* Left-weighted scrim for readable copy, lighter on the right so the produce stays visible */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F18] via-[#0A0F18]/90 to-[#0A0F18]/55 lg:to-[#0A0F18]/20" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F18]/80 via-[#0A0F18]/10 to-[#0A0F18]/90" />
+      <div className="hero-scrim-side absolute inset-0 bg-gradient-to-r from-[#0A0F18] via-[#0A0F18]/90 to-[#0A0F18]/55 lg:to-[#0A0F18]/20" />
+      <div className="hero-scrim-y absolute inset-0 bg-gradient-to-b from-[#0A0F18]/80 via-[#0A0F18]/10 to-[#0A0F18]/90" />
       <div className="absolute inset-0 bg-grid opacity-20" />
     </div>
   )
