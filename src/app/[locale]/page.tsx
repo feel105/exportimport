@@ -38,7 +38,7 @@ export default function HomePage() {
       {/* <TrustStrip /> */}
       <AboutPreview />
       <ProductCategories />
-      <TradePlatformShowcase />
+      {/* <TradePlatformShowcase /> */}
       <WhyChooseUs />
       <SpecificationWorkbench />
       <QualitySection />
