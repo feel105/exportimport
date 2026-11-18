@@ -57,13 +57,15 @@ export default function SpecificationWorkbench() {
                 key={profile.name}
                 className="workbench-card group relative flex flex-col items-center overflow-hidden rounded-2xl border border-hairline bg-white/[0.02] p-6 text-center transition-all duration-300 hover:border-hairline-light hover:bg-white/[0.04] sm:p-7"
               >
-                <Image
-                  src={profile.image}
-                  alt=""
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover object-center opacity-0 scale-105 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-100"
-                />
+                {profile.image && (
+                  <Image
+                    src={profile.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover object-center opacity-0 scale-105 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-100"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F18]/85 via-[#0A0F18]/85 to-[#0A0F18]/95 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-gold/10 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 

@@ -665,16 +665,19 @@
     "phoneAria": "{name} anrufen",
     "profiles": [
       {
+        "image": "/home/team/billionaireme.png",
         "name": "Arjun Mehta",
         "position": "GRÜNDER & GESCHÄFTSFÜHRER",
         "description": "Verantwortet die Beschaffung in Gujarat und Rajasthan und baut langfristige Beziehungen zu Erzeugern, Verarbeitern und Exporteuren auf."
       },
       {
+        "image": "/home/team/partnero.png",
         "name": "Priya Sharma",
         "position": "LEITERIN QUALITÄT & COMPLIANCE",
         "description": "Verantwortet Labortests, Sortex-Reinheitsstandards und die Pflanzengesundheitsdokumentation für jede Sendung."
       },
       {
+        "image": "/home/team/billionairetulsi.png",
         "name": "Rohan Patel",
         "position": "EXPORTLOGISTIK-MANAGER",
         "description": "Koordiniert Containerplanung, Hafenbetrieb in Mundra und Nhava Sheva sowie pünktliche Lieferungen an den Bestimmungsort."
