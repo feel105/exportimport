@@ -182,14 +182,14 @@ export default function Navbar() {
             </nav>
 
             <div className="flex items-center gap-2">
-              <a
+              {/* <a
                 href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
                 className="nav-link hidden 2xl:inline-flex"
               >
                 {siteConfig.phone}
               </a>
 
-              <span className="hidden h-5 w-px bg-white/15 2xl:block" />
+              <span className="hidden h-5 w-px bg-white/15 2xl:block" />*/}
 
               <ThemeToggle />
 
