@@ -1045,10 +1045,11 @@ html.theme-anim *::after {
 [data-theme="light"] .hero-scrim-side {
   background-image: linear-gradient(
     to right,
-    rgba(250, 245, 239, 0.72) 0%,
-    rgba(250, 245, 239, 0.52) 35%,
-    rgba(250, 245, 239, 0.18) 62%,
-    rgba(250, 245, 239, 0.0) 100%
+    rgba(250, 245, 239, 0.94) 0%,
+    rgba(250, 245, 239, 0.9) 32%,
+    rgba(250, 245, 239, 0.72) 55%,
+    rgba(250, 245, 239, 0.2) 80%,
+    rgba(250, 245, 239, 0) 100%
   );
 }
 
@@ -1056,9 +1057,11 @@ html.theme-anim *::after {
   [data-theme="light"] .hero-scrim-side {
     background-image: linear-gradient(
       to right,
-      rgba(250, 245, 239, 0.65) 0%,
-      rgba(250, 245, 239, 0.44) 38%,
-      rgba(250, 245, 239, 0.12) 65%,
+      rgba(250, 245, 239, 0.94) 0%,
+      rgba(250, 245, 239, 0.92) 34%,
+      rgba(250, 245, 239, 0.84) 46%,
+      rgba(250, 245, 239, 0.62) 62%,
+      rgba(250, 245, 239, 0.14) 78%,
       rgba(250, 245, 239, 0) 100%
     );
   }
@@ -1067,11 +1070,19 @@ html.theme-anim *::after {
 [data-theme="light"] .hero-scrim-y {
   background-image: linear-gradient(
     to bottom,
-    rgba(250, 245, 239, 0.28) 0%,
-    rgba(250, 245, 239, 0.0) 30%,
-    rgba(250, 245, 239, 0.0) 70%,
-    rgba(250, 245, 239, 0.28) 100%
+    rgba(250, 245, 239, 0.38) 0%,
+    rgba(250, 245, 239, 0) 28%,
+    rgba(250, 245, 239, 0) 60%,
+    rgba(250, 245, 239, 0.72) 100%
   );
+}
+
+[data-theme="light"] .hero-title-highlight {
+  background-image: linear-gradient(to right, #1F1B16 0%, #4C3BB8 55%, #6D5CE7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 [data-theme="light"] .hero-panel {
@@ -1082,6 +1093,11 @@ html.theme-anim *::after {
 
 [data-theme="light"] .hero-card-title {
   background-image: linear-gradient(to right, #1F1B16 0%, #1F1B16 55%, #6D5CE7 100%);
+}
+
+[data-theme="light"] .hero-slide-meta,
+[data-theme="light"] .hero-slide-meta span {
+  color: #000000 !important;
 }
 
 [data-theme="light"] .bg-grid {

@@ -128,11 +128,11 @@ export default function Hero() {
             <div className="space-y-3">
               <h1 className="text-4xl font-black leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
                 {t('titleLead')} <br />
-                <span className="bg-gradient-to-r from-cyan-200 via-gold to-cyan-300 bg-clip-text text-transparent">
+                <span className="hero-title-highlight bg-gradient-to-r from-cyan-200 via-gold to-cyan-300 bg-clip-text text-transparent">
                   {t('titleHighlight')}
                 </span>
               </h1>
-              <p className="max-w-2xl text-sm leading-relaxed text-slate sm:text-base lg:text-lg">
+              <p className="max-w-2xl text-sm leading-relaxed text-slate sm:text-base lg:text-lg [html[data-theme='light']_&]:text-[#26211C]">
                 {t('description')}
               </p>
             </div>
@@ -176,18 +176,18 @@ export default function Hero() {
               </button>
             </div> */}
 
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-slate-300">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-slate-300 [html[data-theme='light']_&]:text-[#111111] [html[data-theme='light']_&]:font-medium">
               {trust.map((item) => (
                 <div key={item} className="flex items-center gap-1.5">
                   <CheckCircle
                     size={14}
-                    className="flex-shrink-0 text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]"
+                    className="flex-shrink-0 text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)] [html[data-theme='light']_&]:text-[#111111] [html[data-theme='light']_&]:drop-shadow-none"
                   />
                   <span>{item}</span>
                 </div>
               ))}
 
-              <span className="hidden h-4 w-px bg-white/15 sm:block" />
+              <span className="hidden h-4 w-px bg-white/15 sm:block [html[data-theme='light']_&]:bg-black/20" />
 
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-1.5 overflow-hidden py-0.5">
@@ -201,8 +201,8 @@ export default function Hero() {
                     </span>
                   ))}
                 </div>
-                <span className="font-semibold text-white">35+</span>
-                <span className="text-slate-400">{t('exportPorts')}</span>
+                <span className="font-semibold text-white [html[data-theme='light']_&]:text-[#111111]">35+</span>
+                <span className="text-slate-400 [html[data-theme='light']_&]:text-[#111111] [html[data-theme='light']_&]:font-medium">{t('exportPorts')}</span>
               </div>
             </div>
 
@@ -217,18 +217,18 @@ export default function Hero() {
                     type="button"
                     onClick={() => step(-1)}
                     aria-label={t('previousSlide')}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12]"
+                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12] [html[data-theme='light']_&]:border-black/15 [html[data-theme='light']_&]:bg-black/[0.06] [html[data-theme='light']_&]:text-[#111111]"
                   >
                     <ChevronLeft size={14} />
                   </button>
-                  <span className="min-w-8 text-center font-mono text-[10px] tabular-nums text-slate-400">
+                  <span className="min-w-8 text-center font-mono text-[10px] tabular-nums text-slate-400 [html[data-theme='light']_&]:text-[#111111] [html[data-theme='light']_&]:font-semibold">
                     {pad(index + 1)}/{pad(total)}
                   </span>
                   <button
                     type="button"
                     onClick={() => step(1)}
                     aria-label={t('nextSlide')}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12]"
+                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/[0.12] [html[data-theme='light']_&]:border-black/15 [html[data-theme='light']_&]:bg-black/[0.06] [html[data-theme='light']_&]:text-[#111111]"
                   >
                     <ChevronRight size={14} />
                   </button>
@@ -236,15 +236,15 @@ export default function Hero() {
               </div>
               <div className="relative mt-2 flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-base font-bold text-white">{active.label}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-300">
+                  <p className="text-base font-bold text-white [html[data-theme='light']_&]:text-[#111111]">{active.label}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-300 [html[data-theme='light']_&]:text-[#26211C]">
                     {active.description}
                   </p>
                 </div>
                 <Link
                   href={localeHref(locale, active.href)}
                   aria-label={t('explore', { label: active.label })}
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-gold transition-colors hover:bg-white/[0.12]"
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-gold transition-colors hover:bg-white/[0.12] [html[data-theme='light']_&]:border-black/15 [html[data-theme='light']_&]:bg-black/[0.06]"
                 >
                   <ArrowUpRight size={14} />
                 </Link>
@@ -261,7 +261,7 @@ export default function Hero() {
                 <span className="mono-tag text-gold">
                   {t('nowSourcing', { hsCode: active.hsCode })}
                 </span>
-                <span className="font-mono text-[10px] tabular-nums text-slate-300">
+                <span className="font-mono text-[10px] tabular-nums text-slate-300 [html[data-theme='light']_&]:text-[#111111] [html[data-theme='light']_&]:font-semibold">
                   {pad(index + 1)} / {pad(total)}
                 </span>
               </div>
@@ -272,7 +272,7 @@ export default function Hero() {
               <h2 className="hero-card-title relative mt-1.5 bg-gradient-to-r from-white via-white to-gold-light bg-clip-text text-2xl font-black leading-tight text-transparent">
                 {active.label}
               </h2>
-              <p className="relative mt-2 text-sm leading-relaxed text-slate-200">
+              <p className="relative mt-2 text-sm leading-relaxed text-slate-200 [html[data-theme='light']_&]:text-[#26211C]">
                 {active.description}
               </p>
 
@@ -280,7 +280,7 @@ export default function Hero() {
                 {active.specs.map((spec) => (
                   <span
                     key={spec}
-                    className="rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[10px] font-semibold text-white/90"
+                    className="rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[10px] font-semibold text-white/90 [html[data-theme='light']_&]:border-black/15 [html[data-theme='light']_&]:bg-black/[0.06] [html[data-theme='light']_&]:text-[#111111]"
                   >
                     {spec}
                   </span>
@@ -289,7 +289,7 @@ export default function Hero() {
 
               <Link
                 href={localeHref(locale, active.href)}
-                className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-white/[0.08] px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-white/[0.14]"
+                className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-white/[0.08] px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-white/[0.14] [html[data-theme='light']_&]:border [html[data-theme='light']_&]:border-black/15 [html[data-theme='light']_&]:bg-black/[0.06] [html[data-theme='light']_&]:text-[#111111]"
               >
                 {t('explore', { label: active.label })}
                 <ArrowUpRight size={13} className="text-gold" />
@@ -309,16 +309,16 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-20 w-full border-t border-white/10">
+      <div className="relative z-20 w-full border-t border-white/10 [html[data-theme='light']_&]:border-black/10">
         <div className="container-xl px-4 py-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 2xl:px-16">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <span className="mono-tag shrink-0 text-slate-500">{t('rangeLabel')}</span>
+            <span className="mono-tag shrink-0 text-slate-500 [html[data-theme='light']_&]:text-[#111111]">{t('rangeLabel')}</span>
             {CATEGORIES.map(({ key, icon: Icon, href }) => (
               <Link
                 key={key}
                 href={localeHref(locale, href)}
-                className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold text-slate-300 backdrop-blur-md transition-colors hover:border-gold/40 hover:text-white"
+                className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold text-slate-300 backdrop-blur-md transition-colors hover:border-gold/40 hover:text-white [html[data-theme='light']_&]:border-black/10 [html[data-theme='light']_&]:bg-black/[0.04] [html[data-theme='light']_&]:text-[#111111] [html[data-theme='light']_&]:hover:text-black"
               >
                 <Icon size={11} className="text-gold" />
                 {t(`categories.${key}`)}
@@ -327,8 +327,8 @@ export default function Hero() {
           </div>
 
           <div className="hidden items-center justify-between gap-3 lg:flex lg:justify-end">
-            <span className="hidden font-mono text-[11px] text-slate-400 sm:inline">
-              <span className="text-white">{active.label}</span> • {active.meta}
+            <span className="hero-slide-meta hidden font-mono text-[11px] text-slate-400 sm:inline [html[data-theme=light]_&]:text-black">
+              <span className="text-white font-semibold [html[data-theme=light]_&]:text-black">{active.label}</span> • {active.meta}
             </span>
 
             <div className="flex items-center gap-1">
@@ -336,7 +336,7 @@ export default function Hero() {
                 type="button"
                 onClick={() => step(-1)}
                 aria-label={t('previousSlide')}
-                className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60"
+                className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60 [html[data-theme='light']_&]:border-black/15 [html[data-theme='light']_&]:bg-black/10 [html[data-theme='light']_&]:text-[#111111] [html[data-theme='light']_&]:hover:bg-black/20"
               >
                 <ChevronLeft size={14} />
               </button>
@@ -344,13 +344,13 @@ export default function Hero() {
                 type="button"
                 onClick={() => step(1)}
                 aria-label={t('nextSlide')}
-                className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60"
+                className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-md transition-colors hover:border-white/35 hover:bg-black/60 [html[data-theme='light']_&]:border-black/15 [html[data-theme='light']_&]:bg-black/10 [html[data-theme='light']_&]:text-[#111111] [html[data-theme='light']_&]:hover:bg-black/20"
               >
                 <ChevronRight size={14} />
               </button>
             </div>
 
-            <div className="glass-pill flex items-center gap-1.5 px-2.5 py-1.5">
+            <div className="glass-pill flex items-center gap-1.5 px-2.5 py-1.5 [html[data-theme='light']_&]:border-black/15">
               {slides.map((slide, slideIndex) => (
                 <button
                   key={slide.key}
@@ -360,11 +360,11 @@ export default function Hero() {
                   aria-current={slideIndex === index}
                   className={`h-1.5 rounded-full transition-all duration-300 ${slideIndex === index
                     ? 'w-4 bg-gold'
-                    : 'w-1.5 bg-white/30 hover:bg-white/60'
+                    : "w-1.5 bg-white/30 hover:bg-white/60 [html[data-theme=light]_&]:bg-black/35 [html[data-theme=light]_&]:hover:bg-black/60"
                     }`}
                 />
               ))}
-              <span className="ml-1 font-mono text-[10px] tabular-nums text-slate-300">
+              <span className="ml-1 font-mono text-[10px] tabular-nums text-slate-300 [html[data-theme='light']_&]:text-[#111111] font-semibold">
                 {pad(index + 1)}/{pad(total)}
               </span>
             </div>
