@@ -570,6 +570,7 @@
     "heading": "Everything Your Trade Needs in One Place.",
     "description": "Built Around Your Sourcing Needs.",
     "verifiedStandard": "OPERATIONAL STANDARD VERIFIED",
+    "keySpecifications": "KEY SPECIFICATIONS:",
     "tabsLabel": "OPERATIONAL STANDARDS",
     "count": "06 STANDARDS",
     "phase": "STANDARD {num} • {label}",
@@ -579,35 +580,255 @@
     "footerLink": "Talk to the trade desk",
     "features": [
       {
-        "title": "Transparent Quotations",
-        "desc": "Clear, competitive pricing calculated directly against Indian wholesale terminal markets, with complete breakdown of ocean freight and certification costs."
+        "title": "Direct Origin Sourcing",
+        "heading": "Direct Farm-Gate & APMC Terminal Procurement",
+        "desc": "We bypass unnecessary middle layers by maintaining direct aggregation networks across Saurashtra, Unjha, Nagaur, and Kota terminal markets—securing competitive crop arrivals at harvest peak.",
+        "bullets": [
+          "Direct contracts with certified grower clusters and FPOs",
+          "Daily mandi pricing parity with complete transparent breakdown",
+          "Crop season tracking & forward price hedging discussions",
+          "Traceability back to regional growing district and harvest batch"
+        ],
+        "terminalData": [
+          {
+            "label": "Primary Mandi Hub",
+            "value": "Unjha Terminal Market (Gujarat)"
+          },
+          {
+            "label": "Harvest Season",
+            "value": "Fresh Crop Arrival 2026",
+            "highlight": true
+          },
+          {
+            "label": "Grower Aggregation",
+            "value": "Verified Regional FPO Network"
+          },
+          {
+            "label": "Grading Protocol",
+            "value": "AGMARK Grade 1 / Export Special"
+          },
+          {
+            "label": "Transit to Port",
+            "value": "360 km via Dedicated Freight Corridor"
+          },
+          {
+            "label": "Traceability Index",
+            "value": "100% Regional Farm Block Mapped"
+          }
+        ],
+        "actionText": "Learn About Our Sourcing",
+        "href": "/about"
       },
       {
-        "title": "Flexible Packaging Options",
-        "desc": "Custom private labeling, varied package sizing (1kg to 1000kg jumbo tote bags), and protective vacuum packaging tailored to destination shelf life."
+        "title": "Export Documentation",
+        "heading": "Zero-Friction Customs & Statutory Clearance",
+        "desc": "Cross-border agricultural trade requires spotless paperwork. Our customs compliance desk prepares, verifies, and dispatches every statutory trade document prior to ocean vessel arrival.",
+        "bullets": [
+          "Official Government Phytosanitary Certificate (Plant Quarantine)",
+          "Certificate of Origin (Preferential / Non-Preferential via FIEO & Chamber)",
+          "Customs Commercial Invoice, Packing List & Bill of Lading (B/L)",
+          "Fumigation Certificate (Methyl Bromide / Phosphine treatment)"
+        ],
+        "terminalData": [
+          {
+            "label": "Phytosanitary Cert",
+            "value": "PSC-INDIA-2026-VALIDATED",
+            "highlight": true
+          },
+          {
+            "label": "Certificate of Origin",
+            "value": "COO-CHAMBER-ISSUED"
+          },
+          {
+            "label": "Fumigation Standard",
+            "value": "AFAS / IMO Approved 48h Cycle"
+          },
+          {
+            "label": "Bill of Lading",
+            "value": "Clean On Board Express Release"
+          },
+          {
+            "label": "Statutory Body",
+            "value": "FSSAI • APEDA • RCMC"
+          },
+          {
+            "label": "HS Classification",
+            "value": "Harmonized 6-Digit Global Standard"
+          }
+        ],
+        "actionText": "Explore Compliance Credentials",
+        "href": "/quality-compliance"
       },
       {
         "title": "Verified Quality Sourcing",
-        "desc": "Direct field and terminal market sourcing backed by NABL accredited lab inspections for moisture, pesticide MRLs, and ASTA cleanliness."
+        "heading": "Laboratory-Verified Commodity Standards",
+        "desc": "Every export lot undergoes comprehensive testing for physical cleanliness, moisture content, volatile oil percentages, and destination-specific pesticide MRLs before container loading.",
+        "bullets": [
+          "NABL & ISO/IEC 17025 accredited laboratory testing",
+          "Third-party inspection coordination (SGS, Geo-Chem, Bureau Veritas)",
+          "Aflatoxin, Ochratoxin, and Salmonella microbiological screening",
+          "Sortex optical sorting with 99.8% purity guarantee"
+        ],
+        "terminalData": [
+          {
+            "label": "Commodity Batch",
+            "value": "FE-2026-CUMIN-A1"
+          },
+          {
+            "label": "Purity Standard",
+            "value": "99.8% Machine Cleaned Sortex",
+            "highlight": true
+          },
+          {
+            "label": "Moisture Content",
+            "value": "7.4% (Max Allowable: 8.0%)"
+          },
+          {
+            "label": "Volatile Oil",
+            "value": "3.2% v/w (ASTA Standard)"
+          },
+          {
+            "label": "Aflatoxin (B1+B2+G1+G2)",
+            "value": "< 2.0 ppb (Compliant EU/US)"
+          },
+          {
+            "label": "Pesticide MRL Status",
+            "value": "Zero Residue Exceedance"
+          },
+          {
+            "label": "Issuing Lab",
+            "value": "NABL Certified #TC-7892"
+          }
+        ],
+        "actionText": "View Quality Protocols",
+        "href": "/quality-compliance"
       },
       {
-        "title": "Complete Export Documentation",
-        "desc": "Full coordination of Phytosanitary, Certificate of Origin, Bill of Lading, Fumigation, and custom trade invoices without bureaucratic delays."
+        "title": "Flexible Packaging Options",
+        "heading": "Bespoke Bulk Packaging & Private Label Solutions",
+        "desc": "From 25kg multi-ply paper and PP woven sacks for wholesale processors to customized vacuum-sealed barrier pouches under your own brand, we tailor packaging to your exact retail or industrial requirements.",
+        "bullets": [
+          "Multi-wall paper bags, PP woven sacks & traditional Jute hessian",
+          "Food-grade vacuum pouches with oxygen absorbers (1kg to 10kg)",
+          "1000kg FIBC Jumbo Tote Bags with lifting loops for automated lines",
+          "Private label retail printing with barcode & nutritional label integration"
+        ],
+        "terminalData": [
+          {
+            "label": "Primary Bag Type",
+            "value": "25kg Polypropylene (PP) with Inner PE Liner",
+            "highlight": true
+          },
+          {
+            "label": "Moisture Barrier",
+            "value": "Heavy Duty 50-micron Virgin PE"
+          },
+          {
+            "label": "Palletization",
+            "value": "ISPM-15 Heat Treated Wooden Pallets"
+          },
+          {
+            "label": "Stretch Wrap",
+            "value": "Fully Strapped & Shrink-Wrapped"
+          },
+          {
+            "label": "Private Labeling",
+            "value": "Custom Buyer Marking & Artwork Supported"
+          },
+          {
+            "label": "Bag Tolerance",
+            "value": "± 0.2% Automatic Electronic Check-Weigher"
+          }
+        ],
+        "actionText": "Discuss Packaging Needs",
+        "href": "/contact"
       },
       {
         "title": "Responsive Trade Desk",
-        "desc": "Dedicated commercial managers providing proactive status updates from port loading at Mundra / Nhava Sheva to shipping line tracking."
+        "heading": "Container Logistics from Mundra to Destination Port",
+        "desc": "Strategically positioned with rapid highway access to Mundra Port and Nhava Sheva (JNPT), we coordinate container stuffing, customs seal verification, and ocean freight bookings across leading shipping lines.",
+        "bullets": [
+          "FOB (Indian Ports), CIF, or CFR Incoterms pricing",
+          "Direct carrier contracts with Maersk, MSC, CMA CGM & Hapag-Lloyd",
+          "20ft FCL (18–20 MT) and 40ft High Cube (24–26 MT) payloads",
+          "Real-time ocean container tracking updates from port gate-in to discharge"
+        ],
+        "terminalData": [
+          {
+            "label": "Loading Port",
+            "value": "Port of Mundra / Nhava Sheva (IN)"
+          },
+          {
+            "label": "Target Incoterm",
+            "value": "FOB / CIF / CFR Destination Port",
+            "highlight": true
+          },
+          {
+            "label": "Container Size",
+            "value": "20ft GP (19 Metric Tons Payload)"
+          },
+          {
+            "label": "Transit Time to GCC",
+            "value": "4 - 7 Days (Jebel Ali / Dammam)"
+          },
+          {
+            "label": "Transit Time to EU",
+            "value": "18 - 24 Days (Rotterdam / Felixstowe)"
+          },
+          {
+            "label": "Transit Time to US",
+            "value": "26 - 32 Days (New York / Savannah)"
+          }
+        ],
+        "actionText": "Check Shipping Lanes",
+        "href": "/services"
       },
       {
         "title": "Buyer-Specific Procurement",
-        "desc": "Capability to procure unique grades, wild-harvested herbs, or specialty seeds outside standard catalogs upon commercial request."
+        "heading": "Purpose-Built Sourcing Beyond the Catalogue",
+        "desc": "When a specification falls outside our standard grades, our procurement desk identifies matching lots across verified grower clusters, wild-harvest collectives and specialist processors, then locks the grade, documentation and packing to your brief.",
+        "bullets": [
+          "Custom grade, cut, moisture and purity parameters agreed before booking",
+          "Wild-harvested herbs and specialty seeds sourced through verified collectors",
+          "Sample approval and counter-sample retention for every bespoke lot",
+          "Dedicated commercial manager from enquiry to destination discharge"
+        ],
+        "terminalData": [
+          {
+            "label": "Sourcing Mode",
+            "value": "Buyer Brief / Non-Catalogue",
+            "highlight": true
+          },
+          {
+            "label": "Grade Tolerance",
+            "value": "Agreed Against Approved Sample"
+          },
+          {
+            "label": "Sample Cycle",
+            "value": "Pre-Shipment Counter-Sample Retained"
+          },
+          {
+            "label": "Sourcing Belt",
+            "value": "Gujarat • Rajasthan • Regional Collectives"
+          },
+          {
+            "label": "Documentation",
+            "value": "Lot-Specific Traceability Dossier"
+          },
+          {
+            "label": "Commercial Owner",
+            "value": "Dedicated Trade Desk Manager"
+          }
+        ],
+        "actionText": "Discuss Your Requirement",
+        "href": "/contact"
       }
     ]
   },
   "workbench": {
-    "eyebrow": "INSTANT PROCUREMENT SPECS",
-    "heading": "Less talk, verified specifications.",
-    "description": "Direct commercial parameters, tariff classifications, and container payload metrics for international commodity buyers.",
+    "eyebrow": "MEET OUR TEAM",
+    "heading": "Our Team, Your Trust",
+    "description": "From product sourcing and quality coordination to documentation and shipment support, our team works together to make every business transaction smooth, transparent, and reliable.",
     "cards": {
       "rfq": {
         "title": "Instant Proforma RFQ",
@@ -668,19 +889,25 @@
         "image": "/home/team/billionaireme.png",
         "name": "Final Patel",
         "position": "FOUNDER & MANAGING DIRECTOR",
-        "description": "Leads origin sourcing across Gujarat and Rajasthan, building long-term relationships with growers, processors, and exporters."
+        "description": "Leads the company's vision, business strategy, international partnerships, and overall operations.",
+        "email": "info@feelexim.com",
+        "phone": "+91 98795 52619"
       },
       {
         "image": "/home/team/partnero.png",
         "name": "Mahesh Patel",
         "position": "SALES MANAGER",
-        "description": "Coordinates container planning, port operations at Mundra and Nhava Sheva, and on-time destination delivery."
+        "description": "Builds relationships with global buyers, understands market requirements, and develops new business opportunities.",
+        "email": "feel619patel@gmail.com",
+        "phone": "+91 98795 52619"
       },
       {
         "image": "/home/team/billionairetulsi.png",
         "name": "Tulsi Khalasi",
-        "position": "SALES MANAGER",
-        "description": "Owns lab testing, sortex purity standards, and the phytosanitary documentation that clears every consignment."
+        "position": "Export Operations & Logistics",
+        "description": "Coordinates export documentation, packaging, shipment arrangements, and communication throughout the export process.",
+        "email": "tulsikhalasi123@gmail.com",
+        "phone": "+91 98795 52619"
       }
     ]
   },

@@ -8,6 +8,8 @@ interface Profile {
   position: string
   description: string
   image?: string
+  email?: string
+  phone?: string
 }
 
 const roleIcons = [Compass, ShieldCheck, Ship]
@@ -24,7 +26,6 @@ const getInitials = (name: string) =>
 export default function SpecificationWorkbench() {
   const t = useTranslations('workbench')
   const profiles = t.raw('profiles') as Profile[]
-  const phoneHref = siteConfig.phone.replace(/[^\d+]/g, '')
 
   return (
     <section
@@ -107,20 +108,20 @@ export default function SpecificationWorkbench() {
 
                   <div className="mt-5 flex w-full flex-col items-center gap-2 border-t border-hairline pt-4">
                     <a
-                      href={`mailto:${siteConfig.email}`}
+                      href={`mailto:${profile.email || siteConfig.email}`}
                       aria-label={t('emailAria', { name: profile.name })}
                       className="inline-flex items-center gap-2 text-[11px] text-slate-300 transition-colors hover:text-gold"
                     >
                       <Mail size={13} className="shrink-0 text-gold" />
-                      <span className="truncate">{siteConfig.email}</span>
+                      <span className="truncate">{profile.email || siteConfig.email}</span>
                     </a>
                     <a
-                      href={`tel:${phoneHref}`}
+                      href={`tel:${(profile.phone || siteConfig.phone).replace(/[^\d+]/g, '')}`}
                       aria-label={t('phoneAria', { name: profile.name })}
                       className="inline-flex items-center gap-2 text-[11px] text-slate-300 transition-colors hover:text-gold"
                     >
                       <Phone size={13} className="shrink-0 text-gold" />
-                      <span>{siteConfig.phone}</span>
+                      <span>{profile.phone || siteConfig.phone}</span>
                     </a>
                   </div>
                 </div>

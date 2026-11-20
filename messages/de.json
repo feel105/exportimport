@@ -570,6 +570,7 @@
     "heading": "Auf Ihre Beschaffungsanforderungen zugeschnitten.",
     "description": "Entwickelt, um Volatilität, Qualitätsunsicherheit und Kommunikationsbarrieren bei der grenzüberschreitenden Agrarbeschaffung zu beseitigen.",
     "verifiedStandard": "BETRIEBLICHER STANDARD ÜBERPRÜFT",
+    "keySpecifications": "WICHTIGSTE SPEZIFIKATIONEN:",
     "tabsLabel": "BETRIEBSSTANDARDS",
     "count": "06 STANDARDS",
     "phase": "STANDARD {num} • {label}",
@@ -579,28 +580,131 @@
     "footerLink": "Mit dem Trade Desk sprechen",
     "features": [
       {
-        "title": "Transparente Angebote",
-        "desc": "Klare, wettbewerbsfähige Preise, die direkt anhand der indischen Großhandelsterminalmärkte berechnet werden, mit vollständiger Aufschlüsselung der Seefracht- und Zertifizierungskosten."
+        "title": "Direkte Herkunftsbeschaffung",
+        "heading": "Direkte Farm-Gate- und APMC-Terminalbeschaffung",
+        "desc": "Wir umgehen unnötige Zwischenschichten, indem wir direkte Aggregationsnetzwerke über die Terminalmärkte Saurashtra, Unjha, Nagaur und Kota unterhalten und so wettbewerbsfähige Ernteeingänge zum Erntespitzenwert sicherstellen.",
+        "bullets": [
+          "Direktverträge mit zertifizierten Erzeugerclustern und FPOs",
+          "Tägliche Mandi-Preisparität mit vollständig transparenter Aufschlüsselung",
+          "Verfolgung der Erntesaison und Gespräche zur Preisabsicherung",
+          "Rückverfolgbarkeit bis zum regionalen Anbaugebiet und der Erntepartie"
+        ],
+        "terminalData": [
+          { "label": "Primärer Mandi-Hub", "value": "Unjha Terminalmarkt (Gujarat)" },
+          { "label": "Erntezeit", "value": "Ankunft der frischen Ernte 2026", "highlight": true },
+          { "label": "Züchter-Aggregation", "value": "Verifiziertes regionales FPO-Netzwerk" },
+          { "label": "Bewertungsprotokoll", "value": "AGMARK Klasse 1 / Export-Spezial" },
+          { "label": "Transit zum Hafen", "value": "360 km über einen speziellen Güterverkehrskorridor" },
+          { "label": "Rückverfolgbarkeitsindex", "value": "100 % regionale Farmblockkartierung" }
+        ],
+        "actionText": "Erfahren Sie mehr über unsere Beschaffung",
+        "href": "/about"
       },
       {
-        "title": "Flexible Verpackungsoptionen",
-        "desc": "Kundenspezifische private Etikettierung, verschiedene Verpackungsgrößen (Jumbo-Tragetaschen von 1 kg bis 1000 kg) und schützende Vakuumverpackung, die auf die Haltbarkeitsdauer am Zielort zugeschnitten ist."
+        "title": "Exportdokumentation",
+        "heading": "Reibungslose Zoll- und gesetzliche Abfertigung",
+        "desc": "Der grenzüberschreitende Agrarhandel erfordert einen tadellosen Papierkram. Unser Zoll-Compliance-Desk bereitet alle gesetzlichen Handelsdokumente vor, überprüft und versendet sie vor der Ankunft des Seeschiffs.",
+        "bullets": [
+          "Offizielles staatliches Pflanzengesundheitszeugnis (Pflanzenquarantäne)",
+          "Ursprungszeugnis (bevorzugt/nichtbevorzugt über FIEO und Kammer)",
+          "Zoll-Handelsrechnung, Packliste und Frachtbrief (B/L)",
+          "Begasungszertifikat (Methylbromid-/Phosphinbehandlung)"
+        ],
+        "terminalData": [
+          { "label": "Phytosanitäres Zertifikat", "value": "PSC-INDIA-2026-VALIDIERT", "highlight": true },
+          { "label": "Ursprungszeugnis", "value": "COO-KAMMER-AUSGESTELLT" },
+          { "label": "Begasungsstandard", "value": "AFAS/IMO-zugelassener 48-Stunden-Zyklus" },
+          { "label": "Frachtbrief", "value": "Clean On Board Express Release" },
+          { "label": "Gesetzliche Körperschaft", "value": "FSSAI • APEDA • RCMC" },
+          { "label": "HS-Klassifizierung", "value": "Harmonisierter 6-stelliger globaler Standard" }
+        ],
+        "actionText": "Entdecken Sie Compliance-Anmeldeinformationen",
+        "href": "/quality-compliance"
       },
       {
         "title": "Verifizierte Qualitätsbeschaffung",
-        "desc": "Direkte Beschaffung auf dem Feld- und Terminalmarkt, unterstützt durch NABL akkreditierte Laborinspektionen auf Feuchtigkeit, Pestizide MRLs und ASTA Sauberkeit."
+        "heading": "Laborgeprüfte Rohstoffstandards",
+        "desc": "Jede Exportcharge wird vor der Containerverladung umfassenden Tests auf physische Sauberkeit, Feuchtigkeitsgehalt, Anteil an flüchtigen Ölen und zielspezifischen Pestiziden MRLs unterzogen.",
+        "bullets": [
+          "NABL & ISO/IEC 17025 akkreditierte Labortests",
+          "Koordinierung der Inspektion durch Dritte (SGS, Geo-Chem, Bureau Veritas)",
+          "Mikrobiologisches Screening auf Aflatoxin, Ochratoxin und Salmonellen",
+          "Sortex optische Sortierung mit 99,8 % Reinheitsgarantie"
+        ],
+        "terminalData": [
+          { "label": "Warencharge", "value": "FE-2026-CUMIN-A1" },
+          { "label": "Reinheitsstandard", "value": "99,8 % maschinell gereinigt Sortex", "highlight": true },
+          { "label": "Feuchtigkeitsgehalt", "value": "7,4 % (maximal zulässig: 8,0 %)" },
+          { "label": "Ätherisches Öl", "value": "3,2 % v/w (ASTA Standard)" },
+          { "label": "Aflatoxin (B1+B2+G1+G2)", "value": "< 2,0 ppb (konform EU/US)" },
+          { "label": "Pestizid-MRL-Status", "value": "Null-Rückstandsüberschreitung" },
+          { "label": "Ausstellendes Labor", "value": "NABL Zertifiziert #TC-7892" }
+        ],
+        "actionText": "Qualitätsprotokolle anzeigen",
+        "href": "/quality-compliance"
       },
       {
-        "title": "Vollständige Exportdokumentation",
-        "desc": "Vollständige Koordination von Phytosanitär-, Ursprungszeugnis-, Frachtbrief-, Begasungs- und Zollhandelsrechnungen ohne bürokratische Verzögerungen."
+        "title": "Flexible Verpackungsoptionen",
+        "heading": "Maßgeschneiderte Großverpackungs- und Private-Label-Lösungen",
+        "desc": "Von mehrlagigen 25-kg-Säcken aus Papier und PP-Gewebe für Großverarbeiter bis hin zu maßgeschneiderten vakuumversiegelten Barrierebeuteln unter Ihrer eigenen Marke – wir passen die Verpackung genau an Ihre Einzelhandels- oder Industrieanforderungen an.",
+        "bullets": [
+          "Mehrwandige Papiertüten, PP-gewebte Säcke und traditionelle Jute-Sackleinen",
+          "Vakuumbeutel in Lebensmittelqualität mit Sauerstoffabsorbern (1 kg bis 10 kg)",
+          "1000 kg FIBC Jumbo-Tragetaschen mit Hebeschlaufen für automatisierte Linien",
+          "Privatetiketten-Einzelhandelsdruck mit Barcode- und Nährwertetikettenintegration"
+        ],
+        "terminalData": [
+          { "label": "Primärer Beuteltyp", "value": "25 kg Polypropylen (PP) mit innerer PE-Auskleidung", "highlight": true },
+          { "label": "Feuchtigkeitsbarriere", "value": "Strapazierfähiges 50-Mikron-Neuware-PE" },
+          { "label": "Palettierung", "value": "ISPM-15 Wärmebehandelte Holzpaletten" },
+          { "label": "Stretchfolie", "value": "Vollständig umreift und eingeschweißt" },
+          { "label": "Private Etikettierung", "value": "Benutzerdefinierte Käufermarkierung und Grafik werden unterstützt" },
+          { "label": "Taschentoleranz", "value": "± 0,2 % Automatische elektronische Kontrollwaage" }
+        ],
+        "actionText": "Besprechen Sie den Verpackungsbedarf",
+        "href": "/contact"
       },
       {
         "title": "Reaktionsschneller Trade Desk",
-        "desc": "Engagierte kaufmännische Ansprechpartner, die proaktive Statusupdates von der Verladung im Hafen Mundra / Nhava Sheva bis zur Sendungsverfolgung der Reederei bereitstellen."
+        "heading": "Containerlogistik von Mundra bis zum Zielhafen",
+        "desc": "Strategisch positioniert mit schneller Autobahnanbindung an den Hafen Mundra und Nhava Sheva (JNPT) koordinieren wir die Befüllung von Containern, die Überprüfung der Zollverschlüsse und die Buchung von Seefrachten über führende Reedereien hinweg.",
+        "bullets": [
+          "FOB (indische Häfen), CIF oder CFR Incoterms Preise",
+          "Direkte Carrier-Verträge mit Maersk, MSC, CMA CGM und Hapag-Lloyd",
+          "Nutzlasten von 20 Fuß FCL (18–20 MT) und 40 Fuß High Cube (24–26 MT).",
+          "Aktualisierungen der Seecontainerverfolgung in Echtzeit vom Hafentor bis zur Entladung"
+        ],
+        "terminalData": [
+          { "label": "Ladehafen", "value": "Hafen von Mundra / Nhava Sheva (IN)" },
+          { "label": "Ziel-Incoterm", "value": "FOB / CIF / CFR Zielport", "highlight": true },
+          { "label": "Behältergröße", "value": "20 Fuß GP (19 Tonnen Nutzlast)" },
+          { "label": "Transitzeit zum GCC", "value": "4 - 7 Tage (Jebel Ali / Dammam)" },
+          { "label": "Transitzeit in die EU", "value": "18 - 24 Tage (Rotterdam / Felixstowe)" },
+          { "label": "Transitzeit in die USA", "value": "26 - 32 Tage (New York / Savannah)" }
+        ],
+        "actionText": "Überprüfen Sie die Versandwege",
+        "href": "/services"
       },
       {
         "title": "Käuferspezifische Beschaffung",
-        "desc": "Möglichkeit, auf kommerzielle Anfrage einzigartige Sorten, wild geerntete Kräuter oder Spezialsamen außerhalb der Standardkataloge zu beschaffen."
+        "heading": "Maßgeschneiderte Beschaffung jenseits des Katalogs",
+        "desc": "Wenn eine Spezifikation außerhalb unserer Standardqualitäten liegt, findet unser Beschaffungsteam passende Partien bei zertifizierten Erzeugergemeinschaften, Wildsammlern und Spezialverarbeitern und legt Qualität, Dokumentation und Verpackung exakt nach Ihrer Vorgabe fest.",
+        "bullets": [
+          "Individuelle Qualitäts-, Schnitt-, Feuchtigkeits- und Reinheitsparameter vor der Buchung vereinbart",
+          "Wild geerntete Kräuter und Spezialsamen über verifizierte Sammler beschafft",
+          "Musterfreigabe und Gegenmusteraufbewahrung für jede Sondercharge",
+          "Fester kaufmännischer Ansprechpartner von der Anfrage bis zur Entladung am Zielort"
+        ],
+        "terminalData": [
+          { "label": "Beschaffungsart", "value": "Käufervorgabe / Nicht im Katalog", "highlight": true },
+          { "label": "Qualitätstoleranz", "value": "Abgestimmt auf freigegebenes Muster" },
+          { "label": "Musterzyklus", "value": "Gegenmuster vor Versand aufbewahrt" },
+          { "label": "Beschaffungsregion", "value": "Gujarat • Rajasthan • Regionale Kollektive" },
+          { "label": "Dokumentation", "value": "Chargenspezifisches Rückverfolgbarkeitsdossier" },
+          { "label": "Kommerzielle Verantwortung", "value": "Dedizierter Trade-Desk-Manager" }
+        ],
+        "actionText": "Anforderung besprechen",
+        "href": "/contact"
       }
     ]
   },
@@ -668,19 +772,25 @@
         "image": "/home/team/billionaireme.png",
         "name": "Arjun Mehta",
         "position": "GRÜNDER & GESCHÄFTSFÜHRER",
-        "description": "Verantwortet die Beschaffung in Gujarat und Rajasthan und baut langfristige Beziehungen zu Erzeugern, Verarbeitern und Exporteuren auf."
+        "description": "Verantwortet die Beschaffung in Gujarat und Rajasthan und baut langfristige Beziehungen zu Erzeugern, Verarbeitern und Exporteuren auf.",
+        "email": "final@feelexim.com",
+        "phone": "+91 98795 52619"
       },
       {
         "image": "/home/team/partnero.png",
         "name": "Priya Sharma",
         "position": "LEITERIN QUALITÄT & COMPLIANCE",
-        "description": "Verantwortet Labortests, Sortex-Reinheitsstandards und die Pflanzengesundheitsdokumentation für jede Sendung."
+        "description": "Verantwortet Labortests, Sortex-Reinheitsstandards und die Pflanzengesundheitsdokumentation für jede Sendung.",
+        "email": "sales@feelexim.com",
+        "phone": "+91 98795 52619"
       },
       {
         "image": "/home/team/billionairetulsi.png",
         "name": "Rohan Patel",
         "position": "EXPORTLOGISTIK-MANAGER",
-        "description": "Koordiniert Containerplanung, Hafenbetrieb in Mundra und Nhava Sheva sowie pünktliche Lieferungen an den Bestimmungsort."
+        "description": "Koordiniert Containerplanung, Hafenbetrieb in Mundra und Nhava Sheva sowie pünktliche Lieferungen an den Bestimmungsort.",
+        "email": "operations@feelexim.com",
+        "phone": "+91 98795 52619"
       }
     ]
   },

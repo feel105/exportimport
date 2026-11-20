@@ -19,9 +19,20 @@ import type { Locale } from '@/i18n/config'
 
 const icons = [Tag, Package, Shield, FileCheck, MessageSquare, Search]
 
+interface TerminalRow {
+  label: string
+  value: string
+  highlight?: boolean
+}
+
 interface Feature {
   title: string
+  heading?: string
   desc: string
+  bullets?: string[]
+  terminalData?: TerminalRow[]
+  actionText?: string
+  href?: string
 }
 
 export default function WhyChooseUs() {
@@ -33,6 +44,10 @@ export default function WhyChooseUs() {
   const currentFeature = features[activeTab]
   const currentNum = String(activeTab + 1).padStart(2, '0')
   const CurrentIcon = icons[activeTab]
+  const terminalRows: TerminalRow[] = currentFeature.terminalData ?? [
+    { label: currentFeature.title, value: t('status'), highlight: true },
+    { label: t('verifiedStandard'), value: t('manifestFooter') },
+  ]
 
   return (
     <section
@@ -112,7 +127,7 @@ export default function WhyChooseUs() {
                   <CurrentIcon size={18} />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
-                  {currentFeature.title}
+                  {currentFeature.heading ?? currentFeature.title}
                 </h3>
               </div>
               <p className="text-slate text-xs sm:text-sm leading-relaxed">
@@ -120,25 +135,47 @@ export default function WhyChooseUs() {
               </p>
             </div>
 
-            <div className="space-y-2.5 pt-2 border-t border-hairline">
-              <p className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">
-                {t('verifiedStandard')}
-              </p>
-              <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                <CheckCircle2
-                  size={15}
-                  className="text-emerald-400 mt-0.5 flex-shrink-0"
-                />
-                <span>{t('manifestFooter')}</span>
+            {currentFeature.bullets && currentFeature.bullets.length > 0 ? (
+              <div className="space-y-2.5 pt-2 border-t border-hairline">
+                <p className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">
+                  {t('keySpecifications')}
+                </p>
+                <ul className="space-y-2">
+                  {currentFeature.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300"
+                    >
+                      <CheckCircle2
+                        size={15}
+                        className="text-emerald-400 mt-0.5 flex-shrink-0"
+                      />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
+            ) : (
+              <div className="space-y-2.5 pt-2 border-t border-hairline">
+                <p className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">
+                  {t('verifiedStandard')}
+                </p>
+                <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                  <CheckCircle2
+                    size={15}
+                    className="text-emerald-400 mt-0.5 flex-shrink-0"
+                  />
+                  <span>{t('manifestFooter')}</span>
+                </div>
+              </div>
+            )}
 
             <div className="pt-2">
               <Link
-                href={localeHref(locale, '/contact')}
+                href={localeHref(locale, currentFeature.href ?? '/contact')}
                 className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-gold hover:text-gold-light transition-colors group"
               >
-                <span>{t('cta')}</span>
+                <span>{currentFeature.actionText ?? t('cta')}</span>
                 <ArrowRight
                   size={14}
                   className="group-hover:translate-x-1 transition-transform"
@@ -162,51 +199,25 @@ export default function WhyChooseUs() {
               </div>
 
               <div className="p-5 sm:p-6 space-y-3 font-mono text-xs">
-                {features.map((feature, idx) => {
-                  const isActive = activeTab === idx
-                  return (
-                    <button
-                      key={feature.title}
-                      type="button"
-                      onClick={() => setActiveTab(idx)}
-                      aria-pressed={isActive}
-                      className={`flex w-full items-start justify-between gap-3 py-1.5 border-b border-white/[0.04] last:border-0 text-left cursor-pointer transition-colors ${
-                        isActive
-                          ? 'bg-white/[0.03] px-2 rounded -mx-2'
-                          : 'hover:bg-white/[0.02]'
+                {terminalRows.map((row) => (
+                  <div
+                    key={row.label}
+                    className={`flex items-start justify-between gap-3 py-1.5 border-b border-white/[0.04] last:border-0 ${
+                      row.highlight ? 'bg-white/[0.03] px-2 rounded -mx-2' : ''
+                    }`}
+                  >
+                    <span className="text-slate-400 text-[11px] sm:text-xs">
+                      {row.label}:
+                    </span>
+                    <span
+                      className={`font-semibold text-right max-w-[55%] text-[11px] sm:text-xs ${
+                        row.highlight ? 'text-gold-light font-bold' : 'text-white'
                       }`}
                     >
-                      <span className="flex items-start gap-2 text-[11px] sm:text-xs">
-                        <span
-                          className={
-                            isActive
-                              ? 'text-gold font-bold'
-                              : 'text-slate-500'
-                          }
-                        >
-                          {String(idx + 1).padStart(2, '0')}
-                        </span>
-                        <span
-                          className={
-                            isActive
-                              ? 'text-white font-semibold'
-                              : 'text-slate-400'
-                          }
-                        >
-                          {feature.title}
-                        </span>
-                      </span>
-                      <span
-                        className={`inline-flex items-center gap-1 font-semibold uppercase tracking-wide text-[10px] flex-shrink-0 ${
-                          isActive ? 'text-gold-light' : 'text-emerald-400'
-                        }`}
-                      >
-                        <CheckCircle2 size={11} />
-                        {t('status')}
-                      </span>
-                    </button>
-                  )
-                })}
+                      {row.value}
+                    </span>
+                  </div>
+                ))}
 
                 <div className="pt-4 border-t border-hairline flex items-center justify-between gap-3 text-[11px] text-slate-400">
                   <span className="flex items-center gap-1.5">

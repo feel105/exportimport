@@ -13,6 +13,8 @@ export interface LocaleMeta {
   htmlLang: string
   /** Open Graph locale format. */
   ogLocale: string
+  /** Country flag emoji for the language. */
+  flag: string
 }
 
 export const localeMeta: Record<Locale, LocaleMeta> = {
@@ -21,18 +23,21 @@ export const localeMeta: Record<Locale, LocaleMeta> = {
     englishName: 'English',
     htmlLang: 'en',
     ogLocale: 'en_US',
+    flag: '🇬🇧',
   },
   de: {
     nativeName: 'Deutsch',
     englishName: 'German',
     htmlLang: 'de',
     ogLocale: 'de_DE',
+    flag: '🇩🇪',
   },
   es: {
     nativeName: 'Español',
     englishName: 'Spanish',
     htmlLang: 'es',
     ogLocale: 'es_ES',
+    flag: '🇪🇸',
   },
 }
 

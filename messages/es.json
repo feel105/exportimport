@@ -570,6 +570,7 @@
     "heading": "Creado en torno a sus necesidades de abastecimiento.",
     "description": "Diseñado para eliminar la volatilidad, la incertidumbre sobre la calidad y las barreras de comunicación de las adquisiciones agrícolas transfronterizas.",
     "verifiedStandard": "ESTÁNDAR OPERATIVO VERIFICADO",
+    "keySpecifications": "ESPECIFICACIONES CLAVE:",
     "tabsLabel": "ESTÁNDARES OPERATIVOS",
     "count": "06 ESTÁNDARES",
     "phase": "ESTÁNDAR {num} • {label}",
@@ -579,28 +580,248 @@
     "footerLink": "Hable con la mesa comercial",
     "features": [
       {
-        "title": "Cotizaciones transparentes",
-        "desc": "Precios claros y competitivos calculados directamente con respecto a los mercados de terminales mayoristas de la India, con un desglose completo de los costos de certificación y transporte marítimo."
+        "title": "Abastecimiento de origen directo",
+        "heading": "Adquisición directa a puerta de granja y terminal APMC",
+        "desc": "Evitamos capas intermedias innecesarias manteniendo redes de agregación directa en los mercados terminales Saurashtra, Unjha, Nagaur y Kota, asegurando llegadas competitivas de cultivos en el pico de cosecha.",
+        "bullets": [
+          "Contratos directos con clusters de productores certificados y FPO",
+          "Paridad de precios diaria de mandi con desglose transparente completo",
+          "Seguimiento de la temporada de cosechas y debates sobre cobertura de precios a plazo",
+          "Trazabilidad hasta el distrito de cultivo regional y el lote de cosecha"
+        ],
+        "terminalData": [
+          {
+            "label": "Centro Mandi primario",
+            "value": "Unjha Mercado Terminal (Gujarat)"
+          },
+          {
+            "label": "Temporada de cosecha",
+            "value": "Llegada de cultivos frescos 2026",
+            "highlight": true
+          },
+          {
+            "label": "Agregación de productores",
+            "value": "Red regional verificada de FPO"
+          },
+          {
+            "label": "Protocolo de calificación",
+            "value": "AGMARK Grado 1 / Especial de exportación"
+          },
+          {
+            "label": "Tránsito a Puerto",
+            "value": "360 km a través del corredor exclusivo de carga"
+          },
+          {
+            "label": "Índice de trazabilidad",
+            "value": "Bloque agrícola 100% regional mapeado"
+          }
+        ],
+        "actionText": "Obtenga más información sobre nuestro abastecimiento",
+        "href": "/about"
       },
       {
-        "title": "Opciones de embalaje flexibles",
-        "desc": "Etiquetado privado personalizado, tamaños de paquete variados (bolsas grandes de 1 kg a 1000 kg) y embalaje protector al vacío adaptado a la vida útil del destino."
+        "title": "Documentación de exportación",
+        "heading": "Despacho aduanero y legal sin fricción",
+        "desc": "El comercio agrícola transfronterizo requiere un papeleo impecable. Nuestro departamento de cumplimiento aduanero prepara, verifica y envía todos los documentos comerciales legales antes de la llegada del buque marítimo.",
+        "bullets": [
+          "Certificado Fitosanitario Oficial del Gobierno (Cuarentena Vegetal)",
+          "Certificado de Origen (Preferencial / No Preferencial vía FIEO y Cámara)",
+          "Factura comercial de aduanas, lista de empaque y conocimiento de embarque (B/L)",
+          "Certificado de Fumigación (Tratamiento con Bromuro de Metilo / Fosfina)"
+        ],
+        "terminalData": [
+          {
+            "label": "Certificado Fitosanitario",
+            "value": "PSC-INDIA-2026-VALIDADO",
+            "highlight": true
+          },
+          {
+            "label": "Certificado de origen",
+            "value": "COO-EMITIDO POR LA CÁMARA"
+          },
+          {
+            "label": "Norma de fumigación",
+            "value": "Ciclo de 48h aprobado por AFAS / IMO"
+          },
+          {
+            "label": "Guía de carga",
+            "value": "Lanzamiento exprés limpio a bordo"
+          },
+          {
+            "label": "Órgano estatutario",
+            "value": "FSSAI • APEDA • RCMC"
+          },
+          {
+            "label": "Clasificación HS",
+            "value": "Estándar global armonizado de 6 dígitos"
+          }
+        ],
+        "actionText": "Explorar las credenciales de cumplimiento",
+        "href": "/quality-compliance"
       },
       {
         "title": "Abastecimiento de calidad verificada",
-        "desc": "Abastecimiento directo en el campo y en el mercado terminal respaldado por inspecciones de laboratorio acreditadas NABL para humedad, pesticidas MRLs y limpieza ASTA."
+        "heading": "Estándares de productos verificados en laboratorio",
+        "desc": "Cada lote de exportación se somete a pruebas exhaustivas de limpieza física, contenido de humedad, porcentajes de aceite volátil y pesticida específico de destino MRLs antes de cargar el contenedor.",
+        "bullets": [
+          "NABL y ISO/IEC 17025 pruebas de laboratorio acreditadas",
+          "Coordinación de inspección de terceros (SGS, Geo-Chem, Bureau Veritas)",
+          "Cribado microbiológico de aflatoxinas, ocratoxinas y Salmonella",
+          "Sortex clasificación óptica con garantía de pureza del 99,8%"
+        ],
+        "terminalData": [
+          {
+            "label": "Lote de productos básicos",
+            "value": "FE-2026-CUMINO-A1"
+          },
+          {
+            "label": "Estándar de pureza",
+            "value": "99,8 % limpieza a máquina Sortex",
+            "highlight": true
+          },
+          {
+            "label": "Contenido de humedad",
+            "value": "7,4% (Máximo permitido: 8,0%)"
+          },
+          {
+            "label": "Aceite volátil",
+            "value": "3,2% v/p (ASTA Estándar)"
+          },
+          {
+            "label": "Aflatoxina (B1+B2+G1+G2)",
+            "value": "< 2,0 ppb (cumple con la UE/EE. UU.)"
+          },
+          {
+            "label": "Estado del pesticida MRL",
+            "value": "Superación de residuos cero"
+          },
+          {
+            "label": "Laboratorio emisor",
+            "value": "NABL Certificado #TC-7892"
+          }
+        ],
+        "actionText": "Ver protocolos de calidad",
+        "href": "/quality-compliance"
       },
       {
-        "title": "Documentación completa de exportación",
-        "desc": "Coordinación total de Fitosanitarios, Certificados de Origen, Conocimientos de Embarque, Fumigaciones y facturas comerciales aduaneras sin demoras burocráticas."
+        "title": "Opciones de embalaje flexibles",
+        "heading": "Soluciones personalizadas de embalaje a granel y etiquetas privadas",
+        "desc": "Desde sacos tejidos de PP y papel multicapa de 25 kg para procesadores mayoristas hasta bolsas de barrera selladas al vacío personalizadas bajo su propia marca, adaptamos el embalaje a sus requisitos industriales o minoristas exactos.",
+        "bullets": [
+          "Bolsas de papel multicapa, sacos tejidos de PP y arpillera de yute tradicional",
+          "Bolsas de vacío de calidad alimentaria con absorbentes de oxígeno (de 1 kg a 10 kg)",
+          "1000kg FIBC Jumbo Tote Bags con asas de elevación para líneas automatizadas",
+          "Impresión minorista de etiquetas privadas con integración de códigos de barras y etiquetas nutricionales"
+        ],
+        "terminalData": [
+          {
+            "label": "Tipo de bolsa primaria",
+            "value": "Polipropileno (PP) de 25 kg con revestimiento interior de PE",
+            "highlight": true
+          },
+          {
+            "label": "Barrera de humedad",
+            "value": "PE virgen resistente de 50 micrones"
+          },
+          {
+            "label": "paletización",
+            "value": "ISPM-15 Palets de madera tratados térmicamente"
+          },
+          {
+            "label": "Envoltura elástica",
+            "value": "Totalmente atado y envuelto en plástico retráctil"
+          },
+          {
+            "label": "Etiquetado privado",
+            "value": "Se admiten marcas de comprador personalizadas e ilustraciones"
+          },
+          {
+            "label": "Tolerancia de bolsa",
+            "value": "± 0,2% Comprobador de peso electrónico automático"
+          }
+        ],
+        "actionText": "Discutir las necesidades de embalaje",
+        "href": "/contact"
       },
       {
         "title": "Mesa comercial receptiva",
-        "desc": "Gestores comerciales dedicados que proporcionan actualizaciones proactivas del estado desde la carga en los puertos de Mundra / Nhava Sheva hasta el seguimiento de la naviera."
+        "heading": "Logística de contenedores desde Mundra hasta puerto de destino",
+        "desc": "Ubicados estratégicamente con rápido acceso por carretera al puerto Mundra y Nhava Sheva (JNPT), coordinamos el llenado de contenedores, la verificación de sellos aduaneros y las reservas de transporte marítimo en las principales líneas navieras.",
+        "bullets": [
+          "Precios FOB (puertos indios), CIF o CFR Incoterms",
+          "Contratos de transportista directo con Maersk, MSC, CMA CGM y Hapag-Lloyd",
+          "Cargas útiles FCL de 20 pies (18–20 MT) y High Cube de 40 pies (24–26 MT)",
+          "Actualizaciones de seguimiento de contenedores marítimos en tiempo real desde la entrada al puerto hasta la descarga"
+        ],
+        "terminalData": [
+          {
+            "label": "Puerto de carga",
+            "value": "Puerto de Mundra / Nhava Sheva (IN)"
+          },
+          {
+            "label": "Incoterm objetivo",
+            "value": "FOB / CIF / CFR Puerto de destino",
+            "highlight": true
+          },
+          {
+            "label": "Tamaño del contenedor",
+            "value": "GP de 20 pies (carga útil de 19 toneladas métricas)"
+          },
+          {
+            "label": "Tiempo de tránsito al CCG",
+            "value": "4 - 7 días (Jebel Ali / Dammam)"
+          },
+          {
+            "label": "Tiempo de tránsito a la UE",
+            "value": "18 - 24 Días (Rotterdam / Felixstowe)"
+          },
+          {
+            "label": "Tiempo de tránsito a EE. UU.",
+            "value": "26 - 32 Días (New York / Savannah)"
+          }
+        ],
+        "actionText": "Verificar rutas de envío",
+        "href": "/services"
       },
       {
         "title": "Adquisiciones específicas para el comprador",
-        "desc": "Capacidad para adquirir calidades únicas, hierbas silvestres o semillas especiales fuera de los catálogos estándar previa solicitud comercial."
+        "heading": "Abastecimiento a medida más allá del catálogo",
+        "desc": "Cuando una especificación queda fuera de nuestros grados estándar, nuestro equipo de abastecimiento identifica lotes adecuados entre clústeres de productores certificados, recolectores de cosecha silvestre y procesadores especializados, y fija el grado, la documentación y el embalaje según su requisito.",
+        "bullets": [
+          "Parámetros de grado, corte, humedad y pureza acordados antes de la reserva",
+          "Hierbas silvestres y semillas especiales obtenidas mediante recolectores verificados",
+          "Aprobación de muestra y conservación de contramuestra para cada lote especial",
+          "Gestor comercial dedicado desde la consulta hasta la descarga en destino"
+        ],
+        "terminalData": [
+          {
+            "label": "Modalidad de abastecimiento",
+            "value": "Requisito del comprador / Fuera de catálogo",
+            "highlight": true
+          },
+          {
+            "label": "Tolerancia de grado",
+            "value": "Acordada contra muestra aprobada"
+          },
+          {
+            "label": "Ciclo de muestras",
+            "value": "Contramuestra conservada antes del envío"
+          },
+          {
+            "label": "Zona de origen",
+            "value": "Gujarat • Rajasthan • Colectivos regionales"
+          },
+          {
+            "label": "Documentación",
+            "value": "Expediente de trazabilidad por lote"
+          },
+          {
+            "label": "Responsable comercial",
+            "value": "Gestor dedicado de la mesa comercial"
+          }
+        ],
+        "actionText": "Hablemos de su requisito",
+        "href": "/contact"
       }
     ]
   },
@@ -668,19 +889,25 @@
         "image": "/home/team/billionaireme.png",
         "name": "Arjun Mehta",
         "position": "FUNDADOR Y DIRECTOR GENERAL",
-        "description": "Lidera el abastecimiento de origen en Gujarat y Rajasthan, creando relaciones a largo plazo con productores, procesadores y exportadores."
+        "description": "Lidera el abastecimiento de origen en Gujarat y Rajasthan, creando relaciones a largo plazo con productores, procesadores y exportadores.",
+        "email": "info@feelexim.com",
+        "phone": "+91 98795 52619"
       },
       {
         "image": "/home/team/partnero.png",
         "name": "Priya Sharma",
         "position": "JEFA DE CALIDAD Y CUMPLIMIENTO",
-        "description": "Responsable de pruebas de laboratorio, estándares de pureza Sortex y la documentación fitosanitaria de cada envío."
+        "description": "Responsable de pruebas de laboratorio, estándares de pureza Sortex y la documentación fitosanitaria de cada envío.",
+        "email": "feel619patel@gmail.com",
+        "phone": "+91 98795 52619"
       },
       {
         "image": "/home/team/billionairetulsi.png",
         "name": "Rohan Patel",
         "position": "GERENTE DE LOGÍSTICA DE EXPORTACIÓN",
-        "description": "Coordina la planificación de contenedores, las operaciones portuarias en Mundra y Nhava Sheva y la entrega puntual en destino."
+        "description": "Coordina la planificación de contenedores, las operaciones portuarias en Mundra y Nhava Sheva y la entrega puntual en destino.",
+        "email": "tulsikhalasi123@gmail.com",
+        "phone": "+91 98795 52619"
       }
     ]
   },

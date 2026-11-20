@@ -3,7 +3,7 @@
 import { useTransition } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
-import { Globe2 } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { localeMeta, locales, type Locale } from '@/i18n/config'
 import { stripLocale } from '@/i18n/href'
 
@@ -37,21 +37,25 @@ export default function LanguageSwitcher({ className = '' }: LanguageSwitcherPro
     <label
       className={`relative inline-flex items-center gap-1.5 rounded-md border border-white/10 bg-white/[0.06] px-2.5 py-2 text-white transition-colors hover:bg-white/[0.12] ${className}`}
     >
-      <Globe2 size={14} className="pointer-events-none flex-shrink-0 text-gold" />
       <span className="sr-only">{t('change')}</span>
       <select
         value={locale}
         onChange={(event) => changeLocale(event.target.value as Locale)}
         disabled={isPending}
         aria-label={t('current', { language: localeMeta[locale].nativeName })}
-        className="cursor-pointer appearance-none bg-transparent pr-3 text-[11px] font-semibold uppercase tracking-wide text-white outline-none disabled:cursor-wait disabled:opacity-60"
+        className="cursor-pointer appearance-none bg-transparent pr-4 text-[11px] font-semibold uppercase tracking-wide text-white outline-none disabled:cursor-wait disabled:opacity-60"
       >
         {locales.map((item) => (
           <option key={item} value={item} className="bg-[#121A26] text-white">
-            {localeMeta[item].nativeName}
+            {localeMeta[item].flag} {localeMeta[item].nativeName}
           </option>
         ))}
       </select>
+      <ChevronDown
+        size={11}
+        className="pointer-events-none -ml-3 flex-shrink-0 opacity-60 text-current"
+        aria-hidden="true"
+      />
     </label>
   )
 }
